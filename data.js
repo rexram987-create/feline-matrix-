@@ -24,7 +24,7 @@ const content = {
     }
 };
 
-// רשימת החתולים המלאה
+// רשימת החתולים המלאה (מייצרת את הכפתורים דינמית!)
 const catsData = [
     {
         id: "lion",
@@ -78,7 +78,16 @@ const catsData = [
         scientific: "Puma concolor",
         img: "https://images.unsplash.com/photo-1596791242398-3bf211d293f0?q=80&w=200",
         link: "cats/puma.html",
-        color: "#d97706" // נחושת/טאווני
+        color: "#d97706" // נחושת
+    },
+    {
+        id: "caracal",
+        nameHe: "חתולים קטנים (קרקל)",
+        nameEn: "Small Cats (Caracal)",
+        scientific: "Caracal caracal",
+        img: "https://images.unsplash.com/photo-1615822646671-6ce93561a7a0?q=80&w=200",
+        link: "cats/caracal.html",
+        color: "#d97706" // צבע חול/אדמה
     }
 ];
 
