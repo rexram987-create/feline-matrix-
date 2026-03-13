@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>יגואר (Panthera onca) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #fbbf24; /* ענבר בהיר/זהב עמוק המזוהה עם היגואר */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        /* עיצוב פס גלילה */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-amber-500/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט חזרה -->
+        <nav class="absolute top-4 right-4 z-10">
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-amber-600 transition border border-white/10 flex items-center gap-2">
+                <span>&rarr;</span> חזרה למטריצה
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('https://images.unsplash.com/photo-1602491453631-e2a56e4173a7?q=80&w=1000')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="https://images.unsplash.com/photo-1602491453631-e2a56e4173a7?q=80&w=1000" alt="יגואר באמזונס" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-amber-500/20 text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/30">Pantherinae</span>
+                    <span class="text-slate-400 text-sm tracking-widest">אל האמזונס</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1">יגואר</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Panthera onca</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. כותרות ומידע בסיסי -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">תעודת זהות זואולוגית</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Jaguar</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "Lord of the Amazon" / "The One Who Kills With One Leap"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי (HE):</strong> החתול הגדול היחיד ביבשת אמריקה. ניחן בכוח הנשיכה החזק ביותר מכל החתוליים (ביחס למשקלו), המאפשר לו לחדור שריון של צבים וגולגולות של קיימנים בנשיכה אחת.</li>
+                    <li><strong class="text-slate-400">Unique Feature (EN):</strong> The only big cat in the Americas. Possesses the strongest bite force of all felines relative to size, allowing it to pierce turtle shells and caiman skulls with a single bite.</li>
+                </ul>
+            </section>
+
+            <!-- 2. גריד נתונים סטטיסטיים -->
+            <section class="space-y-4">
+                <h3 class="text-amber-500 font-bold text-lg px-2">נתונים סטטיסטיים (Stats)</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-right bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3">פרמטר (HE)</th>
+                                <th class="p-3">ערך (HE)</th>
+                                <th class="p-3 text-left">Parameter (EN)</th>
+                                <th class="p-3 text-left">Value (EN)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">היריון</td>
+                                <td class="p-3">93 עד 105 ימים</td>
+                                <td class="p-3 text-left text-slate-400">Gestation</td>
+                                <td class="p-3 text-left">93 - 105 days</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">אורך גוף - זכר (ללא זנב)</td>
+                                <td class="p-3">1.2 עד 1.95 מטרים</td>
+                                <td class="p-3 text-left text-slate-400">Male Body Length</td>
+                                <td class="p-3 text-left">1.2 - 1.95 meters</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">אורך גוף - נקבה (ללא זנב)</td>
+                                <td class="p-3">1.1 עד 1.7 מטרים</td>
+                                <td class="p-3 text-left text-slate-400">Female Body Length</td>
+                                <td class="p-3 text-left">1.1 - 1.7 meters</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">משקל - זכר בוגר</td>
+                                <td class="p-3">56 עד 120 ק"ג (נדיר: עד 158 ק"ג)</td>
+                                <td class="p-3 text-left text-slate-400">Adult Male Weight</td>
+                                <td class="p-3 text-left">56 - 120 kg (max 158 kg)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">משקל - נקבה בוגרת</td>
+                                <td class="p-3">36 עד 85 ק"ג</td>
+                                <td class="p-3 text-left text-slate-400">Adult Female Weight</td>
+                                <td class="p-3 text-left">36 - 85 kg</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">תוחלת חיים (טבע)</td>
+                                <td class="p-3">12 עד 15 שנים</td>
+                                <td class="p-3 text-left text-slate-400">Lifespan (Wild)</td>
+                                <td class="p-3 text-left">12 - 15 years</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">כוח נשיכה (Bite Force)</td>
+                                <td class="p-3">כ-1500 PSI (החזק ביחס לגוף)</td>
+                                <td class="p-3 text-left text-slate-400">Bite Force</td>
+                                <td class="p-3 text-left">~1500 PSI</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. ייחודיות אנטומית וביולוגית -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">אנטומיה וביולוגיה (Anatomy & Biology)</h3>
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300">
+                    <p><strong>מבנה גוף מאסיבי:</strong> בניגוד לנמר (Leopard) האפריקני והאסיאתי שהוא רזה וגמיש יותר, היגואר בנוי כמו מרים משקולות. יש לו חזה רחב, גפיים קצרות ושריריות מאוד, וראש גדול ועבה המותאם לספק את עוצמת הנשיכה האדירה שלו.</p>
+                    <p><strong>חברבורות כפולות:</strong> קל להבדיל בין יגואר לנמר בעזרת הפרווה. ליגואר יש "רוזטות" (חברבורות דמויות שושנה) גדולות יותר מאשר לנמר, **ובמרכז כל רוזטה ישנה נקודה שחורה אחת או יותר**. דפוס זה מספק הסוואה מעולה ביערות הגשם של האמזונס.</p>
+                    <p><strong>אמפוסים שחיינים:</strong> בדומה לטיגריס, היגואר לא רק שאינו מפחד ממים, אלא הוא שחיין מצטיין וצייד מיומן בתוך הנהרות. הוא מסוגל לארוב ולטרוף קיימנים (סוג של תנין) ואנקונדות בתוך המים עצמם.</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת (Full Etymology) -->
+            <section class="space-y-4">
+                <h3 class="text-amber-500 font-bold text-lg px-2">אטימולוגיה מורחבת (Etymology)</h3>
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2">1. הסוג: Panthera</h4>
+                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> בדומה לשאר החתולים הגדולים, המקור ביוונית עתיקה (pánthēr - πάνθηρ). בלשנים קושרים את המילה למקור הסנסקריטי "pundarīkam" שמשמעותו טיגריס.</p>
+                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> Derived from Ancient Greek 'pánthēr', linked to the Sanskrit word 'pundarīkam'.</p>
+                    </div>
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2">2. המין: onca</h4>
+                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> המילה *onca* מגיעה מהשפות הרומאניות (כמו הפורטוגזית *onça* או הספרדית *onza*). במקור, מקורה במילה הלטינית *lyncea* (שפירושה שונר או פרא מנומר). כאשר האירופאים הגיעו לדרום אמריקה וראו את החתול הענק הזה, הם השתמשו במילה שהכירו עבור חתולי בר מנומרים מאירופה.</p>
+                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> From Romance languages (e.g., Portuguese 'onça'), originally derived from Latin 'lyncea' (lynx). Used by early European explorers to describe the spotted American cat.</p>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2">3. השם העממי: יגואר (Jaguar)</h4>
+                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> השם מגיע ישירות מהשפות הילידיות של דרום אמריקה, ספציפית משפת הטופי-גוארני (Tupi-Guarani). המילה המקורית היא *yaguara* (יגווארה). המשמעות המילולית שלה מצמררת ומדויקת: "החיה שטורפת (או קורעת) את טרפה בזינוק אחד". זה מתאר במדויק את טכניקת הציד הייחודית של היגואר – זינוק פתאומי ונשיכה מרסקת ישירות לגולגולת או לעורף, בניגוד לחתולים אחרים שחונקים את טרפם דרך הגרון.</p>
+                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> Derived from the indigenous Tupi-Guarani word 'yaguara'. It literally translates to "he who kills with one leap", perfectly describing its unique hunting method of crushing the skull with a single bite rather than suffocating prey.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריית הגילוי ואבולוציה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2">הגילוי המקורי:</h4>
+                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> קוטלג ותואר מדעית לראשונה בשנת <strong>1758</strong> על ידי הזואולוג השוודי, <strong>קארל לינאוס</strong> (Carl Linnaeus, שנות חיים: 1707–1778), בדומה לשאר משפחת הפנתרים. לינאוס התבסס על תיאורים מדויקים של חוקרי טבע ואירופאים שחזרו מיבשת "העולם החדש" (דרום אמריקה).</p>
+                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Scientifically cataloged in 1758 by Carl Linnaeus (Lifespan: 1707–1778), based on descriptions from European explorers returning from the New World.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2">אבולוציה ותפוצה:</h4>
+                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> מבחינה אבולוציונית, היגואר קרוב יותר גנטית לנמר (Leopard) מאשר לטיגריס או לאריה, אף על פי שפיזית הוא נראה כשילוב בין נמר לטיגריס. אבותיו של היגואר חצו את מצר ברינג (Bering Strait) מאסיה לאמריקה הצפונית במהלך תור הפליסטוקן, ומשם התפשטו לדרום אמריקה. בעבר התפוצה שלו הגיעה עד דרום ארצות הברית.</p>
+                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Genetically, it is most closely related to the leopard. Its ancestors migrated from Asia across the Bering land bridge to the Americas during the Pleistocene epoch. Historically, its range extended into the southern US.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2">מצב שימור:</h4>
+                        <p class="text-sm text-slate-300">מוגדר כ"קרוב לסיכון" (Near Threatened - NT) על ידי הרשימה האדומה של IUCN. אוכלוסייתו העולמית נמצאת בירידה מתמדת עקב כריתת יערות הגשם של האמזונס, פיצול בתי גידול המקשה על רבייה, וקונפליקטים עם חוואים שהורגים אותם מחשש שיטרפו את הבקר שלהם. כיום הוא נכחד לחלוטין מרוב השטחים ההיסטוריים שלו בצפון ומרכז אמריקה.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-8 p-6 text-center text-slate-500 text-sm border-t border-slate-800 mx-6 pb-12">
+            <p>האתר נבנה על ידי ג'מיני ורם.</p>
+        </footer>
+
+    </div>
+
+    <!-- Modal לתמונה צפה -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/95 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-amber-500 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-2 border-slate-700">
+    </div>
+
+    <script>
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { imgEl.src = imgUrl; modal.classList.remove('hidden'); }
+        }
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
