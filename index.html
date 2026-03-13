@@ -15,7 +15,6 @@
         .quote-pill { background-color: var(--bg-pill); border: 1px solid rgba(255, 255, 255, 0.05); }
         .card-img-container { width: 85px; height: 85px; flex-shrink: 0; border-radius: 1.2rem; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.05); background-color: var(--bg-body); }
         .card-img-container img { width: 100%; height: 100%; object-fit: cover; }
-        .hover-accent-amber:hover { border-color: #f59e0b; } .hover-accent-orange:hover { border-color: #f97316; } .hover-accent-yellow:hover { border-color: #eab308; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col relative px-4 md:px-8">
@@ -44,26 +43,9 @@
         <section class="mb-16">
             <h2 id="catHeader" class="text-xs font-bold text-slate-500 uppercase tracking-[0.2em] mb-6 pl-2 text-center md:text-start">קטלוג החתוליים המלא</h2>
             
+            <!-- הקסם קורה כאן: הרשימה ריקה, ה-JS ימלא אותה! -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="catsGrid">
-                
-                <!-- 1. כפתור אריה -->
-                <a href="cats/lion.html" class="category-card p-4 rounded-3xl flex items-center space-x-4 space-x-reverse hover-accent-amber group">
-                    <div class="card-img-container ml-4"><img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=200" alt="אריה"></div>
-                    <div><h3 class="font-bold text-lg text-white" id="catLion"></h3><p class="text-[10px] text-slate-500 font-mono mt-1">Panthera leo</p></div>
-                </a>
-                
-                <!-- 2. כפתור טיגריס -->
-                <a href="cats/tiger.html" class="category-card p-4 rounded-3xl flex items-center space-x-4 space-x-reverse hover-accent-orange group">
-                    <div class="card-img-container ml-4"><img src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=200" alt="טיגריס"></div>
-                    <div><h3 class="font-bold text-lg text-white" id="catTiger"></h3><p class="text-[10px] text-slate-500 font-mono mt-1">Panthera tigris</p></div>
-                </a>
-
-                <!-- 3. כפתור נמר (Leopard) -->
-                <a href="cats/leopard.html" class="category-card p-4 rounded-3xl flex items-center space-x-4 space-x-reverse hover-accent-yellow group">
-                    <div class="card-img-container ml-4"><img src="https://images.unsplash.com/photo-1517028481483-346765cb1cb8?q=80&w=200" alt="נמר" onerror="this.src='https://via.placeholder.com/150/0a1122/eab308?text=🐆'"></div>
-                    <div><h3 class="font-bold text-lg text-white" id="catLeopard"></h3><p class="text-[10px] text-slate-500 font-mono mt-1">Panthera pardus</p></div>
-                </a>
-
+                <!-- הכרטיסיות יוזרקו לכאן דינמית -->
             </div>
         </section>
     </main>
@@ -83,7 +65,35 @@
         <div class="text-[9px] text-slate-700 uppercase tracking-[0.4em]">© 2026 The Feline Matrix | S25 Ultra</div>
     </footer>
 
-    <!-- טעינת קובץ הנתונים והשפות החיצוני -->
+    <!-- טעינת הנתונים והסקריפט המייצר -->
     <script src="data.js"></script>
+    <script>
+        function renderCats() {
+            const grid = document.getElementById('catsGrid');
+            grid.innerHTML = ''; // מנקה את הגריד
+            
+            // עובר על כל החתולים שהוגדרו ב-data.js ומייצר להם כפתור
+            catsData.forEach(cat => {
+                const title = currentLang === 'he' ? cat.nameHe : cat.nameEn;
+                const cardHtml = `
+                <a href="${cat.link}" class="category-card p-4 rounded-3xl flex items-center space-x-4 space-x-reverse group hover:border-[${cat.color}]">
+                    <div class="card-img-container ml-4"><img src="${cat.img}" alt="${title}" onerror="this.src='https://via.placeholder.com/150/0a1122/${cat.color.replace('#','')}?text=🐾'"></div>
+                    <div><h3 class="font-bold text-lg text-white">${title}</h3><p class="text-[10px] text-slate-500 font-mono mt-1">${cat.scientific}</p></div>
+                </a>
+                `;
+                grid.innerHTML += cardHtml;
+            });
+        }
+
+        // דריסה (החלפה) של פונקציית החלפת השפה מ-data.js כדי שתרנדר גם את החתולים מחדש
+        const originalToggle = window.toggleLanguage;
+        window.toggleLanguage = function() {
+            if(typeof originalToggle === 'function') originalToggle(); // מפעיל את העדכון של הכותרות
+            renderCats(); // מצייר מחדש את החתולים בשפה הנכונה
+        }
+
+        // ציור ראשוני
+        setTimeout(renderCats, 100);
+    </script>
 </body>
 </html>
