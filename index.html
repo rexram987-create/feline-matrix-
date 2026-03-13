@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מטריצת החתוליים | Feline Matrix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #020617; color: #e2e8f0; }
+        .samsung-optimize { max-width: 412px; margin: 0 auto; } /* אופטימיזציה לרוחב S25 Ultra */
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans antialiased">
+
+    <header class="p-6 border-b border-slate-800 text-center">
+        <h1 class="text-3xl font-bold text-amber-500">מטריצת החתוליים</h1>
+        <p class="text-sm text-slate-400 mt-2">מחקר זואולוגי מעמיק על משפחת ה-Felidae</p>
+    </header>
+
+    <main class="p-4 samsung-optimize min-h-screen">
+        <div class="grid grid-cols-1 gap-6 mt-6">
+            
+            <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-xl">
+                <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=1000" 
+                     alt="אריה" class="w-full h-48 object-cover cursor-pointer" 
+                     onclick="openModal(this.src)">
+                <div class="p-5 text-center">
+                    <h2 class="text-2xl font-bold mb-2">אריה (Panthera leo)</h2>
+                    <p class="text-slate-400 text-sm mb-4">מלך החיות - טורף העל של אפריקה.</p>
+                    <a href="cats/lion.html" class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full transition">למחקר המלא</a>
+                </div>
+            </div>
+
+            </div>
+    </main>
+
+    <div id="imageModal" class="fixed inset-0 bg-black/90 hidden z-50 flex items-center justify-center p-4" onclick="closeModal()">
+        <img id="modalImg" src="" class="max-w-full max-h-[80vh] rounded-lg shadow-2xl border-2 border-amber-500">
+    </div>
+
+    <footer class="p-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <p>האתר נבנה על ידי ג'מיני ורם</p>
+    </footer>
+
+    <script>
+        function openModal(src) {
+            document.getElementById('modalImg').src = src;
+            document.getElementById('imageModal').classList.remove('hidden');
+        }
+        function closeModal() {
+            document.getElementById('imageModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
