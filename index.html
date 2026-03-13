@@ -2,110 +2,88 @@
 <html lang="he" dir="rtl" class="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>מטריצת החתוליים | The Feline Matrix</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        darkBg: '#0f172a',
-                        cardBg: '#1e293b',
-                        accent: '#f59e0b' /* צבע זהב/ענבר מותאם לחתוליים */
-                    }
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        body { 
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-            -webkit-tap-highlight-color: transparent;
-            line-height: 1.7;
-            background: radial-gradient(circle at top right, #1e293b, #020617);
-        }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #020617; }
-        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
-        
-        /* עיצוב כרטיסיות החתולים - פרימיום ריבועי מבוסס אטלס המדינות */
-        .cat-card {
-            @apply relative flex flex-col items-center justify-center h-40 bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-[1.5rem] p-4 text-center transition-all duration-300 overflow-hidden shadow-[0_8px_15px_rgba(0,0,0,0.4)];
-        }
-        .cat-card:hover, .cat-card:active {
-            @apply border-accent shadow-[0_0_25px_rgba(245,158,11,0.25)] -translate-y-2 bg-gradient-to-br from-slate-800 to-slate-950;
-        }
-        .cat-card::after {
-            content: '';
-            @apply absolute inset-0 bg-gradient-to-tr from-accent/0 via-accent/5 to-accent/0 opacity-0 transition-opacity duration-300 pointer-events-none;
-        }
-        .cat-card:hover::after, .cat-card:active::after {
-            @apply opacity-100;
-        }
+    <style>
+        :root { --bg-body: #030712; --bg-card: #0a1122; --bg-pill: #132342; --border-card: #1d365d; --text-accent: #f59e0b; }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); line-height: 1.6; transition: all 0.3s ease; }
+        .category-card { background-color: var(--bg-card); border: 1px solid var(--border-card); transition: all 0.3s ease; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5); }
+        .category-card:hover { border-color: rgba(255, 255, 255, 0.2); transform: translateY(-2px); box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.8); }
+        .intro-box { background-color: var(--bg-card); border: 1px solid var(--border-card); border-radius: 2.5rem; box-shadow: 0 15px 35px -10px rgba(0,0,0,0.6); border-right: 4px solid var(--text-accent); }
+        [dir="ltr"] .intro-box { border-right: 1px solid var(--border-card); border-left: 4px solid var(--text-accent); }
+        .quote-pill { background-color: var(--bg-pill); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .card-img-container { width: 85px; height: 85px; flex-shrink: 0; border-radius: 1.2rem; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.05); background-color: var(--bg-body); }
+        .card-img-container img { width: 100%; height: 100%; object-fit: cover; }
+        .hover-accent-amber:hover { border-color: #f59e0b; } .hover-accent-orange:hover { border-color: #f97316; } .hover-accent-yellow:hover { border-color: #eab308; }
     </style>
 </head>
-<body class="bg-darkBg text-slate-200 min-h-screen antialiased flex flex-col items-center p-4 sm:p-6 lg:p-10">
-    
-    <!-- כפתורי ניווט עליונים -->
-    <div class="w-full max-w-5xl flex justify-between items-center mb-6 z-20">
-        <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-800/80 backdrop-blur border border-slate-600 px-6 py-2 rounded-full text-xs font-bold text-accent hover:bg-slate-700 transition-all shadow-lg active:scale-95">EN</button>
-        <a href="about.html" id="topAboutBtn" class="bg-slate-800/80 backdrop-blur border border-slate-600 px-6 py-2 rounded-full text-xs font-bold text-slate-300 hover:text-white transition-all shadow-lg active:scale-95">אודות</a>
-    </div>
+<body class="min-h-screen flex flex-col relative px-4 md:px-8">
 
-    <!-- כותרת האתר ומטא-דאטה -->
-    <header class="w-full max-w-5xl bg-cardBg/80 backdrop-blur-xl rounded-[2.5rem] shadow-2xl p-8 sm:p-12 mb-14 border border-slate-700 relative">
-        
-        <!-- אייקון טביעת רגל (מחליף את דגל ארה"ב) -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-24 h-24 mx-auto mb-8 text-accent drop-shadow-[0_10px_15px_rgba(245,158,11,0.3)]">
-            <path d="M12 11.5c1.93 0 3.5-1.57 3.5-3.5S13.93 4.5 12 4.5 8.5 6.07 8.5 8s1.57 3.5 3.5 3.5zm-6.5-2c1.38 0 2.5-1.12 2.5-2.5S6.88 4.5 5.5 4.5 3 5.62 3 7s1.12 2.5 2.5 2.5zm13 0c1.38 0 2.5-1.12 2.5-2.5S19.88 4.5 18.5 4.5 16 5.62 16 7s1.12 2.5 2.5 2.5zm-5 4c-3.1 0-6 1.7-7.5 4.2C5.12 19.18 6.47 21 8.5 21h7c2.03 0 3.38-1.82 2.5-3.3C16.5 15.2 13.6 13.5 12 13.5z"/>
-        </svg>
-
-        <div class="text-center mb-10">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight mb-4 drop-shadow-lg" id="mainTitle">
-                מטריצת החתוליים
-            </h1>
-            <p class="text-accent text-xl sm:text-2xl font-black tracking-[0.2em] uppercase mb-4">
-                Apex Predators
-            </p>
-            <div class="h-1.5 w-32 bg-accent mx-auto rounded-full mb-6 shadow-[0_0_10px_rgba(245,158,11,0.5)]"></div>
-            <p class="text-slate-400 text-lg font-medium max-w-2xl mx-auto leading-relaxed" id="mainSub">
-                מסע אבולוציוני וזואולוגי לחקר טורפי העל המרתקים ביותר בטבע - משפחת ה-Felidae.
-            </p>
+    <header class="pt-10 pb-8 max-w-5xl mx-auto w-full relative z-10">
+        <div class="flex justify-between items-center w-full mb-8">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-6 py-2.5 rounded-full text-xs font-bold text-amber-500 hover:bg-amber-600 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="about.html" id="topAboutBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-6 py-2.5 rounded-full text-xs font-bold text-slate-300 hover:text-white transition-all shadow-lg active:scale-95">אודות</a>
         </div>
-
-        <!-- פסקת לאונרדו דה וינצ'י -->
-        <div class="bg-slate-900/60 p-8 rounded-[2rem] border-r-4 border-accent shadow-inner">
-            <h2 class="text-2xl font-black text-white mb-6 border-b border-slate-700 pb-3" id="introTitle">מכונת הציד המושלמת</h2>
-            <div class="space-y-6 text-slate-300 text-lg leading-relaxed">
-                <p id="p1"></p>
-                <div class="bg-slate-800/50 p-5 rounded-xl border border-slate-700/50">
-                    <p class="text-accent font-medium italic" id="p2"></p>
-                </div>
-            </div>
+        <div class="text-center">
+            <div class="inline-block px-4 py-1.5 mb-6 text-[10px] font-bold tracking-widest text-amber-500 uppercase bg-amber-900/20 rounded-full border border-amber-800/30">Zoological & Evolutionary Research</div>
+            <h1 id="mainTitle" class="text-4xl md:text-5xl font-black mb-4 text-white tracking-tight">מטריצת <span class="text-amber-500">החתוליים</span></h1>
+            <p id="mainSub" class="text-slate-400 text-sm md:text-base max-w-lg mx-auto leading-relaxed"></p>
         </div>
     </header>
 
-    <!-- רשת החתולים (Grid מעוצב) -->
-    <main class="w-full max-w-5xl flex-grow">
-        <div class="flex items-center mb-8">
-            <div class="w-2 h-8 bg-accent rounded-full mr-3 ml-4 shadow-[0_0_10px_rgba(245,158,11,0.8)]"></div>
-            <h2 class="text-2xl font-black text-white" id="catHeader">
-                קטלוג החתוליים המלא
-            </h2>
-        </div>
-        
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 sm:gap-6 mb-16">
+    <main class="flex-grow container mx-auto max-w-5xl relative z-10">
+        <section class="mb-12 intro-box p-6 md:p-8 max-w-3xl mx-auto" id="introBox">
+            <h2 id="introTitle" class="text-xl md:text-2xl font-bold text-amber-500 mb-5 pb-2 inline-flex items-center"></h2>
+            <div id="introContent" class="space-y-6 text-slate-300 leading-relaxed text-sm md:text-base text-justify">
+                <p id="p1"></p>
+                <div class="quote-pill p-5 rounded-2xl"><p class="text-sm text-slate-300" id="p2"></p></div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 id="catHeader" class="text-xs font-bold text-slate-500 uppercase tracking-[0.2em] mb-6 pl-2 text-center md:text-start">קטלוג החתוליים המלא</h2>
             
-            <!-- כרטיס אריה -->
-            <a href="cats/lion.html" class="cat-card group">
-                <span class="text-slate-500 mb-2 transform transition-transform group-hover:scale-125 duration-500 text-4xl drop-shadow-md">🦁</span>
-                <span class="text-lg font-black text-slate-300 group-hover:text-white tracking-wide z-10 relative" id="catLion">אריה</span>
-                <span class="text-[10px] text-slate-500 font-mono mt-1 opacity-70 group-hover:text-accent transition-colors">Panthera leo</span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="catsGrid">
+                
+                <!-- 1. כפתור אריה -->
+                <a href="cats/lion.html" class="category-card p-4 rounded-3xl flex items-center space-x-4 space-x-reverse hover-accent-amber group">
+                    <div class="card-img-container ml-4"><img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=200" alt="אריה"></div>
+                    <div><h3 class="font-bold text-lg text-white" id="catLion"></h3><p class="text-[10px] text-slate-500 font-mono mt-1">Panthera leo</p></div>
+                </a>
+                
+                <!-- 2. כפתור טיגריס -->
+                <a href="cats/tiger.html" class="category-card p-4 rounded-3xl flex items-center space-x-4 space-x-reverse hover-accent-orange group">
+                    <div class="card-img-container ml-4"><img src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=200" alt="טיגריס"></div>
+                    <div><h3 class="font-bold text-lg text-white" id="catTiger"></h3><p class="text-[10px] text-slate-500 font-mono mt-1">Panthera tigris</p></div>
+                </a>
+
+                <!-- 3. כפתור נמר (Leopard) -->
+                <a href="cats/leopard.html" class="category-card p-4 rounded-3xl flex items-center space-x-4 space-x-reverse hover-accent-yellow group">
+                    <div class="card-img-container ml-4"><img src="https://images.unsplash.com/photo-1517028481483-346765cb1cb8?q=80&w=200" alt="נמר" onerror="this.src='https://via.placeholder.com/150/0a1122/eab308?text=🐆'"></div>
+                    <div><h3 class="font-bold text-lg text-white" id="catLeopard"></h3><p class="text-[10px] text-slate-500 font-mono mt-1">Panthera pardus</p></div>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-auto border-t border-white/5 pt-12 pb-16 text-center px-6 bg-[#02050c]">
+        <div class="flex justify-center items-center space-x-12 space-x-reverse mb-10">
+            <a href="index.html" class="flex flex-col items-center text-amber-500 transition-transform active:scale-95">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+                <span class="text-[10px] mt-1 font-bold tracking-widest" id="navHome">בית</span>
             </a>
-            
-            <!-- כרטיס טיגריס -->
-            <a href="cats/tiger.html" class="cat-card group">
-                <span class="text-slate-500 mb-2 transform transition-transform group-hover:scale-125 duration-500 text-4xl drop-shadow-md">🐅</span>
-                <span class="text-lg font-black text-slate-300 group-hover:text-white tracking-wide z-
+            <a href="about.html" class="flex flex-col items-center text-slate-500 hover:text-amber-400 transition-transform active:scale-95">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span class="text-[10px] mt-1 tracking-widest" id="navAbout">אודות</span>
+            </a>
+        </div>
+        <p id="footerText" class="text-slate-500 text-xs max-w-md mx-auto leading-relaxed mb-4"></p>
+        <div class="text-[9px] text-slate-700 uppercase tracking-[0.4em]">© 2026 The Feline Matrix | S25 Ultra</div>
+    </footer>
+
+    <!-- טעינת קובץ הנתונים והשפות החיצוני -->
+    <script src="data.js"></script>
+</body>
+</html>
