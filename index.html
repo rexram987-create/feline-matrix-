@@ -6,49 +6,97 @@
     <title>מטריצת החתוליים | Feline Matrix</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
         body { background-color: #020617; color: #e2e8f0; }
-        .samsung-optimize { max-width: 412px; margin: 0 auto; } /* אופטימיזציה לרוחב S25 Ultra */
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            min-height: 100vh;
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; }
+        }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-200 font-sans antialiased">
+<body class="bg-slate-950 text-slate-200 font-sans antialiased selection:bg-amber-500/30">
 
-    <header class="p-6 border-b border-slate-800 text-center">
-        <h1 class="text-3xl font-bold text-amber-500">מטריצת החתוליים</h1>
-        <p class="text-sm text-slate-400 mt-2">מחקר זואולוגי מעמיק על משפחת ה-Felidae</p>
-    </header>
+    <div class="samsung-s25-container flex flex-col">
+        
+        <!-- Header -->
+        <header class="p-8 border-b border-slate-800 text-center bg-slate-900/50 backdrop-blur-sm sticky top-0 z-40 shadow-md">
+            <h1 class="text-3xl font-extrabold bg-gradient-to-l from-amber-400 to-orange-500 bg-clip-text text-transparent drop-shadow-sm">מטריצת החתוליים</h1>
+            <p class="text-sm text-slate-400 mt-2 font-medium tracking-wide">מחקר זואולוגי ואבולוציוני על משפחת ה-Felidae</p>
+        </header>
 
-    <main class="p-4 samsung-optimize min-h-screen">
-        <div class="grid grid-cols-1 gap-6 mt-6">
+        <!-- Main Content (Cards Grid) -->
+        <main class="flex-grow p-4 md:p-6 mt-4">
+            <h2 class="text-xl font-bold text-slate-300 mb-6 px-2 border-r-4 border-amber-500 pr-3">תת-משפחה: חתולים גדולים (Pantherinae)</h2>
             
-            <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-xl">
-                <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=1000" 
-                     alt="אריה" class="w-full h-48 object-cover cursor-pointer" 
-                     onclick="openModal(this.src)">
-                <div class="p-5 text-center">
-                    <h2 class="text-2xl font-bold mb-2">אריה (Panthera leo)</h2>
-                    <p class="text-slate-400 text-sm mb-4">מלך החיות - טורף העל של אפריקה.</p>
-                    <a href="cats/lion.html" class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full transition">למחקר המלא</a>
-                </div>
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- כרטיס: אריה -->
+                <article class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-xl hover:border-amber-500/50 transition-colors duration-300 group">
+                    <div class="relative h-48 overflow-hidden">
+                        <button onclick="openImageModal('https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=1000')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer focus:outline-none block">
+                            <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=1000" alt="אריה" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </button>
+                    </div>
+                    <div class="p-5 text-center flex flex-col h-[calc(100%-12rem)]">
+                        <h3 class="text-2xl font-bold mb-1 text-white">אריה <span class="text-lg font-normal text-slate-400 block">(Panthera leo)</span></h3>
+                        <p class="text-slate-400 text-sm mb-5 flex-grow">החתול החברתי היחיד, חי בלהקות. זכרים מתהדרים ברעמה המעידה על דומיננטיות.</p>
+                        <a href="cats/lion.html" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium px-6 py-2.5 rounded-full transition-colors w-full sm:w-auto shadow-lg shadow-amber-900/20">כניסה למחקר המלא</a>
+                    </div>
+                </article>
+
+                <!-- כרטיס: טיגריס -->
+                <article class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-xl hover:border-orange-500/50 transition-colors duration-300 group">
+                    <div class="relative h-48 overflow-hidden">
+                        <button onclick="openImageModal('https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1000')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer focus:outline-none block">
+                            <img src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1000" alt="טיגריס" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </button>
+                    </div>
+                    <div class="p-5 text-center flex flex-col h-[calc(100%-12rem)]">
+                        <h3 class="text-2xl font-bold mb-1 text-white">טיגריס <span class="text-lg font-normal text-slate-400 block">(Panthera tigris)</span></h3>
+                        <p class="text-slate-400 text-sm mb-5 flex-grow">החתול הגדול בעולם. טורף על מתבודד המזוהה בפרוותו הכתומה ובדפוס הפסים הייחודי שלו.</p>
+                        <a href="cats/tiger.html" class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-medium px-6 py-2.5 rounded-full transition-colors w-full sm:w-auto shadow-lg shadow-orange-900/20">כניסה למחקר המלא</a>
+                    </div>
+                </article>
 
             </div>
-    </main>
+        </main>
 
-    <div id="imageModal" class="fixed inset-0 bg-black/90 hidden z-50 flex items-center justify-center p-4" onclick="closeModal()">
-        <img id="modalImg" src="" class="max-w-full max-h-[80vh] rounded-lg shadow-2xl border-2 border-amber-500">
+        <!-- Footer -->
+        <footer class="p-8 border-t border-slate-800 text-center text-slate-500 text-sm mt-auto">
+            <p>האתר נבנה על ידי ג'מיני ורם.</p>
+        </footer>
+
     </div>
 
-    <footer class="p-8 border-t border-slate-800 text-center text-slate-500 text-sm">
-        <p>האתר נבנה על ידי ג'מיני ורם</p>
-    </footer>
+    <!-- Modal לתמונה צפה (המנגנון היציב) -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/95 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-amber-500 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-2 border-slate-700">
+    </div>
 
     <script>
-        function openModal(src) {
-            document.getElementById('modalImg').src = src;
-            document.getElementById('imageModal').classList.remove('hidden');
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            
+            if(modal && imgEl) {
+                imgEl.src = imgUrl;
+                modal.classList.remove('hidden');
+            }
         }
-        function closeModal() {
-            document.getElementById('imageModal').classList.add('hidden');
+
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => {
+                    document.getElementById('modalFullImg').src = '';
+                }, 100);
+            }
         }
     </script>
 </body>
