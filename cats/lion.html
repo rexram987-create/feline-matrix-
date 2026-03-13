@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אריה (Panthera leo) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra ברוחב 412px */
+        body { background-color: #020617; color: #e2e8f0; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        /* עיצוב פס גלילה מותאם למצב כהה */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans antialiased selection:bg-amber-500/30">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט חזרה -->
+        <nav class="absolute top-4 right-4 z-10">
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-amber-600 transition border border-white/10 flex items-center gap-2">
+                <span>&rarr;</span> חזרה למטריצה
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=1000" alt="אריה זכר בטבע" class="w-full h-full object-cover cursor-pointer" onclick="openModal(this.src)">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent"></div>
+            <div class="absolute bottom-0 p-6 w-full">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-amber-500/20 text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/30">Pantherinae</span>
+                    <span class="text-slate-400 text-sm tracking-widest">מלך החיות</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1">אריה</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Panthera leo</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. כותרות ומידע בסיסי -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">תעודת זהות זואולוגית</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Lion</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "King of Beasts"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי (HE):</strong> החתול החברתי היחיד, חי בלהקות (Prides) המבוססות על קשרים משפחתיים הדוקים של הנקבות; לזכרים רעמה מפוארת המעידה על בריאותם ורמות הטסטוסטרון שלהם.</li>
+                    <li><strong class="text-slate-400">Unique Feature (EN):</strong> The only highly social feline species, living in female-led prides; males possess a prominent mane indicating health and testosterone levels.</li>
+                </ul>
+            </section>
+
+            <!-- 2. גריד נתונים סטטיסטיים -->
+            <section class="space-y-4">
+                <h3 class="text-amber-500 font-bold text-lg px-2">נתונים סטטיסטיים (Stats)</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-right bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3">פרמטר (HE)</th>
+                                <th class="p-3">ערך (HE)</th>
+                                <th class="p-3 text-left">Parameter (EN)</th>
+                                <th class="p-3 text-left">Value (EN)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">היריון</td>
+                                <td class="p-3">כ-110 ימים</td>
+                                <td class="p-3 text-left text-slate-400">Gestation</td>
+                                <td class="p-3 text-left">~110 days</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">אורך גוף (ללא זנב)</td>
+                                <td class="p-3">1.8 עד 2.5 מטרים</td>
+                                <td class="p-3 text-left text-slate-400">Body Length</td>
+                                <td class="p-3 text-left">1.8 - 2.5 meters</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">משקל זכר בוגר</td>
+                                <td class="p-3">150 עד 250 ק"ג</td>
+                                <td class="p-3 text-left text-slate-400">Adult Male Weight</td>
+                                <td class="p-3 text-left">150 - 250 kg</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">תוחלת חיים (טבע)</td>
+                                <td class="p-3">10 עד 14 שנים</td>
+                                <td class="p-3 text-left text-slate-400">Lifespan (Wild)</td>
+                                <td class="p-3 text-left">10 - 14 years</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">מהירות ריצה</td>
+                                <td class="p-3">עד 80 קמ"ש לפרצים קצרים</td>
+                                <td class="p-3 text-left text-slate-400">Top Speed</td>
+                                <td class="p-3 text-left">Up to 80 km/h (bursts)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. ייחודיות אנטומית וביולוגית -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">אנטומיה וביולוגיה (Anatomy & Biology)</h3>
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300">
+                    <p><strong>שאגה מהדהדת:</strong> האריה ניחן במיתרי קול מעובים ובעצם לשון (Hyoid bone) גמישה במיוחד, המאפשרים לו להפיק שאגה אדירה שניתן לשמוע למרחק של עד 8 קילומטרים. השאגה משמשת לסימון טריטוריה ותקשורת בין חברי הלהקה.</p>
+                    <p><strong>הרעמה:</strong> מאפיין ייחודי לזכרים. גודלה וצבעה של הרעמה (בהירה עד שחורה לחלוטין) מושפעים מגורמים גנטיים, גיל, אקלים ורמות טסטוסטרון. רעמה כהה ושופעת מעידה על זכר בריא ודומיננטי, ומשמשת כהגנה מפני נשיכות בצוואר במהלך קרבות.</p>
+                </div>
+            </section>
+
+            <!-- 5. אטימולוגיה מורחבת (Full Etymology) -->
+            <section class="space-y-4">
+                <h3 class="text-amber-500 font-bold text-lg px-2">אטימולוגיה מורחבת (Etymology)</h3>
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2">1. הסוג: Panthera</h4>
+                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> מקור המילה ביוונית עתיקה (pánthēr - πάνθηρ). היסטורית, רבים חשבו בטעות כי המילה מורכבת מ-"pan" (הכול) ו-"thēr" (צייד/חיה), כלומר "צייד-הכול". עם זאת, בלשנים מודרניים סבורים שהמקור עתיק אף יותר ומגיע מהמילה הסנסקריטית "pundarīkam" שמשמעותה המקורית הייתה טיגריס.</p>
+                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> Derived from Ancient Greek 'pánthēr'. Historically subjected to folk etymology as 'pan' (all) + 'thēr' (beast/hunter). Modern linguistics links it to the Sanskrit word 'pundarīkam' (tiger).</p>
+                    </div>
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2">2. המין: leo</h4>
+                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> המילה מגיעה ישירות מלטינית (leo), ששאבה אותה מהמילה היוונית העתיקה λέων (léōn). מקור המילה היוונית אינו ידוע בוודאות, אך חוקרים משערים כי היא הושאלה משפה שמית קדומה, בדומה למילה העברית העתיקה "לביא".</p>
+                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> From Latin 'leo', derived from Ancient Greek 'léōn'. The ultimate origin is obscure, heavily suspected to be a loanword from an ancient Semitic language, related to the Hebrew 'lavi'.</p>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2">3. השם העברי: אריה / לביא</h4>
+                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> המילה "אריה" מופיעה בתנ"ך פעמים רבות כסמל לעוצמה וגבורה (למשל: "גור אריה יהודה"). קיימים בשפה העברית מספר שמות נרדפים מרשימים המעידים על חשיבותו התרבותית באזורנו: לביא, כפיר (אריה צעיר), ליש, ושחל.</p>
+                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> The Hebrew word 'Aryeh' is prominent in the Bible, symbolizing ultimate power and courage. Hebrew has multiple distinct names for lions at different life stages, underscoring their profound historical presence in the Levant.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. היסטוריית הגילוי ואבולוציה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2">הגילוי המקורי:</h4>
+                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> קוטלג ותואר מדעית לראשונה בשנת <strong>1758</strong> על ידי הזואולוג השוודי הנודע, <strong>קארל לינאוס</strong> (Carl Linnaeus, שנות חיים: 1707–1778), בספרו המפורסם <em>Systema Naturae</em> בו הניח את היסודות לטקסונומיה המודרנית.</p>
+                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Scientifically cataloged in 1758 by the renowned Swedish zoologist Carl Linnaeus (Lifespan: 1707–1778) in his pivotal work Systema Naturae.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2">אבולוציה ומקורות קדומים:</h4>
+                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> האבולוציה של הסוג <em>Panthera</em> החלה באסיה לפני כ-6 מיליון שנים. האריה המודרני הופיע לראשונה באפריקה לפני כ-120,000 שנה. אבות קדמונים מפורסמים כוללים את "אריה המערות האירופי" (Panthera spelaea) ואת "האריה האמריקני" (Panthera atrox) העצום, שנכחדו שניהם בסוף תקופת הקרח האחרונה, לפני כ-10,000 שנה.</p>
+                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> The Panthera lineage originated in Asia ~6 million years ago. Modern lions emerged ~120,000 years ago. Famous extinct relatives include the Cave Lion and the massive American Lion, which vanished ~10,000 years ago.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2">מצב שימור:</h4>
+                        <p class="text-sm text-slate-300">מוגדר כ"פגיע" (Vulnerable - VU) על ידי הרשימה האדומה של IUCN. אוכלוסיית האריות חוותה ירידה דרסטית של כ-43% בשני העשורים האחרונים עקב אובדן שטחי מחיה, קונפליקטים עם בני אדם וציד בלתי חוקי. כיום מעריכים שנותרו פחות מ-25,000 פרטים בטבע.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer כפי שנדרש -->
+        <footer class="mt-8 p-6 text-center text-slate-500 text-sm border-t border-slate-800 mx-6 pb-12">
+            <p>האתר נבנה על ידי ג'מיני ורם.</p>
+        </footer>
+
+    </div>
+
+    <!-- Modal לתמונה צפה (כמו בדף הבית) -->
+    <div id="imageModal" class="fixed inset-0 bg-black/95 hidden z-50 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0" onclick="closeModal()">
+        <button class="absolute top-6 right-6 text-white text-3xl font-bold hover:text-amber-500">&times;</button>
+        <img id="modalImg" src="" class="max-w-full max-h-[85vh] rounded-lg shadow-2xl border border-slate-700 pointer-events-none">
+    </div>
+
+    <script>
+        // פונקציות להצגת התמונה בחלון צף
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImg');
+
+        function openModal(src) {
+            modalImg.src = src;
+            modal.classList.remove('hidden');
+            // אפקט Fade-in
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.classList.add('opacity-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+    </script>
+</body>
+</html>
