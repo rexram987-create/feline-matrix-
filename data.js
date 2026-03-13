@@ -61,6 +61,15 @@ const catsData = [
         img: "https://images.unsplash.com/photo-1602491453631-e2a56e4173a7?q=80&w=200",
         link: "cats/jaguar.html",
         color: "#fbbf24" // ענבר בהיר
+    },
+    {
+        id: "cheetah",
+        nameHe: "חתולים קטנים (ברדלס)",
+        nameEn: "Small Cats (Cheetah)",
+        scientific: "Acinonyx jubatus",
+        img: "https://images.unsplash.com/photo-1551927336-09d50efd69cd?q=80&w=200",
+        link: "cats/cheetah.html",
+        color: "#facc15" // צהוב מהיר
     }
 ];
 
