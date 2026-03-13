@@ -43,9 +43,8 @@
         <section class="mb-16">
             <h2 id="catHeader" class="text-xs font-bold text-slate-500 uppercase tracking-[0.2em] mb-6 pl-2 text-center md:text-start">קטלוג החתוליים המלא</h2>
             
-            <!-- הקסם קורה כאן: הרשימה ריקה, ה-JS ימלא אותה! -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="catsGrid">
-                <!-- הכרטיסיות יוזרקו לכאן דינמית -->
+                <p class="text-slate-500 text-sm animate-pulse">טוען נתונים אבולוציוניים...</p>
             </div>
         </section>
     </main>
@@ -65,35 +64,39 @@
         <div class="text-[9px] text-slate-700 uppercase tracking-[0.4em]">© 2026 The Feline Matrix | S25 Ultra</div>
     </footer>
 
-    <!-- טעינת הנתונים והסקריפט המייצר -->
-    <script src="data.js"></script>
+    <!-- טעינת הנתונים עם פרמטר v=2 שעוקף את זיכרון המטמון (Cache Buster) -->
+    <script src="data.js?v=2"></script>
     <script>
         function renderCats() {
             const grid = document.getElementById('catsGrid');
-            grid.innerHTML = ''; // מנקה את הגריד
-            
-            // עובר על כל החתולים שהוגדרו ב-data.js ומייצר להם כפתור
-            catsData.forEach(cat => {
-                const title = currentLang === 'he' ? cat.nameHe : cat.nameEn;
-                const cardHtml = `
-                <a href="${cat.link}" class="category-card p-4 rounded-3xl flex items-center space-x-4 space-x-reverse group hover:border-[${cat.color}]">
-                    <div class="card-img-container ml-4"><img src="${cat.img}" alt="${title}" onerror="this.src='https://via.placeholder.com/150/0a1122/${cat.color.replace('#','')}?text=🐾'"></div>
-                    <div><h3 class="font-bold text-lg text-white">${title}</h3><p class="text-[10px] text-slate-500 font-mono mt-1">${cat.scientific}</p></div>
-                </a>
-                `;
-                grid.innerHTML += cardHtml;
-            });
+            try {
+                // מנסה לצייר את הכפתורים. אם יש בעיה ב-data.js זה יקפוץ ל-catch
+                grid.innerHTML = ''; 
+                catsData.forEach(cat => {
+                    const title = currentLang === 'he' ? cat.nameHe : cat.nameEn;
+                    const cardHtml = `
+                    <a href="${cat.link}" class="category-card p-4 rounded-3xl flex items-center space-x-4 space-x-reverse group hover:border-[${cat.color}]">
+                        <div class="card-img-container ml-4"><img src="${cat.img}" alt="${title}" onerror="this.src='https://via.placeholder.com/150/0a1122/${cat.color.replace('#','')}?text=🐾'"></div>
+                        <div><h3 class="font-bold text-lg text-white">${title}</h3><p class="text-[10px] text-slate-500 font-mono mt-1">${cat.scientific}</p></div>
+                    </a>
+                    `;
+                    grid.innerHTML += cardHtml;
+                });
+            } catch (error) {
+                // אם יש שגיאה, נציג אותה כדי לדעת מה לתקן!
+                grid.innerHTML = `<div class="p-4 bg-red-900/30 border border-red-500 rounded-lg text-red-400 text-sm">שגיאה בטעינת נתונים: ${error.message} <br> אנא ודא שקובץ data.js תקין בגיטהאב.</div>`;
+            }
         }
 
         // דריסה (החלפה) של פונקציית החלפת השפה מ-data.js כדי שתרנדר גם את החתולים מחדש
         const originalToggle = window.toggleLanguage;
         window.toggleLanguage = function() {
-            if(typeof originalToggle === 'function') originalToggle(); // מפעיל את העדכון של הכותרות
-            renderCats(); // מצייר מחדש את החתולים בשפה הנכונה
+            if(typeof originalToggle === 'function') originalToggle(); 
+            renderCats(); 
         }
 
-        // ציור ראשוני
-        setTimeout(renderCats, 100);
+        // ציור ראשוני אחרי השהייה קלה כדי לוודא שהנתונים נטענו
+        setTimeout(renderCats, 200);
     </script>
 </body>
 </html>
