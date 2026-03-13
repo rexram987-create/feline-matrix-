@@ -25,7 +25,6 @@ const content = {
 };
 
 // רשימת החתולים המלאה (מייצרת את הכפתורים דינמית!)
-// ככה נוכל להוסיף 40 חתולים בקלות.
 const catsData = [
     {
         id: "lion",
@@ -53,6 +52,15 @@ const catsData = [
         img: "https://images.unsplash.com/photo-1517028481483-346765cb1cb8?q=80&w=200",
         link: "cats/leopard.html",
         color: "#eab308" // צהוב
+    },
+    {
+        id: "jaguar",
+        nameHe: "חתולים גדולים (יגואר)",
+        nameEn: "Big Cats (Jaguar)",
+        scientific: "Panthera onca",
+        img: "https://images.unsplash.com/photo-1602491453631-e2a56e4173a7?q=80&w=200",
+        link: "cats/jaguar.html",
+        color: "#fbbf24" // ענבר בהיר
     }
 ];
 
@@ -78,7 +86,6 @@ function toggleLanguage() {
     document.documentElement.lang = currentLang;
 }
 
-// אתחול כותרות דף הבית (החתולים יאופתחלו ב-index.html)
 window.onload = () => {
     currentLang = 'en'; // set opposite to trigger correct load
     toggleLanguage();
