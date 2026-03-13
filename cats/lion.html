@@ -25,7 +25,7 @@
         ::-webkit-scrollbar-thumb:hover { background: #475569; }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-200 font-sans antialiased selection:bg-amber-500/30">
+<body class="bg-slate-950 text-slate-200 font-sans antialiased selection:bg-amber-500/30 relative">
 
     <div class="samsung-s25-container relative pb-10">
         
@@ -38,9 +38,11 @@
 
         <!-- תמונת נושא ייצוגית -->
         <header class="relative w-full h-72 md:h-96">
-            <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=1000" alt="אריה זכר בטבע" class="w-full h-full object-cover cursor-pointer" onclick="openModal(this.src)">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent"></div>
-            <div class="absolute bottom-0 p-6 w-full">
+            <button onclick="openImageModal('https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=1000')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=1000" alt="אריה זכר בטבע" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none">
                 <div class="flex items-center gap-3 mb-2">
                     <span class="bg-amber-500/20 text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/30">Pantherinae</span>
                     <span class="text-slate-400 text-sm tracking-widest">מלך החיות</span>
@@ -64,7 +66,7 @@
                 </ul>
             </section>
 
-            <!-- 2. גריד נתונים סטטיסטיים -->
+            <!-- 2. גריד נתונים סטטיסטיים מורחב -->
             <section class="space-y-4">
                 <h3 class="text-amber-500 font-bold text-lg px-2">נתונים סטטיסטיים (Stats)</h3>
                 <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
@@ -85,16 +87,28 @@
                                 <td class="p-3 text-left">~110 days</td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">אורך גוף (ללא זנב)</td>
+                                <td class="p-3 font-medium text-slate-400">אורך גוף - זכר (ללא זנב)</td>
                                 <td class="p-3">1.8 עד 2.5 מטרים</td>
-                                <td class="p-3 text-left text-slate-400">Body Length</td>
+                                <td class="p-3 text-left text-slate-400">Male Body Length</td>
                                 <td class="p-3 text-left">1.8 - 2.5 meters</td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">משקל זכר בוגר</td>
+                                <td class="p-3 font-medium text-slate-400">אורך גוף - נקבה (ללא זנב)</td>
+                                <td class="p-3">1.4 עד 1.8 מטרים</td>
+                                <td class="p-3 text-left text-slate-400">Female Body Length</td>
+                                <td class="p-3 text-left">1.4 - 1.8 meters</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">משקל - זכר בוגר</td>
                                 <td class="p-3">150 עד 250 ק"ג</td>
                                 <td class="p-3 text-left text-slate-400">Adult Male Weight</td>
                                 <td class="p-3 text-left">150 - 250 kg</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">משקל - נקבה בוגרת</td>
+                                <td class="p-3">120 עד 180 ק"ג</td>
+                                <td class="p-3 text-left text-slate-400">Adult Female Weight</td>
+                                <td class="p-3 text-left">120 - 180 kg</td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
                                 <td class="p-3 font-medium text-slate-400">תוחלת חיים (טבע)</td>
@@ -173,33 +187,31 @@
 
     </div>
 
-    <!-- Modal לתמונה צפה (כמו בדף הבית) -->
-    <div id="imageModal" class="fixed inset-0 bg-black/95 hidden z-50 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0" onclick="closeModal()">
-        <button class="absolute top-6 right-6 text-white text-3xl font-bold hover:text-amber-500">&times;</button>
-        <img id="modalImg" src="" class="max-w-full max-h-[85vh] rounded-lg shadow-2xl border border-slate-700 pointer-events-none">
+    <!-- Modal לתמונה צפה -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/95 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-amber-500 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-2 border-slate-700">
     </div>
 
     <script>
-        // פונקציות להצגת התמונה בחלון צף
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImg');
-
-        function openModal(src) {
-            modalImg.src = src;
-            modal.classList.remove('hidden');
-            // אפקט Fade-in
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                modal.classList.add('opacity-100');
-            }, 10);
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            
+            if(modal && imgEl) {
+                imgEl.src = imgUrl;
+                modal.classList.remove('hidden');
+            }
         }
 
-        function closeModal() {
-            modal.classList.remove('opacity-100');
-            modal.classList.add('opacity-0');
-            setTimeout(() => {
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
                 modal.classList.add('hidden');
-            }, 300);
+                setTimeout(() => {
+                    document.getElementById('modalFullImg').src = '';
+                }, 100);
+            }
         }
     </script>
 </body>
