@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>קרקל (Caracal caracal) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #d97706; /* צבע אדמה/חול המזוהה עם הקרקל */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        /* עיצוב פס גלילה */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-amber-700/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט חזרה -->
+        <nav class="absolute top-4 right-4 z-10">
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-amber-600 transition border border-white/10 flex items-center gap-2">
+                <span>&rarr;</span> חזרה למטריצה
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('https://images.unsplash.com/photo-1615822646671-6ce93561a7a0?q=80&w=1000')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="https://images.unsplash.com/photo-1615822646671-6ce93561a7a0?q=80&w=1000" alt="קרקל במדבר" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-amber-700/40 text-amber-500 text-xs font-bold px-3 py-1 rounded-full border border-amber-600/30">Felinae (חתולים קטנים)</span>
+                    <span class="text-slate-400 text-sm tracking-widest">רוח המדבר</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1">קרקל</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Caracal caracal</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. כותרות ומידע בסיסי -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2">תעודת זהות זואולוגית</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Caracal</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "Desert Lynx" / "Gazelle Cat"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי (HE):</strong> חתול מדברי, גמיש ואתלטי בצורה יוצאת דופן. ניחן ביכולת ניתור אנכית של עד 3 מטרים מהמקום, המאפשרת לו לתפוס ציפורים במעופן, ומתאפיין בציציות שיער שחורות וארוכות בקצות אוזניו.</li>
+                    <li><strong class="text-slate-400">Unique Feature (EN):</strong> A highly athletic desert cat capable of leaping up to 3 meters vertically to catch birds in flight, characterized by long, prominent black tufts on its ears.</li>
+                </ul>
+            </section>
+
+            <!-- 2. גריד נתונים סטטיסטיים -->
+            <section class="space-y-4">
+                <h3 class="text-amber-600 font-bold text-lg px-2">נתונים סטטיסטיים (Stats)</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-right bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3">פרמטר (HE)</th>
+                                <th class="p-3">ערך (HE)</th>
+                                <th class="p-3 text-left">Parameter (EN)</th>
+                                <th class="p-3 text-left">Value (EN)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">היריון</td>
+                                <td class="p-3">78 עד 81 ימים</td>
+                                <td class="p-3 text-left text-slate-400">Gestation</td>
+                                <td class="p-3 text-left">78 - 81 days</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">אורך גוף - זכר (ללא זנב)</td>
+                                <td class="p-3">73 עד 105 ס"מ</td>
+                                <td class="p-3 text-left text-slate-400">Male Body Length</td>
+                                <td class="p-3 text-left">73 - 105 cm</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">אורך גוף - נקבה (ללא זנב)</td>
+                                <td class="p-3">61 עד 96 ס"מ</td>
+                                <td class="p-3 text-left text-slate-400">Female Body Length</td>
+                                <td class="p-3 text-left">61 - 96 cm</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">משקל - זכר בוגר</td>
+                                <td class="p-3">8 עד 20 ק"ג</td>
+                                <td class="p-3 text-left text-slate-400">Adult Male Weight</td>
+                                <td class="p-3 text-left">8 - 20 kg</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">משקל - נקבה בוגרת</td>
+                                <td class="p-3">6 עד 16 ק"ג</td>
+                                <td class="p-3 text-left text-slate-400">Adult Female Weight</td>
+                                <td class="p-3 text-left">6 - 16 kg</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">תוחלת חיים (טבע)</td>
+                                <td class="p-3">10 עד 12 שנים (עד 17 בשבי)</td>
+                                <td class="p-3 text-left text-slate-400">Lifespan (Wild)</td>
+                                <td class="p-3 text-left">10 - 12 years</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">יכולת ניתור (אנכי)</td>
+                                <td class="p-3">עד 3 מטרים לגובה מהמקום</td>
+                                <td class="p-3 text-left text-slate-400">Vertical Leap</td>
+                                <td class="p-3 text-left">Up to 3 meters</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. ייחודיות אנטומית וביולוגית -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2">אנטומיה וביולוגיה (Anatomy & Biology)</h3>
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300">
+                    <p><strong>ציציות האוזניים (Ear Tufts):</strong> סימן ההיכר הבולט ביותר של הקרקל הוא ציציות השיער השחורות בקצות אוזניו. תפקידן אינו ברור לחלוטין, אך סבורים שהן משמשות לתקשורת (הקרקל מניע אותן כמעין "איתות"), להסוואה בסבך, או לסינון חרקים ורחשים סביבתיים.</p>
+                    <p><strong>מותאם ליובש:</strong> הקרקל מותאם באופן יוצא דופן לחיים באזורים צחיחים ומדבריים. הוא מקבל את רוב נוזליו מהטרף שלו, ומסוגל לשרוד תקופות ארוכות מאוד ללא שתיית מים ישירה.</p>
+                    <p><strong>צייד אקרובט:</strong> רגליו האחוריות של הקרקל ארוכות ושריריות מאוד. בעזרתן, הוא יכול לבצע זינוקים וסיבובים באוויר ("סלטות") במטרה ללכוד מספר ציפורים הממריאות בבת אחת מתוך להקה.</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת (Full Etymology) -->
+            <section class="space-y-4">
+                <h3 class="text-amber-600 font-bold text-lg px-2">אטימולוגיה מורחבת (Etymology)</h3>
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2">1. השם הנפוץ (והסוג): Caracal</h4>
+                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> השם "קרקל" מקורו בשפה הטורקית העתיקה (karakulak). "קארא" (Kara) פירושו "שחור", ו"קולאק" (kulak) פירושו "אוזן". כלומר: "אוזן שחורה", המתאר במדויק את המראה החיצוני הייחודי של אוזניו האחוריות וציציות השיער שעל קצותיהן.</p>
+                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> The name 'Caracal' comes from the Turkish word 'karakulak', meaning "black ear" ('kara' = black, 'kulak' = ear), referring to its distinctive black ear tufts and the dark coloring on the back of its ears.</p>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2">2. השם השני: שונר מדברי (Desert Lynx)</h4>
+                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> למרות שהקרקל נקרא לעיתים "שונר מדברי", הוא אינו שייך לסוג השונר (*Lynx*). הבלבול נובע מהדמיון החיצוני – הציציות שעל האוזניים והזנב הקצר יחסית – אולם הם שייכים לשושלות שונות של חתולים. בעברית לעיתים משתמשים בשם זה כדי להבדילו משונרים שחיים באזורים קרים ומושלגים.</p>
+                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> Although sometimes called the "Desert Lynx" due to its tufted ears and short tail, it is not actually a member of the Lynx genus. The physical similarities are a result of convergent evolution.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריית הגילוי ואבולוציה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2">הגילוי המקורי:</h4>
+                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> קוטלג ותואר מדעית לראשונה בשנת <strong>1776</strong> על ידי הזואולוג הגרמני, <strong>יוהאן כריסטיאן דניאל פון שרבר</strong> (Johann Christian Daniel von Schreber, שנות חיים: 1739–1810). במקור הוא סווג בסוג *Felis* (עם חתולי הבית), ולאחר מכן הועבר לסוג *Lynx*, עד שקיבל סוג משלו (*Caracal*) ב-1843.</p>
+                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Scientifically cataloged in 1776 by the German zoologist Johann Christian Daniel von Schreber (Lifespan: 1739–1810). It was later moved from 'Felis' to 'Lynx' before receiving its own genus in 1843.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2">אבולוציה ותפוצה:</h4>
+                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> מבחינה אבולוציונית וגנטית, הקרקל שייך לשושלת משלו (Caracal lineage), וקרובי המשפחה החיים הקרובים ביותר אליו הם הסרוואל (Serval) והחתול הזהוב האפריקני. תפוצתו משתרעת על פני אפריקה, המזרח התיכון, מרכז אסיה והודו, עם נוכחות גם בישראל באזורי המדבר (כמו הערבה, הנגב וים המלח).</p>
+                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Genetically belongs to the Caracal lineage. Its closest living relatives are the Serval and the African Golden Cat. It inhabits Africa, the Middle East (including Israel), Central Asia, and India.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2">מצב שימור:</h4>
+                        <p class="text-sm text-slate-300">בסך הכל, הקרקל מוגדר כ"ללא חשש" (Least Concern - LC) על ידי ה-IUCN, למרות שאוכלוסיות באזורים מסוימים באסיה והודו נמצאות בירידה או סכנה. הם עדיין ניצודים באזורים רבים בשל נזק שהם גורמים לעדרי צאן. בישראל הקרקל הוא חיה מוגנת ונדיר יחסית לצפות בו בטבע בשל אופיו החשאי ופעילותו הלילית לרוב.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-8 p-6 text-center text-slate-500 text-sm border-t border-slate-800 mx-6 pb-12">
+            <p>האתר נבנה על ידי ג'מיני ורם.</p>
+        </footer>
+
+    </div>
+
+    <!-- Modal לתמונה צפה -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/95 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-amber-600 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-2 border-slate-700">
+    </div>
+
+    <script>
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { imgEl.src = imgUrl; modal.classList.remove('hidden'); }
+        }
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
