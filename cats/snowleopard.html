@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>נמר השלג (Panthera uncia) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #94a3b8; /* צבע אפור-כסוף (שלג/סלע) */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-slate-500/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט חזרה -->
+        <nav class="absolute top-4 right-4 z-10">
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-slate-600 transition border border-white/10 flex items-center gap-2">
+                <span>&rarr;</span> חזרה למטריצה
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית (מצביעה לקובץ שהעלית ל-assets) -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/snowleopard.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/snowleopard.png" alt="נמר שלג על פסגת הר" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-slate-500/20 text-slate-300 text-xs font-bold px-3 py-1 rounded-full border border-slate-500/30">Pantherinae (חתולים גדולים)</span>
+                    <span class="text-slate-400 text-sm tracking-widest">רוח ההרים</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1">נמר השלג</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Panthera uncia</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. כותרות ומידע בסיסי -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2">תעודת זהות זואולוגית</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Snow Leopard / Ounce</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הגדולים (Pantherinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "Ghost of the Mountains"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי (HE):</strong> למרות היותו חתול גדול (פנתר), הוא אינו מסוגל לשאוג. יש לו את הפרווה הצפופה ביותר והזנב העבה והארוך ביותר (ביחס לגופו) מכל החתוליים, המשמש לו כצעיף חימום בטמפרטורות של מינוס 40 מעלות.</li>
+                    <li><strong class="text-slate-400">Unique Feature (EN):</strong> Despite being a "big cat" (Panthera), it cannot roar. It possesses the thickest fur and the longest, thickest tail relative to body size of any feline, using it as a thermal blanket in -40°C temperatures.</li>
+                </ul>
+            </section>
+
+            <!-- 2. גריד נתונים סטטיסטיים -->
+            <section class="space-y-4">
+                <h3 class="text-slate-400 font-bold text-lg px-2">נתונים סטטיסטיים (Stats)</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-right bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3">פרמטר (HE)</th>
+                                <th class="p-3">ערך (HE)</th>
+                                <th class="p-3 text-left">Parameter (EN)</th>
+                                <th class="p-3 text-left">Value (EN)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">היריון</td>
+                                <td class="p-3">90 עד 100 ימים</td>
+                                <td class="p-3 text-left text-slate-400">Gestation</td>
+                                <td class="p-3 text-left">90 - 100 days</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">אורך גוף (ללא זנב)</td>
+                                <td class="p-3">75 עד 150 ס"מ</td>
+                                <td class="p-3 text-left text-slate-400">Body Length</td>
+                                <td class="p-3 text-left">75 - 150 cm</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">אורך זנב</td>
+                                <td class="p-3">80 עד 105 ס"מ (כמעט באורך הגוף!)</td>
+                                <td class="p-3 text-left text-slate-400">Tail Length</td>
+                                <td class="p-3 text-left">80 - 105 cm</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">משקל - זכר בוגר</td>
+                                <td class="p-3">32 עד 55 ק"ג (נדיר עד 75)</td>
+                                <td class="p-3 text-left text-slate-400">Adult Male Weight</td>
+                                <td class="p-3 text-left">32 - 55 kg</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">משקל - נקבה בוגרת</td>
+                                <td class="p-3">25 עד 40 ק"ג</td>
+                                <td class="p-3 text-left text-slate-400">Adult Female Weight</td>
+                                <td class="p-3 text-left">25 - 40 kg</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">תוחלת חיים (טבע)</td>
+                                <td class="p-3">10 עד 12 שנים</td>
+                                <td class="p-3 text-left text-slate-400">Lifespan (Wild)</td>
+                                <td class="p-3 text-left">10 - 12 years</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400">בית גידול בגובה</td>
+                                <td class="p-3">3,000 עד 5,400 מטרים מעל פני הים</td>
+                                <td class="p-3 text-left text-slate-400">Altitude Range</td>
+                                <td class="p-3 text-left">3,000 - 5,400 meters</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. ייחודיות אנטומית וביולוגית -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2">אנטומיה וביולוגיה (Anatomy & Biology)</h3>
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300">
+                    <p><strong>אדפטציה לקור קיצוני:</strong> נמר השלג מצויד באוזניים קטנות ומעוגלות (לצמצום אובדן חום), וחלל אף (נחיריים) רחב ועמוק מאוד. חלל האף הזה פועל כ"מזגן חימום" – הוא מחמם את אוויר ההרים הקפוא והדליל לפני שהוא מגיע לריאותיו, מונע מכת קור פנימית.</p>
+                    <p><strong>זנב הפלא:</strong> הזנב שלו לא נועד רק לאיזון (Balance) בזמן קפיצות של עד 15 מטרים למרחק בין צוקים תלולים. הזנב עבה מאוד ועשיר בשומן, וכאשר נמר השלג ישן בסופות שלגים, הוא עוטף את עצמו בזנב כמו בצעיף עבה ומניח אותו על פניו ואפו כדי לשמור על חום גופו.</p>
+                    <p><strong>נעלי שלג טבעיות:</strong> כפות הרגליים שלו רחבות במיוחד ומכוסות בפרווה עבה גם בתחתית (בין כריות האצבעות). זה גם מחלק את משקלו כך שלא ישקע בשלג העמוק (כמו נעלי שלג), וגם מגן על כפות רגליו מפני כוויות קור וסלעים חדים.</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת (Full Etymology) -->
+            <section class="space-y-4">
+                <h3 class="text-slate-400 font-bold text-lg px-2">אטימולוגיה מורחבת (Etymology)</h3>
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2">1. הסוג: Panthera</h4>
+                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> כמו אצל האריה, הטיגריס, הנמר והיגואר, מקור המילה ביוונית עתיקה (pánthēr). בלשנים קושרים את המילה למקור סנסקריטי עתיק יותר "pundarīkam".</p>
+                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> Derived from Ancient Greek 'pánthēr', linked to the Sanskrit word 'pundarīkam'.</p>
+                    </div>
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2">2. המין והשם העתיק: uncia / Ounce</h4>
+                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> המילה 'uncia' מקורה בטעות תרגום היסטורית מרתקת מהשפה הצרפתית העתיקה (lonce). המילה 'lonce' שימשה במקור לתיאור ה"שונר" (Lynx). עם הזמן, אנשים חשבו שה-L בתחילת המילה היא סומך היידוע (L'once - ה-Once). כך נוצרה מילה חדשה "Once", שהתגלגלה לאנגלית כ-'Ounce' וללטינית מדעית כ-'uncia', והחלה לשמש ספציפית לתיאור חתול ההרים המסתורי הזה.</p>
+                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> The species name 'uncia' and its old English name 'Ounce' stem from an etymological error. The Old French word 'lonce' (meaning lynx) was misdivided as 'l'once' (the once). This back-formation created the word 'once' / 'ounce', later applied to the snow leopard.</p>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2">3. השם העממי: נמר השלג (Snow Leopard)</h4>
+                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> השם המודרני "נמר השלג" מתאר בפשטות את המראה שלו (הדומה לנמר עקב הרוזטות, למרות שהן גדולות ומרווחות יותר) ואת בית הגידול הקיצוני שלו. עם זאת, הוא אינו באמת נמר (Panthera pardus), אלא מין נפרד לחלוטין. מבחינה גנטית, קרוב המשפחה החי הקרוב ביותר לנמר השלג הוא דווקא הטיגריס!</p>
+                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> A descriptive common name based on its spotted appearance and alpine habitat. However, it is not a true leopard; its closest living genetic relative is actually the tiger.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריית הגילוי ואבולוציה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2">הגילוי המקורי:</h4>
+                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> קוטלג ותואר מדעית לראשונה בשנת <strong>1775</strong> על ידי הזואולוג הגרמני, יוהאן כריסטיאן דניאל פון שרבר (Johann Christian Daniel von Schreber, שנות חיים: 1739–1810). במקור הוא סווג כמין נפרד של חתול (*Felis uncia*), ורק במאה ה-20 (ולאחר מחקרים גנטיים נרחבים ב-2006) סווג סופית כחלק משושלת הפנתרים (*Panthera*).</p>
+                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Scientifically cataloged in 1775 by Johann Christian Daniel von Schreber (Lifespan: 1739–1810). It was only confirmed as part of the Panthera genus following extensive DNA analysis in 2006.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2">אבולוציה ותפוצה:</h4>
+                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> התפוצה שלו מוגבלת אך ורק לרכסי ההרים הגבוהים והקשים ביותר של מרכז ודרום אסיה (כמו ההימלאיה, טיבט, והרי פמיר), המתפרסים על פני 12 מדינות (כולל סין, נפאל, ומונגוליה).</p>
+                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Its range is restricted to the high alpine and subalpine zones of Central and South Asia, spanning across 12 countries.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2">מצב שימור:</h4>
+                        <p class="text-sm text-slate-300">במשך שנים הוגדר כ"בסכנת הכחדה" (EN), אך בשנת 2017 מצב השימור שלו עודכן ל"פגיע" (Vulnerable - VU) על ידי ה-IUCN, בעקבות מאמצי שימור בינלאומיים שהוכיחו כי האוכלוסייה גדולה מעט משחשבו (מעריכים שיש בין 4,000 ל-6,500 פרטים בטבע). עם זאת, הוא עדיין מאוים מאוד מציד, התחממות גלובלית המצמצמת את אזורי השלג, ועימותים עם רועי צאן.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-8 p-6 text-center text-slate-500 text-sm border-t border-slate-800 mx-6 pb-12">
+            <p>האתר נבנה על ידי ג'מיני ורם.</p>
+        </footer>
+
+    </div>
+
+    <!-- Modal לתמונה צפה -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/95 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-slate-400 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-2 border-slate-700">
+    </div>
+
+    <script>
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { imgEl.src = imgUrl; modal.classList.remove('hidden'); }
+        }
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
