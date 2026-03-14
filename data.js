@@ -1,6 +1,6 @@
 let currentLang = 'he';
 
-// המילון של דף הבית (מוגן משבירת שורות באמצעות Backticks)
+// המילון של דף הבית
 const content = {
     he: {
         title: `מטריצת <span class="text-amber-500">החתוליים</span>`, 
@@ -32,14 +32,14 @@ const content = {
     }
 };
 
-// רשימת החתולים המלאה
+// רשימת החתולים מחוברת לתיקייה ולקבצים שיצרת
 const catsData = [
     {
         id: "lion",
         nameHe: "חתולים גדולים (אריה)",
         nameEn: "Big Cats (Lion)",
         scientific: "Panthera leo",
-        img: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=200",
+        img: "assets/lion.png",
         link: "cats/lion.html",
         color: "#f59e0b" // זהב
     },
@@ -48,7 +48,7 @@ const catsData = [
         nameHe: "חתולים גדולים (טיגריס)",
         nameEn: "Big Cats (Tiger)",
         scientific: "Panthera tigris",
-        img: "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=200",
+        img: "assets/tiger.png",
         link: "cats/tiger.html",
         color: "#f97316" // כתום
     },
@@ -57,7 +57,7 @@ const catsData = [
         nameHe: "חתולים גדולים (נמר)",
         nameEn: "Big Cats (Leopard)",
         scientific: "Panthera pardus",
-        img: "https://images.unsplash.com/photo-1517028481483-346765cb1cb8?q=80&w=200",
+        img: "assets/leopard.png",
         link: "cats/leopard.html",
         color: "#eab308" // צהוב
     },
@@ -66,7 +66,7 @@ const catsData = [
         nameHe: "חתולים גדולים (יגואר)",
         nameEn: "Big Cats (Jaguar)",
         scientific: "Panthera onca",
-        img: "https://images.unsplash.com/photo-1602491453631-e2a56e4173a7?q=80&w=200",
+        img: "assets/jaguar.png",
         link: "cats/jaguar.html",
         color: "#fbbf24" // ענבר בהיר
     },
@@ -75,7 +75,7 @@ const catsData = [
         nameHe: "חתולים קטנים (ברדלס)",
         nameEn: "Small Cats (Cheetah)",
         scientific: "Acinonyx jubatus",
-        img: "https://images.unsplash.com/photo-1551927336-09d50efd69cd?q=80&w=200",
+        img: "assets/cheetah.png",
         link: "cats/cheetah.html",
         color: "#facc15" // צהוב מהיר
     },
@@ -84,7 +84,7 @@ const catsData = [
         nameHe: "חתולים קטנים (פומה)",
         nameEn: "Small Cats (Puma/Cougar)",
         scientific: "Puma concolor",
-        img: "https://images.unsplash.com/photo-1596791242398-3bf211d293f0?q=80&w=200",
+        img: "assets/puma.png",
         link: "cats/puma.html",
         color: "#d97706" // נחושת
     },
@@ -93,7 +93,7 @@ const catsData = [
         nameHe: "חתולים קטנים (קרקל)",
         nameEn: "Small Cats (Caracal)",
         scientific: "Caracal caracal",
-        img: "https://images.unsplash.com/photo-1615822646671-6ce93561a7a0?q=80&w=200",
+        img: "assets/caracal.png",
         link: "cats/caracal.html",
         color: "#d97706" // צבע חול/אדמה
     }
@@ -122,6 +122,6 @@ function toggleLanguage() {
 }
 
 window.onload = () => {
-    currentLang = 'en'; // set opposite to trigger correct load
+    currentLang = 'en'; 
     toggleLanguage();
 };
