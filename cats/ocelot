@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>אוצלוט (Leopardus pardalis) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #d97706; /* זהב עמוק / חמרה */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-amber-600/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-amber-500 hover:bg-amber-600 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-amber-600 hover:text-black transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/ocelot.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/ocelot.png" alt="אוצלוט על ענף" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-amber-600/20 text-amber-500 text-xs font-bold px-3 py-1 rounded-full border border-amber-600/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-amber-600/20 text-amber-500 text-xs font-bold px-3 py-1 rounded-full border border-amber-600/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">הנמר הגמדי היפהפה</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">The Beautiful Dwarf Leopard</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">אוצלוט</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Ocelot</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Leopardus pardalis</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Ocelot / Painted Leopard</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Painted Leopard" / "Ghost of the Neotropics"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> חתול בגודל בינוני בעל אחת הפרוות המרהיבות והמורכבות ביותר בעולם החי. הפרווה מעוטרת בשילוב של פסים, נקודות ורוזטות המזכירות צורת שרשרת. הוא הטורף הקרקעי העיקרי בגודל בינוני ברחבי האמזונס.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Ocelot / Painted Leopard</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Painted Leopard" / "Ghost of the Neotropics"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> A medium-sized cat possessing one of the most stunning and complex coats in the animal kingdom. The fur is adorned with a combination of stripes, spots, and chain-like rosettes. It is the primary medium-sized terrestrial predator throughout the Amazon basin.</li>
+                </ul>
+            </section>
+
+            <section class="space-y-4 text-start">
+                <h3 class="text-amber-500 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-amber-500 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">79 עד 82 ימים</span><span class="en-content hidden">79 - 82 days</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">55 עד 100 ס"מ</span><span class="en-content hidden">55 - 100 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">30 עד 45 ס"מ</span><span class="en-content hidden">30 - 45 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר (זכרים ונקבות)</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">8 עד 15.5 ק"ג (זכרים מעט כבדים יותר)</span><span class="en-content hidden">8 - 15.5 kg (males slightly heavier)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">10 עד 13 שנים (עד 20 בשבי)</span><span class="en-content hidden">10 - 13 years (up to 20 in captivity)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>יצירת מופת קטלנית:</strong> הפרווה של האוצלוט נחשבת לאחת היפות בעולם. היא משלבת צבעי בסיס של זהב-חול או אפור-כסוף (תלוי בבית הגידול), ועליה מתפתלים פסים אופקיים וכתמים המשתלבים יחד ל"רוזטות" פתוחות דמויות שרשרת. שני פסים שחורים בולטים יורדים מלחייו, ובגב אוזניו השחורות ישנו כתם לבן בוהק (Ocelli) המשמש כסימן עוקב לגוריו בסבך החשוך.</p>
+                    <p><strong>צייד קרקעי ולילי:</strong> למרות שהאוצלוט מטפס עצים מוכשר מאוד שמנצל ענפים כדי לנוח ולברוח מטורפים גדולים (כמו יגוארים), רוב פעילות הציד שלו מתבצעת על הקרקע העמוסה בעלי שלכת. הוא צייד לילי מובהק (Nocturnal) הניזון מטרף קטן עד בינוני: ארנבות, קופים קטנים, מכרסמים, זוחלים וציפורים.</p>
+                    <p><strong>חושים חדים כתער:</strong> לאוצלוט יש ראיית לילה מפותחת להפליא, המאפשרת לו לראות בבירור גם באפלה הכמעט-מוחלטת של קרקעית יער הגשם. בנוסף, חוש הריח שלו מפותח במיוחד והוא משתמש בו כדי לעקוב אחר שבילי הריח של טרפו לאורך קילומטרים רבים.</p>
+                    <p><strong>שחיין מעולה:</strong> בדומה ליגואר ולטיגריס, האוצלוט אינו נרתע ממים. הוא שחיין חזק המשתמש בנהרות ויובלים גם כדי לחצות טריטוריות, גם כדי להימלט, ולעיתים גם כדי לצוד דגים וסרטנים השוהים במים רדודים.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>A Lethal Masterpiece:</strong> The ocelot's coat is considered one of the most beautiful in the world. It combines a base color of tawny gold or silvery-grey (depending on the habitat), overlaid with twisting horizontal stripes and spots that merge into open, chain-like rosettes. Two prominent black stripes run down its cheeks, and the backs of its black ears feature a bright white spot (ocelli) used as a follow-me beacon for its cubs in the dark undergrowth.</p>
+                    <p><strong>Nocturnal Terrestrial Hunter:</strong> Although the ocelot is a highly skilled tree climber that utilizes branches to rest and escape larger predators (like jaguars), the vast majority of its hunting occurs on the leaf-littered ground. It is a strictly nocturnal hunter, feeding on small to medium prey: rabbits, small monkeys, rodents, reptiles, and birds.</p>
+                    <p><strong>Razor-Sharp Senses:</strong> The ocelot possesses incredibly developed night vision, allowing it to see clearly even in the near-total darkness of the rainforest floor. Furthermore, its sense of smell is exceptionally acute, which it uses to track the scent trails of its prey over many kilometers.</p>
+                    <p><strong>Excellent Swimmer:</strong> Similar to the jaguar and tiger, the ocelot does not shy away from water. It is a strong swimmer that uses rivers and streams to traverse territories, escape danger, and occasionally hunt fish and crabs in shallow waters.</p>
+                </div>
+            </section>
+
+            <section class="space-y-4 text-start">
+                <h3 class="text-amber-500 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-amber-500 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Leopardus</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Leopardus</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">למרות שמו, סוג זה *אינו* כולל את הנמר (Leopard, ששייך לסוג הפנתרים). משמעות השם היא "דמוי-נמר", והוא הוענק לקבוצת החתולים הקטנים והמנומרים של יבשת אמריקה בגלל הדמיון השטחי של פרוותם לפרוות הנמר האפריקני.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Despite its name, this genus does *not* include the leopard (which belongs to the Panthera genus). The name implies "leopard-like" and was given to the small, spotted cats of the Americas due to the superficial resemblance of their coats to that of the African leopard.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: pardalis</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: pardalis</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלטינית 'pardalis' מגיעה ישירות מיוונית עתיקה (πάρδαλις), שמשמעותה... נמר (או פנתר מנומר). מכאן שהשם המדעי המלא מתורגם באופן כפול ומשעשע משהו כ"נמר נמרי" או "הדמוי-נמר המנומר".</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Latin word 'pardalis' derives directly from Ancient Greek (πάρδαλις), which means... leopard (or spotted panther). Thus, the full scientific name amusingly translates as a tautology: "leopard-like leopard" or "the spotted leopard-like cat."</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי: אוצלוט (Ocelot)</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Common Name: Ocelot</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה "אוצלוט" נלקחה מתוך שפת הנאוואטל (Nahuatl), שפתם של האצטקים במקסיקו העתיקה. המילה המקורית היא <em>ōcēlōtl</em> (או-סה-לוט-ל). למרבה האירוניה, רוב ההיסטוריונים מסכימים שאצל האצטקים המילה הזו תיארה דווקא את ה<strong>יגואר</strong> הגדול, ולא את החתול הקטן. כשהאירופאים הגיעו לאמריקה, הם שיבשו את המושג והצמידו אותו באופן בלעדי לחתול הבינוני היפהפה הזה.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The word "ocelot" was adopted from Nahuatl, the language of the ancient Aztecs in Mexico. The original word is <em>ōcēlōtl</em>. Ironically, most historians agree that among the Aztecs, this word actually described the mighty <strong>jaguar</strong>, not this smaller cat. When Europeans arrived in the Americas, they misapplied the term, permanently attaching it to this beautiful medium-sized cat.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">כמו רבים מהחתולים, האוצלוט קוטלג ותואר מדעית לראשונה על ידי קארל לינאוס בספרו המפורסם <em>Systema Naturae</em> בשנת <strong>1758</strong>, תחת השם ההתחלתי <em>Felis pardalis</em>, בטרם שויך לסוג החתולים הדרום-אמריקאים.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">Like many felines, the ocelot was first scientifically cataloged and described by Carl Linnaeus in his famous book <em>Systema Naturae</em> in <strong>1758</strong>, under the initial name <em>Felis pardalis</em>, before being reassigned to the South American cat genus.</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">האוצלוט שייך ל"שושלת האוצלוט" – קבוצה של חתולים קטנים שהתפתחה בצפון אמריקה לפני כ-8 מיליון שנים, וחצתה לדרום אמריקה דרך "הגשר היבשתי של פנמה" לפני כ-2 עד 3 מיליון שנים, שם הם התפצלו למינים רבים השולטים בג'ונגלים.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">The ocelot belongs to the "Ocelot lineage"—a group of small cats that evolved in North America about 8 million years ago and crossed into South America via the Isthmus of Panama around 2 to 3 million years ago, where they radiated into multiple jungle-dominating species.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">בשנות ה-60 וה-70 של המאה ה-20, האוצלוט הובא לסף הכחדה קריטי משום שמאות אלפי פרטים נצודו רק עבור סחר הפרוות היוקרתי. לאחר חרם בינלאומי וחקיקת חוקי הגנה נוקשים, האוכלוסייה בדרום ומרכז אמריקה התאוששה בצורה יוצאת דופן. כיום הוא מוגדר ברמה הגלובלית כ"ללא חשש" (Least Concern - LC) על ידי ה-IUCN. עם זאת, התפוצה שלו, שבעבר הגיעה עד מרכז ארצות הברית, הצטמצמה דרמטית: כיום נותרה אוכלוסייה זעירה של פחות מ-100 פרטים בדרום טקסס, והם מוגדרים שם ברמה הפדרלית כ"בסכנת הכחדה".</p>
+                        <p class="text-sm text-slate-300 en-content hidden">During the 1960s and 70s, the ocelot was driven to the brink of critical extinction as hundreds of thousands were hunted solely for the lucrative fur trade. Following international bans and strict protective legislation, the population in South and Central America recovered remarkably. Today, it is globally classified as "Least Concern" (LC) by the IUCN. However, its range, which once extended deep into the US, has shrunk drastically: today, a tiny population of fewer than 100 individuals remains in southern Texas, where they are federally listed as "Endangered".</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-amber-500 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            document.querySelectorAll('.he-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'he'));
+            document.querySelectorAll('.en-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'en'));
+        }
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { imgEl.src = imgUrl; modal.classList.remove('hidden'); }
+        }
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
