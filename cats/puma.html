@@ -6,13 +6,14 @@
     <title>פומה (Puma concolor) | מטריצת החתוליים</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
         :root {
             --bg-body: #030712; 
             --bg-card: #0a1122; 
             --border-card: #1d365d;
-            --text-accent: #d97706; 
+            --text-accent: #d97706; /* נחושת/זהב עמום */
         }
-        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
         .samsung-s25-container { 
             max-width: 412px; 
             margin: 0 auto; 
@@ -33,161 +34,214 @@
 
     <div class="samsung-s25-container relative pb-10">
         
-        <nav class="absolute top-4 right-4 z-10">
-            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-amber-600 transition border border-white/10 flex items-center gap-2">
-                <span>&rarr;</span> חזרה למטריצה
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-amber-600 hover:bg-amber-700 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-amber-600 hover:text-black transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
             </a>
         </nav>
 
-        <!-- תיקון לתמונה מקומית -->
+        <!-- תמונת נושא ייצוגית -->
         <header class="relative w-full h-72 md:h-96">
             <button onclick="openImageModal('../assets/puma.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
                 <img src="../assets/puma.png" alt="פומה על סלע" class="w-full h-full object-cover">
             </button>
             <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
-            <div class="absolute bottom-0 p-6 w-full pointer-events-none">
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
                 <div class="flex items-center gap-3 mb-2">
-                    <span class="bg-amber-700/40 text-amber-500 text-xs font-bold px-3 py-1 rounded-full border border-amber-600/30">Felinae (חתולים קטנים)</span>
-                    <span class="text-slate-400 text-sm tracking-widest">רוח הרי הרוקי</span>
+                    <span class="bg-amber-700/40 text-amber-500 text-xs font-bold px-3 py-1 rounded-full border border-amber-600/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-amber-700/40 text-amber-500 text-xs font-bold px-3 py-1 rounded-full border border-amber-600/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">רוח הרי הרוקי</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">Ghost of the Rockies</span>
                 </div>
-                <h1 class="text-4xl font-extrabold text-white mb-1">פומה (קוגר)</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">פומה (קוגר)</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Puma (Cougar)</h1>
                 <h2 class="text-xl text-slate-300 italic font-serif">Puma concolor</h2>
             </div>
         </header>
 
         <main class="p-6 space-y-8">
-            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
-                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2">תעודת זהות זואולוגית</h3>
-                <ul class="space-y-3 text-sm">
-                    <li><strong class="text-slate-400">שם באנגלית:</strong> Cougar / Puma / Mountain Lion</li>
+            
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Cougar / Puma / Mountain Lion / Panther</li>
                     <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
                     <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "Cat of Many Names" / "Ghost Cat"</li>
-                    <li><strong class="text-slate-400">מאפיין ייחודי (HE):</strong> למרות מידותיה כחתול גדול, הפומה אינה מסוגלת לשאוג אלא רק לגרגר, ולכן מסווגת כ"חתול קטן". יש לה את יכולת הזינוק המרשימה ביותר מכל היונקים (עד 5.5 מטרים גובה).</li>
-                    <li><strong class="text-slate-400">Unique Feature (EN):</strong> Despite its large size, it cannot roar and only purrs, classifying it as a "small cat". It possesses the most formidable leaping ability of any mammal.</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> למרות מידותיה (שעשויות לעלות על נמר אפריקני), הפומה אינה מסוגלת לשאוג אלא רק לגרגר, ולכן מסווגת מבחינה מדעית כ"חתול קטן". היא ניחנת ביכולת הניתור המרשימה ביותר מכל היונקים היבשתיים.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Cougar / Puma / Mountain Lion / Panther</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "Cat of Many Names" / "Ghost Cat"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> Despite its large dimensions (often outweighing an African leopard), the puma cannot roar and can only purr, thus it is scientifically classified as a "small cat". It possesses the most impressive leaping ability of any terrestrial mammal.</li>
                 </ul>
             </section>
 
-            <section class="space-y-4">
-                <h3 class="text-amber-600 font-bold text-lg px-2">נתונים סטטיסטיים (Stats)</h3>
+            <section class="space-y-4 text-start">
+                <h3 class="text-amber-600 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-amber-600 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
                 <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
-                    <table class="w-full text-sm text-right bg-slate-900">
+                    <table class="w-full text-sm text-start bg-slate-900">
                         <thead class="bg-slate-800 text-slate-300">
                             <tr>
-                                <th class="p-3">פרמטר (HE)</th>
-                                <th class="p-3">ערך (HE)</th>
-                                <th class="p-3 text-left">Parameter (EN)</th>
-                                <th class="p-3 text-left">Value (EN)</th>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-800">
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">היריון</td>
-                                <td class="p-3">82 עד 96 ימים</td>
-                                <td class="p-3 text-left text-slate-400">Gestation</td>
-                                <td class="p-3 text-left">82 - 96 days</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">82 עד 96 ימים</span><span class="en-content hidden">82 - 96 days</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">אורך גוף - זכר (ללא זנב)</td>
-                                <td class="p-3">1.2 עד 1.5 מטרים</td>
-                                <td class="p-3 text-left text-slate-400">Male Body Length</td>
-                                <td class="p-3 text-left">1.2 - 1.5 meters</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף - זכר (ללא זנב)</span><span class="en-content hidden">Male Body Length</span></td>
+                                <td class="p-3"><span class="he-content">1.2 עד 1.5 מטרים</span><span class="en-content hidden">1.2 - 1.5 meters</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">אורך גוף - נקבה (ללא זנב)</td>
-                                <td class="p-3">1.0 עד 1.3 מטרים</td>
-                                <td class="p-3 text-left text-slate-400">Female Body Length</td>
-                                <td class="p-3 text-left">1.0 - 1.3 meters</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף - נקבה (ללא זנב)</span><span class="en-content hidden">Female Body Length</span></td>
+                                <td class="p-3"><span class="he-content">1.0 עד 1.3 מטרים</span><span class="en-content hidden">1.0 - 1.3 meters</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">משקל - זכר בוגר</td>
-                                <td class="p-3">53 עד 100 ק"ג</td>
-                                <td class="p-3 text-left text-slate-400">Adult Male Weight</td>
-                                <td class="p-3 text-left">53 - 100 kg</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל - זכר בוגר</span><span class="en-content hidden">Adult Male Weight</span></td>
+                                <td class="p-3"><span class="he-content">53 עד 100 ק"ג (נדיר: מעל 120)</span><span class="en-content hidden">53 - 100 kg (rarely over 120 kg)</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">משקל - נקבה בוגרת</td>
-                                <td class="p-3">29 עד 64 ק"ג</td>
-                                <td class="p-3 text-left text-slate-400">Adult Female Weight</td>
-                                <td class="p-3 text-left">29 - 64 kg</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל - נקבה בוגרת</span><span class="en-content hidden">Adult Female Weight</span></td>
+                                <td class="p-3"><span class="he-content">29 עד 64 ק"ג</span><span class="en-content hidden">29 - 64 kg</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">תוחלת חיים (טבע)</td>
-                                <td class="p-3">8 עד 13 שנים</td>
-                                <td class="p-3 text-left text-slate-400">Lifespan (Wild)</td>
-                                <td class="p-3 text-left">8 - 13 years</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">8 עד 13 שנים</span><span class="en-content hidden">8 - 13 years</span></td>
                             </tr>
-                            <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">יכולת ניתור (אנכי)</td>
-                                <td class="p-3">עד 5.5 מטרים מהמקום</td>
-                                <td class="p-3 text-left text-slate-400">Vertical Leap</td>
-                                <td class="p-3 text-left">Up to 5.5 meters</td>
+                             <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">יכולת ניתור מירבית</span><span class="en-content hidden">Max Leaping Ability</span></td>
+                                <td class="p-3"><span class="he-content">עד 5.5 מטרים אנכית (לגובה)</span><span class="en-content hidden">Up to 5.5 meters vertically</span></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
-            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
-                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2">אנטומיה וביולוגיה (Anatomy & Biology)</h3>
-                <div class="space-y-4 text-sm leading-relaxed text-slate-300">
-                    <p><strong>רגליים אחוריות:</strong> הרגליים האחוריות של הפומה ארוכות ומוצקות יותר מרגליה הקדמיות. מבנה זה מעניק לה כוח דחף חסר תקדים, המאפשר לה לזנק ממארב על טרף גדול כמו איילים, ולהפיל אותם ארצה מעוצמת הפגיעה הראשונית.</p>
-                    <p><strong>קולניות ללא שאגה:</strong> בגלל מבנה עצם הלשון שלה (Hyoid bone) שהתאבנה לחלוטין (בניגוד לחתולים הגדולים שאצלם היא גמישה), הפומה לא יכולה לשאוג. היא מתקשרת באמצעות צריחות מקפיאות דם (שנשמעות לעיתים כמו צרחות אישה), שריקות, וגרגור רציף בדומה לחתול בית.</p>
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>מנוע אחורי עוצמתי:</strong> הרגליים האחוריות של הפומה ארוכות ומוצקות משמעותית מרגליה הקדמיות. מבנה קפיצי זה מעניק לה כוח דחף חסר תקדים. היא מסוגלת לזנק מהמקום למרחק אופקי של עד 12 מטרים, או לגובה של 5.5 מטרים (כמו לקפוץ מעל מבנה בן שתי קומות). זינוק זה משמש אותה למארב פתאומי מעצים או סלעים ישירות על גב הטרף.</p>
+                    <p><strong>קולניות מצמררת (ללא שאגה):</strong> עצם הלשון (Hyoid bone) של הפומה התאבנה לחלוטין, בדומה לחתולי בית, בניגוד לרצועה הגמישה הקיימת אצל האריות והטיגריסים. לכן הפומה מגרגרת בשאיפה ובנשיפה, אך אינה שואגת. במקום שאגה, היא מפיקה צרחות וצווחות מקפיאות דם שנשמעות מרחוק כמעט כמו צרחות של אישה אנושית בצרה, ומשמשות בעיקר לתקשורת בעונת הייחום.</p>
+                    <p><strong>ציידת חמקנית (Ghost Cat):</strong> הפומה היא ציידת יחידאית שפועלת בעיקר בשעות הדמדומים והלילה (Crepuscular / Nocturnal). היא ניזונה ממגוון רחב של טרף - החל מחרקים ומכרסמים, ועד לפרסתנים גדולים כמו איילים אדומים (Elk) ומוס. לאחר שהרגה את הטרף באמצעות נשיכה עמוקה בצוואר, היא נוהגת להסתיר את הפגר תחת עלים, ענפים או שלג, וחוזרת לאכול ממנו במשך מספר ימים.</p>
+                     <p><strong>גורים מנומרים:</strong> למרות שהפומה הבוגרת חלקה לגמרי וללא דפוסים (מכאן השם concolor), גורי הפומה נולדים עם עיניים כחולות ופרווה מכוסה בכתמים כהים וטבעות זנב. הכתמים מספקים הסוואה חיונית ביערות בחודשים הראשונים לחייהם, ודוהים בהדרגה עד היעלמותם המוחלטת בסביבות גיל חצי שנה.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Powerful Rear Engine:</strong> The puma's hind legs are significantly longer and more muscular than its front legs. This spring-like structure provides unparalleled thrust. It can leap horizontally up to 12 meters (40 ft) from a standstill, or jump vertically up to 5.5 meters (18 ft - akin to leaping over a two-story building). This bound is used to ambush prey, often dropping directly onto its back from trees or rocks.</p>
+                    <p><strong>Bloodcurdling Vocalizations:</strong> The puma's hyoid bone is completely ossified, much like domestic cats, unlike the flexible ligament found in lions and tigers. Therefore, the puma purrs (both inhaling and exhaling) but cannot roar. Instead of a roar, it produces bloodcurdling screams and shrieks that sound uncannily like a human woman in distress, used primarily for communication during the mating season.</p>
+                    <p><strong>The Ghost Cat:</strong> The puma is a solitary predator highly active during twilight and night (crepuscular/nocturnal). It feeds on a vast array of prey—from insects and rodents to large ungulates like elk and moose. After killing its prey with a lethal bite to the neck, it typically caches (hides) the carcass under leaves, brush, or snow, returning to feed on it over several days.</p>
+                     <p><strong>Spotted Cubs:</strong> Although the adult puma is entirely solid-colored and unpatterned (hence the name 'concolor'), puma cubs are born with striking blue eyes and a coat covered in dark spots and tail rings. These spots provide vital camouflage in the brush during their vulnerable early months, gradually fading until completely disappearing around six months of age.</p>
                 </div>
             </section>
 
-            <section class="space-y-4">
-                <h3 class="text-amber-600 font-bold text-lg px-2">אטימולוגיה מורחבת (Etymology)</h3>
+            <section class="space-y-4 text-start">
+                <h3 class="text-amber-600 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת (Cat of Many Names)</h3>
+                <h3 class="text-amber-600 font-bold text-lg px-2 en-content hidden">Extended Etymology (Cat of Many Names)</h3>
+                
                 <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
                     <div class="p-4 border-b border-slate-800">
-                        <h4 class="text-md font-bold text-white mb-2">1. הסוג והשם הנפוץ: Puma</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> המילה "פומה" הגיעה לשפות האירופיות ישירות משפת הקצ'ואה (Quechua), שפתם של בני האינקה בהרי האנדים של פרו. המשמעות היא "עוצמתי" או שם החיה באמונתם.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> The word 'Puma' comes directly from the Quechua language of the Incan civilization, meaning "powerful".</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג והשם הנפוץ: Puma</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus & Common Name: Puma</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה "פומה" (Puma) הגיעה לשפות האירופיות ישירות משפת הקצ'ואה (Quechua), שפתם של בני האינקה העתיקים בהרי האנדים שבדרום אמריקה. המשמעות היא פשוט "עוצמתי" או חיית הפרא העוצמתית של האזור.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The word "Puma" entered European languages directly from Quechua, the language of the ancient Inca civilization in the Andes mountains of South America. It simply means "powerful" or refers to the powerful wild beast of the region.</p>
                     </div>
+                    
                     <div class="p-4 border-b border-slate-800">
-                        <h4 class="text-md font-bold text-white mb-2">2. המין: concolor</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> הלטינית 'concolor' מתורגמת כ"בעל צבע אחיד" (Con-Color). זאת משום שפרוות הפומה חלקה ונעדרת לחלוטין כתמים או פסים בבגרותה.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> The Latin word 'concolor' means "of uniform color". This accurately describes the adult puma's spotless coat.</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: concolor</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: concolor</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלטינית 'concolor' מתורגמת פשוט כ"בעל צבע אחיד" (Con-Color). זאת משום שפרוות הפומה חלקה לחלוטין (גווני זהב, נחושת או חול) ונעדרת לחלוטין כתמים או פסים בבגרותה, בניגוד מוחלט לנמר או ליגואר.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Latin word 'concolor' translates simply to "of uniform color" or "one color". This is because the adult puma's coat is entirely solid (shades of gold, tawny, or sand) and devoid of spots or stripes, in stark contrast to leopards or jaguars.</p>
                     </div>
+                    
                     <div class="p-4">
-                        <h4 class="text-md font-bold text-white mb-2">3. השם השני: Cougar / Mountain Lion</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> הפומה מחזיקה בשיא גינס כחיה בעלת מספר השמות הנפוצים הרב ביותר! השם "קוגר" הוא שיבוש צרפתי של מילה משפת הטופי. השם "אריה הרים" ניתן לה על ידי מתיישבים אמריקאים מוקדמים שחשבו שראו לביאה אפריקנית חסרת רעמה במערב ארה"ב.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> Holds a Guinness Record for having the most common names. 'Cougar' is a French corruption of a Tupi word. 'Mountain Lion' was coined by settlers who mistook it for a maneless African lion.</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. שיאן גינס: קוגר ואריה הרים</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Guinness Record: Cougar & Mountain Lion</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">הפומה מחזיקה בשיא גינס כחיה בעלת מספר השמות הנפוצים הרב ביותר (מעל 40 שמות באנגלית בלבד).<br>
+                        <strong>קוגר (Cougar):</strong> שיבוש צרפתי מוקדם למילה "suassuarana" משפת הטופי, שתורגם ל-'cuguar' ואז ל-Cougar.<br>
+                        <strong>אריה הרים (Mountain Lion):</strong> שם שניתן לה על ידי מתיישבים אמריקאים וספרדים מוקדמים, אשר נתקלו בחתול זהוב וגדול ללא כתמים, וחשבו בטעות שמדובר בלביאה (אריה נקבה ללא רעמה) אפריקנית החיה בהרים.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The puma holds a Guinness World Record for having the most common names (over 40 in English alone).<br>
+                        <strong>Cougar:</strong> An early French corruption of the Tupi word "suassuarana", which became 'cuguar' and finally Cougar.<br>
+                        <strong>Mountain Lion:</strong> A name bestowed by early American and Spanish settlers who encountered a large, unspotted golden cat and mistakenly assumed it was an African lioness (lacking a mane) living in the mountains.</p>
                     </div>
                 </div>
             </section>
 
-            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
-                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2">היסטוריית הגילוי, אבולוציה ושימור</h3>
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
                 <div class="space-y-6">
                     <div>
-                        <h4 class="text-white font-semibold mb-2">הגילוי המקורי:</h4>
-                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> קוטלג ותואר מדעית ב-1771 על ידי קארל לינאוס (שנות חיים: 1707–1778). קרא לה במקור <em>Felis concolor</em>, ורק מאוחר יותר הועברה לסוג משלה (Puma).</p>
-                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Scientifically cataloged in 1771 by Carl Linnaeus (Lifespan: 1707–1778) as 'Felis concolor'.</p>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">קוטלג ותואר מדעית ב-1771 על ידי קארל לינאוס (Carl Linnaeus, שנות חיים: 1707–1778). הוא סיווג אותה במקור תחת השם <em>Felis concolor</em> (כקרובת משפחה ישירה לחתולי הבית), ורק מאוחר יותר הפומה קיבלה את סוג החתוליים העצמאי שלה (Puma).</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">Scientifically cataloged and described in 1771 by Carl Linnaeus (Lifespan: 1707–1778). He originally classified it under the name <em>Felis concolor</em> (as a direct relative of domestic cats), and only later was the puma given its own independent feline genus (Puma).</p>
                     </div>
                     <div>
-                        <h4 class="text-white font-semibold mb-2">אבולוציה ותפוצה:</h4>
-                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> לפומה יש את טווח התפוצה הרחב ביותר מכל יונק יבשתי פראי במערב. מבחינה גנטית, קרוביה הקרובים ביותר הם היגוארונדי והברדלס האפריקני!</p>
-                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Has the largest terrestrial range of any wild mammal in the Western Hemisphere. Genetically close to the Jaguarundi and Cheetah.</p>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">לפומה יש את טווח התפוצה הלטראלי (מצפון לדרום) הרחב ביותר מכל יונק יבשתי פראי בחצי הכדור המערבי: מיערות קנדה המושלגים ועד למדבריות ארגנטינה וצ'ילה. מפתיע לגלות שמבחינה גנטית, קרוביה הקרובים ביותר של הפומה אינם שאר החתולים הגדולים באמריקה, אלא היגוארונדי... והברדלס האפריקני (אבותיהם היגרו חזרה מאמריקה לאירואסיה).</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">The puma has the greatest latitudinal range (from north to south) of any wild terrestrial mammal in the Western Hemisphere: from the snowy forests of Canada down to the deserts of Argentina and Chile. Surprisingly, genetically speaking, the puma's closest living relatives are not the other big cats of the Americas, but rather the Jaguarundi... and the African Cheetah (whose ancestors migrated back from the Americas to Eurasia).</p>
                     </div>
                     <div>
-                        <h4 class="text-white font-semibold mb-2">מצב שימור:</h4>
-                        <p class="text-sm text-slate-300">מוגדרת כ"ללא חשש" (LC) על ידי ה-IUCN בשל תפוצתה הרחבה. עם זאת, אוכלוסיות מסוימות מבודדות, כמו תת-המין פנתר פלורידה, נמצאות בסכנת הכחדה קריטית.</p>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">ברמה העולמית, הפומה מוגדרת כ"ללא חשש" (Least Concern - LC) על ידי ה-IUCN בשל תפוצתה העצומה וגמישותה האקולוגית. עם זאת, הציד וההתרחבות העירונית דחקו אותן מחלקים גדולים ממזרח ארצות הברית. אוכלוסיות מסוימות ומבודדות, כמו ה"פנתר של פלורידה" (Florida Panther), סובלות מריבוי קרובים ונמצאות בסכנת הכחדה קריטית.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Globally, the puma is classified as "Least Concern" (LC) by the IUCN due to its massive distribution and ecological adaptability. However, hunting and urban sprawl have eradicated them from large portions of the eastern United States. Certain isolated populations, such as the Florida Panther, suffer from severe inbreeding and are critically endangered.</p>
                     </div>
                 </div>
             </section>
         </main>
 
         <footer class="mt-8 p-6 text-center text-slate-500 text-sm border-t border-slate-800 mx-6 pb-12">
-            <p>האתר נבנה על ידי ג'מיני ורם.</p>
+            <p class="he-content">האתר נבנה על ידי ג'מיני ורם.</p>
+            <p class="en-content hidden">The site was created by Gemini and Ram.</p>
         </footer>
     </div>
 
+    <!-- Modal -->
     <div id="fullScreenImageModal" class="fixed inset-0 bg-black/95 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
         <button class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-amber-600 z-[101]">&times;</button>
         <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-2 border-slate-700">
     </div>
 
     <script>
+        // מנגנון הדו-לשוניות
+        let currentLang = 'he';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+
+            document.querySelectorAll('.he-content').forEach(el => {
+                if(currentLang === 'he') el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
+
+            document.querySelectorAll('.en-content').forEach(el => {
+                if(currentLang === 'en') el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
+        }
+
         function openImageModal(imgUrl) {
             const modal = document.getElementById('fullScreenImageModal');
             const imgEl = document.getElementById('modalFullImg');
