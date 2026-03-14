@@ -6,13 +6,14 @@
     <title>יגואר (Panthera onca) | מטריצת החתוליים</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
         :root {
             --bg-body: #030712; 
             --bg-card: #0a1122; 
             --border-card: #1d365d;
             --text-accent: #fbbf24; /* ענבר בהיר/זהב עמוק */
         }
-        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
         .samsung-s25-container { 
             max-width: 412px; 
             margin: 0 auto; 
@@ -33,162 +34,210 @@
 
     <div class="samsung-s25-container relative pb-10">
         
-        <nav class="absolute top-4 right-4 z-10">
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-amber-500 hover:bg-amber-600 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
             <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-amber-600 transition border border-white/10 flex items-center gap-2">
-                <span>&rarr;</span> חזרה למטריצה
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
             </a>
         </nav>
 
-        <!-- כאן בוצע התיקון לנתיב התמונה המקומי בגיטהאב שלך -->
+        <!-- תמונת נושא ייצוגית -->
         <header class="relative w-full h-72 md:h-96">
             <button onclick="openImageModal('../assets/jaguar.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
                 <img src="../assets/jaguar.png" alt="יגואר באמזונס" class="w-full h-full object-cover">
             </button>
             <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
-            <div class="absolute bottom-0 p-6 w-full pointer-events-none">
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
                 <div class="flex items-center gap-3 mb-2">
-                    <span class="bg-amber-500/20 text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/30">Pantherinae</span>
-                    <span class="text-slate-400 text-sm tracking-widest">אל האמזונס</span>
+                    <span class="bg-amber-500/20 text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/30 he-content">Pantherinae (חתולים גדולים)</span>
+                    <span class="bg-amber-500/20 text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/30 en-content hidden">Pantherinae (Big Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">אל האמזונס</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">Lord of the Amazon</span>
                 </div>
-                <h1 class="text-4xl font-extrabold text-white mb-1">יגואר</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">יגואר</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Jaguar</h1>
                 <h2 class="text-xl text-slate-300 italic font-serif">Panthera onca</h2>
             </div>
         </header>
 
         <main class="p-6 space-y-8">
-            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
-                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">תעודת זהות זואולוגית</h3>
-                <ul class="space-y-3 text-sm">
+            
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
                     <li><strong class="text-slate-400">שם באנגלית:</strong> Jaguar</li>
                     <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae)</li>
-                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "Lord of the Amazon" / "The One Who Kills With One Leap"</li>
-                    <li><strong class="text-slate-400">מאפיין ייחודי (HE):</strong> החתול הגדול היחיד ביבשת אמריקה. ניחן בכוח הנשיכה החזק ביותר מכל החתוליים (ביחס למשקלו), המאפשר לו לחדור שריון של צבים וגולגולות של קיימנים בנשיכה אחת.</li>
-                    <li><strong class="text-slate-400">Unique Feature (EN):</strong> The only big cat in the Americas. Possesses the strongest bite force of all felines relative to size, allowing it to pierce turtle shells and caiman skulls with a single bite.</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The One Who Kills With One Leap"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> החתול הגדול היחיד ביבשת אמריקה. ניחן בכוח הנשיכה החזק ביותר מכל החתוליים (ביחס למשקלו), המאפשר לו לחדור שריון של צבים וגולגולות של קיימנים (סוג של תנין) בנשיכה אחת.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Jaguar</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The One Who Kills With One Leap"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> The only big cat in the Americas. Possesses the strongest bite force of all felines relative to its size, allowing it to pierce turtle shells and the skulls of caimans (a type of crocodilian) with a single bite.</li>
                 </ul>
             </section>
 
-            <section class="space-y-4">
-                <h3 class="text-amber-500 font-bold text-lg px-2">נתונים סטטיסטיים (Stats)</h3>
+            <section class="space-y-4 text-start">
+                <h3 class="text-amber-500 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-amber-500 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
                 <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
-                    <table class="w-full text-sm text-right bg-slate-900">
+                    <table class="w-full text-sm text-start bg-slate-900">
                         <thead class="bg-slate-800 text-slate-300">
                             <tr>
-                                <th class="p-3">פרמטר (HE)</th>
-                                <th class="p-3">ערך (HE)</th>
-                                <th class="p-3 text-left">Parameter (EN)</th>
-                                <th class="p-3 text-left">Value (EN)</th>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-800">
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">היריון</td>
-                                <td class="p-3">93 עד 105 ימים</td>
-                                <td class="p-3 text-left text-slate-400">Gestation</td>
-                                <td class="p-3 text-left">93 - 105 days</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">93 עד 105 ימים</span><span class="en-content hidden">93 - 105 days</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">אורך גוף - זכר (ללא זנב)</td>
-                                <td class="p-3">1.2 עד 1.95 מטרים</td>
-                                <td class="p-3 text-left text-slate-400">Male Body Length</td>
-                                <td class="p-3 text-left">1.2 - 1.95 meters</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף - זכר (ללא זנב)</span><span class="en-content hidden">Male Body Length</span></td>
+                                <td class="p-3"><span class="he-content">1.2 עד 1.95 מטרים</span><span class="en-content hidden">1.2 - 1.95 meters</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">אורך גוף - נקבה (ללא זנב)</td>
-                                <td class="p-3">1.1 עד 1.7 מטרים</td>
-                                <td class="p-3 text-left text-slate-400">Female Body Length</td>
-                                <td class="p-3 text-left">1.1 - 1.7 meters</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף - נקבה (ללא זנב)</span><span class="en-content hidden">Female Body Length</span></td>
+                                <td class="p-3"><span class="he-content">1.1 עד 1.7 מטרים</span><span class="en-content hidden">1.1 - 1.7 meters</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">משקל - זכר בוגר</td>
-                                <td class="p-3">56 עד 120 ק"ג (נדיר: עד 158 ק"ג)</td>
-                                <td class="p-3 text-left text-slate-400">Adult Male Weight</td>
-                                <td class="p-3 text-left">56 - 120 kg (max 158 kg)</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל - זכר בוגר</span><span class="en-content hidden">Adult Male Weight</span></td>
+                                <td class="p-3"><span class="he-content">56 עד 120 ק"ג (נדיר: עד 158 ק"ג)</span><span class="en-content hidden">56 - 120 kg (rarely up to 158 kg)</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">משקל - נקבה בוגרת</td>
-                                <td class="p-3">36 עד 85 ק"ג</td>
-                                <td class="p-3 text-left text-slate-400">Adult Female Weight</td>
-                                <td class="p-3 text-left">36 - 85 kg</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל - נקבה בוגרת</span><span class="en-content hidden">Adult Female Weight</span></td>
+                                <td class="p-3"><span class="he-content">36 עד 85 ק"ג</span><span class="en-content hidden">36 - 85 kg</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">תוחלת חיים (טבע)</td>
-                                <td class="p-3">12 עד 15 שנים</td>
-                                <td class="p-3 text-left text-slate-400">Lifespan (Wild)</td>
-                                <td class="p-3 text-left">12 - 15 years</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">12 עד 15 שנים</span><span class="en-content hidden">12 - 15 years</span></td>
                             </tr>
-                            <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">כוח נשיכה (Bite Force)</td>
-                                <td class="p-3">כ-1500 PSI (החזק ביחס לגוף)</td>
-                                <td class="p-3 text-left text-slate-400">Bite Force</td>
-                                <td class="p-3 text-left">~1500 PSI</td>
+                             <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">כוח נשיכה (Bite Force)</span><span class="en-content hidden">Bite Force</span></td>
+                                <td class="p-3"><span class="he-content">כ-1,500 PSI (החזק ביחס לגוף)</span><span class="en-content hidden">~1,500 PSI (strongest relative to size)</span></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
-            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
-                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">אנטומיה וביולוגיה (Anatomy & Biology)</h3>
-                <div class="space-y-4 text-sm leading-relaxed text-slate-300">
-                    <p><strong>מבנה גוף מאסיבי:</strong> בניגוד לנמר (Leopard) האפריקני והאסיאתי שהוא רזה וגמיש יותר, היגואר בנוי כמו מרים משקולות. יש לו חזה רחב, גפיים קצרות ושריריות מאוד, וראש גדול ועבה המותאם לספק את עוצמת הנשיכה האדירה שלו.</p>
-                    <p><strong>חברבורות כפולות:</strong> קל להבדיל בין יגואר לנמר בעזרת הפרווה. ליגואר יש "רוזטות" (חברבורות דמויות שושנה) גדולות יותר מאשר לנמר, **ובמרכז כל רוזטה ישנה נקודה שחורה אחת או יותר**. דפוס זה מספק הסוואה מעולה ביערות הגשם של האמזונס.</p>
-                    <p><strong>אמפוסים שחיינים:</strong> בדומה לטיגריס, היגואר לא רק שאינו מפחד ממים, אלא הוא שחיין מצטיין וצייד מיומן בתוך הנהרות. הוא מסוגל לארוב ולטרוף קיימנים (סוג של תנין) ואנקונדות בתוך המים עצמם.</p>
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>מבנה גוף מאסיבי:</strong> בניגוד לנמר (Leopard) האפריקני והאסיאתי שהוא רזה וגמיש יותר ומיועד לטיפוס מהיר, היגואר בנוי כמו מרים משקולות. יש לו חזה רחב מאוד, גפיים קצרות ושריריות בצורה יוצאת דופן, וראש גדול ועבה המותאם לספק את עוצמת הנשיכה האדירה שלו. מבנה זה הופך אותו פחות מהיר בריצה מנמר, אך חזק משמעותית בהיאבקות.</p>
+                    <p><strong>חברבורות כפולות:</strong> קל להבדיל בין יגואר לנמר בעזרת הפרווה. ליגואר יש "רוזטות" (חברבורות דמויות שושנה) גדולות יותר מאשר לנמר, ו<strong>במרכז כל רוזטה ישנה נקודה שחורה אחת או יותר</strong> (בניגוד לרוזטות הריקות של הנמר). דפוס זה מספק הסוואה מעולה ביערות הגשם הסבוכים של האמזונס, שבהם אור השמש חודר מבעד לעלים ככתמים בודדים.</p>
+                    <p><strong>אמפיבים שחיינים:</strong> בדומה לטיגריס, היגואר לא רק שאינו מפחד ממים, אלא הוא שחיין מצטיין וצייד מיומן בתוך הנהרות. הוא מסוגל לצלול, לארוב ולטרוף קיימנים ואנקונדות בתוך המים עצמם, ולגרור אותם החוצה אל הגדה. הוא גם נוהג להשתמש בזנבו כדי "לדוג" – הוא מכה קלות על פני המים כדי למשוך דגים ואז לוכד אותם בכפותיו.</p>
+                     <p><strong>טכניקת הרג ייחודית:</strong> בעוד שרוב החתולים הגדולים (אריות, נמרים) הורגים את טרפם באמצעות נשיכה ממושכת בצוואר כדי לחנוק אותו, היגואר נוהג להשתמש בטכניקה אכזרית ומהירה בהרבה: נשיכה מרסקת ישירות לתוך גולגולת הטרף (בין האוזניים) או אל עמוד השדרה העליון כדי לנתק את חוט השדרה.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Massive Build:</strong> Unlike the African and Asian leopard, which is slender, agile, and built for rapid climbing, the jaguar is built like a weightlifter. It has a very broad chest, exceptionally short and muscular limbs, and a large, thick head adapted to deliver its immense bite force. This structure makes it less swift than a leopard, but significantly more powerful in a grappling fight.</p>
+                    <p><strong>Double Spots:</strong> It is easy to distinguish a jaguar from a leopard by its coat. A jaguar has larger "rosettes" (rose-like spots) than a leopard, and <strong>in the center of each rosette, there is one or more distinct black spots</strong> (unlike the empty rosettes of the leopard). This pattern provides excellent camouflage in the dense Amazon rainforests, where sunlight penetrates through the leaves as dappled patches.</p>
+                    <p><strong>Amphibious Swimmers:</strong> Similar to the tiger, the jaguar not only lacks a fear of water but is an outstanding swimmer and a skilled hunter within rivers. It is capable of diving, ambushing, and preying upon caimans and anacondas entirely in the water, dragging them out onto the bank. It is also known to use its tail to "fish"—lightly tapping the water's surface to attract fish and then scooping them out with its paws.</p>
+                     <p><strong>Unique Killing Technique:</strong> While most big cats (lions, leopards) kill their prey by delivering a prolonged bite to the throat to suffocate it, the jaguar employs a much more brutal and rapid technique: a crushing bite directly into the prey's skull (between the ears) or the upper spinal column to sever the spinal cord instantly.</p>
                 </div>
             </section>
 
-            <section class="space-y-4">
-                <h3 class="text-amber-500 font-bold text-lg px-2">אטימולוגיה מורחבת (Etymology)</h3>
+            <section class="space-y-4 text-start">
+                <h3 class="text-amber-500 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-amber-500 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
                 <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
                     <div class="p-4 border-b border-slate-800">
-                        <h4 class="text-md font-bold text-white mb-2">1. הסוג: Panthera</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> בדומה לשאר החתולים הגדולים, המקור ביוונית עתיקה (pánthēr - πάνθηρ). בלשנים קושרים את המילה למקור הסנסקריטי "pundarīkam" שמשמעותו טיגריס.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> Derived from Ancient Greek 'pánthēr', linked to the Sanskrit word 'pundarīkam'.</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Panthera</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Panthera</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">בדומה לשאר החתולים הגדולים, המקור ביוונית עתיקה (pánthēr - πάνθηρ). בלשנים קושרים את המילה למקור הסנסקריטי "pundarīkam" שמשמעותו טיגריס.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Derived from Ancient Greek 'pánthēr', linked to the Sanskrit word 'pundarīkam'.</p>
                     </div>
+                    
                     <div class="p-4 border-b border-slate-800">
-                        <h4 class="text-md font-bold text-white mb-2">2. המין: onca</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> המילה *onca* מגיעה מהשפות הרומאניות (כמו הפורטוגזית *onça* או הספרדית *onza*). במקור, מקורה במילה הלטינית *lyncea* (שפירושה שונר או פרא מנומר). כאשר האירופאים הגיעו לדרום אמריקה וראו את החתול הענק הזה, הם השתמשו במילה שהכירו עבור חתולי בר מנומרים מאירופה.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> From Romance languages (e.g., Portuguese 'onça'), originally derived from Latin 'lyncea' (lynx). Used by early European explorers to describe the spotted American cat.</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: onca</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: onca</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה *onca* מגיעה מהשפות הרומאניות (כמו הפורטוגזית *onça* או הספרדית *onza*). במקור, מקורה במילה הלטינית *lyncea* (שפירושה שונר או פרא מנומר). כאשר האירופאים הגיעו לדרום אמריקה וראו את החתול הענק הזה, הם השתמשו במילה שהכירו מאירופה עבור חתולי בר מנומרים (בדומה לטעות האטימולוגית של נמר השלג - Ounce).</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The word *onca* comes from Romance languages (like Portuguese *onça* or Spanish *onza*). Originally, it derived from the Latin word *lyncea* (meaning lynx or spotted wildcat). When Europeans arrived in South America and saw this giant cat, they applied the word they knew from Europe for spotted wildcats (similar to the etymological error of the snow leopard - Ounce).</p>
                     </div>
+                    
                     <div class="p-4">
-                        <h4 class="text-md font-bold text-white mb-2">3. השם העממי: יגואר (Jaguar)</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> השם מגיע ישירות מהשפות הילידיות של דרום אמריקה, ספציפית משפת הטופי-גוארני (Tupi-Guarani). המילה המקורית היא *yaguara* (יגווארה). המשמעות המילולית שלה מצמררת ומדויקת: "החיה שטורפת (או קורעת) את טרפה בזינוק אחד". זה מתאר במדויק את טכניקת הציד הייחודית של היגואר – זינוק פתאומי ונשיכה מרסקת ישירות לגולגולת או לעורף, בניגוד לחתולים אחרים שחונקים את טרפם דרך הגרון.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> Derived from the indigenous Tupi-Guarani word 'yaguara'. It literally translates to "he who kills with one leap", perfectly describing its unique hunting method of crushing the skull with a single bite rather than suffocating prey.</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי: יגואר (Jaguar)</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Common Name: Jaguar</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם מגיע ישירות מהשפות הילידיות של דרום אמריקה, ספציפית משפת הטופי-גוארני (Tupi-Guarani). המילה המקורית היא *yaguara* (יגווארה). המשמעות המילולית שלה מדויקת להפליא לדרך הפעולה של החיה: "החיה שטורפת (או קורעת) את טרפה בזינוק אחד".</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The name derives directly from the indigenous languages of South America, specifically Tupi-Guarani. The original word is *yaguara*. Its literal meaning is incredibly precise to the animal's modus operandi: "the beast that kills (or tears) its prey with one leap".</p>
                     </div>
                 </div>
             </section>
 
-            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
-                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">היסטוריית הגילוי, אבולוציה ושימור</h3>
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
                 <div class="space-y-6">
                     <div>
-                        <h4 class="text-white font-semibold mb-2">הגילוי המקורי:</h4>
-                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> קוטלג ותואר מדעית לראשונה בשנת <strong>1758</strong> על ידי הזואולוג השוודי, <strong>קארל לינאוס</strong> (Carl Linnaeus, שנות חיים: 1707–1778), בדומה לשאר משפחת הפנתרים. לינאוס התבסס על תיאורים מדויקים של חוקרי טבע ואירופאים שחזרו מיבשת "העולם החדש" (דרום אמריקה).</p>
-                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Scientifically cataloged in 1758 by Carl Linnaeus (Lifespan: 1707–1778), based on descriptions from European explorers returning from the New World.</p>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">קוטלג ותואר מדעית לראשונה בשנת <strong>1758</strong> על ידי הזואולוג השוודי, <strong>קארל לינאוס</strong> (Carl Linnaeus, שנות חיים: 1707–1778), בדומה לשאר משפחת הפנתרים. לינאוס התבסס על תיאורים מדויקים של חוקרי טבע ואירופאים שחזרו מיבשת "העולם החדש" (דרום אמריקה).</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">First scientifically cataloged and described in <strong>1758</strong> by the Swedish zoologist <strong>Carl Linnaeus</strong> (Lifespan: 1707–1778), similar to the rest of the Panthera family. Linnaeus relied on precise descriptions from naturalists and Europeans returning from the "New World" (South America).</p>
                     </div>
                     <div>
-                        <h4 class="text-white font-semibold mb-2">אבולוציה ותפוצה:</h4>
-                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> מבחינה אבולוציונית, היגואר קרוב יותר גנטית לנמר (Leopard) מאשר לטיגריס או לאריה, אף על פי שפיזית הוא נראה כשילוב בין נמר לטיגריס. אבותיו של היגואר חצו את מצר ברינג (Bering Strait) מאסיה לאמריקה הצפונית במהלך תור הפליסטוקן, ומשם התפשטו לדרום אמריקה. בעבר התפוצה שלו הגיעה עד דרום ארצות הברית.</p>
-                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Genetically, it is most closely related to the leopard. Its ancestors migrated from Asia across the Bering land bridge to the Americas during the Pleistocene epoch. Historically, its range extended into the southern US.</p>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">מבחינה אבולוציונית, היגואר קרוב יותר גנטית לנמר האפריקני (Leopard) מאשר לטיגריס או לאריה, אף על פי שפיזית הוא נראה כשילוב בין נמר לטיגריס. אבותיו של היגואר התפתחו באירואסיה וחצו את מצר ברינג (Bering Strait) לאמריקה הצפונית במהלך תור הפליסטוקן (לפני כ-1.5 מיליון שנים), ומשם התפשטו דרומה. בעבר התפוצה שלו הגיעה עד דרום ארצות הברית.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">Genetically, the jaguar is more closely related to the African leopard than to the tiger or lion, even though physically it appears as a hybrid of a leopard and a tiger. The jaguar's ancestors evolved in Eurasia and crossed the Bering Strait land bridge into North America during the Pleistocene epoch (about 1.5 million years ago), spreading southward from there. Historically, its range extended well into the southern United States.</p>
                     </div>
                     <div>
-                        <h4 class="text-white font-semibold mb-2">מצב שימור:</h4>
-                        <p class="text-sm text-slate-300">מוגדר כ"קרוב לסיכון" (Near Threatened - NT) על ידי הרשימה האדומה של IUCN. אוכלוסייתו העולמית נמצאת בירידה מתמדת עקב כריתת יערות הגשם של האמזונס, פיצול בתי גידול המקשה על רבייה, וקונפליקטים עם חוואים שהורגים אותם מחשש שיטרפו את הבקר שלהם. כיום הוא נכחד לחלוטין מרוב השטחים ההיסטוריים שלו בצפון ומרכז אמריקה.</p>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">מוגדר כ"קרוב לסיכון" (Near Threatened - NT) על ידי הרשימה האדומה של IUCN. אוכלוסייתו העולמית נמצאת בירידה מתמדת. האיום העיקרי הוא כריתת יערות הגשם של האמזונס לטובת חקלאות, מה שגורם לפיצול בתי הגידול ומקשה על רבייה. בנוסף, קיימים קונפליקטים מתמשכים עם חוואים שנוהגים להרוג יגוארים מחשש שיטרפו את הבקר שלהם. כיום הוא נכחד לחלוטין מרוב השטחים ההיסטוריים שלו בצפון ומרכז אמריקה.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Classified as "Near Threatened" (NT) by the IUCN Red List. Its global population is in steady decline. The primary threat is the deforestation of the Amazon rainforest for agriculture, which causes habitat fragmentation and hinders reproduction. Additionally, there are ongoing conflicts with ranchers who often kill jaguars for fear they will prey on their cattle. Today, it is completely extinct from most of its historical territories in North and Central America.</p>
                     </div>
                 </div>
             </section>
         </main>
 
         <footer class="mt-8 p-6 text-center text-slate-500 text-sm border-t border-slate-800 mx-6 pb-12">
-            <p>האתר נבנה על ידי ג'מיני ורם.</p>
+            <p class="he-content">האתר נבנה על ידי ג'מיני ורם.</p>
+            <p class="en-content hidden">The site was created by Gemini and Ram.</p>
         </footer>
     </div>
 
+    <!-- Modal -->
     <div id="fullScreenImageModal" class="fixed inset-0 bg-black/95 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
         <button class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-amber-500 z-[101]">&times;</button>
         <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-2 border-slate-700">
     </div>
 
     <script>
+        // מנגנון הדו-לשוניות
+        let currentLang = 'he';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+
+            document.querySelectorAll('.he-content').forEach(el => {
+                if(currentLang === 'he') el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
+
+            document.querySelectorAll('.en-content').forEach(el => {
+                if(currentLang === 'en') el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
+        }
+
         function openImageModal(imgUrl) {
             const modal = document.getElementById('fullScreenImageModal');
             const imgEl = document.getElementById('modalFullImg');
