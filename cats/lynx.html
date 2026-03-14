@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>שונר אירואסייתי (Lynx lynx) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #a8a29e; /* אפור-אבן אירופאי */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-stone-500/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-stone-400 hover:bg-stone-500 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-stone-500 hover:text-black transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/lynx.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/lynx.png" alt="שונר אירואסייתי בשלג" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-stone-500/20 text-stone-300 text-xs font-bold px-3 py-1 rounded-full border border-stone-500/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-stone-500/20 text-stone-300 text-xs font-bold px-3 py-1 rounded-full border border-stone-500/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">מלך היערות האפור</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">Grey King of the Forests</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">שונר אירואסייתי</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Eurasian Lynx</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Lynx lynx</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-stone-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-stone-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Eurasian Lynx / Northern Lynx</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Phantom of the Taiga"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> המין הגדול, החזק והמרשים ביותר מבין ארבעת מיני השונרים בעולם (גדול פי שניים מהבובקט או מהשונר הקנדי). הוא החתול הבר השלישי בגודלו באירופה ואסיה (אחרי הטיגריס והנמר), ויחיד מבין השונרים שמסוגל לצוד טרף הגדול ממנו פי שלושה ואף ארבעה.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Eurasian Lynx / Northern Lynx</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Phantom of the Taiga"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> The largest, strongest, and most impressive of the four lynx species worldwide (twice the size of a bobcat or Canadian lynx). It is the third-largest wild cat in Europe and Asia (after the tiger and leopard), and the only lynx capable of hunting prey three to four times its own size.</li>
+                </ul>
+            </section>
+
+            <section class="space-y-4 text-start">
+                <h3 class="text-stone-400 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-stone-400 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">67 עד 74 ימים</span><span class="en-content hidden">67 - 74 days</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">80 עד 130 ס"מ</span><span class="en-content hidden">80 - 130 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">11 עד 25 ס"מ (זנב ה"בוב" המוכר)</span><span class="en-content hidden">11 - 25 cm (the familiar "bob" tail)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">18 עד 30 ק"ג (נדיר: עד 45 ק"ג בסיביר!)</span><span class="en-content hidden">18 - 30 kg (rarely up to 45 kg in Siberia!)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">עד 17 שנים (עד 24 בשבי)</span><span class="en-content hidden">Up to 17 years (up to 24 in captivity)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-stone-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-stone-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>כוח פיזי חריג:</strong> בניגוד לשאר מיני השונרים שמסתפקים בציד ארנבות, ציפורים או מכרסמים, השונר האירואסייתי מתנהג לעיתים כמו "חתול גדול". הוא צד באופן קבוע פרסתנים (Ungulates) כגון איילי כרמל (Roe deer), יעלים, ואפילו איילי הצפון צעירים (Reindeer) שעשויים לשקול מעל 100 ק"ג – פי שלושה עד ארבעה ממשקלו שלו! הוא עושה זאת בעזרת עוצמת נשיכה מרסקת וכוח שרירים אדיר בפלג גופו העליון.</p>
+                    <p><strong>מלך ההסוואה בשלג:</strong> הפרווה של השונר האירואסייתי משתנה באופן דרמטי בין עונות השנה. בקיץ היא קצרה יותר, בגווני חום-אדמדם עד אפור, ומעוטרת בכתמים שחורים בולטים (העוזרים לו להסתוות בין צללי היער). לקראת החורף, הפרווה הופכת לעבה להפליא, ארוכה מאוד, והצבע משתנה לאפור-כסוף או לבנבן שכמעט ומעלים את הכתמים, ומספק לו הסוואה מושלמת על רקע השלג הצפוני.</p>
+                    <p><strong>אנטנות ציד:</strong> ציציות השיער (Ear tufts) שעל אוזניו של השונר האירואסייתי הן מהארוכות והבולטות ביותר במשפחת החתוליים. חוקרים הוכיחו שחתולים אלה מסוגלים לשמוע עכבר פוסע על השלג ממרחק של 50 מטרים. כאשר "קוצצים" לחתול את הציציות הללו בתנאי מעבדה או שבי, יכולת איתור הקול שלו נפגעת בצורה ניכרת.</p>
+                    <p><strong>סוליטרי וטריטוריאלי:</strong> השונר האירואסייתי הוא אחד מחתולי הבר היחידאים ביותר. זכר בוגר ישלוט בטריטוריה עצומה שעשויה להגיע עד ל-3,000 קילומטרים רבועים (ביערות הצפוניים והדלילים בטרף), והוא יסייר בה ללא הרף כדי להשאיר חותמי ריח ולמנוע מזכרים אחרים לחדור אליה.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Exceptional Physical Strength:</strong> Unlike other lynx species that settle for hunting hares, birds, or rodents, the Eurasian lynx occasionally behaves like a "big cat." It regularly hunts ungulates such as roe deer, chamois, and even young reindeer that can weigh over 100 kg—three to four times its own weight! It achieves this using a crushing bite force and immense upper-body muscle strength.</p>
+                    <p><strong>The King of Snow Camouflage:</strong> The fur of the Eurasian lynx changes dramatically between seasons. In the summer, it is shorter, reddish-brown to greyish, and adorned with prominent black spots (helping it camouflage among the forest shadows). Approaching winter, the coat becomes incredibly thick and long, changing to a silvery-grey or whitish hue that almost makes the spots disappear, providing perfect camouflage against the northern snow.</p>
+                    <p><strong>Hunting Antennae:</strong> The ear tufts on the Eurasian lynx are among the longest and most prominent in the feline family. Researchers have proven these cats can hear a mouse stepping on the snow from 50 meters away. When these tufts are "snipped" off in laboratory or captive conditions, their sound-localization ability is noticeably impaired.</p>
+                    <p><strong>Solitary and Territorial:</strong> The Eurasian lynx is one of the most solitary wildcats. An adult male will control a massive territory that can reach up to 3,000 square kilometers (in sparse northern forests), and he will patrol it relentlessly, leaving scent marks to prevent other males from intruding.</p>
+                </div>
+            </section>
+
+            <section class="space-y-4 text-start">
+                <h3 class="text-stone-400 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-stone-400 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג והמין: Lynx lynx (טאוטולוגיה)</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus & Species: Lynx lynx (Tautology)</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">מקור המילה 'Lynx' ביוונית עתיקה (λύγξ - lunx), הנגזרת מהשורש ההודו-אירופי '*leuk-' שפירושו "אור" או "לזרוח" - אזכור לברק המחזיר של עיניהם בחשכה. העובדה שהשם המדעי של החיה חוזר על עצמו פעמיים (Lynx lynx) מעידה מבחינה טקסונומית על כך שהשונר האירואסייתי הוא "מין הטיפוס" (Type species) - החיה שמייצגת באופן המושלם והקלאסי ביותר את כל קבוצת השונרים.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The word 'Lynx' originates from Ancient Greek (λύγξ - lunx), derived from the Indo-European root '*leuk-' meaning "light" or "to shine" - referencing the reflective glare of their eyes in the dark. The fact that the scientific name repeats twice (Lynx lynx) taxonomically indicates that the Eurasian lynx is the "type species"—the animal that most perfectly and classically represents the entire lynx group.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. השם העממי: Eurasian (אירואסייתי)</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Common Name: Eurasian</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">שם המציין את טווח התפוצה האדיר של החיה. זהו חתול הבר היחיד בעולם (למעט חתול הבית) שתפוצתו הרציפה משתרעת לאורך שתי יבשות שלמות - ממרכז ומערב אירופה, דרך כל רוסיה וסיביר, ועד מזרח אסיה והקצה המזרחי של סין.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">A name denoting the animal's massive distribution range. It is the only wild cat in the world (excluding domestic cats) whose continuous range spans across two entire continents—from Central and Western Europe, through all of Russia and Siberia, to East Asia and the easternmost edge of China.</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. מיתולוגיה פולקלוריסטית</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Folkloric Mythology</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">במיתולוגיה היוונית, הנורדית והאירופית של ימי הביניים, השונר יוחס באופן קבוע כחיה בעלת ראייה על-טבעית. האמינו (בטעות, כמובן) שהשונר מסוגל לראות דרך קירות מאסיביים ואף מבעד להרים, כדי למצוא סודות קבורים. אגדה זו התבססה על הראייה החדה להפליא והעיניים הזוהרות שלו.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">In Greek, Norse, and medieval European mythology, the lynx was consistently attributed with supernatural vision. It was believed (erroneously, of course) that the lynx could see through solid solid walls and even mountains to find buried secrets. This legend was based on its incredibly sharp vision and glowing eyes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-stone-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-stone-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">השונר האירואסייתי תואר מדעית לראשונה ב-<strong>1758</strong> על ידי קארל לינאוס (Carl Linnaeus, שנות חיים: 1707–1778) בספרו הקלאסי <em>Systema Naturae</em>. הוא סווג תחילה בשם הפשוט <em>Felis lynx</em> (חתול שונר).</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">The Eurasian Lynx was first scientifically described in <strong>1758</strong> by Carl Linnaeus (Lifespan: 1707–1778) in his classic book <em>Systema Naturae</em>. It was initially classified under the simple name <em>Felis lynx</em> (lynx cat).</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">הסוג שונר (*Lynx*) התפתח באמריקה לפני כ-4 מיליון שנים. לפני כ-1.5 מיליון שנים חצו אבותיו של השונר האירואסייתי את מצר ברינג (Bering Strait) חזרה לאירואסיה (הגירה הפוכה מזו של הרבה חיות אחרות). ביבשת החדשה והעצומה, ועם שפע של טרף גדול כמו איילים, הוא גדל בממדיו האבולוציוניים בצורה משמעותית לעומת קרוביו האמריקאיים (הבובקט והשונר הקנדי).</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">The *Lynx* genus evolved in the Americas about 4 million years ago. Roughly 1.5 million years ago, the ancestors of the Eurasian Lynx crossed the Bering Strait back into Eurasia (a reverse migration compared to many other animals). In this vast new continent, with an abundance of large prey like deer, it grew significantly in evolutionary size compared to its American relatives (the bobcat and Canadian lynx).</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">ברמה הגלובלית, מצבו מוגדר כ"ללא חשש" (Least Concern - LC) על ידי ה-IUCN, משום שאוכלוסיות ענק של עשרות אלפי פרטים חיות ביערות רוסיה וסיביר. עם זאת, התמונה באירופה שונה לחלוטין: בשל מאות שנים של ציד אינטנסיבי לפרווה ולהגנה על משק החי, השונר הוכחד כמעט לחלוטין ממערב ומרכז אירופה עד אמצע המאה ה-20. כיום מתבצעים פרויקטים רבים של השבה לטבע במדינות כמו גרמניה, שוויץ וצרפת, והאוכלוסייה האירופית נמצאת במגמת התאוששות אטית אך יציבה.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Globally, its status is classified as "Least Concern" (LC) by the IUCN, as massive populations of tens of thousands of individuals live in the forests of Russia and Siberia. However, the picture in Europe is entirely different: due to centuries of intensive hunting for fur and livestock protection, the lynx was almost completely eradicated from Western and Central Europe by the mid-20th century. Today, numerous reintroduction projects are underway in countries like Germany, Switzerland, and France, and the European population is on a slow but steady path to recovery.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-stone-400 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            document.querySelectorAll('.he-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'he'));
+            document.querySelectorAll('.en-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'en'));
+        }
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { imgEl.src = imgUrl; modal.classList.remove('hidden'); }
+        }
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
