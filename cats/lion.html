@@ -6,13 +6,14 @@
     <title>אריה (Panthera leo) | מטריצת החתוליים</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
         :root {
             --bg-body: #030712; 
             --bg-card: #0a1122; 
             --border-card: #1d365d;
             --text-accent: #f59e0b; /* זהב מלכותי */
         }
-        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
         .samsung-s25-container { 
             max-width: 412px; 
             margin: 0 auto; 
@@ -33,144 +34,192 @@
 
     <div class="samsung-s25-container relative pb-10">
         
-        <nav class="absolute top-4 right-4 z-10">
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-amber-500 hover:bg-amber-600 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
             <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-amber-600 transition border border-white/10 flex items-center gap-2">
-                <span>&rarr;</span> חזרה למטריצה
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
             </a>
         </nav>
 
-        <!-- כאן בוצע התיקון לנתיב התמונה המקומי בגיטהאב שלך -->
+        <!-- תמונת נושא ייצוגית -->
         <header class="relative w-full h-72 md:h-96">
             <button onclick="openImageModal('../assets/lion.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
                 <img src="../assets/lion.png" alt="אריה בסוואנה" class="w-full h-full object-cover">
             </button>
             <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
-            <div class="absolute bottom-0 p-6 w-full pointer-events-none">
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
                 <div class="flex items-center gap-3 mb-2">
-                    <span class="bg-amber-500/20 text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/30">Pantherinae</span>
-                    <span class="text-slate-400 text-sm tracking-widest">מלך החיות</span>
+                    <span class="bg-amber-500/20 text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/30 he-content">Pantherinae (חתולים גדולים)</span>
+                    <span class="bg-amber-500/20 text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/30 en-content hidden">Pantherinae (Big Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">מלך החיות</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">King of the Beasts</span>
                 </div>
-                <h1 class="text-4xl font-extrabold text-white mb-1">אריה</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">אריה</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Lion</h1>
                 <h2 class="text-xl text-slate-300 italic font-serif">Panthera leo</h2>
             </div>
         </header>
 
         <main class="p-6 space-y-8">
-            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
-                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">תעודת זהות זואולוגית</h3>
-                <ul class="space-y-3 text-sm">
+            
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
                     <li><strong class="text-slate-400">שם באנגלית:</strong> Lion</li>
                     <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae)</li>
-                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "King of the Beasts" / "Lord of the Savannah"</li>
-                    <li><strong class="text-slate-400">מאפיין ייחודי (HE):</strong> החתול החברתי היחיד. חי בלהקות (Prides) המנוהלות על ידי נקבות, ומתאפיין בדימורפיזם זוויגי קיצוני (לזכרים יש רעמה). שאגתו נשמעת למרחק של עד 8 קילומטרים.</li>
-                    <li><strong class="text-slate-400">Unique Feature (EN):</strong> The only highly social cat species, living in matriarchal prides. Exhibits extreme sexual dimorphism (males have manes). Its roar can be heard up to 8 kilometers away.</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "Lord of the Savannah"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> החתול החברתי היחיד. חי בלהקות (Prides) המנוהלות על ידי נקבות, ומתאפיין בדימורפיזם זוויגי קיצוני (לזכרים יש רעמה). שאגתו נשמעת למרחק של עד 8 קילומטרים.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Lion</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "Lord of the Savannah"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> The only highly social cat species, living in matriarchal prides. Exhibits extreme sexual dimorphism (males possess manes). Its roar can be heard up to 8 kilometers away.</li>
                 </ul>
             </section>
 
-            <section class="space-y-4">
-                <h3 class="text-amber-500 font-bold text-lg px-2">נתונים סטטיסטיים (Stats)</h3>
+            <section class="space-y-4 text-start">
+                <h3 class="text-amber-500 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-amber-500 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
                 <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
-                    <table class="w-full text-sm text-right bg-slate-900">
+                    <table class="w-full text-sm text-start bg-slate-900">
                         <thead class="bg-slate-800 text-slate-300">
                             <tr>
-                                <th class="p-3">פרמטר (HE)</th>
-                                <th class="p-3">ערך (HE)</th>
-                                <th class="p-3 text-left">Parameter (EN)</th>
-                                <th class="p-3 text-left">Value (EN)</th>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-800">
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">היריון</td>
-                                <td class="p-3">110 ימים (בממוצע)</td>
-                                <td class="p-3 text-left text-slate-400">Gestation</td>
-                                <td class="p-3 text-left">~110 days</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">110 ימים (בממוצע)</span><span class="en-content hidden">~110 days</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">אורך גוף - זכר (ללא זנב)</td>
-                                <td class="p-3">1.7 עד 2.5 מטרים</td>
-                                <td class="p-3 text-left text-slate-400">Male Body Length</td>
-                                <td class="p-3 text-left">1.7 - 2.5 meters</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף - זכר (ללא זנב)</span><span class="en-content hidden">Male Body Length</span></td>
+                                <td class="p-3"><span class="he-content">1.7 עד 2.5 מטרים</span><span class="en-content hidden">1.7 - 2.5 meters</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">משקל - זכר בוגר</td>
-                                <td class="p-3">150 עד 250 ק"ג</td>
-                                <td class="p-3 text-left text-slate-400">Adult Male Weight</td>
-                                <td class="p-3 text-left">150 - 250 kg</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל - זכר בוגר</span><span class="en-content hidden">Adult Male Weight</span></td>
+                                <td class="p-3"><span class="he-content">150 עד 250 ק"ג</span><span class="en-content hidden">150 - 250 kg</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">משקל - נקבה בוגרת</td>
-                                <td class="p-3">110 עד 182 ק"ג</td>
-                                <td class="p-3 text-left text-slate-400">Adult Female Weight</td>
-                                <td class="p-3 text-left">110 - 182 kg</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל - נקבה בוגרת</span><span class="en-content hidden">Adult Female Weight</span></td>
+                                <td class="p-3"><span class="he-content">110 עד 182 ק"ג</span><span class="en-content hidden">110 - 182 kg</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">תוחלת חיים (טבע)</td>
-                                <td class="p-3">10-14 שנים (זכרים פחות)</td>
-                                <td class="p-3 text-left text-slate-400">Lifespan (Wild)</td>
-                                <td class="p-3 text-left">10 - 14 years</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">10-14 שנים (זכרים פחות)</span><span class="en-content hidden">10 - 14 years (males less)</span></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
-            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
-                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">אנטומיה וביולוגיה (Anatomy & Biology)</h3>
-                <div class="space-y-4 text-sm leading-relaxed text-slate-300">
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה וביולוגיה</h3>
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy & Biology</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
                     <p><strong>הרעמה:</strong> מאפיין בלעדי לזכרים הבוגרים. הרעמה משמשת גם כהגנה על העורף במהלך קרבות טריטוריאליים עם זכרים אחרים, וגם כסמן לבריאות וגנטיקה: ככל שהרעמה כהה ומלאה יותר, כך הזכר נחשב לבריא יותר ולמושך יותר עבור הנקבות.</p>
                     <p><strong>לב קטן:</strong> באופן מפתיע, לאריה יש לב קטן מאוד ביחס למשקל הגוף שלו (בהשוואה לחתולים אחרים). עובדה זו מגבילה את יכולת הריצה שלו לפרצים קצרים בלבד (כ-60 קמ"ש לזמן קצר). לכן הם תלויים בעבודת צוות ומארב קרוב לטרף.</p>
                 </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>The Mane:</strong> An exclusive trait of adult males. The mane serves both as protection for the neck during territorial fights with rival males, and as an indicator of health and genetics: darker, fuller manes indicate a healthier male, making him more attractive to females.</p>
+                    <p><strong>Small Heart:</strong> Surprisingly, the lion has a very small heart in proportion to its body weight compared to other felines. This anatomical fact limits their running ability to short bursts only (about 60 km/h briefly). Consequently, they rely heavily on teamwork and stalking close to their prey.</p>
+                </div>
             </section>
 
-            <section class="space-y-4">
-                <h3 class="text-amber-500 font-bold text-lg px-2">אטימולוגיה מורחבת (Etymology)</h3>
+            <section class="space-y-4 text-start">
+                <h3 class="text-amber-500 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-amber-500 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
                 <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
                     <div class="p-4 border-b border-slate-800">
-                        <h4 class="text-md font-bold text-white mb-2">1. הסוג: Panthera</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> מקור המילה ביוונית עתיקה (pánthēr - πάνθηρ). חלק מהבלשנים קושרים את המילה למקור סנסקריטי עתיק יותר "pundarīkam" שמשמעותו טיגריס.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> Derived from Ancient Greek 'pánthēr', linked to the Sanskrit word 'pundarīkam'.</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Panthera</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Panthera</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">מקור המילה ביוונית עתיקה (pánthēr - πάνθηρ). חלק מהבלשנים קושרים את המילה למקור סנסקריטי עתיק יותר "pundarīkam" שמשמעותו טיגריס.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Derived from Ancient Greek 'pánthēr' (πάνθηρ). Some linguists link the word to an older Sanskrit root 'pundarīkam', which actually translates to tiger.</p>
                     </div>
+                    
                     <div class="p-4 border-b border-slate-800">
-                        <h4 class="text-md font-bold text-white mb-2">2. המין: leo</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> המילה 'leo' מגיעה ישירות מלטינית (Leo), שהיא עצמה שאילה מהמילה היוונית 'léōn' (λέων). השורש ככל הנראה עתיק אף יותר ומקורו בשפות שמיות או מצריות עתיקות, בדומה למילה "לביא" בעברית.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> Derived directly from Latin 'leo', a loanword from Ancient Greek 'léōn', likely originating from a much older Semitic or Egyptian root.</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: leo</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: leo</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה 'leo' מגיעה ישירות מלטינית (Leo), שהיא עצמה שאילה מהמילה היוונית 'léōn' (λέων). השורש ככל הנראה עתיק אף יותר ומקורו בשפות שמיות או מצריות עתיקות, בדומה למילה "לביא" בעברית.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The word 'leo' derives directly from Latin, which itself is a loanword from the Greek 'léōn' (λέων). The root is likely much older, originating from ancient Semitic or Egyptian languages.</p>
                     </div>
+                    
                     <div class="p-4">
-                        <h4 class="text-md font-bold text-white mb-2">3. השם העממי העברי: אריה</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> מקור השם "אריה" בעברית מקראית הוא עתיק ומשותף לשפות שמיות רבות (כמו אכדית - "אריה", וארמית - "אריא"). השורש האטימולוגי קשור ככל הנראה לפועל אר"ה, שפירושו לקטוף, לתלוש או לטרוף. לאריה בשפה העברית יש שמות נרדפים רבים (לביא, כפיר, ליש, שחל), המעידים על ההיכרות העמוקה של יושבי ארץ ישראל הקדומים עם החיה, אשר חיה באזור עד תקופת מסעי הצלב.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> The Hebrew name 'Aryeh' is an ancient Semitic word, related to the verb root meaning to pluck or to prey. Hebrew has multiple synonyms for lion, reflecting its historical presence in the region.</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העברי: אריה</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Hebrew Name: Aryeh</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">מקור השם "אריה" בעברית מקראית הוא עתיק ומשותף לשפות שמיות רבות (כמו אכדית - "אריה", וארמית - "אריא"). השורש האטימולוגי קשור ככל הנראה לפועל אר"ה, שפירושו לקטוף, לתלוש או לטרוף. לאריה בשפה העברית יש שמות נרדפים רבים (לביא, כפיר, ליש, שחל), המעידים על ההיכרות העמוקה של יושבי ארץ ישראל הקדומים עם החיה, אשר חיה באזור עד תקופת מסעי הצלב.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Hebrew name 'Aryeh' is an ancient Semitic word, related to the verb root meaning to pluck, tear, or prey. Hebrew possesses multiple synonyms for the lion (Lavi, Kfir, Layish, Shachal), reflecting the deep familiarity of ancient inhabitants of the Land of Israel with the animal, which roamed the region until the Crusader period.</p>
                     </div>
                 </div>
             </section>
 
-            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
-                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">היסטוריית הגילוי, אבולוציה ושימור</h3>
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
                 <div class="space-y-6">
                     <div>
-                        <h4 class="text-white font-semibold mb-2">הגילוי המקורי:</h4>
-                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> קוטלג ותואר מדעית על ידי קארל לינאוס (שנות חיים: 1707–1778) בשנת 1758, תחת השם <em>Felis leo</em>, ולאחר מכן הועבר לסוג <em>Panthera</em>.</p>
-                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Scientifically described by Carl Linnaeus (Lifespan: 1707–1778) in 1758.</p>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">קוטלג ותואר מדעית על ידי קארל לינאוס (שנות חיים: 1707–1778) בשנת 1758, תחת השם <em>Felis leo</em>, ולאחר מכן הועבר לסוג <em>Panthera</em>.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">Scientifically cataloged and described by Carl Linnaeus (Lifespan: 1707–1778) in 1758 under the name <em>Felis leo</em>, and later moved to the <em>Panthera</em> genus.</p>
                     </div>
                     <div>
-                        <h4 class="text-white font-semibold mb-2">מצב שימור:</h4>
-                        <p class="text-sm text-slate-300">מוגדר כ"פגיע" (Vulnerable - VU) על ידי ה-IUCN. אוכלוסיית האריות חוותה ירידה דרמטית של כ-40% בשני העשורים האחרונים בשל ציד, הרעלות וצמצום שטחי מחיה. קיימת אוכלוסייה שרידית וקטנה מאוד של אריות אסייתים ביער גיר שבהודו.</p>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">מוגדר כ"פגיע" (Vulnerable - VU) על ידי ה-IUCN. אוכלוסיית האריות חוותה ירידה דרמטית של כ-40% בשני העשורים האחרונים בשל ציד, הרעלות וצמצום שטחי מחיה. קיימת אוכלוסייה שרידית וקטנה מאוד של אריות אסייתים ביער גיר שבהודו.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Classified as "Vulnerable" (VU) by the IUCN. The lion population has experienced a dramatic decline of approximately 40% over the last two decades due to hunting, poisoning, and habitat loss. A very small, remnant population of Asiatic lions survives in the Gir Forest of India.</p>
                     </div>
                 </div>
             </section>
         </main>
 
         <footer class="mt-8 p-6 text-center text-slate-500 text-sm border-t border-slate-800 mx-6 pb-12">
-            <p>האתר נבנה על ידי ג'מיני ורם.</p>
+            <p class="he-content">האתר נבנה על ידי ג'מיני ורם.</p>
+            <p class="en-content hidden">The site was created by Gemini and Ram.</p>
         </footer>
     </div>
 
+    <!-- Modal -->
     <div id="fullScreenImageModal" class="fixed inset-0 bg-black/95 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
         <button class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-amber-500 z-[101]">&times;</button>
         <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-2 border-slate-700">
     </div>
 
     <script>
+        // מנגנון הדו-לשוניות
+        let currentLang = 'he';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+
+            document.querySelectorAll('.he-content').forEach(el => {
+                if(currentLang === 'he') el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
+
+            document.querySelectorAll('.en-content').forEach(el => {
+                if(currentLang === 'en') el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
+        }
+
         function openImageModal(imgUrl) {
             const modal = document.getElementById('fullScreenImageModal');
             const imgEl = document.getElementById('modalFullImg');
