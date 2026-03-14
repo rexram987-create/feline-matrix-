@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>פנתר שחור (Melanistic Panthera) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #020617; 
+            --bg-card: #0f172a; 
+            --border-card: #1e293b;
+            --text-accent: #64748b; /* אפור פלדה עמוק */
+        }
+        body { background-color: var(--bg-body); color: #f1f5f9; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #020617; 
+            min-height: 100vh;
+            box-shadow: 0 0 40px rgba(0,0,0,0.8);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #334155; }
+        .ghost-rosettes { background: radial-gradient(circle, rgba(255,255,255,0.03) 1%, transparent 70%); }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-slate-700/50 relative">
+
+    <div class="samsung-s25-container relative pb-10 overflow-hidden">
+        <div class="absolute inset-0 ghost-rosettes pointer-events-none"></div>
+
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/90 backdrop-blur border border-white/5 px-4 py-2 rounded-full text-xs font-bold text-slate-400 hover:bg-slate-700 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-slate-800 transition border border-white/5 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-80 md:h-[450px]">
+            <button onclick="openImageModal('../assets/blackpanther.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/blackpanther.png" alt="פנתר שחור מסתורי" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-[#020617]/40 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-slate-800/60 text-slate-300 text-xs font-bold px-3 py-1 rounded-full border border-slate-700/50 he-content">Pantherinae (מוטציה גנטית)</span>
+                    <span class="bg-slate-800/60 text-slate-300 text-xs font-bold px-3 py-1 rounded-full border border-slate-700/50 en-content hidden">Pantherinae (Genetic Mutation)</span>
+                    <span class="text-slate-500 text-sm tracking-widest he-content">הצל של הג'ונגל</span>
+                    <span class="text-slate-500 text-sm tracking-widest en-content hidden">Shadow of the Jungle</span>
+                </div>
+                <h1 class="text-4xl font-black text-white mb-1 he-content">פנתר שחור</h1>
+                <h1 class="text-4xl font-black text-white mb-1 en-content hidden">Black Panther</h1>
+                <h2 class="text-xl text-slate-400 italic font-serif">Melanistic Panthera</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8 relative z-10">
+            
+            <section class="bg-slate-900/50 rounded-2xl p-5 border border-slate-800/50 shadow-xl text-start backdrop-blur-sm">
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-800 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-800 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content leading-relaxed">
+                    <li><strong class="text-slate-500">שם מדעי:</strong> אין שם מדעי נפרד (שייך למין המקור, לרוב <em>Panthera pardus</em> או <em>Panthera onca</em>).</li>
+                    <li><strong class="text-slate-500">תופעה ביולוגית:</strong> מלניזם (Melanism) - מוטציה גנטית הגורמת לעודף של פיגמנטציה כהה.</li>
+                    <li><strong class="text-slate-500">מאפיין ייחודי:</strong> ה"פנתר השחור" אינו מין ביולוגי בפני עצמו, אלא כינוי לנמרים או ליגוארים שפרוותם שחורה לחלוטין. למרות המראה האחיד, במבט מקרוב תחת אור חזק ניתן לראות את הכתמים המקוריים (הרוזטות) מבעד לשכבת הפיגמנט השחורה - תופעה המכונה "כתמי רפאים" (Ghost markings).</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden leading-relaxed">
+                    <li><strong class="text-slate-500">Scientific Name:</strong> No distinct scientific name (classified by source species, usually <em>Panthera pardus</em> or <em>Panthera onca</em>).</li>
+                    <li><strong class="text-slate-500">Biological Phenomenon:</strong> Melanism - A genetic mutation resulting in an excess of dark pigmentation.</li>
+                    <li><strong class="text-slate-500">Unique Feature:</strong> The "Black Panther" is not a separate species, but an umbrella term for leopards or jaguars with entirely black fur. Despite the uniform appearance, close inspection under direct light reveals their original rosettes beneath the black pigment—a phenomenon known as "ghost markings."</li>
+                </ul>
+            </section>
+
+            <section class="space-y-4 text-start">
+                <h3 class="text-slate-400 font-bold text-lg px-2 he-content">נתונים מדעיים (מלניזם)</h3>
+                <h3 class="text-slate-400 font-bold text-lg px-2 en-content hidden">Scientific Data (Melanism)</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900/80">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-500"><span class="he-content">שכיחות אצל נמרים</span><span class="en-content hidden">Frequency in Leopards</span></td>
+                                <td class="p-3"><span class="he-content">כ-11% מכלל האוכלוסייה</span><span class="en-content hidden">Approx. 11% of total population</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-500"><span class="he-content">שכיחות אצל יגוארים</span><span class="en-content hidden">Frequency in Jaguars</span></td>
+                                <td class="p-3"><span class="he-content">כ-6% מכלל האוכלוסייה</span><span class="en-content hidden">Approx. 6% of total population</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-500"><span class="he-content">גורם גנטי (נמר)</span><span class="en-content hidden">Genetic Driver (Leopard)</span></td>
+                                <td class="p-3"><span class="he-content">אלל רצסיבי (צריך שני הורים נושאים)</span><span class="en-content hidden">Recessive allele (requires two carrier parents)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-500"><span class="he-content">גורם גנטי (יגואר)</span><span class="en-content hidden">Genetic Driver (Jaguar)</span></td>
+                                <td class="p-3"><span class="he-content">אלל דומיננטי (מספיק הורה אחד נושא)</span><span class="en-content hidden">Dominant allele (only one carrier parent needed)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-slate-900/50 rounded-2xl p-5 border border-slate-800 shadow-lg text-start leading-relaxed">
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-800 pb-2 he-content">אנטומיה ויתרון אבולוציוני</h3>
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy & Evolutionary Advantage</h3>
+                
+                <div class="space-y-4 text-sm text-slate-300 he-content">
+                    <p><strong>הסוואה לילית אולטימטיבית:</strong> המלניזם אינו "טעות" של הטבע. באזורים של יערות גשם סבוכים וחשוכים (כמו בדרום-מזרח אסיה), לפנתרים שחורים יש יתרון הישרדותי עצום. הם כמעט בלתי נראים בתוך הצללים העמוקים של הסבך ובזמן ציד לילי. זה מסביר מדוע שכיחותם גבוהה משמעותית ביערות טרופיים לעומת סוואנות פתוחות.</p>
+                    <p><strong>פיזיולוגיה של הפיגמנט:</strong> הצבע השחור נגרם על ידי ייצור יתר של אומלנין (Eumelanin). מחקרים מראים שמוטציה זו עשויה להיות קשורה לחיזוק המערכת החיסונית של החתול כנגד מחלות נגיפיות מסוימות, מה שמעניק להם עמידות גבוהה יותר מזו של קרוביהם המנומרים.</p>
+                    <p><strong>התנהגות וחושים:</strong> למעט צבע הפרווה, הפנתר השחור חולק את כל החושים החדים של מין המקור שלו. עם זאת, נצפה כי פנתרים שחורים נוטים להיות פעילים יותר בשעות הלילה המאוחרות מאוד (Nocturnal), שם יתרון ההסוואה שלהם מגיע לשיאו.</p>
+                </div>
+
+                <div class="space-y-4 text-sm text-slate-300 en-content hidden">
+                    <p><strong>Ultimate Nocturnal Camouflage:</strong> Melanism is not a biological error. In dense, dark rainforests (especially in Southeast Asia), black panthers possess a massive survival advantage. They are virtually invisible within the deep shadows of the undergrowth and during night hunts. This explains why their frequency is significantly higher in tropical jungles compared to open savannas.</p>
+                    <p><strong>Pigment Physiology:</strong> The black coloration is caused by an overproduction of eumelanin. Research suggests this mutation may be linked to a bolstered immune system against certain viral diseases, potentially granting them higher resilience than their spotted counterparts.</p>
+                    <p><strong>Behavior & Senses:</strong> Aside from coat color, the black panther shares all the acute senses of its source species. However, it has been observed that black panthers tend to be more active during the deepest hours of the night, where their camouflage advantage peaks.</p>
+                </div>
+            </section>
+
+            <section class="space-y-4 text-start">
+                <h3 class="text-slate-400 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-slate-400 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900/50 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. המונח: Panthera (פנתר)</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. The Term: Panthera</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">מקור המילה ביוונית עתיקה (pánthēr). בעת העתיקה, המילה שימשה לתיאור כל החתולים הגדולים המנומרים. מעניין לציין שבשפות רבות, המילה "פנתר" הפכה למילה נרדפת לשחור עקב הפופולריות של המוטציה הזו בתרבות.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Originating from Ancient Greek 'pánthēr'. In antiquity, the term applied to all large, spotted cats. Interestingly, in many languages, "panther" has become synonymous with black due to the mutation's cultural popularity.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המקור המדעי: Melanism (מלניזם)</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Scientific Root: Melanism</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">נגזר מהמילה היוונית 'melas' (μέλας) שפירושה "שחור". זהו המונח המתאר מצב של ריכוז פיגמנט כהה בעור, בנוצות או בפרווה. התופעה ההפוכה לה היא "אלביניזם" (לבקנות).</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Derived from the Greek 'melas' (μέλας) meaning "black." This scientific term describes the dark pigment concentration in skin, feathers, or fur. Its biological opposite is "albinism."</p>
+                    </div>
+
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העברי: פנתר שחור</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Hebrew Name: Panter Shachor</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">בעברית המודרנית נעשה שימוש במונח הבינלאומי. בתרבות הישראלית, השם מזוהה גם עם תנועת המחאה החברתית "הפנתרים השחורים" משנות ה-70, ששאבה את השם והלוגו מתנועת ה-Black Panther Party בארה"ב, כסמל לעוצמה, נחישות ועמידה כנגד דיכוי.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Modern Hebrew utilizes the international term. In Israeli culture, the name is also synonymous with the 1970s social protest movement "The Black Panthers," which adopted the name and logo as symbols of power, determination, and resistance.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-slate-900/50 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-800 pb-2 he-content">היסטוריה, תרבות ושימור</h3>
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-800 pb-2 en-content hidden">History, Culture & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">דמויות אייקוניות:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Iconic Figures:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">הפנתר השחור המפורסם ביותר בספרות הוא <strong>בגירה</strong> (Bagheera) מתוך "ספר הג'ונגל" של רודיארד קיפלינג (1894). קיפלינג מתאר אותו כנמר שחור שנולד בשבי בארמונו של המהארג'ה באודייפור וברח לג'ונגל. תיאור זה מדויק זואולוגית לאזור של הודו שם מלניזם נפוץ יחסית.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">The most famous black panther in literature is <strong>Bagheera</strong> from Rudyard Kipling's "The Jungle Book" (1894). Kipling describes him as a black leopard born in captivity who escaped to the wild, which is zoologically consistent with India's panther populations.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">מכיוון שהפנתר השחור אינו מין נפרד, מצבו תלוי במצבם של המינים המארחים (נמרים או יגוארים). שני המינים נמצאים תחת איום מתמיד (Vulnerable/Near Threatened). עם זאת, לפנתרים שחורים יש ביקוש גבוה ובלתי חוקי בשוק הפרוות השחור, מה שהופך אותם למטרות מועדפות עבור ציידים לא חוקיים המנסים להשיג פרווה נדירה ויוקרתית.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">As they are not a separate species, their status depends on the host species (leopards or jaguars). Both face threats of habitat loss. However, black panthers are often specifically targeted by illegal poachers due to the high market value of their rare and prestigious black pelts.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-slate-400 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            document.querySelectorAll('.he-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'he'));
+            document.querySelectorAll('.en-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'en'));
+        }
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { imgEl.src = imgUrl; modal.classList.remove('hidden'); }
+        }
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
