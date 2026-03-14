@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>סרוואל (Leptailurus serval) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #ca8a04; /* צהוב-זהב כהה (סוואנה) */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-yellow-600/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-yellow-500 hover:bg-yellow-600 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-yellow-600 hover:text-black transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/serval.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/serval.png" alt="סרוואל בעשב הגבוה" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-yellow-600/20 text-yellow-500 text-xs font-bold px-3 py-1 rounded-full border border-yellow-600/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-yellow-600/20 text-yellow-500 text-xs font-bold px-3 py-1 rounded-full border border-yellow-600/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">רדאר הסוואנה</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">Radar of the Savanna</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">סרוואל</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Serval</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Leptailurus serval</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-yellow-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-yellow-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Serval</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "Cat of the Tall Grass"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> חתול אפריקני בינוני ודק גזרה. הוא מחזיק בשני שיאים אנטומיים בולטים ביחס לגודל גופו מבין כלל החתוליים: הרגליים הארוכות ביותר, והאוזניים הגדולות ביותר. כמעט כל תזונתו מבוססת על מכרסמים.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Serval</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "Cat of the Tall Grass"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> A medium-sized, slender African cat. It holds two remarkable anatomical records relative to its body size among all felines: the longest legs, and the largest ears. Its diet consists almost entirely of rodents.</li>
+                </ul>
+            </section>
+
+            <section class="space-y-4 text-start">
+                <h3 class="text-yellow-500 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-yellow-500 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">73 עד 74 ימים</span><span class="en-content hidden">73 - 74 days</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">54 עד 100 ס"מ</span><span class="en-content hidden">54 - 100 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">30 ס"מ (קצר יחסית לגופו)</span><span class="en-content hidden">~30 cm (relatively short)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">גובה כתף</span><span class="en-content hidden">Shoulder Height</span></td>
+                                <td class="p-3"><span class="he-content">54 עד 62 ס"מ (גבוה מאוד)</span><span class="en-content hidden">54 - 62 cm (very tall)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">8 עד 18 ק"ג</span><span class="en-content hidden">8 - 18 kg</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">10 עד 12 שנים (עד 20 בשבי)</span><span class="en-content hidden">10 - 12 years (up to 20 in captivity)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-yellow-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-yellow-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>רגלי כלונסאות:</strong> רגליו של הסרוואל ארוכות במיוחד לא בזכות עצם הירך, אלא בזכות התארכות קיצונית של עצמות כף הרגל (המסרק). מבנה זה מאפשר לו להזדקף ולצפות למרחקים מעל העשב הגבוה של הסוואנה (כמעין פריסקופ), וכן לזנק לגובה של מעל 2 מטרים כדי לתפוס ציפורים במעופן.</p>
+                    <p><strong>צלחות רדאר:</strong> אוזניו של הסרוואל עצומות, עגולות וקרובות אחת לשנייה בראש הגולגולת. הן משמשות כצלחות מכ"ם עוצמתיות. הסרוואל מסוגל לעמוד ללא נוע בעשב ולשמוע תנועה של עכברים וחלדים (חפרפרות) עמוק מתחת לאדמה. כאשר הוא מאתר את הרעש, הוא חופר או מזנק כדי ללכוד אותם.</p>
+                    <p><strong>מכונת ציד משוכללת:</strong> בזמן שרוב החתולים הגדולים (כמו אריות ונמרים) מסתפקים באחוזי הצלחה של כ-10% עד 30% בכל ניסיון ציד, הסרוואל הוא צייד קטלני ויעיל במיוחד. אחוזי ההצלחה שלו בציד מכרסמים עומדים על כ-50% (ונושקים ל-65% בלילות ירח מלא). בממוצע, סרוואל יכול לאכול כ-4,000 מכרסמים בשנה, מה שהופך אותו למדביר ביולוגי חיוני באפריקה.</p>
+                    <p><strong>הסוואה של ברדלס מיניאטורי:</strong> פרוותו הזהובה מעוטרת בנקודות שחורות ופסים המזכירים מאוד ברדלס. דפוס זה מספק לו הסוואה מושלמת (אור וצל) בין הענפים ועשב הפיל הגבוה של בתי הגידול הלחים והסוואנות שבהם הוא חי.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Stilt-like Legs:</strong> The serval's legs are exceptionally long not because of a lengthened femur, but due to extreme elongation of the metatarsal (foot) bones. This structure acts like a periscope, allowing it to stand tall and see far over the high savanna grass. It also enables the serval to leap over 2 meters (6.5 feet) vertically to catch birds mid-flight.</p>
+                    <p><strong>Radar Dishes:</strong> The serval's ears are enormous, rounded, and set close together on top of its skull. They function as powerful radar dishes. A serval can stand motionless in the grass and hear the movement of mice and mole-rats deep underground. Once it pinpoints the noise, it digs or pounces to capture them.</p>
+                    <p><strong>Highly Efficient Hunting Machine:</strong> While most big cats (like lions and leopards) settle for hunting success rates of about 10% to 30%, the serval is an exceptionally lethal and efficient hunter. Its success rate for catching rodents is roughly 50% (and approaches 65% on moonlit nights). On average, a serval can consume about 4,000 rodents a year, making it a crucial biological pest controller in Africa.</p>
+                    <p><strong>Miniature Cheetah Camouflage:</strong> Its golden coat is adorned with black spots and stripes closely resembling a cheetah. This pattern provides perfect camouflage (dappled light and shadow) amidst the branches and tall elephant grass of the wetlands and savannas where it resides.</p>
+                </div>
+            </section>
+
+            <section class="space-y-4 text-start">
+                <h3 class="text-yellow-500 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-yellow-500 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Leptailurus</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Leptailurus</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">מקור השם המדעי ביוונית עתיקה. המילה מורכבת מ-'leptos' (λεπτός) שפירושו דק, עדין או קליל, ומהמילה 'ailouros' (αἴλουρος) שפירושה חתול. כלומר: "החתול הדק/העדין", תיאור מדויק של מבנה גופו הצנום ורגליו הארוכות.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Derived from Ancient Greek. The word is composed of 'leptos' (λεπτός) meaning fine, delicate, or slender, and 'ailouros' (αἴλουρος) meaning cat. Thus: "the slender cat," a perfect description of its lean build and long legs.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין והשם העממי: Serval</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species & Common Name: Serval</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">מקור השם טמון בטעות היסטורית. המילה מגיעה ככל הנראה מהשפה הפורטוגזית ('serval' או 'lobo-cerval'), שבתורה נגזרה מהלטינית 'lupus cervalis' - שפירושה המילולי "זאב-איילים". במקור, באירופה, כינוי זה שימש לתיאור השונר האירואסייתי. כאשר מגלי ארצות אירופאים הגיעו לאפריקה וראו חתול בר עם אוזניים גדולות, הם השתמשו בשם שהכירו מאירופה, וכך דבק בו השם סרוואל עד היום.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The name's origin lies in a historical misnomer. The word likely comes from Portuguese ('serval' or 'lobo-cerval'), which in turn derives from the Latin 'lupus cervalis' - literally meaning "deer-like wolf" or "lynx". Originally in Europe, this term was used to describe the Eurasian lynx. When European explorers reached Africa and saw a wildcat with large ears, they applied the familiar European name, and it stuck.</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העברי: סרוואל</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Hebrew Name: Serval</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השפה העברית אימצה את השם הבינלאומי ככתבו וכלשונו (תעתיק ישיר). אין לסרוואל שם עברי מקורי משום שמעולם לא הייתה לו נוכחות היסטורית או תנ"כית בארץ ישראל (תפוצתו מוגבלת ליבשת אפריקה מדרום לסהרה).</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Hebrew language simply adopted the international name via direct transliteration. The serval has no original Hebrew name because it never had a historical or biblical presence in the Land of Israel (its distribution is restricted to sub-Saharan Africa).</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-yellow-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-yellow-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">קוטלג ותואר מדעית לראשונה ב-1776 על ידי הזואולוג הגרמני יוהאן כריסטיאן דניאל פון שרבר (Johann Christian Daniel von Schreber, שנות חיים: 1739–1810). במקור סווג תחת סוג חתולי הבית (*Felis serval*), ולאחר מכן קיבל את הסוג הייחודי שלו (*Leptailurus*) על ידי חוקר רוסי ב-1858.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">First scientifically cataloged and described in 1776 by the German zoologist Johann Christian Daniel von Schreber (Lifespan: 1739–1810). Originally classified under the domestic cat genus (*Felis serval*), it was later granted its unique genus (*Leptailurus*) by a Russian researcher in 1858.</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">מבחינה גנטית, הסרוואל חולק אב קדמון משותף (לפני כ-8.5 מיליון שנים) עם שני חתולים אפריקניים נוספים: הקרקל והחתול הזהוב האפריקני (שושלת הקרקל). בעוד הקרקל התפתח לצייד של טרף ציפורים באזורים יבשים, הסרוואל התמחה בבתי גידול לחים עתירי עשב ובציד מכרסמים. מעניין לציין שבעשורים האחרונים הורבע הסרוואל עם חתולי בית ליצירת גזע החתול ההיברידי "סוואנה" (Savannah cat).</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">Genetically, the serval shares a common ancestor (from ~8.5 million years ago) with two other African cats: the Caracal and the African Golden Cat (the Caracal lineage). While the caracal evolved to hunt birds in arid regions, the serval specialized in tall-grass wetlands and rodent hunting. Interestingly, in recent decades, the serval has been crossbred with domestic cats to create the hybrid breed known as the "Savannah cat".</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">מוגדר כ"ללא חשש" (Least Concern - LC) על ידי ה-IUCN מכיוון שהוא עדיין נפוץ במרבית מדינות אפריקה מדרום לסהרה. עם זאת, הוא מאוים מקומית מצד שני גורמים עיקריים: ייבוש אדמות ביצה (wetlands) המשמשות לו כבית גידול מרכזי, וציד בלתי חוקי לשם סחר בפרוותו המנומרת (שלעיתים נמכרת בטעות כפרוות ברדלס צעיר) ולרפואה מסורתית.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Classified as "Least Concern" (LC) by the IUCN because it remains widespread in most sub-Saharan African countries. However, it faces local threats from two main factors: the draining of wetlands, which serve as its primary habitat, and illegal poaching for its spotted pelt (sometimes mistakenly sold as young cheetah fur) and for traditional medicine.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-500 text-sm border-t border-slate-800 mx-6 pb-12">
+            <p class="he-content">האתר נבנה על ידי ג'מיני ורם.</p>
+            <p class="en-content hidden">The site was created by Gemini and Ram.</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/95 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-yellow-500 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-2 border-slate-700">
+    </div>
+
+    <script>
+        // מנגנון הדו-לשוניות
+        let currentLang = 'he';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+
+            document.querySelectorAll('.he-content').forEach(el => {
+                if(currentLang === 'he') el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
+
+            document.querySelectorAll('.en-content').forEach(el => {
+                if(currentLang === 'en') el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
+        }
+
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { imgEl.src = imgUrl; modal.classList.remove('hidden'); }
+        }
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
