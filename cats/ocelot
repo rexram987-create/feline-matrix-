@@ -110,7 +110,7 @@
                                 <td class="p-3"><span class="he-content">30 עד 45 ס"מ</span><span class="en-content hidden">30 - 45 cm</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר (זכרים ונקבות)</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
                                 <td class="p-3"><span class="he-content">8 עד 15.5 ק"ג (זכרים מעט כבדים יותר)</span><span class="en-content hidden">8 - 15.5 kg (males slightly heavier)</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
@@ -123,7 +123,7 @@
             </section>
 
             <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
-                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות</h3>
                 <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
                 
                 <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
@@ -149,22 +149,22 @@
                     <div class="p-4 border-b border-slate-800">
                         <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Leopardus</h4>
                         <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Leopardus</h4>
-                        <p class="text-sm text-slate-300 mb-2 he-content">למרות שמו, סוג זה *אינו* כולל את הנמר (Leopard, ששייך לסוג הפנתרים). משמעות השם היא "דמוי-נמר", והוא הוענק לקבוצת החתולים הקטנים והמנומרים של יבשת אמריקה בגלל הדמיון השטחי של פרוותם לפרוות הנמר האפריקני.</p>
-                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Despite its name, this genus does *not* include the leopard (which belongs to the Panthera genus). The name implies "leopard-like" and was given to the small, spotted cats of the Americas due to the superficial resemblance of their coats to that of the African leopard.</p>
+                        <p class="text-sm text-slate-300 mb-2 he-content">למרות שמו, סוג זה אינו כולל את הנמר (Leopard), ששייך לסוג הפנתרים. משמעות השם היא "דמוי-נמר", והוא הוענק לקבוצת החתולים הקטנים והמנומרים של יבשת אמריקה בגלל הדמיון השטחי של פרוותם לפרוות הנמר האפריקני.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Despite its name, this genus does not include the leopard (which belongs to the Panthera genus). The name implies "leopard-like" and was given to the small, spotted cats of the Americas due to the superficial resemblance of their coats to that of the African leopard.</p>
                     </div>
                     
                     <div class="p-4 border-b border-slate-800">
                         <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: pardalis</h4>
                         <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: pardalis</h4>
-                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלטינית 'pardalis' מגיעה ישירות מיוונית עתיקה (πάρδαλις), שמשמעותה... נמר (או פנתר מנומר). מכאן שהשם המדעי המלא מתורגם באופן כפול ומשעשע משהו כ"נמר נמרי" או "הדמוי-נמר המנומר".</p>
-                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Latin word 'pardalis' derives directly from Ancient Greek (πάρδαλις), which means... leopard (or spotted panther). Thus, the full scientific name amusingly translates as a tautology: "leopard-like leopard" or "the spotted leopard-like cat."</p>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלטינית 'pardalis' מגיעה ישירות מיוונית עתיקה (πάρδαλις), שמשמעותה... נמר. מכאן שהשם המדעי המלא מתורגם באופן כפול ומשעשע כ"נמר נמרי" או "הדמוי-נמר המנומר".</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Latin word 'pardalis' derives directly from Ancient Greek (πάρδαλις), which means... leopard. Thus, the full scientific name amusingly translates as a tautology: "leopard-like leopard" or "the spotted leopard-like cat."</p>
                     </div>
                     
                     <div class="p-4">
                         <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי: אוצלוט (Ocelot)</h4>
                         <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Common Name: Ocelot</h4>
-                        <p class="text-sm text-slate-300 mb-2 he-content">המילה "אוצלוט" נלקחה מתוך שפת הנאוואטל (Nahuatl), שפתם של האצטקים במקסיקו העתיקה. המילה המקורית היא <em>ōcēlōtl</em> (או-סה-לוט-ל). למרבה האירוניה, רוב ההיסטוריונים מסכימים שאצל האצטקים המילה הזו תיארה דווקא את ה<strong>יגואר</strong> הגדול, ולא את החתול הקטן. כשהאירופאים הגיעו לאמריקה, הם שיבשו את המושג והצמידו אותו באופן בלעדי לחתול הבינוני היפהפה הזה.</p>
-                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The word "ocelot" was adopted from Nahuatl, the language of the ancient Aztecs in Mexico. The original word is <em>ōcēlōtl</em>. Ironically, most historians agree that among the Aztecs, this word actually described the mighty <strong>jaguar</strong>, not this smaller cat. When Europeans arrived in the Americas, they misapplied the term, permanently attaching it to this beautiful medium-sized cat.</p>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה "אוצלוט" נלקחה מתוך שפת הנאוואטל (Nahuatl), שפתם של האצטקים במקסיקו העתיקה. המילה המקורית היא <em>ōcēlōtl</em> (או-סה-לוט-ל). למרבה האירוניה, רוב ההיסטוריונים מסכימים שאצל האצטקים המילה הזו תיארה דווקא את היגואר הגדול, ולא את החתול הקטן. כשהאירופאים הגיעו לאמריקה, הם שיבשו את המושג והצמידו אותו באופן בלעדי לחתול הבינוני הזה.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The word "ocelot" was adopted from Nahuatl, the language of the ancient Aztecs in Mexico. The original word is <em>ōcēlōtl</em>. Ironically, most historians agree that among the Aztecs, this word actually described the mighty jaguar, not this smaller cat. When Europeans arrived in the Americas, they misapplied the term, permanently attaching it to this beautiful medium-sized cat.</p>
                     </div>
                 </div>
             </section>
