@@ -6,13 +6,14 @@
     <title>ברדלס (Acinonyx jubatus) | מטריצת החתוליים</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
         :root {
             --bg-body: #030712; 
             --bg-card: #0a1122; 
             --border-card: #1d365d;
             --text-accent: #facc15; 
         }
-        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
         .samsung-s25-container { 
             max-width: 412px; 
             margin: 0 auto; 
@@ -33,167 +34,217 @@
 
     <div class="samsung-s25-container relative pb-10">
         
-        <nav class="absolute top-4 right-4 z-10">
-            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-yellow-500 hover:text-black transition border border-white/10 flex items-center gap-2">
-                <span>&rarr;</span> חזרה למטריצה
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-yellow-500 hover:bg-yellow-600 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-yellow-600 hover:text-black transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
             </a>
         </nav>
 
-        <!-- תיקון לתמונה מקומית -->
+        <!-- תמונת נושא ייצוגית -->
         <header class="relative w-full h-72 md:h-96">
             <button onclick="openImageModal('../assets/cheetah.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
                 <img src="../assets/cheetah.png" alt="ברדלס רץ בסוואנה" class="w-full h-full object-cover">
             </button>
             <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
-            <div class="absolute bottom-0 p-6 w-full pointer-events-none">
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
                 <div class="flex items-center gap-3 mb-2">
-                    <span class="bg-yellow-500/20 text-yellow-400 text-xs font-bold px-3 py-1 rounded-full border border-yellow-500/30">Felinae (חתולים קטנים)</span>
-                    <span class="text-slate-400 text-sm tracking-widest">היונק המהיר בעולם</span>
+                    <span class="bg-yellow-500/20 text-yellow-400 text-xs font-bold px-3 py-1 rounded-full border border-yellow-500/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-yellow-500/20 text-yellow-400 text-xs font-bold px-3 py-1 rounded-full border border-yellow-500/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">היונק המהיר בעולם</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">The World's Fastest Mammal</span>
                 </div>
-                <h1 class="text-4xl font-extrabold text-white mb-1">ברדלס</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">ברדלס</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Cheetah</h1>
                 <h2 class="text-xl text-slate-300 italic font-serif">Acinonyx jubatus</h2>
             </div>
         </header>
 
         <main class="p-6 space-y-8">
-            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
-                <h3 class="text-yellow-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2">תעודת זהות זואולוגית</h3>
-                <ul class="space-y-3 text-sm">
+            
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-yellow-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-yellow-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
                     <li><strong class="text-slate-400">שם באנגלית:</strong> Cheetah</li>
                     <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
                     <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Sprinting Phantom" / "Wind Runner"</li>
-                    <li><strong class="text-slate-400">מאפיין ייחודי (HE):</strong> עבר אבולוציה קיצונית למהירות על חשבון כוח; הוא היונק היבשתי המהיר בעולם, אך אינו מסוגל לשאוג (במקום זאת הוא מצייץ כציפור) והטפרים שלו אינם נשלפים במלואם.</li>
-                    <li><strong class="text-slate-400">Unique Feature (EN):</strong> Evolved purely for speed over strength; the fastest land mammal, but it cannot roar (it chirps like a bird instead) and possesses semi-non-retractable claws.</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> החיה היבשתית המהירה ביותר בעולם. הברדלס עבר אבולוציה קיצונית למהירות מוחלטת על חשבון כוח וחוזק; למרות גודלו הפיזי, הוא שייך מבחינה גנטית ואנטומית לשושלת החתולים הקטנים (אינו יכול לשאוג, אלא רק מגרגר ומצייץ כציפור), והטפרים שלו אינם נשלפים במלואם.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Cheetah</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Sprinting Phantom" / "Wind Runner"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> The fastest land animal in the world. The cheetah has undergone extreme evolution for absolute speed at the expense of power and strength; despite its physical size, it belongs genetically and anatomically to the small cat lineage (it cannot roar, but rather purrs and chirps like a bird), and its claws are semi-non-retractable.</li>
                 </ul>
             </section>
 
-            <section class="space-y-4">
-                <h3 class="text-yellow-400 font-bold text-lg px-2">נתונים סטטיסטיים (Stats)</h3>
+            <section class="space-y-4 text-start">
+                <h3 class="text-yellow-400 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-yellow-400 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
                 <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
-                    <table class="w-full text-sm text-right bg-slate-900">
+                    <table class="w-full text-sm text-start bg-slate-900">
                         <thead class="bg-slate-800 text-slate-300">
                             <tr>
-                                <th class="p-3">פרמטר (HE)</th>
-                                <th class="p-3">ערך (HE)</th>
-                                <th class="p-3 text-left">Parameter (EN)</th>
-                                <th class="p-3 text-left">Value (EN)</th>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-800">
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">היריון</td>
-                                <td class="p-3">90 עד 95 ימים</td>
-                                <td class="p-3 text-left text-slate-400">Gestation</td>
-                                <td class="p-3 text-left">90 - 95 days</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">90 עד 95 ימים</span><span class="en-content hidden">90 - 95 days</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">אורך גוף - זכר (ללא זנב)</td>
-                                <td class="p-3">1.1 עד 1.5 מטרים</td>
-                                <td class="p-3 text-left text-slate-400">Male Body Length</td>
-                                <td class="p-3 text-left">1.1 - 1.5 meters</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף - זכר (ללא זנב)</span><span class="en-content hidden">Male Body Length</span></td>
+                                <td class="p-3"><span class="he-content">1.1 עד 1.5 מטרים</span><span class="en-content hidden">1.1 - 1.5 meters</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">אורך גוף - נקבה (ללא זנב)</td>
-                                <td class="p-3">1.1 עד 1.4 מטרים</td>
-                                <td class="p-3 text-left text-slate-400">Female Body Length</td>
-                                <td class="p-3 text-left">1.1 - 1.4 meters</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף - נקבה (ללא זנב)</span><span class="en-content hidden">Female Body Length</span></td>
+                                <td class="p-3"><span class="he-content">1.1 עד 1.4 מטרים</span><span class="en-content hidden">1.1 - 1.4 meters</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">משקל - זכר בוגר</td>
-                                <td class="p-3">38 עד 54 ק"ג</td>
-                                <td class="p-3 text-left text-slate-400">Adult Male Weight</td>
-                                <td class="p-3 text-left">38 - 54 kg</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל - זכר בוגר</span><span class="en-content hidden">Adult Male Weight</span></td>
+                                <td class="p-3"><span class="he-content">38 עד 54 ק"ג</span><span class="en-content hidden">38 - 54 kg</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">משקל - נקבה בוגרת</td>
-                                <td class="p-3">35 עד 50 ק"ג</td>
-                                <td class="p-3 text-left text-slate-400">Adult Female Weight</td>
-                                <td class="p-3 text-left">35 - 50 kg</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל - נקבה בוגרת</span><span class="en-content hidden">Adult Female Weight</span></td>
+                                <td class="p-3"><span class="he-content">35 עד 50 ק"ג</span><span class="en-content hidden">35 - 50 kg</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">תוחלת חיים (טבע)</td>
-                                <td class="p-3">10 עד 12 שנים</td>
-                                <td class="p-3 text-left text-slate-400">Lifespan (Wild)</td>
-                                <td class="p-3 text-left">10 - 12 years</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">10 עד 12 שנים</span><span class="en-content hidden">10 - 12 years</span></td>
                             </tr>
-                            <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">מהירות ריצה</td>
-                                <td class="p-3">100 עד 120 קמ"ש לפרצים קצרים</td>
-                                <td class="p-3 text-left text-slate-400">Top Speed</td>
-                                <td class="p-3 text-left">100 - 120 km/h</td>
+                             <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">מהירות ריצה מירבית</span><span class="en-content hidden">Top Speed</span></td>
+                                <td class="p-3"><span class="he-content">100 עד 120 קמ"ש לפרצים קצרים</span><span class="en-content hidden">100 - 120 km/h in short bursts</span></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
-            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
-                <h3 class="text-yellow-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2">אנטומיה וביולוגיה (Anatomy & Biology)</h3>
-                <div class="space-y-4 text-sm leading-relaxed text-slate-300">
-                    <p><strong>אווירודינמיקה מושלמת:</strong> בניגוד לחתולים הגדולים (Panthera), גולגולתו של הברדלס קטנה וקלה, פתחי הנחיריים שלו רחבים במיוחד כדי לאפשר שאיפת חמצן מוגברת בזמן ריצה, והלב והריאות שלו גדולים משמעותית ביחס למשקל גופו. עמוד השדרה שלו פועל כקפיץ, מאפשר לו להגיע לאורך פסיעה של עד 7 מטרים בדהרה.</p>
-                    <p><strong>פסי דמעות שחורים (Tear Marks):</strong> לברדלס יש שני פסים שחורים היורדים מזוויות עיניו עד לצידי פיו. לפסים אלו יש תפקיד קריטי: הם בולעים את סנור קרני השמש (כמו הצבע השחור מתחת לעיניהם של שחקני פוטבול), מה שמאפשר לברדלס לצוד בשעות היום החמות כשהאריות והנמרים ישנים.</p>
-                    <p><strong>טפרים חצי-נשלפים (Semi-retractable Claws):</strong> הברדלס הוא החתול היחיד (יחד עם חתול הדייגים) שטפריו תמיד בולטים החוצה, בדומה לכלב. הם משמשים כ"פקקים" (Spikes) הננעצים בקרקע ומעניקים לו אחיזה אדירה בסיבובים חדים במהירויות גבוהות.</p>
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-yellow-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-yellow-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>אווירודינמיקה מושלמת:</strong> מבנה גופו של הברדלס מזכיר יותר כלב רוח (כמו גרייהאונד) מאשר חתול. גולגולתו קטנה, קלה ופחוסה לשיפור האווירודינמיקה; פתחי הנחיריים שלו רחבים במיוחד כדי לאפשר שאיפת חמצן מוגברת בזמן ריצת הספרינט; והלב והריאות שלו גדולים משמעותית ביחס למשקל גופו. עמוד השדרה שלו גמיש ופועל ממש כמו קפיץ הנמתח ומתכווץ, מה שמאפשר לו להגיע לאורך פסיעה מדהים של עד 7 מטרים בדהרה באוויר.</p>
+                    <p><strong>פסי דמעות שחורים (Tear Marks):</strong> לברדלס יש שני פסים שחורים היורדים מזוויות עיניו עד לצידי פיו (ה"שפם"). לפסים אלו יש תפקיד קריטי בהישרדות: הם מתפקדים כמשקפי שמש. הם בולעים את סנור קרני השמש העזות בסוואנה, מה שמאפשר לברדלס (שהוא צייד יום מובהק, Diurnal) לצוד בשעות החמות והמוארות ביותר כשהאריות והנמרים העוצמתיים ישנים, וכך להימנע מתחרות עימם.</p>
+                    <p><strong>טפרים חצי-נשלפים (Semi-retractable Claws):</strong> בניגוד לשאר החתולים ששומרים את טפריהם חבויים ומושחזים בתוך כיסי עור, הברדלס הוא החתול היחיד (יחד עם חתול הדייגים) שטפריו תמיד בולטים החוצה וחשופים, בדומה לכלב. כתוצאה מכך הם קהים, אך הם משמשים כ"פקקים" או מסמרים (Spikes של נעלי ריצה) הננעצים בקרקע ומעניקים לו אחיזה (Traction) אדירה בסיבובים חדים במהירויות של מעל 100 קמ"ש.</p>
+                     <p><strong>המחיר של המהירות:</strong> הברדלס הקריב את שרירי הלסת והגוף שלו לטובת מהירות. משום כך, הוא אינו יכול להגן על הטרף שצד (כמו צבי תומסון) מפני אריות, נמרים ואפילו בבונים או נשרים. הברדלס ינטוש את ארוחתו מיד אם טורף אחר יתקרב, כדי לא להסתכן בפציעה שתמנע ממנו לרוץ בעתיד.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Perfect Aerodynamics:</strong> The cheetah's body structure resembles that of a sighthound (like a Greyhound) more than a cat. Its skull is small, lightweight, and flattened for improved aerodynamics; its nasal passages are exceptionally wide to allow increased oxygen intake during a sprint; and its heart and lungs are significantly enlarged relative to its body weight. Its flexible spine acts exactly like a coil spring extending and contracting, enabling it to achieve an astonishing stride length of up to 7 meters while galloping mid-air.</p>
+                    <p><strong>Tear Marks:</strong> The cheetah has two distinct black "tear marks" running from the inner corners of its eyes down to the sides of its mouth. These marks serve a critical survival function: they act as sunglasses. They absorb the glare of the harsh savanna sun, allowing the cheetah (a strictly diurnal daytime hunter) to hunt during the hottest, brightest hours when the more powerful lions and leopards are sleeping, thereby avoiding competition.</p>
+                    <p><strong>Semi-retractable Claws:</strong> Unlike other cats that keep their claws hidden and sharpened inside skin sheaths, the cheetah is the only feline (along with the Fishing Cat) whose claws are always exposed, much like a dog's. Consequently, they are blunt, but they serve as "cleats" or spikes (like running shoes) that dig into the dirt, providing tremendous traction during sharp turns at speeds exceeding 100 km/h.</p>
+                     <p><strong>The Price of Speed:</strong> The cheetah sacrificed jaw and body muscle in favor of speed. Because of this, it cannot defend its kill (such as a Thomson's gazelle) from lions, leopards, or even baboons and vultures. A cheetah will immediately abandon its meal if another predator approaches, avoiding any risk of an injury that could prevent it from running in the future.</p>
                 </div>
             </section>
 
-            <section class="space-y-4">
-                <h3 class="text-yellow-400 font-bold text-lg px-2">אטימולוגיה מורחבת (Etymology)</h3>
+            <section class="space-y-4 text-start">
+                <h3 class="text-yellow-400 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-yellow-400 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
                 <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
                     <div class="p-4 border-b border-slate-800">
-                        <h4 class="text-md font-bold text-white mb-2">1. הסוג: Acinonyx</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> בניגוד לאריה ולטיגריס, הברדלס אינו שייך לסוג *Panthera*. שמו המדעי מורכב משתי מילים ביוונית עתיקה: 'akinetos' (אקינטוס - שאינו זז / מקובע) ו-'onyx' (אוניקס - טופר). משמעות השם היא "טופר שאינו זז", עדות לתכונתו הפיזית הבולטת ביותר.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> Derived from Greek 'akinetos' (unmoving/immobile) and 'onyx' (claw). It translates to "immobile claw", referencing its non-retractable claws.</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Acinonyx</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Acinonyx</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">בניגוד לחתולים הגדולים, הברדלס אינו שייך לסוג *Panthera*. שמו המדעי מורכב משתי מילים ביוונית עתיקה: 'akinetos' (אקינטוס - שאינו זז / מקובע) ו-'onyx' (אוניקס - טופר / ציפורן). משמעות השם היא "טופר שאינו זז", עדות לתכונתו הפיזית הבולטת ביותר - טפריו שאינם נשלפים.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Unlike the big cats, the cheetah does not belong to the *Panthera* genus. Its scientific name is composed of two Ancient Greek words: 'akinetos' (immobile/fixed) and 'onyx' (claw/nail). The name translates to "immobile claw," a testament to its most prominent physical trait—its non-retractable claws.</p>
                     </div>
+                    
                     <div class="p-4 border-b border-slate-800">
-                        <h4 class="text-md font-bold text-white mb-2">2. המין: jubatus</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> מקור המילה בלטינית ופירושה "בעל רעמה" (Crested / Maned). שם זה ניתן לו מכיוון שלגורי הברדלס יש רעמה אפורה-כסופה על העורף והגב שמסייעת להם להסתוות כיעד מסוכן (גירית הדבש) בשבועות הראשונים לחייהם.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> From Latin meaning "crested" or "having a mane". This refers to the distinct silvery mane (mantle) present on the neck and back of cheetah cubs.</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: jubatus</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: jubatus</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">מקור המילה בלטינית ופירושה "בעל רעמה" או "מצויץ" (Crested / Maned). שם זה ניתן לו מכיוון שלגורי הברדלס יש רעמה אפורה-כסופה ארוכה (Mantle) על העורף והגב שמסייעת להם להסתוות כיעד מסוכן (הם מזכירים במראם גירית דבש אגרסיבית) בשבועות הראשונים לחייהם כשהם פגיעים בעשב.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Derived from Latin meaning "crested" or "having a mane". This name was given because cheetah cubs possess a long, silvery-grey mane (a mantle) along their neck and back, which helps them camouflage as a dangerous target (mimicking an aggressive honey badger) during their vulnerable first weeks in the tall grass.</p>
                     </div>
+                    
                     <div class="p-4 border-b border-slate-800">
-                        <h4 class="text-md font-bold text-white mb-2">3. השם באנגלית: Cheetah</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> המילה נשאלה לשפה האנגלית מהמילה ההינדית 'Chita' (चीता), שבתורה נגזרה מהמילה הסנסקריטית העתיקה 'Chitraka' (चित्रक). המשמעות המילולית בסנסקריט היא "המוכתם הבהיר" או "החיה המגוונת".</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> Derived from the Hindi word 'Chita', which itself originates from the ancient Sanskrit word 'Chitraka', meaning "the variegated one" or "brightly spotted".</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם באנגלית: Cheetah</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. English Name: Cheetah</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה נשאלה לשפה האנגלית מהמילה ההינדית 'Chita' (चीता), שבתורה נגזרה מהמילה הסנסקריטית העתיקה 'Chitraka' (चित्रक). המשמעות המילולית בסנסקריט היא "המוכתם הבהיר" או "החיה המגוונת".</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The word was borrowed into English from the Hindi word 'Chita' (चीता), which itself derives from the ancient Sanskrit word 'Chitraka' (चित्रक). The literal meaning in Sanskrit is "the brightly spotted one" or "the variegated animal."</p>
                     </div>
+
                     <div class="p-4">
-                        <h4 class="text-md font-bold text-white mb-2">4. השם העברי: ברדלס</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> המילה "ברדלס" מגיעה מלשון חז"ל והיא שאילה מהמילה היוונית העתיקה 'Pardalis' (πάρδαλις), שמשמעותה הייתה נמר או פנתר. במשך מאות שנים היה בלבול עצום בישראל בין נמר לברדלס. האקדמיה ללשון קבעה כי החיה המהירה עם הפסים תחת העיניים תיקרא "ברדלס", ואילו החיה המאסיבית עם הרוזטות תיקרא "נמר".</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> The Hebrew name 'Bardelas' is a Talmudic loanword from the Ancient Greek 'Pardalis' (meaning leopard/panther). Due to historical confusion, modern Hebrew strictly differentiates 'Namer' (Leopard) from 'Bardelas' (Cheetah).</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">4. השם העברי: ברדלס</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">4. Hebrew Name: Bardelas</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה "ברדלס" מגיעה מלשון חז"ל והיא שאילה מהמילה היוונית העתיקה 'Pardalis' (πάρδαλις), שמשמעותה הייתה נמר או פנתר. במשך מאות שנים בארץ ישראל היה בלבול עצום בין נמר לברדלס, ואנשים השתמשו במילים כמילים נרדפות. כיום, האקדמיה ללשון קבעה כי החיה המהירה (Cheetah) תיקרא רשמית "ברדלס", והחיה עם הרוזטות (Leopard) תיקרא "נמר".</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The word 'Bardelas' originates from Talmudic Hebrew and is a loanword from the Ancient Greek 'Pardalis' (πάρδαλις), meaning leopard or panther. For centuries in the Land of Israel, there was immense confusion between the leopard and the cheetah, and people used the terms interchangeably. Today, the Academy of the Hebrew Language has determined that the fast animal (Cheetah) is officially called 'Bardelas', and the one with rosettes (Leopard) is 'Namer'.</p>
                     </div>
                 </div>
             </section>
 
-            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
-                <h3 class="text-yellow-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2">היסטוריית הגילוי, אבולוציה ושימור</h3>
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-yellow-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-yellow-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
                 <div class="space-y-6">
                     <div>
-                        <h4 class="text-white font-semibold mb-2">הגילוי המקורי:</h4>
-                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> קוטלג ותואר מדעית לראשונה בשנת 1775 על ידי הזואולוג הגרמני יוהאן כריסטיאן דניאל פון שרבר (שנות חיים: 1739–1810). במקור סווג כסוג של חתול (*Felis jubata*), ורק ב-1828 הועבר לסוג העצמאי שלו (*Acinonyx*).</p>
-                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Scientifically cataloged in 1775 by Johann Christian Daniel von Schreber (Lifespan: 1739–1810).</p>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">קוטלג ותואר מדעית לראשונה בשנת <strong>1775</strong> על ידי הזואולוג הגרמני יוהאן כריסטיאן דניאל פון שרבר (Johann Christian Daniel von Schreber, שנות חיים: 1739–1810). במקור הוא סווג בטעות כסוג של חתול בית/בר (*Felis jubata*), ורק בשנת 1828 הועבר לסוג העצמאי שלו (*Acinonyx*).</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">First scientifically cataloged and described in <strong>1775</strong> by the German zoologist Johann Christian Daniel von Schreber (Lifespan: 1739–1810). Originally, it was mistakenly classified as a type of wild/domestic cat (*Felis jubata*), and it was only moved to its own independent genus (*Acinonyx*) in 1828.</p>
                     </div>
                     <div>
-                        <h4 class="text-white font-semibold mb-2">אבולוציה ותפוצה:</h4>
-                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> הברדלס שרד כמעט בנס אירוע הכחדה ("צוואר בקבוק גנטי") שאירע לפני כ-10,000 שנה. כתוצאה מכך, כל הברדלסים כיום הם קרובי משפחה גנטיים מדרגה ראשונה (Inbreeding), מה שהופך אותם לפגיעים מאוד למחלות.</p>
-                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Survived a severe genetic "bottleneck" ~10,000 years ago, resulting in extremely low genetic diversity among modern cheetahs.</p>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה וצוואר הבקבוק הגנטי:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution and the Genetic Bottleneck:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">הברדלס שרד כמעט בנס אירוע הכחדה המוני ("צוואר בקבוק גנטי") שאירע במהלך עידן הקרח האחרון, לפני כ-10,000 עד 12,000 שנה. מספר הפרטים בעולם ירד למינימום הקריטי. כתוצאה מכך, הברדלסים של ימינו התרבו מתוך מאגר גנים זעיר (Inbreeding חמור). בגלל שונות גנטית אפסית זו (כל הברדלסים כיום הם קרובי משפחה מדרגה ראשונה), הם פגיעים מאוד למחלות ולבעיות פוריות. בעבר חיו ברדלסי-ענק גם באמריקה (הברדלס האמריקאי - שנכחד).</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">The cheetah miraculously survived a mass extinction event (a "genetic bottleneck") during the last Ice Age, about 10,000 to 12,000 years ago. The global population dropped to a critical minimum. Consequently, today's cheetahs reproduced from a tiny gene pool (severe inbreeding). Due to this near-zero genetic diversity (all modern cheetahs are essentially first-degree relatives), they are highly vulnerable to diseases and fertility issues. Historically, giant cheetahs also roamed the Americas (the now-extinct American cheetah).</p>
                     </div>
                     <div>
-                        <h4 class="text-white font-semibold mb-2">מצב שימור:</h4>
-                        <p class="text-sm text-slate-300">מוגדר כ"פגיע" (Vulnerable - VU) על ידי ה-IUCN. נותרו כ-7,100 פרטים בלבד בטבע. אוכלוסייה קריטית של הברדלס האסיאתי (כ-50 פרטים בלבד) שרדה באיראן. בארץ ישראל נכחד הברדלס לחלוטין בשנות ה-50.</p>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">מוגדר כ"פגיע" (Vulnerable - VU) על ידי ה-IUCN, למרות שחוקרים רבים דורשים להחמיר את מצבו ל"בסכנת הכחדה". נותרו כ-7,100 פרטים בלבד בטבע (בעיקר בנמיביה ודרום אפריקה). אוכלוסייה קריטית וזעירה של הברדלס האסיאתי (תת-מין נפרד, כ-50 פרטים בלבד) שרדה באיראן. בארץ ישראל נכחד הברדלס לחלוטין בשנות ה-50 של המאה ה-20.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Classified as "Vulnerable" (VU) by the IUCN, although many researchers are pushing to upgrade its status to "Endangered". Only about 7,100 individuals remain in the wild (primarily in Namibia and South Africa). A critically tiny population of the Asiatic cheetah (a distinct subspecies, ~50 individuals) survives in Iran. In the Land of Israel, the cheetah went completely extinct in the 1950s.</p>
                     </div>
                 </div>
             </section>
         </main>
 
         <footer class="mt-8 p-6 text-center text-slate-500 text-sm border-t border-slate-800 mx-6 pb-12">
-            <p>האתר נבנה על ידי ג'מיני ורם.</p>
+            <p class="he-content">האתר נבנה על ידי ג'מיני ורם.</p>
+            <p class="en-content hidden">The site was created by Gemini and Ram.</p>
         </footer>
     </div>
 
+    <!-- Modal -->
     <div id="fullScreenImageModal" class="fixed inset-0 bg-black/95 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
         <button class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-yellow-500 z-[101]">&times;</button>
         <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-2 border-slate-700">
     </div>
 
     <script>
+        // מנגנון הדו-לשוניות
+        let currentLang = 'he';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+
+            document.querySelectorAll('.he-content').forEach(el => {
+                if(currentLang === 'he') el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
+
+            document.querySelectorAll('.en-content').forEach(el => {
+                if(currentLang === 'en') el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
+        }
+
         function openImageModal(imgUrl) {
             const modal = document.getElementById('fullScreenImageModal');
             const imgEl = document.getElementById('modalFullImg');
