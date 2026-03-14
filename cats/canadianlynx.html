@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>שונר קנדי (Lynx canadensis) | מטריצת החתוליים</title>
+    <title>קרקל (Caracal caracal) | מטריצת החתוליים</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
@@ -11,7 +11,7 @@
             --bg-body: #030712; 
             --bg-card: #0a1122; 
             --border-card: #1d365d;
-            --text-accent: #93c5fd; /* תכלת-קרח */
+            --text-accent: #d97706; /* צבע אדמה/חול */
         }
         body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
         .samsung-s25-container { 
@@ -30,14 +30,14 @@
         ::-webkit-scrollbar-thumb:hover { background: #475569; }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-200 antialiased selection:bg-blue-500/30 relative">
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-amber-700/30 relative">
 
     <div class="samsung-s25-container relative pb-10">
         
         <!-- ניווט וכפתור שפה -->
         <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
-            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-blue-400 hover:bg-blue-600 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
-            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-blue-600 transition border border-white/10 flex items-center gap-2">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-amber-600 hover:bg-amber-700 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-amber-600 hover:text-black transition border border-white/10 flex items-center gap-2">
                 <span class="he-content">&rarr; חזרה למטריצה</span>
                 <span class="en-content hidden">&larr; Back to Matrix</span>
             </a>
@@ -45,47 +45,47 @@
 
         <!-- תמונת נושא ייצוגית -->
         <header class="relative w-full h-72 md:h-96">
-            <button onclick="openImageModal('../assets/canadianlynx.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
-                <img src="../assets/canadianlynx.png" alt="שונר קנדי" class="w-full h-full object-cover">
+            <button onclick="openImageModal('../assets/caracal.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/caracal.png" alt="קרקל במדבר" class="w-full h-full object-cover">
             </button>
             <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
             <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
                 <div class="flex items-center gap-3 mb-2">
-                    <span class="bg-blue-500/20 text-blue-300 text-xs font-bold px-3 py-1 rounded-full border border-blue-500/30 he-content">Felinae (חתולים קטנים)</span>
-                    <span class="bg-blue-500/20 text-blue-300 text-xs font-bold px-3 py-1 rounded-full border border-blue-500/30 en-content hidden">Felinae (Small Cats)</span>
-                    <span class="text-slate-400 text-sm tracking-widest he-content">צייד היערות הקפואים</span>
-                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">Hunter of the Frozen Forests</span>
+                    <span class="bg-amber-700/40 text-amber-500 text-xs font-bold px-3 py-1 rounded-full border border-amber-600/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-amber-700/40 text-amber-500 text-xs font-bold px-3 py-1 rounded-full border border-amber-600/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">רוח המדבר</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">Spirit of the Desert</span>
                 </div>
-                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">שונר קנדי</h1>
-                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Canadian Lynx</h1>
-                <h2 class="text-xl text-slate-300 italic font-serif">Lynx canadensis</h2>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">קרקל</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Caracal</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Caracal caracal</h2>
             </div>
         </header>
 
         <main class="p-6 space-y-8">
             
             <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
-                <h3 class="text-blue-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
-                <h3 class="text-blue-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
                 
                 <ul class="space-y-3 text-sm he-content">
-                    <li><strong class="text-slate-400">שם באנגלית:</strong> Canadian Lynx / Canada Lynx</li>
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Caracal</li>
                     <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
-                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "Shadow of the Boreal Forest"</li>
-                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> חתול בגודל בינוני המותאם בצורה קיצונית לשלג עמוק. כפות רגליו העצומות משמשות כ"נעלי שלג" המונעות שקיעה, וציציות השיער השחורות והארוכות על אוזניו משמשות כמעין אנטנות לזיהוי טרף. תזונתו תלויה כמעט לחלוטין (עד 97%) במין אחד של טרף: ארנבת השלג.</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "Desert Lynx" / "Gazelle Cat"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> חתול מדברי, חסון ואתלטי בצורה יוצאת דופן. ניחן ביכולת ניתור אנכית פנומנלית של עד 3 מטרים מהמקום (המאפשרת לו לתפוס ציפורים במעופן), ומתאפיין בציציות שיער שחורות, ארוכות ומובחנות בקצות אוזניו המחודדות.</li>
                 </ul>
 
                 <ul class="space-y-3 text-sm en-content hidden">
-                    <li><strong class="text-slate-400">Common Name:</strong> Canadian Lynx / Canada Lynx</li>
+                    <li><strong class="text-slate-400">Common Name:</strong> Caracal</li>
                     <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
-                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "Shadow of the Boreal Forest"</li>
-                    <li><strong class="text-slate-400">Unique Feature:</strong> A medium-sized cat highly adapted to deep snow. Its enormous paws act as "snowshoes," and its long black ear tufts function like antennae for detecting prey. Its diet relies almost entirely (up to 97%) on a single prey species: the snowshoe hare.</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "Desert Lynx" / "Gazelle Cat"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> A robust and exceptionally athletic desert cat. It possesses a phenomenal vertical leaping ability of up to 3 meters from a standstill (allowing it to catch birds in mid-air), and is characterized by long, distinct black tufts of hair on the tips of its pointed ears.</li>
                 </ul>
             </section>
 
             <section class="space-y-4 text-start">
-                <h3 class="text-blue-400 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
-                <h3 class="text-blue-400 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <h3 class="text-amber-600 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-amber-600 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
                 <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
                     <table class="w-full text-sm text-start bg-slate-900">
                         <thead class="bg-slate-800 text-slate-300">
@@ -99,23 +99,31 @@
                         <tbody class="divide-y divide-slate-800">
                             <tr class="hover:bg-slate-800/50 transition">
                                 <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
-                                <td class="p-3"><span class="he-content">64 עד 73 ימים</span><span class="en-content hidden">64 - 73 days</span></td>
+                                <td class="p-3"><span class="he-content">78 עד 81 ימים</span><span class="en-content hidden">78 - 81 days</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (כולל זנב)</span><span class="en-content hidden">Body Length</span></td>
-                                <td class="p-3"><span class="he-content">76 עד 106 ס"מ</span><span class="en-content hidden">76 - 106 cm</span></td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף - זכר (ללא זנב)</span><span class="en-content hidden">Male Body Length</span></td>
+                                <td class="p-3"><span class="he-content">73 עד 105 ס"מ</span><span class="en-content hidden">73 - 105 cm</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
-                                <td class="p-3"><span class="he-content">5 עד 12 ס"מ (קצר מאוד)</span><span class="en-content hidden">5 - 12 cm (very short)</span></td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף - נקבה (ללא זנב)</span><span class="en-content hidden">Female Body Length</span></td>
+                                <td class="p-3"><span class="he-content">61 עד 96 ס"מ</span><span class="en-content hidden">61 - 96 cm</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
-                                <td class="p-3"><span class="he-content">5 עד 17 ק"ג</span><span class="en-content hidden">5 - 17 kg</span></td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל - זכר בוגר</span><span class="en-content hidden">Adult Male Weight</span></td>
+                                <td class="p-3"><span class="he-content">8 עד 20 ק"ג</span><span class="en-content hidden">8 - 20 kg</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל - נקבה בוגרת</span><span class="en-content hidden">Adult Female Weight</span></td>
+                                <td class="p-3"><span class="he-content">6 עד 16 ק"ג</span><span class="en-content hidden">6 - 16 kg</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
                                 <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
-                                <td class="p-3"><span class="he-content">10 עד 14 שנים (עד 26 בשבי!)</span><span class="en-content hidden">10 - 14 years (up to 26 in captivity)</span></td>
+                                <td class="p-3"><span class="he-content">10 עד 12 שנים (עד 17 בשבי)</span><span class="en-content hidden">10 - 12 years (up to 17 in captivity)</span></td>
+                            </tr>
+                             <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">יכולת ניתור מירבית</span><span class="en-content hidden">Max Leaping Ability</span></td>
+                                <td class="p-3"><span class="he-content">עד 3 מטרים אנכית (לגובה)</span><span class="en-content hidden">Up to 3 meters vertically</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -123,72 +131,67 @@
             </section>
 
             <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
-                <h3 class="text-blue-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה וביולוגיה</h3>
-                <h3 class="text-blue-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy & Biology</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
                 
                 <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
-                    <p><strong>רגליים אחוריות ארוכות:</strong> במבט מהצד, נראה שהשונר הקנדי "משופע" קדימה. רגליו האחוריות ארוכות באופן משמעותי מרגליו הקדמיות. מבנה זה נועד להעניק לו כוח דחף עצום לזינוקים פתאומיים מתוך השלג אל עבר הארנבות המהירות.</p>
-                    <p><strong>כפות רגליים עצומות (Snowshoes):</strong> כפות הרגליים של השונר הקנדי גדולות באופן חסר פרופורציה לשאר גופו ומכוסות בפרווה צפופה ועבה גם בקיץ. הן פועלות כנעלי שלג טבעיות, ומפזרות את משקלו כך שהוא יכול לרוץ על פני שלג עמוק מאוד מבלי לשקוע (לחץ של רק 4.1 עד 8.8 גרם לסמ"ר!).</p>
-                    <p><strong>מחזוריות דרמטית:</strong> אוכלוסיית השונר הקנדי כבולה באופן טראגי ומופלא לאוכלוסיית "ארנבת השלג" (Snowshoe Hare). במחזורים של כ-10 שנים, כאשר אוכלוסיית הארנבות מתפוצצת, גם אוכלוסיית השונרים גדלה במהירות. כשהארנבות קורסות (ממחלות או חוסר מזון), אוכלוסיית השונרים קורסת יחד איתן עקב רעב. זוהי אחת הדוגמאות הקלאסיות ביותר באקולוגיה ל"יחסי טורף-נטרף".</p>
+                    <p><strong>אקרובטיקה אווירית:</strong> הקרקל נחשב לאחד האקרובטים הגדולים של משפחת החתוליים. רגליו האחוריות הארוכות והשריריות משמשות כקפיצי ענק. הוא מסוגל לזנק לגובה של 3 מטרים היישר מתוך עמידה במקום. יכולת זו מאפשרת לו ל"דוג" ציפורים (כמו יונים או חוגלות) ממש מתוך האוויר כשהן ממריאות. בזינוק אחד מוצלח, תוך שימוש בטפרים של שתי רגליו הקדמיות, הוא מסוגל להפיל מספר ציפורים בו-זמנית מתוך הלהקה.</p>
+                    <p><strong>ציציות האוזניים (Ear Tufts):</strong> סימן ההיכר הבולט ביותר של הקרקל הוא ציציות השיער השחורות בקצות אוזניו, שיכולות להגיע לאורך של 4.5 ס"מ. למרות שקיימות תיאוריות רבות (סינון חרקים, שבירת קווי המתאר של הפנים להסוואה בסבך), ההשערה המדעית הרווחת כיום היא שהציציות משמשות כאמצעי תקשורת חזותי. הקרקל מניע את אוזניו וציציותיו (כמו אנטנות) כדי לאותת לקרקלים אחרים על מצב רוחו או כוונותיו ממרחק.</p>
+                    <p><strong>הישרדות ביובש קיצוני:</strong> הפרווה של הקרקל (בגווני אדמה, חול או חמרה) צפופה וקצרה, מותאמת לחיים במדבריות ובסוואנות היבשות של אפריקה והמזרח התיכון. הקרקל הסתגל באופן מופלא למחסור במים: הוא מפיק את רוב הנוזלים הדרושים לקיומו ישירות מהדם ומנוזלי הגוף של הטרף שלו (מכרסמים, ארנבות, ציפורים ואנטילופות קטנות), ולכן יכול לשרוד תקופות ארוכות מאוד ללא שתייה ממקור מים גלוי.</p>
+                    <p><strong>צייד אגרסיבי:</strong> למרות גודלו הבינוני, הקרקל הוא צייד עז, אגרסיבי וחסר פחד. תועדו מקרים שבהם קרקל בוגר הצליח להכניע טרף הגדול ממנו פי שניים עד פי שלושה (כמו צבאי תומסון בוגרים), ולעיתים אף גירש טורפים מתחרים כגון תנים מהטרף שלו.</p>
                 </div>
 
                 <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
-                    <p><strong>Long Hind Legs:</strong> When viewed from the side, the Canadian Lynx appears to slope downward toward its head. Its hind legs are significantly longer than its front legs. This structure is designed to provide immense explosive power for sudden leaps through the snow after fast-moving hares.</p>
-                    <p><strong>Enormous Paws (Snowshoes):</strong> The paws of the Canadian Lynx are disproportionately large for its body size and are covered in thick, dense fur even in summer. They act as natural snowshoes, distributing its weight so it can run atop deep snow without sinking (exerting a pressure of only 4.1 to 8.8 grams per square centimeter!).</p>
-                    <p><strong>Dramatic Population Cycles:</strong> The Canadian Lynx population is tragically and wonderfully tied to the population of the Snowshoe Hare. In roughly 10-year cycles, when the hare population explodes, the lynx population rapidly follows suit. When the hares crash (due to disease or lack of food), the lynx population crashes along with them due to starvation. This is one of ecology's most classic examples of a "predator-prey relationship."</p>
+                    <p><strong>Aerial Acrobatics:</strong> The caracal is considered one of the greatest acrobats in the feline family. Its long, muscular hind legs act as giant springs. It is capable of leaping 3 meters vertically straight from a standing position. This ability allows it to "fish" birds (like pigeons or partridges) right out of the air as they take off. In a single successful leap, using the claws on both front paws, it can swat down multiple birds simultaneously from a flock.</p>
+                    <p><strong>Ear Tufts:</strong> The caracal's most prominent defining feature is the black tufts of hair on the tips of its ears, which can reach a length of 4.5 cm (1.8 inches). Although there are many theories (filtering out insects, breaking up the facial outline for camouflage in the brush), the prevailing scientific hypothesis today is that the tufts serve as a means of visual communication. The caracal twitches its ears and tufts (like antennae) to signal its mood or intentions to other caracals from a distance.</p>
+                    <p><strong>Survival in Extreme Aridity:</strong> The caracal's coat (in shades of tawny, sand, or brick-red) is dense and short, adapted for life in the deserts and dry savannas of Africa and the Middle East. The caracal is marvelously adapted to water scarcity: it derives most of the fluids necessary for its survival directly from the blood and bodily fluids of its prey (rodents, hares, birds, and small antelopes), and therefore can survive for very long periods without drinking from a standing water source.</p>
+                    <p><strong>Aggressive Hunter:</strong> Despite its medium size, the caracal is a fierce, aggressive, and fearless hunter. There are documented cases where an adult caracal has managed to subdue prey two to three times its own size (such as adult Thomson's gazelles), and occasionally it has even driven off competing predators like jackals from its kill.</p>
                 </div>
             </section>
 
             <section class="space-y-4 text-start">
-                <h3 class="text-blue-400 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
-                <h3 class="text-blue-400 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                <h3 class="text-amber-600 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת (Desert Lynx)</h3>
+                <h3 class="text-amber-600 font-bold text-lg px-2 en-content hidden">Extended Etymology (Desert Lynx)</h3>
                 
                 <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
                     <div class="p-4 border-b border-slate-800">
-                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Lynx</h4>
-                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Lynx</h4>
-                        <p class="text-sm text-slate-300 mb-2 he-content">המילה 'Lynx' מקורה בשפה היוונית העתיקה (λύγξ - lunx) דרך לטינית אמצעית. השורש האינדו-אירופי הקדום של המילה הוא '*leuk-' שפירושו "אור", "בהירות" או "להאיר". סבורים שהשם ניתן לחיה זו בגלל הברק הזוהר והמחזיר-אור של עיניה בחשכה.</p>
-                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The word 'Lynx' comes from Ancient Greek (λύγξ) via Middle Latin. The ancient Indo-European root of the word is '*leuk-', meaning "light," "brightness," or "to shine." It is believed the name was given to this animal because of the bright, reflective luminescence of its eyes in the dark.</p>
-                    </div>
-                    
-                    <div class="p-4 border-b border-slate-800">
-                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: canadensis</h4>
-                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: canadensis</h4>
-                        <p class="text-sm text-slate-300 mb-2 he-content">תוספת לטינית שמשמעותה פשוטה - "מקנדה" או "הקנדי". מציין את טווח התפוצה המרכזי של מין זה, הכולל את היערות הצפוניים (הבוריאליים) של קנדה וצפון ארצות הברית.</p>
-                        <p class="text-sm text-slate-300 mb-2 en-content hidden">A Latinized term simply meaning "from Canada" or "Canadian." It denotes the primary geographic distribution of this species, which encompasses the northern (boreal) forests of Canada and the northern United States.</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. השם הנפוץ (והסוג): Caracal</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus & Common Name: Caracal</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם המדעי והעממי "קרקל" מגיע אלינו מהשפה הטורקית העתיקה, מהמילה 'karakulak'. פירוש המילה 'kara' הוא "שחור", ופירוש המילה 'kulak' הוא "אוזן". כלומר, ההלחם של שתיהן מתורגם מילולית ל"אוזן שחורה" (Black Ear), שם המתאר באופן הישיר והמדויק ביותר את המראה החיצוני הייחודי של אוזניו והציציות שלו.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The scientific and common name "Caracal" comes to us from the Old Turkish language, from the word 'karakulak'. The word 'kara' means "black", and the word 'kulak' means "ear". Thus, their combination literally translates to "black ear", a name that directly and precisely describes the unique appearance of its ears and tufts.</p>
                     </div>
                     
                     <div class="p-4">
-                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העברי: שונר</h4>
-                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Hebrew Name: Shunar</h4>
-                        <p class="text-sm text-slate-300 mb-2 he-content">השם "שונר" הוא תחדיש (מילה שחודשה) על ידי האקדמיה ללשון העברית. המקור הוא לשון חז"ל (למשל בתלמוד הבבלי) שם מוזכרת חיה בשם "שונרא" (בארמית פירושה פשוט חתול, "בר שונרא" הוא חתול בר). האקדמיה לקחה את השם העתיק והעניקה אותו ספציפית לסוג *Lynx* כדי להבדילו מחתולי בר אחרים.</p>
-                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Hebrew name 'Shunar' is a neologism created by the Academy of the Hebrew Language. It originates from Talmudic literature, which mentions an animal called 'Shunra' (in Aramaic, it simply means cat, and 'Bar Shunra' is a wildcat). The Academy assigned this ancient name specifically to the Lynx genus to distinguish it from other wildcats.</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. הבלבול: שונר מדברי (Desert Lynx)</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. The Confusion: Desert Lynx</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">באנגלית ובשפות נוספות, הקרקל מכונה לעיתים קרובות "שונר מדברי" (Desert Lynx). זהו שם מטעה מבחינה טקסונומית. הקרקל <strong>אינו</strong> שייך כלל לסוג השונר (*Lynx*). הבלבול ההיסטורי נבע מהדמיון החיצוני המובהק: לשניהם יש ציציות על האוזניים ולשניהם יש תכונות פיזיות של ציידים זריזים. זהו מקרה קלאסי של "אבולוציה מתכנסת" (Convergent evolution) – בעלי חיים שונים המפתחים תכונות דומות עקב לחצים סביבתיים דומים, ללא קשר גנטי קרוב.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">In English and other languages, the caracal is often referred to as the "Desert Lynx". This is a taxonomically misleading name. The caracal does <strong>not</strong> belong to the Lynx genus (*Lynx*) at all. The historical confusion stemmed from their striking visual similarity: both have ear tufts and both share physical traits of agile hunters. This is a classic case of "convergent evolution"—different animals developing similar traits due to similar environmental pressures, without a close genetic relationship.</p>
                     </div>
                 </div>
             </section>
 
             <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
-                <h3 class="text-blue-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
-                <h3 class="text-blue-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
                 
                 <div class="space-y-6">
                     <div>
                         <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
                         <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
-                        <p class="text-sm text-slate-300 mb-1 he-content">קוטלג ותואר מדעית לראשונה בשנת <strong>1792</strong> על ידי חוקר הטבע הסקוטי, רוברט קר (Robert Kerr, שנות חיים: 1755–1813), תחת השם *Felis lynx canadensis*.</p>
-                        <p class="text-sm text-slate-300 mb-1 en-content hidden">First scientifically cataloged and described in <strong>1792</strong> by the Scottish naturalist Robert Kerr (Lifespan: 1755–1813), under the name *Felis lynx canadensis*.</p>
+                        <p class="text-sm text-slate-300 mb-1 he-content">קוטלג ותואר מדעית לראשונה בשנת 1776 על ידי הזואולוג הגרמני יוהאן כריסטיאן דניאל פון שרבר (Johann Christian Daniel von Schreber, שנות חיים: 1739–1810). בגלל הבלבול האמור, הוא סווג תחילה תחת סוג חתול הבית (*Felis caracal*), ולאחר מכן הועבר בטעות לסוג השונר (*Lynx caracal*). רק בשנת 1843 הוא הופרד וקיבל את הסוג העצמאי שלו (*Caracal*).</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">First scientifically cataloged and described in 1776 by the German zoologist Johann Christian Daniel von Schreber (Lifespan: 1739–1810). Because of the aforementioned confusion, it was initially classified under the domestic cat genus (*Felis caracal*), and later mistakenly moved to the Lynx genus (*Lynx caracal*). It was only in 1843 that it was separated and given its own independent genus (*Caracal*).</p>
                     </div>
                     <div>
-                        <h4 class="text-white font-semibold mb-2 he-content">אבולוציה ותפוצה:</h4>
-                        <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution and Distribution:</h4>
-                        <p class="text-sm text-slate-300 mb-1 he-content">הסוג *Lynx* התפתח באמריקה הצפונית לפני כ-4 מיליון שנים. השונר הקנדי הוא קרוב משפחה הדוק של השונר המצוי (הבובקט - Bobcat), אך בניגוד לבובקט שמעדיף אקלים ממוזג, השונר הקנדי מתמחה אך ורק ביערות השלג (Taiga) ובטונדרה מדרום לחוג הארקטי בקנדה, באלסקה ובחלקים ספציפיים בצפון ארה"ב.</p>
-                        <p class="text-sm text-slate-300 mb-1 en-content hidden">The *Lynx* genus evolved in North America around 4 million years ago. The Canadian Lynx is a close relative of the Bobcat, but unlike the Bobcat which prefers temperate climates, the Canadian Lynx is strictly specialized for the snow forests (Taiga) and tundra south of the Arctic Circle in Canada, Alaska, and parts of the northern US.</p>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה ושייכות גנטית:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution and Genetic Lineage:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">מבחינה פילוגנטית (אבולוציונית), לקרקל יש שושלת משלו המכונה "שושלת הקרקל" (Caracal lineage). המחקר הגנטי המודרני גילה כי קרובי המשפחה החיים הקרובים ביותר אל הקרקל הם הסרוואל (Serval) בעל הרגליים הארוכות, והחתול הזהוב האפריקני (African Golden Cat). שלושתם חולקים אב קדמון משותף שחי באפריקה לפני כ-8.5 מיליון שנים.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">Phylogenetically (evolutionarily), the caracal has its own lineage known as the "Caracal lineage". Modern genetic research has revealed that the caracal's closest living relatives are the long-legged Serval and the African Golden Cat. All three share a common ancestor that lived in Africa about 8.5 million years ago.</p>
                     </div>
                     <div>
-                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור:</h4>
-                        <h4 class="text-white font-semibold mb-2 en-content hidden">Conservation Status:</h4>
-                        <p class="text-sm text-slate-300 he-content">באופן גלובלי מוגדר כ"ללא חשש" (LC) על ידי ה-IUCN, משום שאוכלוסייתו שם יציבה וגדולה. עם זאת, במדינות התחתונות של ארצות הברית (Lower 48), השונר הקנדי מוגדר ברמה הפדרלית כ"מאוים" (Threatened) בשל כריתת יערות ואובדן בית גידול.</p>
-                        <p class="text-sm text-slate-300 en-content hidden">Globally classified as "Least Concern" (LC) by the IUCN because its population in Canada/Alaska is stable and large. However, in the contiguous United States (the Lower 48), the Canadian Lynx is federally listed as "Threatened" due to logging and habitat loss.</p>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני (ובישראל):</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status (and in Israel):</h4>
+                        <p class="text-sm text-slate-300 he-content">מוגדר ברמה העולמית כ"ללא חשש" (Least Concern - LC) על ידי ה-IUCN, משום שתפוצתו באפריקה עדיין נרחבת. עם זאת, אוכלוסיות באזורים מסוימים באסיה נמצאות בירידה מדאיגה עקב איבוד בתי גידול. בישראל (המהווה את גבול התפוצה הצפוני שלו), הקרקל הוא חיה מוגנת. למרות שהוא נפוץ בערבה, בנגב ובים המלח, נדיר יחסית לצפות בו בטבע בשל אופיו החמקני ופעילותו הלילית.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Globally classified as "Least Concern" (LC) by the IUCN, because its distribution in Africa is still extensive. However, populations in certain areas of Asia are experiencing a worrying decline due to habitat loss. In Israel (which marks its northernmost distribution limit), the caracal is a protected species. Although it is present in the Arava, the Negev, and the Dead Sea regions, it is relatively rare to spot in the wild due to its elusive nature and nocturnal habits.</p>
                     </div>
                 </div>
             </section>
@@ -202,39 +205,29 @@
 
     <!-- Modal -->
     <div id="fullScreenImageModal" class="fixed inset-0 bg-black/95 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
-        <button class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-blue-400 z-[101]">&times;</button>
+        <button class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-amber-600 z-[101]">&times;</button>
         <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-2 border-slate-700">
     </div>
 
     <script>
-        // מנגנון הדו-לשוניות החדש לאתר שלך
+        // מנגנון הדו-לשוניות
         let currentLang = 'he';
 
         function toggleLanguage() {
             currentLang = currentLang === 'he' ? 'en' : 'he';
             
-            // שינוי כיווניות האתר
             document.documentElement.lang = currentLang;
             document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
-
-            // החלפת הטקסט בכפתור השפה
             document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
 
-            // הסתרה והצגה של תוכן לפי המחלקות החדשות
             document.querySelectorAll('.he-content').forEach(el => {
-                if(currentLang === 'he') {
-                    el.classList.remove('hidden');
-                } else {
-                    el.classList.add('hidden');
-                }
+                if(currentLang === 'he') el.classList.remove('hidden');
+                else el.classList.add('hidden');
             });
 
             document.querySelectorAll('.en-content').forEach(el => {
-                if(currentLang === 'en') {
-                    el.classList.remove('hidden');
-                } else {
-                    el.classList.add('hidden');
-                }
+                if(currentLang === 'en') el.classList.remove('hidden');
+                else el.classList.add('hidden');
             });
         }
 
