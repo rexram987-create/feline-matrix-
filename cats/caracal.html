@@ -6,12 +6,11 @@
     <title>קרקל (Caracal caracal) | מטריצת החתוליים</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
         :root {
             --bg-body: #030712; 
             --bg-card: #0a1122; 
             --border-card: #1d365d;
-            --text-accent: #d97706; /* צבע אדמה/חול המזוהה עם הקרקל */
+            --text-accent: #d97706; 
         }
         body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; }
         .samsung-s25-container { 
@@ -24,7 +23,6 @@
         @media (min-width: 768px) {
             .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
         }
-        /* עיצוב פס גלילה */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--bg-body); }
         ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
@@ -35,17 +33,16 @@
 
     <div class="samsung-s25-container relative pb-10">
         
-        <!-- ניווט חזרה -->
         <nav class="absolute top-4 right-4 z-10">
             <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-amber-600 transition border border-white/10 flex items-center gap-2">
                 <span>&rarr;</span> חזרה למטריצה
             </a>
         </nav>
 
-        <!-- תמונת נושא ייצוגית -->
+        <!-- תיקון לתמונה מקומית -->
         <header class="relative w-full h-72 md:h-96">
-            <button onclick="openImageModal('https://images.unsplash.com/photo-1615822646671-6ce93561a7a0?q=80&w=1000')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
-                <img src="https://images.unsplash.com/photo-1615822646671-6ce93561a7a0?q=80&w=1000" alt="קרקל במדבר" class="w-full h-full object-cover">
+            <button onclick="openImageModal('../assets/caracal.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/caracal.png" alt="קרקל במדבר" class="w-full h-full object-cover">
             </button>
             <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
             <div class="absolute bottom-0 p-6 w-full pointer-events-none">
@@ -59,8 +56,6 @@
         </header>
 
         <main class="p-6 space-y-8">
-            
-            <!-- 1. כותרות ומידע בסיסי -->
             <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
                 <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2">תעודת זהות זואולוגית</h3>
                 <ul class="space-y-3 text-sm">
@@ -72,7 +67,6 @@
                 </ul>
             </section>
 
-            <!-- 2. גריד נתונים סטטיסטיים -->
             <section class="space-y-4">
                 <h3 class="text-amber-600 font-bold text-lg px-2">נתונים סטטיסטיים (Stats)</h3>
                 <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
@@ -133,63 +127,57 @@
                 </div>
             </section>
 
-            <!-- 3. ייחודיות אנטומית וביולוגית -->
             <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
                 <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2">אנטומיה וביולוגיה (Anatomy & Biology)</h3>
                 <div class="space-y-4 text-sm leading-relaxed text-slate-300">
-                    <p><strong>ציציות האוזניים (Ear Tufts):</strong> סימן ההיכר הבולט ביותר של הקרקל הוא ציציות השיער השחורות בקצות אוזניו. תפקידן אינו ברור לחלוטין, אך סבורים שהן משמשות לתקשורת (הקרקל מניע אותן כמעין "איתות"), להסוואה בסבך, או לסינון חרקים ורחשים סביבתיים.</p>
+                    <p><strong>ציציות האוזניים (Ear Tufts):</strong> סימן ההיכר הבולט ביותר של הקרקל הוא ציציות השיער השחורות בקצות אוזניו. תפקידן אינו ברור לחלוטין, אך סבורים שהן משמשות לתקשורת, להסוואה בסבך, או לסינון חרקים.</p>
                     <p><strong>מותאם ליובש:</strong> הקרקל מותאם באופן יוצא דופן לחיים באזורים צחיחים ומדבריים. הוא מקבל את רוב נוזליו מהטרף שלו, ומסוגל לשרוד תקופות ארוכות מאוד ללא שתיית מים ישירה.</p>
                     <p><strong>צייד אקרובט:</strong> רגליו האחוריות של הקרקל ארוכות ושריריות מאוד. בעזרתן, הוא יכול לבצע זינוקים וסיבובים באוויר ("סלטות") במטרה ללכוד מספר ציפורים הממריאות בבת אחת מתוך להקה.</p>
                 </div>
             </section>
 
-            <!-- 4. אטימולוגיה מורחבת (Full Etymology) -->
             <section class="space-y-4">
                 <h3 class="text-amber-600 font-bold text-lg px-2">אטימולוגיה מורחבת (Etymology)</h3>
                 <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
                     <div class="p-4 border-b border-slate-800">
                         <h4 class="text-md font-bold text-white mb-2">1. השם הנפוץ (והסוג): Caracal</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> השם "קרקל" מקורו בשפה הטורקית העתיקה (karakulak). "קארא" (Kara) פירושו "שחור", ו"קולאק" (kulak) פירושו "אוזן". כלומר: "אוזן שחורה", המתאר במדויק את המראה החיצוני הייחודי של אוזניו האחוריות וציציות השיער שעל קצותיהן.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> The name 'Caracal' comes from the Turkish word 'karakulak', meaning "black ear" ('kara' = black, 'kulak' = ear), referring to its distinctive black ear tufts and the dark coloring on the back of its ears.</p>
+                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> השם מקורו בשפה הטורקית העתיקה (karakulak). "קארא" פירושו "שחור", ו"קולאק" פירושו "אוזן". כלומר: "אוזן שחורה", המתאר במדויק את המראה החיצוני הייחודי של אוזניו.</p>
+                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> The name 'Caracal' comes from the Turkish word 'karakulak', meaning "black ear".</p>
                     </div>
                     <div class="p-4">
                         <h4 class="text-md font-bold text-white mb-2">2. השם השני: שונר מדברי (Desert Lynx)</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> למרות שהקרקל נקרא לעיתים "שונר מדברי", הוא אינו שייך לסוג השונר (*Lynx*). הבלבול נובע מהדמיון החיצוני – הציציות שעל האוזניים והזנב הקצר יחסית – אולם הם שייכים לשושלות שונות של חתולים. בעברית לעיתים משתמשים בשם זה כדי להבדילו משונרים שחיים באזורים קרים ומושלגים.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> Although sometimes called the "Desert Lynx" due to its tufted ears and short tail, it is not actually a member of the Lynx genus. The physical similarities are a result of convergent evolution.</p>
+                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> למרות שנקרא לעיתים "שונר מדברי", הוא אינו שייך לסוג השונר (*Lynx*). הבלבול נובע מהדמיון החיצוני – הציציות שעל האוזניים והזנב הקצר – אולם הם שייכים לשושלות שונות.</p>
+                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> Although called the "Desert Lynx" due to its tufted ears and short tail, it is not actually a member of the Lynx genus. The similarities are a result of convergent evolution.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- 5. היסטוריית הגילוי ואבולוציה -->
             <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
                 <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2">היסטוריית הגילוי, אבולוציה ושימור</h3>
                 <div class="space-y-6">
                     <div>
                         <h4 class="text-white font-semibold mb-2">הגילוי המקורי:</h4>
-                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> קוטלג ותואר מדעית לראשונה בשנת <strong>1776</strong> על ידי הזואולוג הגרמני, <strong>יוהאן כריסטיאן דניאל פון שרבר</strong> (Johann Christian Daniel von Schreber, שנות חיים: 1739–1810). במקור הוא סווג בסוג *Felis* (עם חתולי הבית), ולאחר מכן הועבר לסוג *Lynx*, עד שקיבל סוג משלו (*Caracal*) ב-1843.</p>
-                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Scientifically cataloged in 1776 by the German zoologist Johann Christian Daniel von Schreber (Lifespan: 1739–1810). It was later moved from 'Felis' to 'Lynx' before receiving its own genus in 1843.</p>
+                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> קוטלג ותואר מדעית בשנת 1776 על ידי פון שרבר (שנות חיים: 1739–1810). סווג תחילה תחת *Felis*, אחר כך *Lynx*, ורק ב-1843 קיבל סוג משלו (*Caracal*).</p>
+                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Scientifically cataloged in 1776 by von Schreber (Lifespan: 1739–1810).</p>
                     </div>
                     <div>
                         <h4 class="text-white font-semibold mb-2">אבולוציה ותפוצה:</h4>
-                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> מבחינה אבולוציונית וגנטית, הקרקל שייך לשושלת משלו (Caracal lineage), וקרובי המשפחה החיים הקרובים ביותר אליו הם הסרוואל (Serval) והחתול הזהוב האפריקני. תפוצתו משתרעת על פני אפריקה, המזרח התיכון, מרכז אסיה והודו, עם נוכחות גם בישראל באזורי המדבר (כמו הערבה, הנגב וים המלח).</p>
-                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Genetically belongs to the Caracal lineage. Its closest living relatives are the Serval and the African Golden Cat. It inhabits Africa, the Middle East (including Israel), Central Asia, and India.</p>
+                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> שייך לשושלת משלו (Caracal lineage). קרובי המשפחה הקרובים ביותר אליו הם הסרוואל והחתול הזהוב האפריקני. נפוץ באפריקה, במזרח התיכון (כולל ישראל), ומרכז אסיה.</p>
+                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Genetically belongs to the Caracal lineage. Its closest living relatives are the Serval and the African Golden Cat.</p>
                     </div>
                     <div>
                         <h4 class="text-white font-semibold mb-2">מצב שימור:</h4>
-                        <p class="text-sm text-slate-300">בסך הכל, הקרקל מוגדר כ"ללא חשש" (Least Concern - LC) על ידי ה-IUCN, למרות שאוכלוסיות באזורים מסוימים באסיה והודו נמצאות בירידה או סכנה. הם עדיין ניצודים באזורים רבים בשל נזק שהם גורמים לעדרי צאן. בישראל הקרקל הוא חיה מוגנת ונדיר יחסית לצפות בו בטבע בשל אופיו החשאי ופעילותו הלילית לרוב.</p>
+                        <p class="text-sm text-slate-300">מוגדר כ"ללא חשש" (LC) על ידי ה-IUCN, למרות שאוכלוסיות באזורים מסוימים נמצאות בירידה. בישראל הקרקל הוא חיה מוגנת ונדיר יחסית לצפות בו בטבע.</p>
                     </div>
                 </div>
             </section>
         </main>
 
-        <!-- Footer -->
         <footer class="mt-8 p-6 text-center text-slate-500 text-sm border-t border-slate-800 mx-6 pb-12">
             <p>האתר נבנה על ידי ג'מיני ורם.</p>
         </footer>
-
     </div>
 
-    <!-- Modal לתמונה צפה -->
     <div id="fullScreenImageModal" class="fixed inset-0 bg-black/95 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
         <button class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-amber-600 z-[101]">&times;</button>
         <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-2 border-slate-700">
