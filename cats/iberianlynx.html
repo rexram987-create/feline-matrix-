@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>שונר איברי (Lynx pardinus) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d3ש65d;
+            --text-accent: #ea580c; /* כתום-אדמה (חצי האי האיברי) */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-orange-600/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-orange-500 hover:bg-orange-600 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-orange-600 hover:text-black transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/iberianlynx.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <!-- נתיב התמונה כפי שהגדרת -->
+                <img src="../assets/iberianlynx.png" alt="שונר איברי בטבע" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-orange-600/20 text-orange-500 text-xs font-bold px-3 py-1 rounded-full border border-orange-600/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-orange-600/20 text-orange-500 text-xs font-bold px-3 py-1 rounded-full border border-orange-600/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">ניצול חצי האי האיברי</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">Survivor of the Iberian Peninsula</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">שונר איברי</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Iberian Lynx</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Lynx pardinus</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-orange-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-orange-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Iberian Lynx</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Phantom of the Mediterranean"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> מתאפיין בפרווה מנומרת מאוד (בניגוד לשונר הקנדי והאירואסייתי שהם חלקים יותר), וברעמת פנים ("זקן") בולטת במיוחד. זהו אחד ממיני החתולים הנדירים בעולם, המהווה את סיפור ההצלחה המרשים ביותר בתחום שימור חיות הבר באירופה.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Iberian Lynx</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Phantom of the Mediterranean"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> Characterized by a heavily spotted coat (unlike the Canadian and Eurasian lynx, which are more solid in color) and a particularly prominent facial ruff ("beard"). It is one of the rarest cat species in the world, representing Europe's most impressive wildlife conservation success story.</li>
+                </ul>
+            </section>
+
+            <section class="space-y-4 text-start">
+                <h3 class="text-orange-500 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-orange-500 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">60 עד 65 ימים</span><span class="en-content hidden">60 - 65 days</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">85 עד 110 ס"מ</span><span class="en-content hidden">85 - 110 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">12 עד 30 ס"מ (קצר אופייני לשונר)</span><span class="en-content hidden">12 - 30 cm (typical short lynx tail)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל - זכר בוגר</span><span class="en-content hidden">Adult Male Weight</span></td>
+                                <td class="p-3"><span class="he-content">12 עד 15 ק"ג (קטן משונר אירואסייתי)</span><span class="en-content hidden">12 - 15 kg (smaller than Eurasian lynx)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל - נקבה בוגרת</span><span class="en-content hidden">Adult Female Weight</span></td>
+                                <td class="p-3"><span class="he-content">9 עד 10 ק"ג</span><span class="en-content hidden">9 - 10 kg</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">עד 13 שנים (בסביבה מוגנת)</span><span class="en-content hidden">Up to 13 years (in protected environments)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-orange-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-orange-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>זקן לחיים ייחודי (Facial Ruff):</strong> לשונר האיברי יש "זקן" בולט מאוד המורכב מקווצות שיער ארוכות היורדות מלחייו וצווארו. חוקרים מאמינים שלרעמת הפנים הזו יש מספר תפקידים: היא עוזרת לשבור את קווי המתאר העגולים של הפנים כדי להעצים את ההסוואה בסבך הים-תיכוני, משמשת לאינטראקציה חברתית (השערות סומרות בזמן איום), וייתכן שאף פועלת כרדאר סנסורי בדומה לשפם, המסייע בניווט בסבך צפוף.</p>
+                    <p><strong>ציציות האוזניים (Ear Tufts):</strong> כמו כל בני סוג השונר, לאיברי יש ציציות שיער שחורות ובולטות בקצות אוזניו. הציציות אינן נוי בלבד; מחקרים מצביעים על כך שהן פועלות כאנטנות, המשפרות את כיווניות הקול ועוזרות לשונר לאתר בדיוק רב את רשרוש הארנבות בתוך סבך הצמחייה.</p>
+                    <p><strong>דיאטה מומחית קיצונית:</strong> השונר האיברי הוא דוגמה קלאסית ל"טורף מומחה" (Specialist predator). תזונתו תלויה באופן כמעט בלעדי (בין 80% ל-100%) במין אחד של טרף: הארנבון המצוי (European Rabbit). תלות קיצונית זו הפכה לנקודת התורפה הגדולה ביותר שלו, שכן כאשר מחלות וירוס קטלניות (כמו המיקסומטוזיס) פגעו באוכלוסיית הארנבים בספרד, אוכלוסיית השונר האיברי קרסה כמעט לחלוטין עקב רעב.</p>
+                    <p><strong>צבע והסוואה:</strong> בניגוד לשונר הקנדי האפור, השונר האיברי חי באקלים חם יותר. פרוותו בצבע חום-צהבהב עד כתמתם, והיא מכוסה בצפיפות בכתמים שחורים בגדלים שונים. צבע זה משתלב באופן מושלם עם האור המנומר החודר מבעד לעלווה של יערות האלונים וחורש הים התיכון של חצי האי האיברי.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Unique Facial Ruff:</strong> The Iberian Lynx features a very prominent "beard" consisting of long tufts of hair hanging from its cheeks and neck. Researchers believe this facial ruff serves multiple purposes: it helps break up the round outline of the face to enhance camouflage in the Mediterranean scrub, aids in social interaction (the hairs bristle when threatened), and may even act as a sensory radar similar to whiskers, assisting navigation in dense undergrowth.</p>
+                    <p><strong>Ear Tufts:</strong> Like all members of the Lynx genus, the Iberian possesses prominent black hair tufts on the tips of its ears. These tufts are not merely ornamental; studies suggest they act as antennae, enhancing sound directionality and helping the lynx accurately pinpoint the rustling of rabbits within the dense vegetation.</p>
+                    <p><strong>Extreme Specialist Diet:</strong> The Iberian Lynx is a classic example of a "specialist predator." Its diet relies almost exclusively (between 80% and 100%) on a single prey species: the European Rabbit. This extreme dependency became its greatest vulnerability, as when lethal viral diseases (like myxomatosis) decimated the rabbit population in Spain, the Iberian Lynx population nearly collapsed entirely due to starvation.</p>
+                    <p><strong>Coloration and Camouflage:</strong> Unlike the grey Canadian Lynx, the Iberian Lynx lives in a warmer climate. Its coat is tawny-yellow to orangey-brown and is densely covered with black spots of varying sizes. This coloration blends perfectly with the dappled light filtering through the foliage of the oak forests and Mediterranean scrubland of the Iberian Peninsula.</p>
+                </div>
+            </section>
+
+            <section class="space-y-4 text-start">
+                <h3 class="text-orange-500 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-orange-500 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Lynx</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Lynx</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה 'Lynx' מקורה בשפה היוונית העתיקה (λύγξ - lunx) דרך לטינית אמצעית. השורש האינדו-אירופי הקדום של המילה הוא '*leuk-' שפירושו "אור", "בהירות" או "להאיר". סבורים שהשם ניתן לחיה זו בגלל הברק הזוהר והמחזיר-אור של עיניה בחשכה.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The word 'Lynx' comes from Ancient Greek (λύγξ) via Middle Latin. The ancient Indo-European root of the word is '*leuk-', meaning "light," "brightness," or "to shine." It is believed the name was given to this animal because of the bright, reflective luminescence of its eyes in the dark.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: pardinus</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: pardinus</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלטינית 'pardinus' פירושה "כמו נמר" או "מנומר" (נגזר מ-'pardus', נמר). השם ניתן לו משום שפרוותו מכוסה בכתמים בולטים הרבה יותר משאר מיני השונר, מה שמקנה לו מראה שמזכיר במעט נמר קטן.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Latin word 'pardinus' means "leopard-like" or "spotted" (derived from 'pardus', leopard). It was given this name because its coat is covered in spots that are much more prominent than other lynx species, giving it an appearance slightly reminiscent of a small leopard.</p>
+                    </div>
+
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי באנגלית: Iberian</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. English Common Name: Iberian</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה 'Iberian' מציינת את אזור התפוצה הבלעדי שלו: חצי האי האיברי (Iberian Peninsula), הכולל כיום את המדינות ספרד ופורטוגל. זהו מין אנדמי, כלומר הוא אינו קיים באופן טבעי בשום מקום אחר בעולם.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The word 'Iberian' denotes its exclusive area of distribution: the Iberian Peninsula, which today comprises the countries of Spain and Portugal. It is an endemic species, meaning it does not naturally exist anywhere else in the world.</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">4. השם העברי: שונר איברי</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">4. Hebrew Name: Shunar Iberi</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם "שונר" הוא תחדיש של האקדמיה ללשון העברית, שמקורו בלשון חז"ל במילה הארמית "שונרא" (חתול). האקדמיה לקחה את השם העתיק והעניקה אותו ספציפית לסוג *Lynx* כדי להבדילו מחתולי בר אחרים, בתוספת 'איברי' המציינת את אזור הגידול הגיאוגרפי.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The name 'Shunar' is a neologism by the Academy of the Hebrew Language, originating from Talmudic Aramaic 'Shunra' (cat). The Academy assigned this ancient name specifically to the *Lynx* genus to distinguish it from other wildcats, adding 'Iberi' to indicate its geographical habitat.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-orange-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור (סיפור של תקווה)</h3>
+                <h3 class="text-orange-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation (A Tale of Hope)</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">השונר האיברי קוטלג ותואר מדעית בשנת <strong>1827</strong> על ידי הזואולוג ההולנדי קונראד יאקוב טמינק (Coenraad Jacob Temminck, שנות חיים: 1778–1858). בתחילה הוא נחשב לתת-מין של השונר האירואסייתי, אך מחקרים מורפולוגיים וגנטיים מאוחרים יותר הוכיחו מעל לכל ספק שמדובר במין נפרד לחלוטין.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">The Iberian Lynx was cataloged and scientifically described in <strong>1827</strong> by the Dutch zoologist Coenraad Jacob Temminck (Lifespan: 1778–1858). Initially, it was considered a subspecies of the Eurasian lynx, but later morphological and genetic studies proved beyond a doubt that it is an entirely separate species.</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">על פי ההערכות, השושלת המשותפת של השונר האיברי והאירואסייתי התפצלה לפני כמיליון שנים. השונר האיברי נותר מבודד בחצי האי האיברי, שם האקלים הים-תיכוני ושפע הארנבות עיצבו את מסלולו האבולוציוני להפוך לחתול קטן, מנומר ומתמחה יותר מקרוביו הצפוניים.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">It is estimated that the common lineage of the Iberian and Eurasian lynx diverged about one million years ago. The Iberian lynx became isolated in the Iberian Peninsula, where the Mediterranean climate and abundance of rabbits shaped its evolutionary path to become a smaller, more spotted, and more specialized cat than its northern relatives.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור: מ"סכנת הכחדה חמורה" ל"פגיע":</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Conservation Status: From "Critically Endangered" to "Vulnerable":</h4>
+                        <p class="text-sm text-slate-300 he-content">השונר האיברי מחזיק בסיפור ההתאוששות המרשים ביותר בעולם החתוליים. בשנת 2002, נותרו בטבע בספרד רק <strong>94 פרטים</strong>, והמין הוגדר ב"סכנת הכחדה חמורה קריטית" (CR). האיומים היו מחלות שחיסלו את הארנבות, דריסות בכבישים וציד. בזכות פרויקט לאומי ואירופאי עצום שכלל רבייה בשבי, שחרור לטבע, שיקום אוכלוסיית הארנבות ויצירת מעברים בטוחים בכבישים, האוכלוסייה זינקה. בשנת 2024, הכריז ה-IUCN על שיפור הסטטוס מ"בסכנת הכחדה" ל"פגיע" (Vulnerable - VU), לאחר שנספרו מעל <strong>2,000 פרטים</strong> בטבע בספרד ובפורטוגל!</p>
+                        <p class="text-sm text-slate-300 en-content hidden">The Iberian Lynx holds the most impressive recovery story in the feline world. In 2002, only <strong>94 individuals</strong> remained in the wild in Spain, and the species was classified as "Critically Endangered" (CR). Threats included diseases wiping out rabbits, roadkills, and hunting. Thanks to a massive national and European project involving captive breeding, reintroduction, restoring rabbit populations, and creating safe wildlife crossings on roads, the population surged. In 2024, the IUCN announced the downlisting of its status from "Endangered" to "Vulnerable" (VU), after counting over <strong>2,000 individuals</strong> in the wild in Spain and Portugal!</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-500 text-sm border-t border-slate-800 mx-6 pb-12">
+            <p class="he-content">האתר נבנה על ידי ג'מיני ורם.</p>
+            <p class="en-content hidden">The site was created by Gemini and Ram.</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/95 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-orange-500 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-2 border-slate-700">
+    </div>
+
+    <script>
+        // מנגנון הדו-לשוניות
+        let currentLang = 'he';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+
+            document.querySelectorAll('.he-content').forEach(el => {
+                if(currentLang === 'he') el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
+
+            document.querySelectorAll('.en-content').forEach(el => {
+                if(currentLang === 'en') el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
+        }
+
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { imgEl.src = imgUrl; modal.classList.remove('hidden'); }
+        }
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
