@@ -6,12 +6,11 @@
     <title>נמר (Panthera pardus) | מטריצת החתוליים</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
         :root {
             --bg-body: #030712; 
             --bg-card: #0a1122; 
             --border-card: #1d365d;
-            --text-accent: #eab308; /* צהוב/זהב כהה המזוהה עם הנמר */
+            --text-accent: #eab308; /* צהוב נמר */
         }
         body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; }
         .samsung-s25-container { 
@@ -24,7 +23,6 @@
         @media (min-width: 768px) {
             .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
         }
-        /* עיצוב פס גלילה */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--bg-body); }
         ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
@@ -35,23 +33,22 @@
 
     <div class="samsung-s25-container relative pb-10">
         
-        <!-- ניווט חזרה -->
         <nav class="absolute top-4 right-4 z-10">
-            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-yellow-600 transition border border-white/10 flex items-center gap-2">
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-yellow-500 hover:text-black transition border border-white/10 flex items-center gap-2">
                 <span>&rarr;</span> חזרה למטריצה
             </a>
         </nav>
 
-        <!-- תמונת נושא ייצוגית -->
+        <!-- כאן בוצע התיקון לנתיב התמונה המקומי בגיטהאב שלך -->
         <header class="relative w-full h-72 md:h-96">
-            <button onclick="openImageModal('https://images.unsplash.com/photo-1517028481483-346765cb1cb8?q=80&w=1000')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
-                <img src="https://images.unsplash.com/photo-1517028481483-346765cb1cb8?q=80&w=1000" alt="נמר על עץ" class="w-full h-full object-cover">
+            <button onclick="openImageModal('../assets/leopard.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/leopard.png" alt="נמר רובץ" class="w-full h-full object-cover">
             </button>
             <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
             <div class="absolute bottom-0 p-6 w-full pointer-events-none">
                 <div class="flex items-center gap-3 mb-2">
                     <span class="bg-yellow-500/20 text-yellow-400 text-xs font-bold px-3 py-1 rounded-full border border-yellow-500/30">Pantherinae</span>
-                    <span class="text-slate-400 text-sm tracking-widest">רוח הרפאים של הג'ונגל</span>
+                    <span class="text-slate-400 text-sm tracking-widest">אלוף ההסוואה והטיפוס</span>
                 </div>
                 <h1 class="text-4xl font-extrabold text-white mb-1">נמר</h1>
                 <h2 class="text-xl text-slate-300 italic font-serif">Panthera pardus</h2>
@@ -59,20 +56,17 @@
         </header>
 
         <main class="p-6 space-y-8">
-            
-            <!-- 1. כותרות ומידע בסיסי -->
             <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
                 <h3 class="text-yellow-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">תעודת זהות זואולוגית</h3>
                 <ul class="space-y-3 text-sm">
                     <li><strong class="text-slate-400">שם באנגלית:</strong> Leopard</li>
                     <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae)</li>
-                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Spotted Ghost" / "Prince of Stealth"</li>
-                    <li><strong class="text-slate-400">מאפיין ייחודי (HE):</strong> מתאפיין בכוח פיזי עצום ביחס למשקלו, המאפשר לו לגרור טרף הכבד ממנו פי שניים (כמו אנטילופות) אל מרומי העצים כדי להרחיקו מטורפים אחרים.</li>
-                    <li><strong class="text-slate-400">Unique Feature (EN):</strong> Characterized by immense physical strength relative to its size, allowing it to drag prey twice its own weight high into tree canopies to protect it from scavengers.</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Silent Assassin" / "Prince of Stealth"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי (HE):</strong> הקטן מבין החתולים הגדולים (Panthera), אך ניחן ביחס הכוח-למשקל הגבוה ביותר מביניהם. מסוגל לטפס על עצים זקופים כשבפיו טרף השוקל יותר ממשקל גופו, כדי להרחיקו מטורפים מתחרים.</li>
+                    <li><strong class="text-slate-400">Unique Feature (EN):</strong> The smallest of the "big cats", yet possesses the highest strength-to-weight ratio. Capable of climbing vertical trees while carrying prey heavier than its own body weight to keep it away from scavengers.</li>
                 </ul>
             </section>
 
-            <!-- 2. גריד נתונים סטטיסטיים -->
             <section class="space-y-4">
                 <h3 class="text-yellow-500 font-bold text-lg px-2">נתונים סטטיסטיים (Stats)</h3>
                 <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
@@ -99,12 +93,6 @@
                                 <td class="p-3 text-left">1.0 - 1.9 meters</td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">אורך גוף - נקבה (ללא זנב)</td>
-                                <td class="p-3">0.9 עד 1.6 מטרים</td>
-                                <td class="p-3 text-left text-slate-400">Female Body Length</td>
-                                <td class="p-3 text-left">0.9 - 1.6 meters</td>
-                            </tr>
-                            <tr class="hover:bg-slate-800/50 transition">
                                 <td class="p-3 font-medium text-slate-400">משקל - זכר בוגר</td>
                                 <td class="p-3">37 עד 90 ק"ג</td>
                                 <td class="p-3 text-left text-slate-400">Adult Male Weight</td>
@@ -122,83 +110,66 @@
                                 <td class="p-3 text-left text-slate-400">Lifespan (Wild)</td>
                                 <td class="p-3 text-left">12 - 17 years</td>
                             </tr>
-                            <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">מהירות ריצה</td>
-                                <td class="p-3">עד 58 קמ"ש לפרצים קצרים</td>
-                                <td class="p-3 text-left text-slate-400">Top Speed</td>
-                                <td class="p-3 text-left">Up to 58 km/h</td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
-            <!-- 3. ייחודיות אנטומית וביולוגית -->
             <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
                 <h3 class="text-yellow-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">אנטומיה וביולוגיה (Anatomy & Biology)</h3>
                 <div class="space-y-4 text-sm leading-relaxed text-slate-300">
-                    <p><strong>חברבורות (Rosettes):</strong> הפרווה של הנמר מעוטרת בכתמים דמויי שושנה (רוזטות). בניגוד לכתמים של היגואר, הרוזטות של הנמר אינן מכילות נקודה שחורה במרכזן. דפוס זה מספק הסוואה מושלמת (קריפטיות) ביערות סבוכים ובאור השמש המסונן מבעד לעלים, מה שמאפשר לו לארוב לטרף מטווח אפס.</p>
-                    <p><strong>הפנתר השחור (Melanism):</strong> "פנתר שחור" אינו מין נפרד, אלא נמר (או יגואר) בעל פגם גנטי (מלניזם) הגורם לייצור מוגבר של הפיגמנט השחור מלנין. אם מתבוננים מקרוב בפרוותו של נמר שחור באור השמש, עדיין ניתן להבחין בבירור בתבנית החברבורות האופיינית.</p>
+                    <p><strong>רוזטות:</strong> פרוות הנמר מכוסה בחברבורות דמויות שושנה (Rosettes). בניגוד ליגואר, הרוזטות של הנמר צפופות יותר, קטנות יותר, ו**ריקות במרכזן** (ללא נקודה שחורה באמצע). תבנית זו עוזרת לנמר להתמזג מושלם עם צללי העלים בסבך או על העצים.</p>
+                    <p><strong>פנתר שחור (Black Panther):</strong> "פנתר שחור" אינו מין נפרד בטבע. זוהי למעשה תופעה גנטית של מלניזם (עודף פיגמנטציה שחורה) שמופיעה לרוב אצל נמרים או יגוארים. אם נתבונן מקרוב בנמר שחור באור השמש, עדיין נוכל לראות את הרוזטות מבעד לפרווה השחורה.</p>
                 </div>
             </section>
 
-            <!-- 4. אטימולוגיה מורחבת (Full Etymology) -->
             <section class="space-y-4">
                 <h3 class="text-yellow-500 font-bold text-lg px-2">אטימולוגיה מורחבת (Etymology)</h3>
                 <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
                     <div class="p-4 border-b border-slate-800">
                         <h4 class="text-md font-bold text-white mb-2">1. הסוג: Panthera</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> מקור המילה ביוונית עתיקה (pánthēr - πάνθηρ). בלשנים מודרניים קושרים את המילה למקור הסנסקריטי "pundarīkam" (טיגריס).</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> Derived from Ancient Greek 'pánthēr', linked to the Sanskrit word 'pundarīkam'.</p>
+                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> בדומה לאריה ולטיגריס, מיוונית עתיקה (pánthēr), הקשורה היסטורית למילה בסנסקריט "pundarīkam".</p>
+                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> From Ancient Greek 'pánthēr', linked to Sanskrit.</p>
                     </div>
                     <div class="p-4 border-b border-slate-800">
                         <h4 class="text-md font-bold text-white mb-2">2. המין: pardus</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> מקור המילה בלטינית (pardus) שנגזרה מהיוונית העתיקה 'párdalos' (πάρδαλος). משמעות המילה ביוונית היא "מנומר" או "מוכתם". היוונים הקדמונים השתמשו במילה זו כדי לתאר כל חיה גדולה ומוכתמת.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> From Latin 'pardus', derived from Ancient Greek 'párdalos', meaning "spotted" or "panther". Used historically for spotted beasts.</p>
+                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> המילה 'pardus' בלטינית הגיעה מהמילה היוונית העתיקה 'párdalos' (πάρδαλος) או 'párdalis' (πάρδαλις), שפירושה המילולי הוא "מנומר" או "מוכתם". בעבר זה היה השם הכללי לחיה זו באזור יוון ורומא.</p>
+                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> Derived from the Latin 'pardus', which came from the Ancient Greek 'párdalos' meaning "spotted".</p>
                     </div>
                     <div class="p-4 border-b border-slate-800">
-                        <h4 class="text-md font-bold text-white mb-2">3. השם באנגלית: Leopard</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> השם האנגלי הוא הלחם בסיסים היסטורי (Portmanteau) מרתק. בימי הביניים האמינו בטעות כי הנמר הוא הכלאה (היבריד) בין אריה (Leo) לבין חיה פראית ומוכתמת שנקראה פרד (Pard - כנראה ברדלס). ולכן חיברו את השמות: Leo + Pard = Leopard.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> A historical portmanteau. In antiquity, it was mistakenly believed to be a hybrid of a lion (Leo) and a panther/cheetah (Pard), creating 'Leopard'.</p>
+                        <h4 class="text-md font-bold text-white mb-2">3. השם העממי באנגלית: Leopard</h4>
+                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> המילה הלועזית נוצרה בטעות מרתקת של אנשי העת העתיקה. הם האמינו שהנמר אינו חיה בפני עצמה, אלא יצור כלאיים (הכלאה) שנוצר מהזדווגות של אריה (Leo) ופנתר (Pard). חיבור שתי המילים יצר את השם "Leo-Pard". רק מאוחר יותר הוכח כי זהו מין עצמאי לחלוטין.</p>
+                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> A portmanteau created in antiquity. Early naturalists mistakenly believed the animal was a hybrid between a lion ('leo') and a panther/pard ('pardus'), thus "leopard".</p>
                     </div>
                     <div class="p-4">
-                        <h4 class="text-md font-bold text-white mb-2">4. השם העברי: נמר</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> המילה "נמר" מופיעה בתנ"ך מספר פעמים, לרוב כסמל למהירות, פראיות והכתמים שעל עורו (למשל, ירמיהו י"ג, כ"ג: "הֲיַהֲפֹךְ כּוּשִׁי עוֹרוֹ וְנָמֵר חֲבַרְבֻּרֹתָיו"). השורש נ.מ.ר בשפות שמיות קשור למשמעות של "מוכתם" או "מנומר" (כמו מים צלולים ובהירים שמשתקפים בהם כתמים).</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> The Hebrew 'Namer' appears in the Bible, symbolizing fierceness and its spotted coat. The Semitic root likely means "spotted" or "clear/bright" (referring to its striking pattern).</p>
+                        <h4 class="text-md font-bold text-white mb-2">4. השם העממי העברי: נמר</h4>
+                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> מקור המילה העברית (המופיעה בתנ"ך פעמים רבות, כגון "היהפוך כושי עורו ונמר חברבורותיו") נגזר מהשורש השמי נ.מ.ר שמשמעותו כתם, צבע מנומר או ברור. שורש זה מצוי גם באכדית (nimru) ובערבית (nimr). בישראל חיה תת-מין ייחודית, נמר המדבר (Arabian leopard), אשר ככל הנראה נכחדה כליל מאזורנו בעשורים האחרונים.</p>
+                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> The Hebrew name 'Namer' derives from an ancient Semitic root meaning spotted or clear. It appears extensively in biblical texts.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- 5. היסטוריית הגילוי ואבולוציה -->
             <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
                 <h3 class="text-yellow-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">היסטוריית הגילוי, אבולוציה ושימור</h3>
                 <div class="space-y-6">
                     <div>
                         <h4 class="text-white font-semibold mb-2">הגילוי המקורי:</h4>
-                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> קוטלג ותואר מדעית לראשונה בשנת <strong>1758</strong> על ידי הזואולוג השוודי הנודע, <strong>קארל לינאוס</strong> (Carl Linnaeus, שנות חיים: 1707–1778), בדומה לשאר החתולים הגדולים. לינאוס הסתמך על תיאורים שהגיעו ממצרים ומאסיה.</p>
-                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Scientifically cataloged in 1758 by Carl Linnaeus (Lifespan: 1707–1778), based on historical descriptions from Egypt and Asia.</p>
-                    </div>
-                    <div>
-                        <h4 class="text-white font-semibold mb-2">אבולוציה ותפוצה:</h4>
-                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> הנמר הוא המין בעל התפוצה הרחבה ביותר מכל חתולי הבר, בזכות יכולת ההסתגלות המדהימה שלו. שושלת הנמר (ביחד עם האריה והיגואר) התפצלה משאר החתוליים לפני כ-4.3 מיליון שנים. מאובנים של נמרים נמצאו אפילו באירופה, משם נכחדו בסוף תקופת הקרח האחרונה.</p>
-                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> The most widely distributed wild cat due to extreme adaptability. Its lineage diverged ~4.3 million years ago. Fossils show they once roamed Europe before the last Ice Age.</p>
+                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> קוטלג ותואר מדעית על ידי קארל לינאוס (שנות חיים: 1707–1778) בשנת 1758, תחת השם <em>Felis pardus</em>. הועבר מאוחר יותר לסוג <em>Panthera</em>.</p>
+                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Scientifically described by Carl Linnaeus (Lifespan: 1707–1778) in 1758.</p>
                     </div>
                     <div>
                         <h4 class="text-white font-semibold mb-2">מצב שימור:</h4>
-                        <p class="text-sm text-slate-300">מוגדר כ"פגיע" (Vulnerable - VU) על ידי הרשימה האדומה של IUCN. אף על פי שתפוצתו רחבה, אוכלוסיות רבות נמצאות בבידוד חמור ובירידה מתמדת עקב אובדן בתי גידול וציד בלתי חוקי עבור פרוותו. תת-מינים מסוימים, כמו נמר אמור (Amur Leopard) ונמר המדבר (Arabian Leopard, שחי בעבר גם בישראל), נמצאים בסכנת הכחדה קריטית.</p>
+                        <p class="text-sm text-slate-300">מוגדר כ"פגיע" (Vulnerable - VU) על ידי ה-IUCN. למרות שהנמר הוא בעל טווח התפוצה הרחב ביותר מבין החתולים הגדולים (אפריקה ואסיה) בזכות כושר הסתגלותו לסביבות שונות, תת-מינים מסוימים (כמו נמר אמור ברוסיה, או נמר המדבר באזורנו) נמצאים בסכנת הכחדה חמורה עקב ציד לפרוות ואובדן שטחים.</p>
                     </div>
                 </div>
             </section>
         </main>
 
-        <!-- Footer -->
         <footer class="mt-8 p-6 text-center text-slate-500 text-sm border-t border-slate-800 mx-6 pb-12">
             <p>האתר נבנה על ידי ג'מיני ורם.</p>
         </footer>
-
     </div>
 
-    <!-- Modal לתמונה צפה -->
     <div id="fullScreenImageModal" class="fixed inset-0 bg-black/95 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
         <button class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-yellow-500 z-[101]">&times;</button>
         <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-2 border-slate-700">
