@@ -1,6 +1,6 @@
 let currentLang = 'he';
 
-// המילון של דף הבית (מוגן משבירת שורות באמצעות Backticks)
+// המילון של דף הבית
 const content = {
     he: {
         title: `מטריצת <span class="text-amber-500">החתוליים</span>`, 
@@ -32,7 +32,7 @@ const content = {
     }
 };
 
-// רשימת החתולים המלאה והמעודכנת לנתיב ה-assets שלך
+// רשימת 17 החתולים המלאה
 const catsData = [
     {
         id: "lion",
@@ -41,7 +41,7 @@ const catsData = [
         scientific: "Panthera leo",
         img: "assets/lion.png",
         link: "cats/lion.html",
-        color: "#f59e0b" // זהב
+        color: "#f59e0b"
     },
     {
         id: "tiger",
@@ -50,7 +50,7 @@ const catsData = [
         scientific: "Panthera tigris",
         img: "assets/tiger.png",
         link: "cats/tiger.html",
-        color: "#f97316" // כתום
+        color: "#f97316"
     },
     {
         id: "leopard",
@@ -59,7 +59,7 @@ const catsData = [
         scientific: "Panthera pardus",
         img: "assets/leopard.png",
         link: "cats/leopard.html",
-        color: "#eab308" // צהוב
+        color: "#eab308"
     },
     {
         id: "jaguar",
@@ -68,7 +68,7 @@ const catsData = [
         scientific: "Panthera onca",
         img: "assets/jaguar.png",
         link: "cats/jaguar.html",
-        color: "#fbbf24" // ענבר בהיר
+        color: "#fbbf24"
     },
     {
         id: "cheetah",
@@ -77,7 +77,7 @@ const catsData = [
         scientific: "Acinonyx jubatus",
         img: "assets/cheetah.png",
         link: "cats/cheetah.html",
-        color: "#facc15" // צהוב מהיר
+        color: "#facc15"
     },
     {
         id: "puma",
@@ -86,7 +86,7 @@ const catsData = [
         scientific: "Puma concolor",
         img: "assets/puma.png",
         link: "cats/puma.html",
-        color: "#d97706" // נחושת
+        color: "#d97706"
     },
     {
         id: "caracal",
@@ -95,7 +95,7 @@ const catsData = [
         scientific: "Caracal caracal",
         img: "assets/caracal.png",
         link: "cats/caracal.html",
-        color: "#d97706" // צבע חול/אדמה
+        color: "#d97706"
     },
     {
         id: "snowleopard",
@@ -104,7 +104,88 @@ const catsData = [
         scientific: "Panthera uncia",
         img: "assets/snowleopard.png",
         link: "cats/snowleopard.html",
-        color: "#94a3b8" // אפור-כסוף
+        color: "#94a3b8"
+    },
+    {
+        id: "canadianlynx",
+        nameHe: "חתולים קטנים (שונר קנדי)",
+        nameEn: "Small Cats (Canadian Lynx)",
+        scientific: "Lynx canadensis",
+        img: "assets/canadianlynx.png",
+        link: "cats/canadianlynx.html",
+        color: "#93c5fd"
+    },
+    {
+        id: "serval",
+        nameHe: "חתולים קטנים (סרוואל)",
+        nameEn: "Small Cats (Serval)",
+        scientific: "Leptailurus serval",
+        img: "assets/serval.png",
+        link: "cats/serval.html",
+        color: "#ca8a04"
+    },
+    {
+        id: "iberianlynx",
+        nameHe: "חתולים קטנים (שונר איברי)",
+        nameEn: "Small Cats (Iberian Lynx)",
+        scientific: "Lynx pardinus",
+        img: "assets/iberianlynx.png",
+        link: "cats/iberianlynx.html",
+        color: "#ea580c"
+    },
+    {
+        id: "blackpanther",
+        nameHe: "מוטציה (פנתר שחור)",
+        nameEn: "Mutation (Black Panther)",
+        scientific: "Melanistic Panthera",
+        img: "assets/blackpanther.png",
+        link: "cats/blackpanther.html",
+        color: "#64748b"
+    },
+    {
+        id: "ocelot",
+        nameHe: "חתולים קטנים (אוצלוט)",
+        nameEn: "Small Cats (Ocelot)",
+        scientific: "Leopardus pardalis",
+        img: "assets/ocelot.png",
+        link: "cats/ocelot.html",
+        color: "#d97706"
+    },
+    {
+        id: "bobcat",
+        nameHe: "חתולים קטנים (בובקט)",
+        nameEn: "Small Cats (Bobcat)",
+        scientific: "Lynx rufus",
+        img: "assets/bobcat.png",
+        link: "cats/bobcat.html",
+        color: "#9a3412"
+    },
+    {
+        id: "lynx",
+        nameHe: "חתולים קטנים (שונר אירואסייתי)",
+        nameEn: "Small Cats (Eurasian Lynx)",
+        scientific: "Lynx lynx",
+        img: "assets/lynx.png",
+        link: "cats/lynx.html",
+        color: "#a8a29e"
+    },
+    {
+        id: "cloudedleopard",
+        nameHe: "חתולים גדולים (נמר ערפלי)",
+        nameEn: "Big Cats (Clouded Leopard)",
+        scientific: "Neofelis nebulosa",
+        img: "assets/cloudedleopard.png",
+        link: "cats/cloudedleopard.html",
+        color: "#6b7280"
+    },
+    {
+        id: "sandcat",
+        nameHe: "חתולים קטנים (חתול חולות)",
+        nameEn: "Small Cats (Sand Cat)",
+        scientific: "Felis margarita",
+        img: "assets/sandcat.png",
+        link: "cats/sandcat.html",
+        color: "#fde047"
     }
 ];
 
@@ -128,6 +209,17 @@ function toggleLanguage() {
     
     document.documentElement.dir = data.dir;
     document.documentElement.lang = currentLang;
+
+    // רענון טקסטים של כרטיסיות החיות אם הן קיימות בדף
+    const cards = document.querySelectorAll('.cat-card');
+    if(cards.length > 0) {
+        catsData.forEach((cat, index) => {
+            const nameEl = document.getElementById(`cat-name-${index}`);
+            if(nameEl) {
+                nameEl.innerText = currentLang === 'he' ? cat.nameHe : cat.nameEn;
+            }
+        });
+    }
 }
 
 window.onload = () => {
