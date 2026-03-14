@@ -6,13 +6,14 @@
     <title>טיגריס (Panthera tigris) | מטריצת החתוליים</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
         :root {
             --bg-body: #030712; 
             --bg-card: #0a1122; 
             --border-card: #1d365d;
             --text-accent: #f97316; /* כתום טיגריס */
         }
-        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
         .samsung-s25-container { 
             max-width: 412px; 
             margin: 0 auto; 
@@ -33,144 +34,206 @@
 
     <div class="samsung-s25-container relative pb-10">
         
-        <nav class="absolute top-4 right-4 z-10">
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-orange-500 hover:bg-orange-600 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
             <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-orange-600 transition border border-white/10 flex items-center gap-2">
-                <span>&rarr;</span> חזרה למטריצה
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
             </a>
         </nav>
 
-        <!-- כאן בוצע התיקון לנתיב התמונה המקומי בגיטהאב שלך -->
+        <!-- תמונת נושא ייצוגית -->
         <header class="relative w-full h-72 md:h-96">
             <button onclick="openImageModal('../assets/tiger.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
                 <img src="../assets/tiger.png" alt="טיגריס בג'ונגל" class="w-full h-full object-cover">
             </button>
             <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
-            <div class="absolute bottom-0 p-6 w-full pointer-events-none">
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
                 <div class="flex items-center gap-3 mb-2">
-                    <span class="bg-orange-500/20 text-orange-400 text-xs font-bold px-3 py-1 rounded-full border border-orange-500/30">Pantherinae</span>
-                    <span class="text-slate-400 text-sm tracking-widest">טורף העל של אסיה</span>
+                    <span class="bg-orange-500/20 text-orange-400 text-xs font-bold px-3 py-1 rounded-full border border-orange-500/30 he-content">Pantherinae (חתולים גדולים)</span>
+                    <span class="bg-orange-500/20 text-orange-400 text-xs font-bold px-3 py-1 rounded-full border border-orange-500/30 en-content hidden">Pantherinae (Big Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">טורף העל של אסיה</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">Apex Predator of Asia</span>
                 </div>
-                <h1 class="text-4xl font-extrabold text-white mb-1">טיגריס</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">טיגריס</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Tiger</h1>
                 <h2 class="text-xl text-slate-300 italic font-serif">Panthera tigris</h2>
             </div>
         </header>
 
         <main class="p-6 space-y-8">
-            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
-                <h3 class="text-orange-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">תעודת זהות זואולוגית</h3>
-                <ul class="space-y-3 text-sm">
+            
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-orange-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-orange-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
                     <li><strong class="text-slate-400">שם באנגלית:</strong> Tiger</li>
                     <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae)</li>
                     <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Striped Ghost" / "Emperor of the Jungle"</li>
-                    <li><strong class="text-slate-400">מאפיין ייחודי (HE):</strong> מין החתול הגדול והכבד ביותר בעולם החי כיום. חתול יחידאי (סוליטרי) בעל פרווה מפוספסת ייחודית, ששוחה היטב ולעיתים קרובות מצנן עצמו במים.</li>
-                    <li><strong class="text-slate-400">Unique Feature (EN):</strong> The largest and heaviest living cat species. A solitary predator with a unique striped coat, known for being a strong swimmer that actively seeks water to cool down.</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> מין החתול הגדול והכבד ביותר בעולם החי כיום. בניגוד לאריה, הטיגריס הוא צייד יחידאי וטריטוריאלי ביותר. הוא בעל פרווה מפוספסת ייחודית המספקת הסוואה מושלמת ביערות, וידוע בחיבתו העמוקה למים ולשחייה.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Tiger</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Striped Ghost" / "Emperor of the Jungle"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> The largest and heaviest living cat species in the world. Unlike the lion, the tiger is a highly territorial, solitary hunter. It possesses a unique striped coat for perfect forest camouflage and is well-known for its deep affinity for water and swimming.</li>
                 </ul>
             </section>
 
-            <section class="space-y-4">
-                <h3 class="text-orange-500 font-bold text-lg px-2">נתונים סטטיסטיים (Stats)</h3>
+            <section class="space-y-4 text-start">
+                <h3 class="text-orange-500 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-orange-500 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
                 <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
-                    <table class="w-full text-sm text-right bg-slate-900">
+                    <table class="w-full text-sm text-start bg-slate-900">
                         <thead class="bg-slate-800 text-slate-300">
                             <tr>
-                                <th class="p-3">פרמטר (HE)</th>
-                                <th class="p-3">ערך (HE)</th>
-                                <th class="p-3 text-left">Parameter (EN)</th>
-                                <th class="p-3 text-left">Value (EN)</th>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-800">
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">היריון</td>
-                                <td class="p-3">93 עד 112 ימים</td>
-                                <td class="p-3 text-left text-slate-400">Gestation</td>
-                                <td class="p-3 text-left">93 - 112 days</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">93 עד 112 ימים</span><span class="en-content hidden">93 - 112 days</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">אורך גוף - זכר (ללא זנב)</td>
-                                <td class="p-3">2.5 עד 3.9 מטרים (הארוך מבין החתולים)</td>
-                                <td class="p-3 text-left text-slate-400">Male Body Length</td>
-                                <td class="p-3 text-left">2.5 - 3.9 meters</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף - זכר (ללא זנב)</span><span class="en-content hidden">Male Body Length</span></td>
+                                <td class="p-3"><span class="he-content">2.5 עד 3.9 מטרים (הארוך בחתולים)</span><span class="en-content hidden">2.5 - 3.9 meters (Longest feline)</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">משקל - זכר בוגר</td>
-                                <td class="p-3">180 עד 310 ק"ג (תלוי בתת-המין)</td>
-                                <td class="p-3 text-left text-slate-400">Adult Male Weight</td>
-                                <td class="p-3 text-left">180 - 310 kg</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל - זכר בוגר</span><span class="en-content hidden">Adult Male Weight</span></td>
+                                <td class="p-3"><span class="he-content">180 עד 310 ק"ג (תלוי בתת-המין)</span><span class="en-content hidden">180 - 310 kg (varies by subspecies)</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">משקל - נקבה בוגרת</td>
-                                <td class="p-3">100 עד 167 ק"ג</td>
-                                <td class="p-3 text-left text-slate-400">Adult Female Weight</td>
-                                <td class="p-3 text-left">100 - 167 kg</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל - נקבה בוגרת</span><span class="en-content hidden">Adult Female Weight</span></td>
+                                <td class="p-3"><span class="he-content">100 עד 167 ק"ג</span><span class="en-content hidden">100 - 167 kg</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">תוחלת חיים (טבע)</td>
-                                <td class="p-3">8 עד 10 שנים</td>
-                                <td class="p-3 text-left text-slate-400">Lifespan (Wild)</td>
-                                <td class="p-3 text-left">8 - 10 years</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">8 עד 10 שנים (עד 20 בשבי)</span><span class="en-content hidden">8 - 10 years (up to 20 in captivity)</span></td>
+                            </tr>
+                             <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">כוח נשיכה</span><span class="en-content hidden">Bite Force</span></td>
+                                <td class="p-3"><span class="he-content">כ-1,050 PSI (חזק משל האריה)</span><span class="en-content hidden">~1,050 PSI (stronger than a lion's)</span></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
-            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
-                <h3 class="text-orange-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">אנטומיה וביולוגיה (Anatomy & Biology)</h3>
-                <div class="space-y-4 text-sm leading-relaxed text-slate-300">
-                    <p><strong>טביעת אצבע מפוספסת:</strong> דפוס הפסים השחורים של הטיגריס הוא ייחודי לכל פרט ופרט, ממש כמו טביעת אצבע אנושית. למעשה, הפסים אינם רק על הפרווה - אם נגלח את הטיגריס, נראה שהפסים טבועים על העור עצמו. דפוס זה מספק הסוואה מושלמת (Disruptive coloration) בעשב הגבוה של הג'ונגלים.</p>
-                    <p><strong>אהבה למים:</strong> בניגוד לרוב החתולים (ובמיוחד חתולי הבית) שסולדים ממים, הטיגריס הוא שחיין חזק ונוטה לבלות שעות ארוכות בתוך נהרות ואגמים כדי לקרר את גופו הגדול במהלך הימים החמים של אסיה. יש להם אפילו קרום חלקי בין האצבעות המסייע להם בשחייה.</p>
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-orange-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-orange-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>טביעת אצבע מפוספסת:</strong> דפוס הפסים השחורים של הטיגריס הוא ייחודי לכל פרט ופרט, ממש כמו טביעת אצבע אנושית. למעשה, הפסים אינם מופיעים רק על הפרווה - אם נגלח את הטיגריס, נראה שהפסים טבועים על העור (הפיגמנטציה) עצמו. דפוס זה מספק הסוואה מושלמת הידועה כ"צבעוניות משבשת" (Disruptive coloration) בעשב הגבוה ובין צללי הג'ונגל.</p>
+                    <p><strong>צייד יחידאי וטריטוריאלי:</strong> בניגוד לאריות שחולקים ארוחות, הטיגריס חי, צד ואוכל לבדו. זכר בוגר ישלוט בטריטוריה ענקית שעשויה לכלול מספר טריטוריות קטנות יותר של נקבות. הציד מתבסס על התגנבות חרישית מאחור (Stalking), זינוק מהיר ונשיכה קטלנית אחת בעורף או בגרון של טרף גדול כמו חזירי בר, איילים, ולעיתים אפילו תאואי מים ודובים צעירים.</p>
+                    <p><strong>אהבה למים:</strong> בניגוד לרוב החתולים (ובמיוחד חתולי הבית) שסולדים ממים, הטיגריס הוא שחיין חזק ונוטה לבלות שעות ארוכות בתוך נהרות ואגמים כדי לקרר את גופו הגדול במהלך הימים החמים של אסיה. יש להם קרום חלקי קטן בין האצבעות המסייע להם בשחייה ביעילות.</p>
+                    <p><strong>ראיית לילה ועוצמה:</strong> לטיגריס יש אישונים עגולים (בניגוד לאישונים האנכיים של חתולי הבית), וראיית הלילה שלו טובה פי שישה מזו של אדם. שרירי הגפיים הקדמיות שלו מפותחים בצורה קיצונית, מה שמאפשר לו לאחוז בטרף משתולל ולגרור פגרים הכבדים ממנו בהרבה למרחקים ארוכים אל תוך הסבך.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Striped Fingerprint:</strong> The pattern of black stripes on a tiger is unique to each individual, much like a human fingerprint. In fact, the stripes are not just on the fur—if a tiger were shaved, the stripes would still be visible imprinted on the skin's pigmentation. This pattern provides perfect camouflage known as disruptive coloration amidst the tall grass and jungle shadows.</p>
+                    <p><strong>Solitary & Territorial Hunter:</strong> Unlike lions that share meals, the tiger lives, hunts, and eats alone. A mature male will control a massive territory that overlaps the smaller territories of several females. Hunting relies on silent stalking from behind, a rapid pounce, and a single lethal bite to the back of the neck or throat of large prey such as wild boars, deer, and occasionally even water buffalo or young bears.</p>
+                    <p><strong>Affinity for Water:</strong> Contrary to most felines (especially domestic cats) that abhor water, the tiger is a strong swimmer and tends to spend long hours sitting in rivers and lakes to cool its massive body during hot Asian days. They even possess partial webbing between their toes to aid in swimming efficiently.</p>
+                    <p><strong>Night Vision & Power:</strong> Tigers have round pupils (unlike the vertical slits of domestic cats), and their night vision is six times better than that of a human. The muscles in their forelimbs are extremely developed, allowing them to grapple struggling prey and drag carcasses far heavier than their own body weight over long distances into dense cover.</p>
                 </div>
             </section>
 
-            <section class="space-y-4">
-                <h3 class="text-orange-500 font-bold text-lg px-2">אטימולוגיה מורחבת (Etymology)</h3>
+            <section class="space-y-4 text-start">
+                <h3 class="text-orange-500 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-orange-500 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
                 <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
                     <div class="p-4 border-b border-slate-800">
-                        <h4 class="text-md font-bold text-white mb-2">1. הסוג: Panthera</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> מקור המילה ביוונית עתיקה (pánthēr). חלק מהבלשנים קושרים את המילה למקור סנסקריטי עתיק יותר "pundarīkam" שמשמעותו (אירונית משהו) טיגריס.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> Derived from Ancient Greek 'pánthēr', linked to the Sanskrit word 'pundarīkam'.</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Panthera</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Panthera</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">מקור המילה ביוונית עתיקה (pánthēr). חלק מהבלשנים קושרים את המילה למקור סנסקריטי עתיק יותר "pundarīkam" שמשמעותו (אירונית משהו) טיגריס.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Derived from Ancient Greek 'pánthēr'. Some linguists link the word to an older Sanskrit root 'pundarīkam', which ironically translates to tiger.</p>
                     </div>
+                    
                     <div class="p-4 border-b border-slate-800">
-                        <h4 class="text-md font-bold text-white mb-2">2. המין: tigris</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> המילה הלטינית 'tigris' שאולה מיוונית עתיקה ('tígris' - τίγρις). מקור המילה היוונית הוא עתיק אף יותר ומגיע ככל הנראה מהשפה הפרסית העתיקה (או שפה איראנית אחרת), מהמילה 'tigra' שפירושה "מהיר", "חד" או "מחודד כמו חץ" - המתאר את מהירות ההתקפה שלו.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> From Latin 'tigris', borrowed from Ancient Greek 'tígris'. Ultimately derived from an Old Persian word meaning "sharp", "fast", or "arrow-like", describing its speed and agility.</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: tigris</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: tigris</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלטינית 'tigris' שאולה מיוונית עתיקה ('tígris' - τίγρις). מקור המילה היוונית הוא עתיק אף יותר ומגיע ככל הנראה מהשפה הפרסית העתיקה (Old Persian), מהמילה 'tigra' שפירושה "מהיר", "חד" או "מחודד כמו חץ" - שם המתאר באופן פואטי את מהירות ההתקפה הקטלנית שלו ואת נהר החידקל (Tigris River) הזורם במהירות.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">From Latin 'tigris', borrowed from Ancient Greek 'tígris' (τίγρις). The Greek word is even older, likely originating from Old Persian 'tigra', meaning "sharp", "fast", or "arrow-like"—a name that poetically describes its rapid, lethal attack and is also the namesake of the swift-flowing Tigris River.</p>
                     </div>
+                    
                     <div class="p-4">
-                        <h4 class="text-md font-bold text-white mb-2">3. השם העממי העברי: טיגריס</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> בעברית מודרנית אומץ השם הבינלאומי "טיגריס". עם זאת, במסורת היהודית (למשל בתלמוד), הטיגריס הוזכר תחת השם "טיגריס" אך לעיתים קרובות גם התבלבלו בינו לבין הנמר או השתמשו בכינויים שונים לחיה טורפת זרה ואימתנית שלא חיה בארץ ישראל.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> Modern Hebrew adopted the international name 'Tigris'. It is mentioned in Talmudic literature, though historically confused with other big cats as it was not native to the Land of Israel.</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העברי: טיגריס</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Hebrew Name: Tigris</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">בעברית מודרנית אומץ השם הבינלאומי "טיגריס". עם זאת, במסורת היהודית ובלשון חז"ל, הטיגריס הוזכר לעיתים תחת שמות שונים והיה בלבול היסטורי בינו לבין הנמר או הברדלס, משום שטיגריסים מעולם לא היו חלק מהפאונה (עולם החי) הטבעית של ארץ ישראל.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Modern Hebrew adopted the international name 'Tigris'. However, in Jewish tradition and Talmudic literature, the tiger was mentioned occasionally but historically confused with the leopard or cheetah, primarily because tigers were never part of the natural fauna of the Land of Israel.</p>
                     </div>
                 </div>
             </section>
 
-            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
-                <h3 class="text-orange-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">היסטוריית הגילוי, אבולוציה ושימור</h3>
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-orange-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-orange-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
                 <div class="space-y-6">
                     <div>
-                        <h4 class="text-white font-semibold mb-2">הגילוי המקורי:</h4>
-                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> קוטלג ותואר מדעית ב-1758 על ידי קארל לינאוס (שנות חיים: 1707–1778), תחת השם <em>Felis tigris</em>. מאוחר יותר הועבר לסוג <em>Panthera</em> יחד עם שאר החתולים הגדולים.</p>
-                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Scientifically described by Carl Linnaeus (Lifespan: 1707–1778) in 1758.</p>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">קוטלג ותואר מדעית ב-1758 על ידי הזואולוג השוודי קארל לינאוס (Carl Linnaeus, שנות חיים: 1707–1778), תחת השם <em>Felis tigris</em>. מאוחר יותר הועבר לסוג <em>Panthera</em> יחד עם שאר החתולים הגדולים.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">Scientifically cataloged and described in 1758 by the Swedish zoologist Carl Linnaeus (Lifespan: 1707–1778) under the name <em>Felis tigris</em>. It was later moved to the <em>Panthera</em> genus alongside the other big cats.</p>
                     </div>
                     <div>
-                        <h4 class="text-white font-semibold mb-2">מצב שימור:</h4>
-                        <p class="text-sm text-slate-300">מוגדר כ"בסכנת הכחדה" (Endangered - EN) על ידי ה-IUCN. זוהי אחת החיות המאוימות ביותר בעולם. כמאה שנים בלבד עברו מאז חיו בטבע כמאה אלף טיגריסים, וכיום נותרו כ-4,500 פרטים בלבד. האיום המרכזי הוא ציד לא חוקי (עבור שוק התרופות המסורתיות במזרח) ואובדן קריטי של שטחי יער.</p>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה ותת-מינים:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution and Subspecies:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">הטיגריס התפתח במרכז אסיה לפני כשני מיליון שנים, והתפשט דרומה ומזרחה. בגלל המגוון העצום של בתי הגידול שבהם הוא חי (מיערות שלג קפואים ועד ג'ונגלים טרופיים), הטיגריס התפצל למספר תת-מינים מובהקים. הגדול שבהם הוא הטיגריס הסיבירי (Amur tiger), והנפוץ ביותר הוא הטיגריס הבנגלי מהודו. תת-מינים כמו טיגריס כספי וטיגריס באלינזי נכחדו לחלוטין במהלך המאה ה-20.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">The tiger evolved in Central Asia about two million years ago, spreading south and east. Due to the vast variety of habitats it occupies (from freezing snowy forests to tropical jungles), the tiger diverged into several distinct subspecies. The largest is the Siberian (Amur) tiger, and the most numerous is the Bengal tiger of India. Subspecies like the Caspian and Balinese tigers went completely extinct during the 20th century.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">מוגדר כ"בסכנת הכחדה" (Endangered - EN) על ידי ה-IUCN, ומהווה את אחד מסמלי שמירת הטבע העולמיים. כמאה שנים בלבד עברו מאז חיו בטבע כמאה אלף טיגריסים, וכיום נותרו כ-4,500 פרטים בלבד בטבע העולמי (רובם בהודו). האיום המרכזי הוא ציד לא חוקי אכזרי (המונע מדרישה לחלקי גופם בשוק "התרופות המסורתיות" במזרח אסיה), קיטוע קריטי של שטחי יער, וצמצום בחיות הטרף שלהם.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Classified as "Endangered" (EN) by the IUCN and serves as a global icon for wildlife conservation. Only a century ago, an estimated 100,000 tigers roamed the wild; today, only about 4,500 individuals remain (mostly in India). The primary threats are brutal illegal poaching (driven by demand for their body parts in traditional East Asian medicine), critical forest fragmentation, and the depletion of their prey base.</p>
                     </div>
                 </div>
             </section>
         </main>
 
         <footer class="mt-8 p-6 text-center text-slate-500 text-sm border-t border-slate-800 mx-6 pb-12">
-            <p>האתר נבנה על ידי ג'מיני ורם.</p>
+            <p class="he-content">האתר נבנה על ידי ג'מיני ורם.</p>
+            <p class="en-content hidden">The site was created by Gemini and Ram.</p>
         </footer>
     </div>
 
+    <!-- Modal -->
     <div id="fullScreenImageModal" class="fixed inset-0 bg-black/95 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
         <button class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-orange-500 z-[101]">&times;</button>
         <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-2 border-slate-700">
     </div>
 
     <script>
+        // מנגנון הדו-לשוניות
+        let currentLang = 'he';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+
+            document.querySelectorAll('.he-content').forEach(el => {
+                if(currentLang === 'he') el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
+
+            document.querySelectorAll('.en-content').forEach(el => {
+                if(currentLang === 'en') el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
+        }
+
         function openImageModal(imgUrl) {
             const modal = document.getElementById('fullScreenImageModal');
             const imgEl = document.getElementById('modalFullImg');
