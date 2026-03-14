@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>שונר קנדי (Lynx canadensis) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #93c5fd; /* תכלת-קרח */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-blue-500/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-blue-400 hover:bg-blue-600 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-blue-600 transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/canadianlynx.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/canadianlynx.png" alt="שונר קנדי" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-blue-500/20 text-blue-300 text-xs font-bold px-3 py-1 rounded-full border border-blue-500/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-blue-500/20 text-blue-300 text-xs font-bold px-3 py-1 rounded-full border border-blue-500/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">צייד היערות הקפואים</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">Hunter of the Frozen Forests</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">שונר קנדי</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Canadian Lynx</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Lynx canadensis</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-blue-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-blue-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Canadian Lynx / Canada Lynx</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "Shadow of the Boreal Forest"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> חתול בגודל בינוני המותאם בצורה קיצונית לשלג עמוק. כפות רגליו העצומות משמשות כ"נעלי שלג" המונעות שקיעה, וציציות השיער השחורות והארוכות על אוזניו משמשות כמעין אנטנות לזיהוי טרף. תזונתו תלויה כמעט לחלוטין (עד 97%) במין אחד של טרף: ארנבת השלג.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Canadian Lynx / Canada Lynx</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "Shadow of the Boreal Forest"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> A medium-sized cat highly adapted to deep snow. Its enormous paws act as "snowshoes," and its long black ear tufts function like antennae for detecting prey. Its diet relies almost entirely (up to 97%) on a single prey species: the snowshoe hare.</li>
+                </ul>
+            </section>
+
+            <section class="space-y-4 text-start">
+                <h3 class="text-blue-400 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-blue-400 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">64 עד 73 ימים</span><span class="en-content hidden">64 - 73 days</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (כולל זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">76 עד 106 ס"מ</span><span class="en-content hidden">76 - 106 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">5 עד 12 ס"מ (קצר מאוד)</span><span class="en-content hidden">5 - 12 cm (very short)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">5 עד 17 ק"ג</span><span class="en-content hidden">5 - 17 kg</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">10 עד 14 שנים (עד 26 בשבי!)</span><span class="en-content hidden">10 - 14 years (up to 26 in captivity)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-blue-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה וביולוגיה</h3>
+                <h3 class="text-blue-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy & Biology</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>רגליים אחוריות ארוכות:</strong> במבט מהצד, נראה שהשונר הקנדי "משופע" קדימה. רגליו האחוריות ארוכות באופן משמעותי מרגליו הקדמיות. מבנה זה נועד להעניק לו כוח דחף עצום לזינוקים פתאומיים מתוך השלג אל עבר הארנבות המהירות.</p>
+                    <p><strong>כפות רגליים עצומות (Snowshoes):</strong> כפות הרגליים של השונר הקנדי גדולות באופן חסר פרופורציה לשאר גופו ומכוסות בפרווה צפופה ועבה גם בקיץ. הן פועלות כנעלי שלג טבעיות, ומפזרות את משקלו כך שהוא יכול לרוץ על פני שלג עמוק מאוד מבלי לשקוע (לחץ של רק 4.1 עד 8.8 גרם לסמ"ר!).</p>
+                    <p><strong>מחזוריות דרמטית:</strong> אוכלוסיית השונר הקנדי כבולה באופן טראגי ומופלא לאוכלוסיית "ארנבת השלג" (Snowshoe Hare). במחזורים של כ-10 שנים, כאשר אוכלוסיית הארנבות מתפוצצת, גם אוכלוסיית השונרים גדלה במהירות. כשהארנבות קורסות (ממחלות או חוסר מזון), אוכלוסיית השונרים קורסת יחד איתן עקב רעב. זוהי אחת הדוגמאות הקלאסיות ביותר באקולוגיה ל"יחסי טורף-נטרף".</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Long Hind Legs:</strong> When viewed from the side, the Canadian Lynx appears to slope downward toward its head. Its hind legs are significantly longer than its front legs. This structure is designed to provide immense explosive power for sudden leaps through the snow after fast-moving hares.</p>
+                    <p><strong>Enormous Paws (Snowshoes):</strong> The paws of the Canadian Lynx are disproportionately large for its body size and are covered in thick, dense fur even in summer. They act as natural snowshoes, distributing its weight so it can run atop deep snow without sinking (exerting a pressure of only 4.1 to 8.8 grams per square centimeter!).</p>
+                    <p><strong>Dramatic Population Cycles:</strong> The Canadian Lynx population is tragically and wonderfully tied to the population of the Snowshoe Hare. In roughly 10-year cycles, when the hare population explodes, the lynx population rapidly follows suit. When the hares crash (due to disease or lack of food), the lynx population crashes along with them due to starvation. This is one of ecology's most classic examples of a "predator-prey relationship."</p>
+                </div>
+            </section>
+
+            <section class="space-y-4 text-start">
+                <h3 class="text-blue-400 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-blue-400 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Lynx</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Lynx</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה 'Lynx' מקורה בשפה היוונית העתיקה (λύγξ - lunx) דרך לטינית אמצעית. השורש האינדו-אירופי הקדום של המילה הוא '*leuk-' שפירושו "אור", "בהירות" או "להאיר". סבורים שהשם ניתן לחיה זו בגלל הברק הזוהר והמחזיר-אור של עיניה בחשכה.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The word 'Lynx' comes from Ancient Greek (λύγξ) via Middle Latin. The ancient Indo-European root of the word is '*leuk-', meaning "light," "brightness," or "to shine." It is believed the name was given to this animal because of the bright, reflective luminescence of its eyes in the dark.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: canadensis</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: canadensis</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">תוספת לטינית שמשמעותה פשוטה - "מקנדה" או "הקנדי". מציין את טווח התפוצה המרכזי של מין זה, הכולל את היערות הצפוניים (הבוריאליים) של קנדה וצפון ארצות הברית.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">A Latinized term simply meaning "from Canada" or "Canadian." It denotes the primary geographic distribution of this species, which encompasses the northern (boreal) forests of Canada and the northern United States.</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העברי: שונר</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Hebrew Name: Shunar</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם "שונר" הוא תחדיש (מילה שחודשה) על ידי האקדמיה ללשון העברית. המקור הוא לשון חז"ל (למשל בתלמוד הבבלי) שם מוזכרת חיה בשם "שונרא" (בארמית פירושה פשוט חתול, "בר שונרא" הוא חתול בר). האקדמיה לקחה את השם העתיק והעניקה אותו ספציפית לסוג *Lynx* כדי להבדילו מחתולי בר אחרים.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Hebrew name 'Shunar' is a neologism created by the Academy of the Hebrew Language. It originates from Talmudic literature, which mentions an animal called 'Shunra' (in Aramaic, it simply means cat, and 'Bar Shunra' is a wildcat). The Academy assigned this ancient name specifically to the Lynx genus to distinguish it from other wildcats.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-blue-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-blue-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">קוטלג ותואר מדעית לראשונה בשנת <strong>1792</strong> על ידי חוקר הטבע הסקוטי, רוברט קר (Robert Kerr, שנות חיים: 1755–1813), תחת השם *Felis lynx canadensis*.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">First scientifically cataloged and described in <strong>1792</strong> by the Scottish naturalist Robert Kerr (Lifespan: 1755–1813), under the name *Felis lynx canadensis*.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">אבולוציה ותפוצה:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution and Distribution:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">הסוג *Lynx* התפתח באמריקה הצפונית לפני כ-4 מיליון שנים. השונר הקנדי הוא קרוב משפחה הדוק של השונר המצוי (הבובקט - Bobcat), אך בניגוד לבובקט שמעדיף אקלים ממוזג, השונר הקנדי מתמחה אך ורק ביערות השלג (Taiga) ובטונדרה מדרום לחוג הארקטי בקנדה, באלסקה ובחלקים ספציפיים בצפון ארה"ב.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">The *Lynx* genus evolved in North America around 4 million years ago. The Canadian Lynx is a close relative of the Bobcat, but unlike the Bobcat which prefers temperate climates, the Canadian Lynx is strictly specialized for the snow forests (Taiga) and tundra south of the Arctic Circle in Canada, Alaska, and parts of the northern US.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">באופן גלובלי מוגדר כ"ללא חשש" (LC) על ידי ה-IUCN, משום שאוכלוסייתו שם יציבה וגדולה. עם זאת, במדינות התחתונות של ארצות הברית (Lower 48), השונר הקנדי מוגדר ברמה הפדרלית כ"מאוים" (Threatened) בשל כריתת יערות ואובדן בית גידול.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Globally classified as "Least Concern" (LC) by the IUCN because its population in Canada/Alaska is stable and large. However, in the contiguous United States (the Lower 48), the Canadian Lynx is federally listed as "Threatened" due to logging and habitat loss.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-500 text-sm border-t border-slate-800 mx-6 pb-12">
+            <p class="he-content">האתר נבנה על ידי ג'מיני ורם.</p>
+            <p class="en-content hidden">The site was created by Gemini and Ram.</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/95 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-blue-400 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-2 border-slate-700">
+    </div>
+
+    <script>
+        // מנגנון הדו-לשוניות החדש לאתר שלך
+        let currentLang = 'he';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            
+            // שינוי כיווניות האתר
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+
+            // החלפת הטקסט בכפתור השפה
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+
+            // הסתרה והצגה של תוכן לפי המחלקות החדשות
+            document.querySelectorAll('.he-content').forEach(el => {
+                if(currentLang === 'he') {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+
+            document.querySelectorAll('.en-content').forEach(el => {
+                if(currentLang === 'en') {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+        }
+
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { imgEl.src = imgUrl; modal.classList.remove('hidden'); }
+        }
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
