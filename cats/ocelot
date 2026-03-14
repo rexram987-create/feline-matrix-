@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Version 2.0 - Ocelot Fix -->
 <html lang="he" dir="rtl" class="dark">
 <head>
     <meta charset="UTF-8">
@@ -46,7 +47,7 @@
         <!-- תמונת נושא ייצוגית -->
         <header class="relative w-full h-72 md:h-96">
             <button onclick="openImageModal('../assets/ocelot.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
-                <img src="../assets/ocelot.png" alt="אוצלוט על ענף" class="w-full h-full object-cover">
+                <img src="../assets/ocelot.png" alt="אוצלוט בסבך" class="w-full h-full object-cover">
             </button>
             <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
             <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
@@ -111,7 +112,7 @@
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
                                 <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
-                                <td class="p-3"><span class="he-content">8 עד 15.5 ק"ג (זכרים מעט כבדים יותר)</span><span class="en-content hidden">8 - 15.5 kg (males slightly heavier)</span></td>
+                                <td class="p-3"><span class="he-content">8 עד 15.5 ק"ג (זכרים כבדים יותר)</span><span class="en-content hidden">8 - 15.5 kg (males heavier)</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
                                 <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
@@ -149,22 +150,22 @@
                     <div class="p-4 border-b border-slate-800">
                         <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Leopardus</h4>
                         <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Leopardus</h4>
-                        <p class="text-sm text-slate-300 mb-2 he-content">למרות שמו, סוג זה אינו כולל את הנמר (Leopard), ששייך לסוג הפנתרים. משמעות השם היא "דמוי-נמר", והוא הוענק לקבוצת החתולים הקטנים והמנומרים של יבשת אמריקה בגלל הדמיון השטחי של פרוותם לפרוות הנמר האפריקני.</p>
-                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Despite its name, this genus does not include the leopard (which belongs to the Panthera genus). The name implies "leopard-like" and was given to the small, spotted cats of the Americas due to the superficial resemblance of their coats to that of the African leopard.</p>
+                        <p class="text-sm text-slate-300 mb-2 he-content">למרות שמו, סוג זה אינו כולל את הנמר (Leopard). משמעות השם היא "דמוי-נמר", והוא הוענק לחתולים הקטנים של אמריקה בגלל דמיון פרוותם לנמר האפריקני.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Despite its name, this genus does not include the leopard. The name implies "leopard-like" and was given to the small cats of the Americas due to coat resemblance.</p>
                     </div>
                     
                     <div class="p-4 border-b border-slate-800">
                         <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: pardalis</h4>
                         <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: pardalis</h4>
-                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלטינית 'pardalis' מגיעה ישירות מיוונית עתיקה (πάρδαλις), שמשמעותה... נמר. מכאן שהשם המדעי המלא מתורגם באופן כפול ומשעשע כ"נמר נמרי" או "הדמוי-נמר המנומר".</p>
-                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Latin word 'pardalis' derives directly from Ancient Greek (πάρδαλις), which means... leopard. Thus, the full scientific name amusingly translates as a tautology: "leopard-like leopard" or "the spotted leopard-like cat."</p>
+                        <p class="text-sm text-slate-300 mb-2 he-content">מילה לטינית מיוונית (πάρδαλις) שמשמעותה נמר. מכאן שהשם המדעי כפול ומשעשע: "הדמוי-נמר המנומר".</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Latin from Greek (πάρδαλις) meaning leopard. Thus, the scientific name is an amusing tautology: "spotted leopard-like cat."</p>
                     </div>
                     
                     <div class="p-4">
-                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי: אוצלוט (Ocelot)</h4>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי: אוצלוט</h4>
                         <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Common Name: Ocelot</h4>
-                        <p class="text-sm text-slate-300 mb-2 he-content">המילה "אוצלוט" נלקחה מתוך שפת הנאוואטל (Nahuatl), שפתם של האצטקים במקסיקו העתיקה. המילה המקורית היא <em>ōcēlōtl</em> (או-סה-לוט-ל). למרבה האירוניה, רוב ההיסטוריונים מסכימים שאצל האצטקים המילה הזו תיארה דווקא את היגואר הגדול, ולא את החתול הקטן. כשהאירופאים הגיעו לאמריקה, הם שיבשו את המושג והצמידו אותו באופן בלעדי לחתול הבינוני הזה.</p>
-                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The word "ocelot" was adopted from Nahuatl, the language of the ancient Aztecs in Mexico. The original word is <em>ōcēlōtl</em>. Ironically, most historians agree that among the Aztecs, this word actually described the mighty jaguar, not this smaller cat. When Europeans arrived in the Americas, they misapplied the term, permanently attaching it to this beautiful medium-sized cat.</p>
+                        <p class="text-sm text-slate-300 mb-2 he-content">מקורו בשפת הנאוואטל של האצטקים: <em>ōcēlōtl</em>. למרבה האירוניה, רוב החוקרים מסכימים שאצל האצטקים המילה הזו תיארה דווקא את היגואר. האירופאים שיבשו את המושג והצמידו אותו לחתול קטן זה.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Derived from Nahuatl: <em>ōcēlōtl</em>. Ironically, researchers agree this word originally described the jaguar. Europeans misapplied it to this smaller cat.</p>
                     </div>
                 </div>
             </section>
@@ -177,20 +178,20 @@
                     <div>
                         <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
                         <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
-                        <p class="text-sm text-slate-300 mb-1 he-content">כמו רבים מהחתולים, האוצלוט קוטלג ותואר מדעית לראשונה על ידי קארל לינאוס בספרו המפורסם <em>Systema Naturae</em> בשנת <strong>1758</strong>, תחת השם ההתחלתי <em>Felis pardalis</em>, בטרם שויך לסוג החתולים הדרום-אמריקאים.</p>
-                        <p class="text-sm text-slate-300 mb-1 en-content hidden">Like many felines, the ocelot was first scientifically cataloged and described by Carl Linnaeus in his famous book <em>Systema Naturae</em> in <strong>1758</strong>, under the initial name <em>Felis pardalis</em>, before being reassigned to the South American cat genus.</p>
+                        <p class="text-sm text-slate-300 mb-1 he-content">האוצלוט תואר מדעית לראשונה על ידי קארל לינאוס בספרו <em>Systema Naturae</em> ב-1758, תחת השם <em>Felis pardalis</em>, בטרם הועבר לסוג הנוכחי.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">The ocelot was first scientifically described by Carl Linnaeus in <em>Systema Naturae</em> in 1758, as <em>Felis pardalis</em>, before being moved to its current genus.</p>
                     </div>
                     <div>
                          <h4 class="text-white font-semibold mb-2 he-content">אבולוציה:</h4>
                          <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution:</h4>
-                         <p class="text-sm text-slate-300 mb-1 he-content">האוצלוט שייך ל"שושלת האוצלוט" – קבוצה של חתולים קטנים שהתפתחה בצפון אמריקה לפני כ-8 מיליון שנים, וחצתה לדרום אמריקה דרך "הגשר היבשתי של פנמה" לפני כ-2 עד 3 מיליון שנים, שם הם התפצלו למינים רבים השולטים בג'ונגלים.</p>
-                         <p class="text-sm text-slate-300 mb-1 en-content hidden">The ocelot belongs to the "Ocelot lineage"—a group of small cats that evolved in North America about 8 million years ago and crossed into South America via the Isthmus of Panama around 2 to 3 million years ago, where they radiated into multiple jungle-dominating species.</p>
+                         <p class="text-sm text-slate-300 mb-1 he-content">האוצלוט שייך ל"שושלת האוצלוט" שהתפתחה בצפון אמריקה לפני כ-8 מיליון שנים, וחצתה לדרום אמריקה דרך פנמה לפני כ-3 מיליון שנים.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">The ocelot belongs to the "Ocelot lineage" which evolved in North America ~8 million years ago, crossing into South America via Panama ~3 million years ago.</p>
                     </div>
                     <div>
                         <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני:</h4>
                         <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status:</h4>
-                        <p class="text-sm text-slate-300 he-content">בשנות ה-60 וה-70 של המאה ה-20, האוצלוט הובא לסף הכחדה קריטי משום שמאות אלפי פרטים נצודו רק עבור סחר הפרוות היוקרתי. לאחר חרם בינלאומי וחקיקת חוקי הגנה נוקשים, האוכלוסייה בדרום ומרכז אמריקה התאוששה בצורה יוצאת דופן. כיום הוא מוגדר ברמה הגלובלית כ"ללא חשש" (Least Concern - LC) על ידי ה-IUCN. עם זאת, התפוצה שלו, שבעבר הגיעה עד מרכז ארצות הברית, הצטמצמה דרמטית: כיום נותרה אוכלוסייה זעירה של פחות מ-100 פרטים בדרום טקסס, והם מוגדרים שם ברמה הפדרלית כ"בסכנת הכחדה".</p>
-                        <p class="text-sm text-slate-300 en-content hidden">During the 1960s and 70s, the ocelot was driven to the brink of critical extinction as hundreds of thousands were hunted solely for the lucrative fur trade. Following international bans and strict protective legislation, the population in South and Central America recovered remarkably. Today, it is globally classified as "Least Concern" (LC) by the IUCN. However, its range, which once extended deep into the US, has shrunk drastically: today, a tiny population of fewer than 100 individuals remains in southern Texas, where they are federally listed as "Endangered".</p>
+                        <p class="text-sm text-slate-300 he-content">בשנות ה-60 וה-70 הובא לסף הכחדה קריטי עקב סחר הפרוות. לאחר חקיקה, האוכלוסייה בדרום אמריקה התאוששה וכיום הוא מוגדר "ללא חשש" (LC). עם זאת, בדרום טקסס נותרה אוכלוסייה זעירה של פחות מ-100 פרטים המוגדרת בסכנת הכחדה.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">In the 60s and 70s, it was driven to near extinction by the fur trade. Following legislation, the South American population recovered and is now "Least Concern" (LC). However, in southern Texas, a tiny population of under 100 individuals remains endangered.</p>
                     </div>
                 </div>
             </section>
