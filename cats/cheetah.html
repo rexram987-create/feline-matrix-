@@ -6,12 +6,11 @@
     <title>ברדלס (Acinonyx jubatus) | מטריצת החתוליים</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
         :root {
             --bg-body: #030712; 
             --bg-card: #0a1122; 
             --border-card: #1d365d;
-            --text-accent: #facc15; /* צהוב בוהק/מהיר המזוהה עם הברדלס */
+            --text-accent: #facc15; 
         }
         body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; }
         .samsung-s25-container { 
@@ -24,7 +23,6 @@
         @media (min-width: 768px) {
             .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
         }
-        /* עיצוב פס גלילה */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--bg-body); }
         ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
@@ -35,17 +33,16 @@
 
     <div class="samsung-s25-container relative pb-10">
         
-        <!-- ניווט חזרה -->
         <nav class="absolute top-4 right-4 z-10">
             <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-yellow-500 hover:text-black transition border border-white/10 flex items-center gap-2">
                 <span>&rarr;</span> חזרה למטריצה
             </a>
         </nav>
 
-        <!-- תמונת נושא ייצוגית -->
+        <!-- תיקון לתמונה מקומית -->
         <header class="relative w-full h-72 md:h-96">
-            <button onclick="openImageModal('https://images.unsplash.com/photo-1551927336-09d50efd69cd?q=80&w=1000')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
-                <img src="https://images.unsplash.com/photo-1551927336-09d50efd69cd?q=80&w=1000" alt="ברדלס רץ בסוואנה" class="w-full h-full object-cover">
+            <button onclick="openImageModal('../assets/cheetah.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/cheetah.png" alt="ברדלס רץ בסוואנה" class="w-full h-full object-cover">
             </button>
             <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
             <div class="absolute bottom-0 p-6 w-full pointer-events-none">
@@ -59,8 +56,6 @@
         </header>
 
         <main class="p-6 space-y-8">
-            
-            <!-- 1. כותרות ומידע בסיסי -->
             <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
                 <h3 class="text-yellow-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2">תעודת זהות זואולוגית</h3>
                 <ul class="space-y-3 text-sm">
@@ -72,7 +67,6 @@
                 </ul>
             </section>
 
-            <!-- 2. גריד נתונים סטטיסטיים -->
             <section class="space-y-4">
                 <h3 class="text-yellow-400 font-bold text-lg px-2">נתונים סטטיסטיים (Stats)</h3>
                 <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
@@ -100,13 +94,13 @@
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
                                 <td class="p-3 font-medium text-slate-400">אורך גוף - נקבה (ללא זנב)</td>
-                                <td class="p-3">1.1 עד 1.4 מטרים (הבדל קטן)</td>
+                                <td class="p-3">1.1 עד 1.4 מטרים</td>
                                 <td class="p-3 text-left text-slate-400">Female Body Length</td>
                                 <td class="p-3 text-left">1.1 - 1.4 meters</td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
                                 <td class="p-3 font-medium text-slate-400">משקל - זכר בוגר</td>
-                                <td class="p-3">38 עד 54 ק"ג (קל מאוד)</td>
+                                <td class="p-3">38 עד 54 ק"ג</td>
                                 <td class="p-3 text-left text-slate-400">Adult Male Weight</td>
                                 <td class="p-3 text-left">38 - 54 kg</td>
                             </tr>
@@ -133,7 +127,6 @@
                 </div>
             </section>
 
-            <!-- 3. ייחודיות אנטומית וביולוגית -->
             <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
                 <h3 class="text-yellow-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2">אנטומיה וביולוגיה (Anatomy & Biology)</h3>
                 <div class="space-y-4 text-sm leading-relaxed text-slate-300">
@@ -143,7 +136,6 @@
                 </div>
             </section>
 
-            <!-- 4. אטימולוגיה מורחבת (Full Etymology) -->
             <section class="space-y-4">
                 <h3 class="text-yellow-400 font-bold text-lg px-2">אטימולוגיה מורחבת (Etymology)</h3>
                 <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
@@ -154,7 +146,7 @@
                     </div>
                     <div class="p-4 border-b border-slate-800">
                         <h4 class="text-md font-bold text-white mb-2">2. המין: jubatus</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> מקור המילה בלטינית ופירושה "בעל רעמה" (Crested / Maned). שם זה ניתן לו מכיוון שלגורי הברדלס (Cheetah cubs) יש רעמה אפורה-כסופה על העורף והגב שמסייעת להם להסתוות כיעד מסוכן (גירית הדבש) בשבועות הראשונים לחייהם.</p>
+                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> מקור המילה בלטינית ופירושה "בעל רעמה" (Crested / Maned). שם זה ניתן לו מכיוון שלגורי הברדלס יש רעמה אפורה-כסופה על העורף והגב שמסייעת להם להסתוות כיעד מסוכן (גירית הדבש) בשבועות הראשונים לחייהם.</p>
                         <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> From Latin meaning "crested" or "having a mane". This refers to the distinct silvery mane (mantle) present on the neck and back of cheetah cubs.</p>
                     </div>
                     <div class="p-4 border-b border-slate-800">
@@ -164,42 +156,38 @@
                     </div>
                     <div class="p-4">
                         <h4 class="text-md font-bold text-white mb-2">4. השם העברי: ברדלס</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> המילה "ברדלס" מגיעה מלשון חז"ל והיא שאילה מהמילה היוונית העתיקה 'Pardalis' (πάρδαλις), שמשמעותה הייתה נמר או פנתר. במשך מאות שנים (ואף עד היום בקרב הציבור הרחב) היה בלבול עצום בישראל בין נמר לברדלס. האקדמיה ללשון קבעה כי החיה המהירה עם הפסים מתחת לעיניים תיקרא "ברדלס", ואילו החיה המאסיבית עם הרוזטות תיקרא "נמר" (Leopard).</p>
+                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> המילה "ברדלס" מגיעה מלשון חז"ל והיא שאילה מהמילה היוונית העתיקה 'Pardalis' (πάρδαλις), שמשמעותה הייתה נמר או פנתר. במשך מאות שנים היה בלבול עצום בישראל בין נמר לברדלס. האקדמיה ללשון קבעה כי החיה המהירה עם הפסים תחת העיניים תיקרא "ברדלס", ואילו החיה המאסיבית עם הרוזטות תיקרא "נמר".</p>
                         <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> The Hebrew name 'Bardelas' is a Talmudic loanword from the Ancient Greek 'Pardalis' (meaning leopard/panther). Due to historical confusion, modern Hebrew strictly differentiates 'Namer' (Leopard) from 'Bardelas' (Cheetah).</p>
                     </div>
                 </div>
             </section>
 
-            <!-- 5. היסטוריית הגילוי ואבולוציה -->
             <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
                 <h3 class="text-yellow-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2">היסטוריית הגילוי, אבולוציה ושימור</h3>
                 <div class="space-y-6">
                     <div>
                         <h4 class="text-white font-semibold mb-2">הגילוי המקורי:</h4>
-                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> קוטלג ותואר מדעית לראשונה בשנת <strong>1775</strong> על ידי הזואולוג הגרמני <strong>יוהאן כריסטיאן דניאל פון שרבר</strong> (Johann Christian Daniel von Schreber, שנות חיים: 1739–1810). במקור הוא סיווג אותו כסוג של חתול (*Felis jubata*), ורק בשנת 1828 הועבר הברדלס לסוג העצמאי שלו (*Acinonyx*).</p>
-                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Scientifically cataloged in 1775 by the German zoologist Johann Christian Daniel von Schreber (Lifespan: 1739–1810). Originally classified as 'Felis jubata' before getting its unique genus.</p>
+                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> קוטלג ותואר מדעית לראשונה בשנת 1775 על ידי הזואולוג הגרמני יוהאן כריסטיאן דניאל פון שרבר (שנות חיים: 1739–1810). במקור סווג כסוג של חתול (*Felis jubata*), ורק ב-1828 הועבר לסוג העצמאי שלו (*Acinonyx*).</p>
+                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Scientifically cataloged in 1775 by Johann Christian Daniel von Schreber (Lifespan: 1739–1810).</p>
                     </div>
                     <div>
                         <h4 class="text-white font-semibold mb-2">אבולוציה ותפוצה:</h4>
-                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> שושלת הברדלס התפצלה משאר החתוליים באמריקה הצפונית לפני כ-6.7 מיליון שנים. הברדלס שרד כמעט בנס אירוע הכחדה ("צוואר בקבוק גנטי") שאירע לפני כ-10,000 שנה בסוף תקופת הקרח. כתוצאה מכך, כל הברדלסים כיום הם קרובי משפחה גנטיים מדרגה ראשונה (Inbreeding), מה שהופך אותם לפגיעים מאוד למחלות.</p>
-                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> The cheetah lineage diverged in North America ~6.7 million years ago. It survived a severe genetic "bottleneck" ~10,000 years ago, resulting in extremely low genetic diversity among modern cheetahs worldwide.</p>
+                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> הברדלס שרד כמעט בנס אירוע הכחדה ("צוואר בקבוק גנטי") שאירע לפני כ-10,000 שנה. כתוצאה מכך, כל הברדלסים כיום הם קרובי משפחה גנטיים מדרגה ראשונה (Inbreeding), מה שהופך אותם לפגיעים מאוד למחלות.</p>
+                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Survived a severe genetic "bottleneck" ~10,000 years ago, resulting in extremely low genetic diversity among modern cheetahs.</p>
                     </div>
                     <div>
                         <h4 class="text-white font-semibold mb-2">מצב שימור:</h4>
-                        <p class="text-sm text-slate-300">מוגדר כ"פגיע" (Vulnerable - VU) על ידי ה-IUCN, ויש הקוראים להגדירו בסכנת הכחדה חמורה. נותרו כ-7,100 פרטים בלבד בטבע (בעיקר בנמיביה ודרום אפריקה). אוכלוסייה זעירה וקריטית של הברדלס האסיאתי (כ-50 פרטים בלבד) שרדה באיראן. בארץ ישראל נכחד הברדלס לחלוטין בשנות ה-50 של המאה ה-20.</p>
+                        <p class="text-sm text-slate-300">מוגדר כ"פגיע" (Vulnerable - VU) על ידי ה-IUCN. נותרו כ-7,100 פרטים בלבד בטבע. אוכלוסייה קריטית של הברדלס האסיאתי (כ-50 פרטים בלבד) שרדה באיראן. בארץ ישראל נכחד הברדלס לחלוטין בשנות ה-50.</p>
                     </div>
                 </div>
             </section>
         </main>
 
-        <!-- Footer -->
         <footer class="mt-8 p-6 text-center text-slate-500 text-sm border-t border-slate-800 mx-6 pb-12">
             <p>האתר נבנה על ידי ג'מיני ורם.</p>
         </footer>
-
     </div>
 
-    <!-- Modal לתמונה צפה -->
     <div id="fullScreenImageModal" class="fixed inset-0 bg-black/95 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
         <button class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-yellow-500 z-[101]">&times;</button>
         <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-2 border-slate-700">
