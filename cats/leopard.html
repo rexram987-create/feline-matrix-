@@ -6,13 +6,14 @@
     <title>נמר (Panthera pardus) | מטריצת החתוליים</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
         :root {
             --bg-body: #030712; 
             --bg-card: #0a1122; 
             --border-card: #1d365d;
             --text-accent: #eab308; /* צהוב נמר */
         }
-        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
         .samsung-s25-container { 
             max-width: 412px; 
             margin: 0 auto; 
@@ -33,149 +34,213 @@
 
     <div class="samsung-s25-container relative pb-10">
         
-        <nav class="absolute top-4 right-4 z-10">
-            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-yellow-500 hover:text-black transition border border-white/10 flex items-center gap-2">
-                <span>&rarr;</span> חזרה למטריצה
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-yellow-500 hover:bg-yellow-600 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-yellow-600 transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
             </a>
         </nav>
 
-        <!-- כאן בוצע התיקון לנתיב התמונה המקומי בגיטהאב שלך -->
+        <!-- תמונת נושא ייצוגית -->
         <header class="relative w-full h-72 md:h-96">
             <button onclick="openImageModal('../assets/leopard.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
                 <img src="../assets/leopard.png" alt="נמר רובץ" class="w-full h-full object-cover">
             </button>
             <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
-            <div class="absolute bottom-0 p-6 w-full pointer-events-none">
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
                 <div class="flex items-center gap-3 mb-2">
-                    <span class="bg-yellow-500/20 text-yellow-400 text-xs font-bold px-3 py-1 rounded-full border border-yellow-500/30">Pantherinae</span>
-                    <span class="text-slate-400 text-sm tracking-widest">אלוף ההסוואה והטיפוס</span>
+                    <span class="bg-yellow-500/20 text-yellow-400 text-xs font-bold px-3 py-1 rounded-full border border-yellow-500/30 he-content">Pantherinae (חתולים גדולים)</span>
+                    <span class="bg-yellow-500/20 text-yellow-400 text-xs font-bold px-3 py-1 rounded-full border border-yellow-500/30 en-content hidden">Pantherinae (Big Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">אלוף ההסוואה והטיפוס</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">Master of Stealth & Climbing</span>
                 </div>
-                <h1 class="text-4xl font-extrabold text-white mb-1">נמר</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">נמר</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Leopard</h1>
                 <h2 class="text-xl text-slate-300 italic font-serif">Panthera pardus</h2>
             </div>
         </header>
 
         <main class="p-6 space-y-8">
-            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
-                <h3 class="text-yellow-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">תעודת זהות זואולוגית</h3>
-                <ul class="space-y-3 text-sm">
+            
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-yellow-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-yellow-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
                     <li><strong class="text-slate-400">שם באנגלית:</strong> Leopard</li>
                     <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae)</li>
                     <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Silent Assassin" / "Prince of Stealth"</li>
-                    <li><strong class="text-slate-400">מאפיין ייחודי (HE):</strong> הקטן מבין החתולים הגדולים (Panthera), אך ניחן ביחס הכוח-למשקל הגבוה ביותר מביניהם. מסוגל לטפס על עצים זקופים כשבפיו טרף השוקל יותר ממשקל גופו, כדי להרחיקו מטורפים מתחרים.</li>
-                    <li><strong class="text-slate-400">Unique Feature (EN):</strong> The smallest of the "big cats", yet possesses the highest strength-to-weight ratio. Capable of climbing vertical trees while carrying prey heavier than its own body weight to keep it away from scavengers.</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> הקטן מבין החתולים הגדולים (Panthera), אך ניחן ביחס הכוח-למשקל הגבוה ביותר מביניהם. זהו חתול אקרובטי המסוגל לטפס על עצים זקופים כשבפיו טרף השוקל עד פי שניים ממשקל גופו, כדי להרחיקו מטורפים מתחרים כמו אריות וצבועים.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Leopard</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Silent Assassin" / "Prince of Stealth"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> The smallest of the "big cats" (Panthera), yet it possesses the highest strength-to-weight ratio among them. It is an acrobatic cat capable of climbing vertical trees while carrying prey up to twice its own body weight to keep it safe from competing predators like lions and hyenas.</li>
                 </ul>
             </section>
 
-            <section class="space-y-4">
-                <h3 class="text-yellow-500 font-bold text-lg px-2">נתונים סטטיסטיים (Stats)</h3>
+            <section class="space-y-4 text-start">
+                <h3 class="text-yellow-500 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-yellow-500 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
                 <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
-                    <table class="w-full text-sm text-right bg-slate-900">
+                    <table class="w-full text-sm text-start bg-slate-900">
                         <thead class="bg-slate-800 text-slate-300">
                             <tr>
-                                <th class="p-3">פרמטר (HE)</th>
-                                <th class="p-3">ערך (HE)</th>
-                                <th class="p-3 text-left">Parameter (EN)</th>
-                                <th class="p-3 text-left">Value (EN)</th>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-800">
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">היריון</td>
-                                <td class="p-3">90 עד 105 ימים</td>
-                                <td class="p-3 text-left text-slate-400">Gestation</td>
-                                <td class="p-3 text-left">90 - 105 days</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">90 עד 105 ימים</span><span class="en-content hidden">90 - 105 days</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">אורך גוף - זכר (ללא זנב)</td>
-                                <td class="p-3">1.0 עד 1.9 מטרים</td>
-                                <td class="p-3 text-left text-slate-400">Male Body Length</td>
-                                <td class="p-3 text-left">1.0 - 1.9 meters</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף - זכר (ללא זנב)</span><span class="en-content hidden">Male Body Length</span></td>
+                                <td class="p-3"><span class="he-content">1.0 עד 1.9 מטרים</span><span class="en-content hidden">1.0 - 1.9 meters</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">משקל - זכר בוגר</td>
-                                <td class="p-3">37 עד 90 ק"ג</td>
-                                <td class="p-3 text-left text-slate-400">Adult Male Weight</td>
-                                <td class="p-3 text-left">37 - 90 kg</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל - זכר בוגר</span><span class="en-content hidden">Adult Male Weight</span></td>
+                                <td class="p-3"><span class="he-content">37 עד 90 ק"ג</span><span class="en-content hidden">37 - 90 kg</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">משקל - נקבה בוגרת</td>
-                                <td class="p-3">28 עד 60 ק"ג</td>
-                                <td class="p-3 text-left text-slate-400">Adult Female Weight</td>
-                                <td class="p-3 text-left">28 - 60 kg</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל - נקבה בוגרת</span><span class="en-content hidden">Adult Female Weight</span></td>
+                                <td class="p-3"><span class="he-content">28 עד 60 ק"ג</span><span class="en-content hidden">28 - 60 kg</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/50 transition">
-                                <td class="p-3 font-medium text-slate-400">תוחלת חיים (טבע)</td>
-                                <td class="p-3">12 עד 17 שנים</td>
-                                <td class="p-3 text-left text-slate-400">Lifespan (Wild)</td>
-                                <td class="p-3 text-left">12 - 17 years</td>
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">12 עד 17 שנים</span><span class="en-content hidden">12 - 17 years</span></td>
+                            </tr>
+                             <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">מהירות ריצה</span><span class="en-content hidden">Top Speed</span></td>
+                                <td class="p-3"><span class="he-content">עד 58 קמ"ש לטווחים קצרים</span><span class="en-content hidden">Up to 58 km/h in short bursts</span></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
-            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
-                <h3 class="text-yellow-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">אנטומיה וביולוגיה (Anatomy & Biology)</h3>
-                <div class="space-y-4 text-sm leading-relaxed text-slate-300">
-                    <p><strong>רוזטות:</strong> פרוות הנמר מכוסה בחברבורות דמויות שושנה (Rosettes). בניגוד ליגואר, הרוזטות של הנמר צפופות יותר, קטנות יותר, ו**ריקות במרכזן** (ללא נקודה שחורה באמצע). תבנית זו עוזרת לנמר להתמזג מושלם עם צללי העלים בסבך או על העצים.</p>
-                    <p><strong>פנתר שחור (Black Panther):</strong> "פנתר שחור" אינו מין נפרד בטבע. זוהי למעשה תופעה גנטית של מלניזם (עודף פיגמנטציה שחורה) שמופיעה לרוב אצל נמרים או יגוארים. אם נתבונן מקרוב בנמר שחור באור השמש, עדיין נוכל לראות את הרוזטות מבעד לפרווה השחורה.</p>
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-yellow-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-yellow-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>רוזטות (Rosettes):</strong> פרוות הנמר מכוסה בחברבורות דמויות שושנה הנקראות רוזטות. בניגוד ליגואר שחי באמריקה, הרוזטות של הנמר צפופות יותר, קטנות יותר, ו<strong>ריקות במרכזן</strong> (כלומר, ללא נקודה שחורה באמצע). תבנית פריקה זו עוזרת לנמר להתמזג באופן מושלם עם צללי העלים והענפים בסבך, מה שמאפשר לו להפוך ל"רואה ואינו נראה".</p>
+                    <p><strong>פנתר שחור (Black Panther):</strong> המונח "פנתר שחור" מתייחס לרוב לנמרים (ולעיתים ליגוארים) החווים תופעה גנטית שנקראת מלניזם (Melanism) – עודף קיצוני של פיגמנטציה כהה. זה אינו מין נפרד בטבע. אם נתבונן מקרוב בפרוותו של נמר שחור באור שמש ישיר, עדיין נוכל לראות את תבנית הרוזטות המקורית מבעד לצבע השחור העמוק.</p>
+                    <p><strong>אדריכלות של כוח:</strong> גולגולתו של הנמר מאסיבית ביחס לגופו, ושרירי הלסת העוצמתיים שלו מאפשרים לו להרוג טרף גדול בהרבה ממנו (כמו אנטילופות ואפילו גורילות צעירות). העצמות הקצרות והעבות ברגליו מספקות מנוף כוח אדיר המאפשר לו לשאת פגרים כבדים במעלה גזעים אנכיים הרחק מהישג ידם של אוכלי נבלות.</p>
+                    <p><strong>יכולת הסתגלות (Adaptability):</strong> הנמר הוא גאון של שרידות אבולוציונית. בניגוד לטיגריס שזקוק לסביבה ספציפית, הנמר בעל טווח התפוצה הרחב ביותר מכל חתולי הבר, ומסוגל לשגשג ביערות גשם, סוואנות, מדבריות צחיחים ואפילו בשולי אזורים אורבניים כפריים.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Rosettes:</strong> The leopard's coat is covered in rose-like spots called rosettes. Unlike the jaguar found in the Americas, a leopard's rosettes are denser, smaller, and <strong>empty in the center</strong> (meaning they lack a central black spot). This disruptive pattern helps the leopard blend perfectly with the dappled shadows of leaves and branches, rendering it practically invisible.</p>
+                    <p><strong>Black Panthers:</strong> The term "black panther" typically refers to leopards (and sometimes jaguars) experiencing a genetic phenomenon called melanism—an extreme excess of dark pigmentation. It is not a separate species. If you look closely at a black panther's fur in direct sunlight, you can still see the original rosette pattern beneath the deep black color.</p>
+                    <p><strong>Architecture of Power:</strong> The leopard's skull is massive relative to its body, and its powerful jaw muscles allow it to kill prey much larger than itself (like antelopes and even young gorillas). The short, thick bones in its legs provide tremendous leverage, enabling it to haul heavy carcasses up vertical trunks, far out of reach of scavengers.</p>
+                    <p><strong>Adaptability:</strong> The leopard is a genius of evolutionary survival. Unlike the tiger, which requires a specific environment, the leopard has the widest distribution range of any wild cat, capable of thriving in rainforests, savannahs, arid deserts, and even on the fringes of rural urban areas.</p>
                 </div>
             </section>
 
-            <section class="space-y-4">
-                <h3 class="text-yellow-500 font-bold text-lg px-2">אטימולוגיה מורחבת (Etymology)</h3>
+            <section class="space-y-4 text-start">
+                <h3 class="text-yellow-500 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-yellow-500 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
                 <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
                     <div class="p-4 border-b border-slate-800">
-                        <h4 class="text-md font-bold text-white mb-2">1. הסוג: Panthera</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> בדומה לאריה ולטיגריס, מיוונית עתיקה (pánthēr), הקשורה היסטורית למילה בסנסקריט "pundarīkam".</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> From Ancient Greek 'pánthēr', linked to Sanskrit.</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Panthera</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Panthera</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">בדומה לאריה ולטיגריס, מקור המילה ביוונית עתיקה (pánthēr), הקשורה היסטורית למילה בסנסקריט "pundarīkam" (טיגריס).</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Similar to the lion and tiger, it originates from Ancient Greek 'pánthēr', historically linked to the Sanskrit word 'pundarīkam' (tiger).</p>
                     </div>
+                    
                     <div class="p-4 border-b border-slate-800">
-                        <h4 class="text-md font-bold text-white mb-2">2. המין: pardus</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> המילה 'pardus' בלטינית הגיעה מהמילה היוונית העתיקה 'párdalos' (πάρδαλος) או 'párdalis' (πάρδαλις), שפירושה המילולי הוא "מנומר" או "מוכתם". בעבר זה היה השם הכללי לחיה זו באזור יוון ורומא.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> Derived from the Latin 'pardus', which came from the Ancient Greek 'párdalos' meaning "spotted".</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: pardus</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: pardus</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלטינית 'pardus' הגיעה מהמילה היוונית העתיקה 'párdalos' (πάρδαλος) או 'párdalis' (πάρδαλις), שפירושה המילולי הוא "מנומר" או "מוכתם". בעת העתיקה, זה היה השם הכללי לחיה הטורפת הזו באזור יוון ורומא.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Latin word 'pardus' comes from the Ancient Greek 'párdalos' (πάρδαλος) or 'párdalis' (πάρδαλις), which literally translates to "spotted" or "mottled". In antiquity, this was the general name for this predatory animal in Greece and Rome.</p>
                     </div>
+                    
                     <div class="p-4 border-b border-slate-800">
-                        <h4 class="text-md font-bold text-white mb-2">3. השם העממי באנגלית: Leopard</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> המילה הלועזית נוצרה בטעות מרתקת של אנשי העת העתיקה. הם האמינו שהנמר אינו חיה בפני עצמה, אלא יצור כלאיים (הכלאה) שנוצר מהזדווגות של אריה (Leo) ופנתר (Pard). חיבור שתי המילים יצר את השם "Leo-Pard". רק מאוחר יותר הוכח כי זהו מין עצמאי לחלוטין.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> A portmanteau created in antiquity. Early naturalists mistakenly believed the animal was a hybrid between a lion ('leo') and a panther/pard ('pardus'), thus "leopard".</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי באנגלית: Leopard</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. English Name: Leopard</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלועזית נוצרה בטעות מרתקת של חוקרי טבע בעת העתיקה (ביניהם פליניוס הזקן). הם האמינו שהנמר אינו חיה בפני עצמה, אלא יצור כלאיים אכזרי שנוצר מהזדווגות של אריה (Leo) ופנתר (Pard). חיבור שתי המילים יצר את השם המורכב "Leo-Pard". רק מאות שנים מאוחר יותר הוכח מדעית כי זהו מין עצמאי לחלוטין.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">This word is a portmanteau born from a fascinating mistake by ancient naturalists (including Pliny the Elder). They believed the leopard was not a distinct species, but rather a fierce hybrid resulting from the mating of a lion ('leo') and a panther ('pard'). Combining the two words created the name "Leo-Pard". It was only centuries later scientifically proven to be a completely independent species.</p>
                     </div>
+
                     <div class="p-4">
-                        <h4 class="text-md font-bold text-white mb-2">4. השם העממי העברי: נמר</h4>
-                        <p class="text-sm text-slate-300 mb-2"><strong>הסבר (HE):</strong> מקור המילה העברית (המופיעה בתנ"ך פעמים רבות, כגון "היהפוך כושי עורו ונמר חברבורותיו") נגזר מהשורש השמי נ.מ.ר שמשמעותו כתם, צבע מנומר או ברור. שורש זה מצוי גם באכדית (nimru) ובערבית (nimr). בישראל חיה תת-מין ייחודית, נמר המדבר (Arabian leopard), אשר ככל הנראה נכחדה כליל מאזורנו בעשורים האחרונים.</p>
-                        <p class="text-sm text-slate-400"><strong>Explanation (EN):</strong> The Hebrew name 'Namer' derives from an ancient Semitic root meaning spotted or clear. It appears extensively in biblical texts.</p>
+                        <h4 class="text-md font-bold text-white mb-2 he-content">4. השם העברי: נמר</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">4. Hebrew Name: Namer</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">מקור המילה העברית (המופיעה בתנ"ך פעמים רבות, כגון "היהפוך כושי עורו ונמר חברבורותיו" - ירמיהו י"ג) נגזר מהשורש השמי נ.מ.ר שמשמעותו כתם, צבע מנומר או ברור. שורש זה מצוי גם באכדית (nimru) ובערבית (nimr). בישראל חיה תת-מין ייחודית, נמר המדבר (Arabian leopard), אשר ככל הנראה נכחדה כליל מאזורנו בעשורים האחרונים (הנמר האחרון במדבר יהודה תועד ב-2007).</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Hebrew word (appearing frequently in the Bible, e.g., "Can the Ethiopian change his skin, or the leopard his spots?" - Jeremiah 13) derives from the Semitic root n-m-r, meaning spotted, speckled, or clear. This root is also found in Akkadian (nimru) and Arabic (nimr). Israel was home to a unique subspecies, the Arabian leopard, which has likely become locally extinct in recent decades (the last sighting in the Judean Desert was in 2007).</p>
                     </div>
                 </div>
             </section>
 
-            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg">
-                <h3 class="text-yellow-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2">היסטוריית הגילוי, אבולוציה ושימור</h3>
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-yellow-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-yellow-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
                 <div class="space-y-6">
                     <div>
-                        <h4 class="text-white font-semibold mb-2">הגילוי המקורי:</h4>
-                        <p class="text-sm text-slate-300 mb-1"><strong class="text-slate-400">HE:</strong> קוטלג ותואר מדעית על ידי קארל לינאוס (שנות חיים: 1707–1778) בשנת 1758, תחת השם <em>Felis pardus</em>. הועבר מאוחר יותר לסוג <em>Panthera</em>.</p>
-                        <p class="text-sm text-slate-400"><strong class="text-slate-500">EN:</strong> Scientifically described by Carl Linnaeus (Lifespan: 1707–1778) in 1758.</p>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">קוטלג ותואר מדעית על ידי הזואולוג השוודי קארל לינאוס (Carl Linnaeus, שנות חיים: 1707–1778) בשנת 1758, תחת השם ההתחלתי <em>Felis pardus</em>. הועבר מאוחר יותר לסוג <em>Panthera</em> כשהתברר שריגית הגרון שלו מאפשרת לו לשאוג (אף על פי ששאגתו נשמעת יותר כמו ניסור עץ גס מאשר שאגת אריה).</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">Scientifically cataloged and described by Swedish zoologist Carl Linnaeus (Lifespan: 1707–1778) in 1758, under the initial name <em>Felis pardus</em>. It was later moved to the <em>Panthera</em> genus when it was discovered its throat morphology allows it to roar (though its roar sounds more like a rough sawing of wood than a lion's roar).</p>
                     </div>
                     <div>
-                        <h4 class="text-white font-semibold mb-2">מצב שימור:</h4>
-                        <p class="text-sm text-slate-300">מוגדר כ"פגיע" (Vulnerable - VU) על ידי ה-IUCN. למרות שהנמר הוא בעל טווח התפוצה הרחב ביותר מבין החתולים הגדולים (אפריקה ואסיה) בזכות כושר הסתגלותו לסביבות שונות, תת-מינים מסוימים (כמו נמר אמור ברוסיה, או נמר המדבר באזורנו) נמצאים בסכנת הכחדה חמורה עקב ציד לפרוות ואובדן שטחים.</p>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">ניתוח גנטי מצביע על כך שהנמר התפתח באפריקה לפני כ-0.5 עד 0.8 מיליון שנים, והיגר לאסיה לפני כ-0.2 עד 0.3 מיליון שנים. הוא קרוב משפחה גנטי של האריה והיגואר.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">Genetic analysis indicates that the leopard evolved in Africa approximately 0.5 to 0.8 million years ago, and migrated to Asia about 0.2 to 0.3 million years ago. It is a close genetic relative of the lion and the jaguar.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">מוגדר כ"פגיע" (Vulnerable - VU) ברמה העולמית על ידי ה-IUCN. למרות שהנמר הוא בעל טווח התפוצה הרחב ביותר מבין החתולים הגדולים באפריקה ובאסיה, מצבו מדרדר במהירות. הוא איבד כ-75% מטווח התפוצה ההיסטורי שלו. תת-מינים מסוימים (כמו נמר אמור ברוסיה, או הנמר הערבי באזורנו) הגיעו למצב של סכנת הכחדה חמורה (CR) עקב ציד בלתי חוקי לפרוות היקרות שלהם ואובדן שטחי יער למטרות חקלאות.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Globally classified as "Vulnerable" (VU) by the IUCN. Although the leopard has the widest distribution range among big cats in Africa and Asia, its status is rapidly deteriorating. It has lost about 75% of its historical range. Certain subspecies (like the Amur leopard in Russia, or the Arabian leopard in our region) have reached "Critically Endangered" (CR) status due to illegal poaching for their highly valued fur and the loss of forest land to agriculture.</p>
                     </div>
                 </div>
             </section>
         </main>
 
         <footer class="mt-8 p-6 text-center text-slate-500 text-sm border-t border-slate-800 mx-6 pb-12">
-            <p>האתר נבנה על ידי ג'מיני ורם.</p>
+            <p class="he-content">האתר נבנה על ידי ג'מיני ורם.</p>
+            <p class="en-content hidden">The site was created by Gemini and Ram.</p>
         </footer>
     </div>
 
+    <!-- Modal -->
     <div id="fullScreenImageModal" class="fixed inset-0 bg-black/95 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
         <button class="absolute top-6 right-6 text-white text-4xl font-bold hover:text-yellow-500 z-[101]">&times;</button>
         <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-2 border-slate-700">
     </div>
 
     <script>
+        // מנגנון הדו-לשוניות
+        let currentLang = 'he';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+
+            document.querySelectorAll('.he-content').forEach(el => {
+                if(currentLang === 'he') el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
+
+            document.querySelectorAll('.en-content').forEach(el => {
+                if(currentLang === 'en') el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
+        }
+
         function openImageModal(imgUrl) {
             const modal = document.getElementById('fullScreenImageModal');
             const imgEl = document.getElementById('modalFullImg');
