@@ -1,6 +1,6 @@
 let currentLang = 'he';
 
-// המילון של דף הבית
+// המילון של דף הבית (מוגן משבירת שורות באמצעות Backticks)
 const content = {
     he: {
         title: `מטריצת <span class="text-amber-500">החתוליים</span>`, 
@@ -32,7 +32,7 @@ const content = {
     }
 };
 
-// רשימת החתולים מחוברת לתיקייה ולקבצים שיצרת
+// רשימת החתולים המלאה והמעודכנת לנתיב ה-assets שלך
 const catsData = [
     {
         id: "lion",
@@ -96,6 +96,15 @@ const catsData = [
         img: "assets/caracal.png",
         link: "cats/caracal.html",
         color: "#d97706" // צבע חול/אדמה
+    },
+    {
+        id: "snowleopard",
+        nameHe: "חתולים גדולים (נמר השלג)",
+        nameEn: "Big Cats (Snow Leopard)",
+        scientific: "Panthera uncia",
+        img: "assets/snowleopard.png",
+        link: "cats/snowleopard.html",
+        color: "#94a3b8" // אפור-כסוף
     }
 ];
 
