@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>חתול בית (Felis catus) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #8b5cf6; /* סגול-כחלחל מודרני / ביתי */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-purple-800/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-purple-400 hover:bg-purple-500 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-purple-500 hover:text-white transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/domesticcat.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/domesticcat.png" alt="חתול בית" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-purple-900/40 text-purple-400 text-xs font-bold px-3 py-1 rounded-full border border-purple-800/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-purple-900/40 text-purple-400 text-xs font-bold px-3 py-1 rounded-full border border-purple-800/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">הטורף הביתי שלנו</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">Our Indoor Predator</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">חתול בית</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Domestic Cat</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Felis catus</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. תעודת זהות זואולוגית -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-purple-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-purple-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Domestic Cat / House Cat</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Human's Companion"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> המין היחיד במשפחת החתוליים שעבר תהליך של ביות (Domestication). למרות שחי בקרבת בני אדם וניזון ממזון מסחרי, הוא שמר על מבנה אנטומי ואינסטינקטים זהים לחלוטין לאלו של אבותיו חתולי הבר, ונחשב לאחד הטורפים האקולוגיים היעילים (וההרסניים) ביותר בעולם.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Domestic Cat / House Cat</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Human's Companion"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> The only species in the feline family to have undergone domestication. Although it lives near humans and eats commercial food, it has retained an anatomical structure and instincts completely identical to those of its wildcat ancestors, and is considered one of the most efficient (and destructive) ecological predators in the world.</li>
+                </ul>
+            </section>
+
+            <!-- 2. נתונים סטטיסטיים -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-purple-400 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-purple-400 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">63 עד 65 ימים</span><span class="en-content hidden">63 - 65 days</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">כ-46 ס"מ בממוצע</span><span class="en-content hidden">Approx. 46 cm on average</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">כ-30 ס"מ (משמש לתקשורת ולאיזון)</span><span class="en-content hidden">Approx. 30 cm (used for communication and balance)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">4 עד 5 ק"ג ממוצע (משתנה מאוד לפי גזע)</span><span class="en-content hidden">4 - 5 kg average (varies greatly by breed)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים</span><span class="en-content hidden">Lifespan</span></td>
+                                <td class="p-3"><span class="he-content">12 עד 15 שנים (חתולי בית עשויים לחצות את ה-20)</span><span class="en-content hidden">12 - 15 years (indoor cats may exceed 20)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. אנטומיה וביולוגיה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-purple-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-purple-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>רפלקס היישור (Righting Reflex):</strong> התכונה המפורסמת ביותר של חתול הבית היא יכולתו "לנחות תמיד על הרגליים". זה מתאפשר בזכות עצם בריח (Collarbone) שאינה מחוברת לשלד אלא מרחפת בתוך השריר, ועמוד שדרה גמיש במיוחד המכיל 53 חוליות (לאדם יש רק 34). כשהחתול נופל, המערכת הוסטיבולרית באוזנו הפנימית מזהה את חוסר האיזון, הוא מסובב את ראשו, אחר כך את פלג גופו הקדמי, ולבסוף את האחורי, הכל בתוך שבריר שנייה לקראת נחיתה מושלמת.</p>
+                    <p><strong>שפה שפותחה עבורנו (Meow):</strong> הפקת צליל ה"מיאו" היא תופעה מרתקת. בטבע, חתולי בר משמיעים צליל זה רק כגורים כדי לקרוא לאמם. חתולי בית בוגרים כמעט ולא "מייללים" אחד לשני. הם הבינו לאורך אלפי שנות ביות שבני אדם מגיבים היטב לקול זה (שמזכיר תדר של בכי תינוק אנושי), והם משתמשים בו אך ורק כדי לתקשר איתנו ולדרוש מזון, תשומת לב או פתיחת דלתות.</p>
+                    <p><strong>מכונת ציד רדומה:</strong> למרות שהם מקבלים אוכל בקערה, חתולי בית הם טורפים אופורטוניסטיים מובהקים. אינסטינקט הציד שלהם מופרד מאינסטינקט הרעב – הם יצודו חרקים, ציפורים ומכרסמים גם כשהם שבעים לחלוטין. הראייה שלהם בלילה חדה פי שישה מראיית אדם, ויש להם איבר מיוחד בגג הפה (איבר יעקובסון) המאפשר להם "להריח טעמים" ולקלוט פרומונים.</p>
+                    <p><strong>שנת ציידים:</strong> חתולי בית ישנים בממוצע בין 12 ל-16 שעות ביממה, וישנים כבדים עשויים להגיע ל-20 שעות! זו אינה עצלנות, אלא שימור אנרגיה אבולוציוני שנועד לאגור כוח לקראת "התפרצויות מתפרצות" של אנרגיה הנדרשות לציד מארב בשעות בין הערביים והבוקר המוקדמות (Crepuscular).</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Righting Reflex:</strong> The domestic cat's most famous trait is its ability to "always land on its feet." This is made possible by a free-floating collarbone (not attached to the skeleton) and an exceptionally flexible spine containing 53 vertebrae (humans have only 34). When a cat falls, the vestibular system in its inner ear detects the imbalance; it rotates its head, then its front body, and finally its rear, all within a fraction of a second for a perfect landing.</p>
+                    <p><strong>A Language Evolved for Us (Meow):</strong> The "meow" sound is a fascinating phenomenon. In the wild, wildcats only make this sound as kittens to call their mother. Adult domestic cats rarely "meow" at each other. Over thousands of years of domestication, they realized that humans respond well to this sound (which mimics the frequency of a human baby's cry), and they use it almost exclusively to communicate with us to demand food, attention, or open doors.</p>
+                    <p><strong>A Dormant Hunting Machine:</strong> Even though they receive food in a bowl, domestic cats are opportunistic predators. Their hunting instinct is completely separate from their hunger instinct—they will hunt insects, birds, and rodents even when perfectly full. Their night vision is six times sharper than a human's, and they possess a special organ in the roof of their mouth (Jacobson's organ) that allows them to "smell tastes" and detect pheromones.</p>
+                    <p><strong>Hunter's Sleep:</strong> Domestic cats sleep an average of 12 to 16 hours a day, and heavy sleepers may reach 20 hours! This is not laziness, but an evolutionary energy conservation tactic designed to store power for the "explosive bursts" of energy required for ambush hunting during the crepuscular hours (dawn and dusk).</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-purple-400 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-purple-400 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Felis</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Felis</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">מילה לטינית קלאסית שפירושה פשוט "חתול". זהו סוג הליבה של כל תת-המשפחה (חתולים קטנים) והוא המקור לשם הכללי של משפחת החתוליים כולה (Felidae).</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">A classic Latin word simply meaning "cat." This is the core genus of the entire subfamily (small cats) and is the origin of the general name for the entire feline family (Felidae).</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: catus</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: catus</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלטינית המאוחרת 'cattus' הופיעה באירופה סביב המאה ה-4 לספירה. היא החליפה בהדרגה את המילה הלטינית המסורתית 'felis' לתיאור ספציפי של החתול המבוית. יש סברה שהמילה הגיעה במקור משפות אפריקניות או ארמיות (השורש "קטו" או "חתול" בעברית/ארמית עתיקה).</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Late Latin word 'cattus' appeared in Europe around the 4th century AD. It gradually replaced the traditional Latin word 'felis' to specifically describe the domesticated cat. There is a theory that the word originally came from African or Aramaic languages (the root "qatu" or "chatul" in ancient Hebrew/Aramaic).</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי והעברי: Cat / חתול</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Common Name: Cat</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה האנגלית Cat (וכמוה Chat בצרפתית, Gato בספרדית, Katze בגרמנית) כולן נגזרות מאותו שורש לטיני 'cattus'. בעברית, המילה "חתול" מופיעה בתלמוד ונגזרת מהשורש ח-ת-ל, ככל הנראה בגלל נטייתו של החתול לכסות (לחתל) ולהסתיר את צרכיו בחול.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The English word Cat (and similarly Chat in French, Gato in Spanish, Katze in German) are all derived from the same Latin root 'cattus'. In Hebrew, the word "Chatul" appears in the Talmud and derives from the root CH-T-L (to swaddle/cover), likely due to the cat's instinct to cover and hide its waste in the sand.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריה ושימור -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-purple-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הביות, אבולוציה ושימור</h3>
+                <h3 class="text-purple-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Domestication History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">תיוג מדעי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Scientific Cataloging:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">חתול הבית תואר מדעית על ידי חוקר הטבע השוודי <strong>קארל לינאוס</strong> (Carl Linnaeus, 1707–1778) בספרו הקלאסי <em>Systema Naturae</em> (1758). לינאוס הבדיל אותו מחתול הבר (Felis silvestris) כמין נפרד בשל התאמתו לחיים עם האדם.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">The domestic cat was scientifically described by the Swedish naturalist <strong>Carl Linnaeus</strong> (1707–1778) in his classic book <em>Systema Naturae</em> (1758). Linnaeus distinguished it from the wildcat (Felis silvestris) as a separate species due to its adaptation to living with humans.</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה ותהליך הביות (Domestication):</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution and Domestication Process:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">בדיקות גנטיות הוכיחו מעל לכל ספק שכל חתולי הבית בעולם הם צאצאים ישירים של <strong>חתול הבר האפריקני</strong> (Felis lybica). הביות החל באזור "הסהר הפורה" (המזרח התיכון וישראל) לפני כ-10,000 שנים, עם תחילת המהפכה החקלאית. מחסני התבואה משכו עכברים וחולדות, ואלו משכו את חתולי הבר שניזונו מהם. בניגוד לכלבים שבויתו למשימות ספציפיות, החתולים פיתחו מערכת יחסים סימביוטית (הדדית) עם האדם – הם הדבירו את המכרסמים, והאדם סיפק להם הגנה ושאריות מזון. מאוחר יותר, במצרים העתיקה, החתול אף הועלה לדרגת אל (האלה באסתת) וזכה להערצה עמוקה.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">Genetic testing has proven beyond a doubt that all domestic cats in the world are direct descendants of the <strong>African Wildcat</strong> (Felis lybica). Domestication began in the "Fertile Crescent" (the Middle East and Israel) about 10,000 years ago, with the onset of the agricultural revolution. Grain silos attracted mice and rats, which in turn attracted wildcats that fed on them. Unlike dogs that were domesticated for specific tasks, cats developed a symbiotic (mutual) relationship with humans—they controlled pests, and humans provided protection and food scraps. Later, in Ancient Egypt, the cat was elevated to deity status (the goddess Bastet) and deeply revered.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב אקולוגי עכשווי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Current Ecological Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">חתול הבית רחוק מאוד מהכחדה; מעריכים כי ישנם למעלה מ-600 מיליון חתולים ברחבי העולם (בישראל לבדה מעריכים שישנם כשני מיליון חתולי רחוב). למעשה, הבעיה כיום הפוכה – אוכלוסיות ענק של חתולי רחוב (Feral cats) שניצלו ממוות טבעי בזכות קרבתם לאדם, הפכו לאחד ממיני הטורפים הפולשים וההרסניים ביותר לאקולוגיה המקומית. הם גורמים להכחדה של עשרות מיני ציפורים, לטאות ויונקים קטנים, ולכן ישנה חשיבות אקולוגית מכרעת לעיקור וסירוס (TNR) של חתולי רחוב.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">The domestic cat is far from extinct; it is estimated there are over 600 million cats worldwide (in Israel alone, an estimated two million stray cats exist). In fact, the problem today is the opposite—massive populations of feral cats that have escaped natural death due to human proximity have become one of the most invasive and destructive predator species to local ecologies. They cause the extinction of dozens of bird, lizard, and small mammal species, making the Trap-Neuter-Return (TNR) programs for stray cats of crucial ecological importance.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-purple-400 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            document.querySelectorAll('.he-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'he'));
+            document.querySelectorAll('.en-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'en'));
+        }
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { imgEl.src = imgUrl; modal.classList.remove('hidden'); }
+        }
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
