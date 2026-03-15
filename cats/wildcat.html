@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>חתול בר (Felis silvestris) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #65a30d; /* ירוק זית / יער */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-lime-700/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-lime-500 hover:bg-lime-600 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-lime-600 hover:text-white transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/wildcat.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/wildcat.png" alt="חתול בר בסבך" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-lime-900/40 text-lime-400 text-xs font-bold px-3 py-1 rounded-full border border-lime-800/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-lime-900/40 text-lime-400 text-xs font-bold px-3 py-1 rounded-full border border-lime-800/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">האב הקדמון הבלתי-מרוסן</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">The Untamed Ancestor</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">חתול בר</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Wildcat</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Felis silvestris</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. תעודת זהות זואולוגית -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-lime-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-lime-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Wildcat (European Wildcat / African Wildcat)</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Original Feline"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> למרות דמיונו הרב לחתול הבית, חתול הבר האירופי הוא חיית בר לחלוטין, שרירית יותר, בעלת פרווה סמיכה וזנב עבה עם קצה קהה ושחור. תת-המין האפריקני שלו (Felis lybica) הוא האב הקדמון הישיר של כל חתולי הבית בעולם.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Wildcat (European Wildcat / African Wildcat)</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Original Feline"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> Despite its strong resemblance to the domestic cat, the European wildcat is a completely wild animal, more muscular, with a thicker coat and a bushy tail with a blunt, black tip. Its African subspecies (Felis lybica) is the direct ancestor of all domestic cats worldwide.</li>
+                </ul>
+            </section>
+
+            <!-- 2. נתונים סטטיסטיים -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-lime-500 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-lime-500 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">60 עד 68 ימים</span><span class="en-content hidden">60 - 68 days</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">43 עד 73 ס"מ</span><span class="en-content hidden">43 - 73 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">21 עד 35 ס"מ</span><span class="en-content hidden">21 - 35 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">3 עד 8 ק"ג (זכרים כבדים יותר)</span><span class="en-content hidden">3 - 8 kg (males are heavier)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">13 עד 14 שנים</span><span class="en-content hidden">13 - 14 years</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. אנטומיה וביולוגיה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-lime-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-lime-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>ההבדל מחתול הבית:</strong> למרות שחתול הבר נראה במבט ראשון כמו חתול טאבי מצוי (Mackerel tabby), ישנם הבדלים מורפולוגיים ברורים. חתול הבר האירופי הוא בעל מבנה גוף חסון ושרירי יותר, רגליים ארוכות מעט יותר, ופרווה סמיכה מאוד המותאמת לחורפים קשים. ההבדל הבולט ביותר הוא הזנב: בעוד לחתול בית יש זנב דק שמסתיים בשפיץ, לחתול הבר האירופי יש זנב עבה מאוד, שופע שיער, המסתים בקצה קהה לחלוטין (כמו חתוך) עם טבעות שחורות ברורות.</p>
+                    <p><strong>צייד סוליטרי:</strong> חתול הבר הוא בעל חיים יחידאי וטריטוריאלי ביותר. הוא צייד לילי מובהק המסתמך על שמיעה חדה וראיית לילה מצוינת כדי לצוד מכרסמים (כמו עכברי יער ונברנים), ארנבונים, וציפורים. הוא מעדיף אזורים מיוערים בסבך בו יוכל להסתוות ולארוב לטרפו, ונמנע ככל האפשר מקרבת בני אדם.</p>
+                    <p><strong>פראות בלתי ניתנת לאילוף:</strong> בניגוד לחתול הבר האפריקני (שהוא קטן יותר ובעל מזג נוח יותר שאפשר את ביותו), חתול הבר האירופי נחשב לחיה שאינה ניתנת לאילוף כלל, גם אם נלקח בצעירותו וגודל על ידי אדם. הפראיות העמוקה שלו והנטייה להימנע ממגע אנושי הן תכונות שטבועות בו גנטית.</p>
+                    <p><strong>תקשורת:</strong> חתול הבר מתקשר באמצעות מגוון קולות הדומים לאלו של חתול הבית: יללות, גרגורים (purring), נשיפות ו"יריקות" בעת איום. עם זאת, עוצמת הקולות שלו חזקה יותר מזו של חתול הבית, במיוחד בעונת הייחום.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Difference from Domestic Cats:</strong> Although the wildcat looks at first glance like a common mackerel tabby, there are clear morphological differences. The European wildcat has a sturdier, more muscular build, slightly longer legs, and a very thick coat adapted to harsh winters. The most prominent difference is the tail: while a domestic cat has a tapering, pointed tail, the European wildcat has a very thick, bushy tail that ends in a completely blunt tip (as if cut off) with clear black rings.</p>
+                    <p><strong>Solitary Hunter:</strong> The wildcat is a highly solitary and territorial animal. It is a strict nocturnal hunter that relies on acute hearing and excellent night vision to hunt rodents (like wood mice and voles), rabbits, and birds. It prefers densely wooded areas where it can camouflage and ambush its prey, avoiding human proximity as much as possible.</p>
+                    <p><strong>Untamable Wildness:</strong> Unlike the African wildcat (which is smaller and has a more docile temperament that allowed for its domestication), the European wildcat is considered a completely untamable animal, even if taken young and raised by humans. Its deep wildness and tendency to avoid human contact are traits ingrained in its genetics.</p>
+                    <p><strong>Communication:</strong> The wildcat communicates using a variety of vocalizations similar to those of the domestic cat: meows, purrs, hisses, and spits when threatened. However, the volume of its calls is louder than that of a domestic cat, especially during the mating season.</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-lime-500 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-lime-500 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Felis</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Felis</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלטינית 'Felis' משמעותה חתול. סוג זה כולל את חתולי הבר הקטנים ביותר במשפחת החתוליים, והוא למעשה הסוג המייצג (Type genus) שעליו מבוסס השם של כל המשפחה (Felidae).</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Latin word 'Felis' means cat. This genus includes the smallest wildcats in the feline family, and is actually the type genus upon which the name of the entire family (Felidae) is based.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: silvestris</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: silvestris</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלטינית 'silvestris' מתורגמת ל"של היער" או "פראי" (מהמילה 'silva' שפירושה יער). השם ניתן לו כדי להדגיש את טבעו הפראי ואת בית הגידול המועדף עליו באירופה – יערות עבותים – ולהבדילו מחתול הבית (Felis catus).</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Latin word 'silvestris' translates to "of the forest" or "wild" (from 'silva' meaning forest). The name was given to emphasize its wild nature and its preferred habitat in Europe—dense forests—and to distinguish it from the domestic cat (Felis catus).</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי: Wildcat</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Common Name: Wildcat</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">באנגלית, השם הפשוט "Wildcat" מציין במפורש מין זה. בעברית "חתול בר". זהו השם הישיר והתיאורי ביותר לחתול שאינו מבוית, ששמר על תכונותיו הפראיות המקוריות.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">In English, the simple name "Wildcat" explicitly denotes this species. In Hebrew, "Hatul Bar". It is the most direct and descriptive name for an undomesticated cat that has retained its original wild traits.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריה ושימור -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-lime-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-lime-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">כמו חיות אירופיות רבות, חתול הבר תואר מדעית לראשונה בשנת <strong>1758</strong> על ידי המדען השוודי <strong>קארל לינאוס</strong> (Carl Linnaeus) במהדורה העשירית של ספרו <em>Systema Naturae</em>.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">Like many European animals, the wildcat was first scientifically described in <strong>1758</strong> by the Swedish scientist <strong>Carl Linnaeus</strong> in the tenth edition of his book <em>Systema Naturae</em>.</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה: האב הקדמון</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution: The Ancestor</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">מבחינה אבולוציונית, כל מיני הסוג *Felis* התפצלו מאב קדמון משותף לפני כ-3.4 מיליון שנים. חתול הבר (Felis silvestris) נפוץ על פני אירופה, אפריקה ואסיה. מחקרי דנ"א קבעו באופן סופי כי תת-המין **חתול הבר האפריקני** (Felis lybica), שהתפצל מהענף האירופי לפני כ-131,000 שנים, הוא האב הקדמון הישיר שממנו בויתו כל חתולי הבית באזור הסהר הפורה לפני כ-10,000 שנים.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">Evolutionarily, all species of the *Felis* genus diverged from a common ancestor about 3.4 million years ago. The wildcat (Felis silvestris) is distributed across Europe, Africa, and Asia. DNA studies conclusively determined that the subspecies **African wildcat** (Felis lybica), which diverged from the European branch about 131,000 years ago, is the direct ancestor from which all domestic cats were tamed in the Fertile Crescent roughly 10,000 years ago.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">באופן גלובלי, ה-IUCN מגדיר אותו כ"ללא חשש" (Least Concern - LC) בשל תפוצתו הרחבה. עם זאת, התמונה האמיתית מורכבת בהרבה: האיום הגדול ביותר על חתול הבר כיום אינו ציד, אלא **הכלאה (Hybridization) עם חתולי בית משוטטים**. הזדווגויות אלו מדלדלות את המאגר הגנטי הטהור של חתולי הבר, ובאזורים מסוימים (כמו סקוטלנד) כמעט ולא נותרו חתולי בר טהורים גנטית לחלוטין. בנוסף, הרס יערות ודריסות מהווים איום מתמיד על האוכלוסיות באירופה.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Globally, the IUCN classifies it as "Least Concern" (LC) due to its wide distribution. However, the true picture is much more complex: the greatest threat to the wildcat today is not hunting, but **hybridization with feral domestic cats**. These matings dilute the pure genetic pool of the wildcats, and in some areas (like Scotland), there are almost no completely genetically pure wildcats left. Additionally, deforestation and roadkills pose a constant threat to populations in Europe.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-lime-500 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            document.querySelectorAll('.he-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'he'));
+            document.querySelectorAll('.en-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'en'));
+        }
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { imgEl.src = imgUrl; modal.classList.remove('hidden'); }
+        }
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
