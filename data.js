@@ -32,7 +32,7 @@ const content = {
     }
 };
 
-// רשימת 17 החתולים המלאה
+// רשימת 21 החתולים המלאה (בדרך ל-40!)
 const catsData = [
     {
         id: "lion",
@@ -186,6 +186,42 @@ const catsData = [
         img: "assets/sandcat.png",
         link: "cats/sandcat.html",
         color: "#fde047"
+    },
+    {
+        id: "jaguarundi",
+        nameHe: "חתולים קטנים (יגוארונדי)",
+        nameEn: "Small Cats (Jaguarundi)",
+        scientific: "Herpailurus yagouaroundi",
+        img: "assets/jaguarundi.png",
+        link: "cats/jaguarundi.html",
+        color: "#573516" // חום-אפרפר
+    },
+    {
+        id: "sundacloudedleopard",
+        nameHe: "חתולים גדולים (נמר ערפלי של איי סונדה)",
+        nameEn: "Big Cats (Sunda Clouded Leopard)",
+        scientific: "Neofelis diardi",
+        img: "assets/sundacloudedleopard.png",
+        link: "cats/sundacloudedleopard.html",
+        color: "#4b5563" // אפור כהה
+    },
+    {
+        id: "colocolo",
+        nameHe: "חתולים קטנים (קולוקולו)",
+        nameEn: "Small Cats (Colocolo / Pampas Cat)",
+        scientific: "Leopardus colocola",
+        img: "assets/colocolo.png",
+        link: "cats/colocolo.html",
+        color: "#b45309" // חום-קש
+    },
+    {
+        id: "pantanalcat",
+        nameHe: "חתולים קטנים (חתול פנטנל)",
+        nameEn: "Small Cats (Pantanal Cat)",
+        scientific: "Leopardus braccatus",
+        img: "assets/pantanalcat.png",
+        link: "cats/pantanalcat.html",
+        color: "#a16207" // צהוב-חום
     }
 ];
 
@@ -210,7 +246,7 @@ function toggleLanguage() {
     document.documentElement.dir = data.dir;
     document.documentElement.lang = currentLang;
 
-    // רענון טקסטים של כרטיסיות החיות אם הן קיימות בדף
+    // רענון טקסטים של כרטיסיות החיות
     const cards = document.querySelectorAll('.cat-card');
     if(cards.length > 0) {
         catsData.forEach((cat, index) => {
@@ -223,6 +259,6 @@ function toggleLanguage() {
 }
 
 window.onload = () => {
-    currentLang = 'en'; 
+    currentLang = 'en'; // כפתור ה-toggle יהפוך את זה לעברית בטעינה
     toggleLanguage();
 };
