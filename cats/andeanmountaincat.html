@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>חתול הרים אנדיי (Leopardus jacobita) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #9ca3af; /* אפור סלעים אנדיי */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-slate-700/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-slate-400 hover:bg-slate-600 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-slate-700 hover:text-white transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/andeanmountaincat.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/andeanmountaincat.png" alt="חתול הרים אנדיי על צוק" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-slate-700/40 text-slate-300 text-xs font-bold px-3 py-1 rounded-full border border-slate-600/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-slate-700/40 text-slate-300 text-xs font-bold px-3 py-1 rounded-full border border-slate-600/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">רוח הרפאים של הפסגות</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">Ghost of the Peaks</span>
+                </div>
+                <h1 class="text-3xl font-extrabold text-white mb-1 he-content">חתול הרים אנדיי</h1>
+                <h1 class="text-3xl font-extrabold text-white mb-1 en-content hidden">Andean Mountain Cat</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Leopardus jacobita</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Andean Mountain Cat / Andean Cat</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Sacred Cat of the Andes"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> החתול הנדיר ביותר ביבשת אמריקה ואחד החתולים הפחות מוכרים בעולם. הוא חי בגבהים בלתי אפשריים של מעל 3,500 מטרים בהרי האנדים. המאפיין הבולט ביותר שלו הוא זנבו העצום (כ-70% מאורך גופו) העטור בטבעות כהות ומשמש כמשקולת איזון מושלמת בין הצוקים.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Andean Mountain Cat / Andean Cat</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Sacred Cat of the Andes"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> The rarest cat in the Americas and one of the least known cats globally. It lives at extreme altitudes above 3,500 meters in the Andes Mountains. Its most striking feature is its massive tail (about 70% of its body length) adorned with dark rings, serving as a perfect counterbalance among the cliffs.</li>
+                </ul>
+            </section>
+
+            <section class="space-y-4 text-start">
+                <h3 class="text-slate-400 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-slate-400 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">גובה מחיה</span><span class="en-content hidden">Habitat Altitude</span></td>
+                                <td class="p-3"><span class="he-content">3,500 עד 5,000 מטרים מעל פני הים</span><span class="en-content hidden">3,500 - 5,000 meters ASL</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">57 עד 64 ס"מ</span><span class="en-content hidden">57 - 64 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">41 עד 48 ס"מ (עבה ושעיר במיוחד)</span><span class="en-content hidden">41 - 48 cm (extremely thick and bushy)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">כ-4 עד 6 ק"ג</span><span class="en-content hidden">Approx. 4 - 6 kg</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אוכלוסייה משוערת</span><span class="en-content hidden">Estimated Population</span></td>
+                                <td class="p-3"><span class="he-content">פחות מ-1,400 פרטים בוגרים בטבע</span><span class="en-content hidden">Fewer than 1,400 mature individuals</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>פרווה כבידוד תרמי:</strong> חתול ההרים האנדיי חי באחד האזורים הקרים והסוערים ביותר בעולם. הפרווה שלו ארוכה להפליא (מגיעה ל-40 מ"מ בגב) וסמיכה מאוד, בגוון אפור-כסוף המשתלב באופן מושלם עם סלעי הגרניט המכוסים חזזיות. הפרווה אינה רק לחימום, אלא משמשת כשכבת הגנה מפני קרינת ה-UV החזקה בגבהים הללו.</p>
+                    <p><strong>הזנב ככלי הישרדות:</strong> הזנב של חתול זה הוא פלא הנדסי. הוא עבה מאוד, גלילי ואינו מצטמצם בקצהו. יש לו תפקיד כפול: ראשית, הוא משמש כמשקולת איזון (Counterweight) המאפשרת לחתול לבצע תנועות פתאומיות וחדות בזמן מרדף אחרי טרף על צוקים תלולים. שנית, בלילות הקפואים של הרי האנדים, החתול מתכרבל ככדור ועוטף את עצמו בזנבו הפרוותי, המשמש כשמיכה תרמית לשמירה על חום הגוף.</p>
+                    <p><strong>מומחה הציד של ה"ויסקאשה":</strong> התזונה של חתול ההרים האנדיי מבוססת באופן כמעט בלעדי (מעל 90%) על מכרסם סלעים ספציפי הנקרא "ויסקאשה דרומית" (Mountain Viscacha), שנראה כמו שילוב בין ארנב לסנאי. החתול פיתח שיטות מארב וזינוק שמותאמות במיוחד למבנה הסלעי והמסובך של מושבות הוויסקאשה.</p>
+                    <p><strong>שמיעה תת-קרקעית:</strong> בדומה לחתול החולות (שחקרנו קודם), גם לחתול ההרים האנדיי יש בולות שמיעה (Auditory bullae) מפותחות מאוד בגולגולת. התפתחות זו מאפשרת לו לשמוע תדרים נמוכים מאוד ורעשים זעירים של טרף הנע בין סדקי הסלעים במרחקים גדולים.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Fur as Thermal Insulation:</strong> The Andean mountain cat lives in one of the coldest and windiest regions on Earth. Its fur is incredibly long (up to 40 mm on the back) and very dense, with a silvery-grey hue that blends perfectly with lichen-covered granite rocks. The fur isn't just for warmth; it acts as protection against the intense UV radiation at these altitudes.</p>
+                    <p><strong>The Tail as a Survival Tool:</strong> This cat's tail is an engineering marvel. It is very thick, cylindrical, and does not taper at the tip. It has a dual role: first, it serves as a counterbalance, allowing the cat to make sudden, sharp movements while chasing prey on steep cliffs. Second, during the freezing Andean nights, the cat curls into a ball and wraps itself in its bushy tail, using it as a thermal blanket to maintain body heat.</p>
+                    <p><strong>Viscacha Specialist:</strong> The Andean mountain cat's diet is based almost exclusively (over 90%) on a specific rock-dwelling rodent called the Southern Mountain Viscacha, which looks like a cross between a rabbit and a squirrel. The cat has developed ambush and leap tactics specifically adapted to the complex rocky structure of viscacha colonies.</p>
+                    <p><strong>Subterranean Hearing:</strong> Similar to the sand cat (which we studied earlier), the Andean mountain cat has highly developed auditory bullae in its skull. This adaptation allows it to hear very low frequencies and the minute noises of prey moving between rock crevices at great distances.</p>
+                </div>
+            </section>
+
+            <section class="space-y-4 text-start">
+                <h3 class="text-slate-400 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-slate-400 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Leopardus</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Leopardus</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">כפי שכבר למדנו, שם זה פירושו "דמוי-נמר" בלטינית. חתול ההרים האנדיי משתייך לשושלת החתולים הקטנים של דרום אמריקה. מעניין לציין כי בעבר הוא סווג בסוג משלו (*Oreailurus* - חתול הרים), אך מחקרים גנטיים מודרניים איחדו אותו לתוך סוג זה.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">As we've learned, this name means "leopard-like" in Latin. The Andean mountain cat belongs to the small cat lineage of South America. Interestingly, it was previously classified in its own genus (*Oreailurus* - mountain cat), but modern genetic studies unified it into this genus.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: jacobita</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: jacobita</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם 'jacobita' ניתן כמחווה לחוקר שהיה שותפו של המגלה המקורי. יש המקשרים את השם באופן עקיף למסדר "היעקוביטים" הנוצרי, אך ההסבר המקובל הוא ציון שמו של חוקר טבע בשם ג'ייקוב או יעקב. זהו אחד השמות המדעיים הפחות שכיחים במשפחה.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The name 'jacobita' was given as a tribute to a researcher who was a colleague of the original discoverer. Some link the name indirectly to the Christian "Jacobite" order, but the accepted explanation is referencing a naturalist named Jacob. This is one of the less common scientific names in the family.</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. מיתולוגיה: "טיטי" (Titi)</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Mythology: "Titi"</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">בתרבויות האינקה והאיימרה (Aymara) העתיקות של פסגות האנדים, החתול הזה מכונה "Titi". הוא נחשב לחיה קדושה השולטת על המים ועל פוריות האדמה. לפי האמונה, החתול חי בפסגות ההרים שם שוכנים האלים ("אפו"), והוא משמש כמתווך ביניהם לבין בני האדם. עד היום, פרוות של חתול זה משמשות בטקסים מסורתיים לברכת היבול.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">In the ancient Inca and Aymara cultures of the Andean peaks, this cat is known as "Titi." It is considered a sacred animal controlling water and land fertility. According to belief, the cat lives on the mountain peaks where the gods ("Apu") reside, acting as a mediator between them and humans. To this day, skins of this cat are used in traditional ceremonies to bless the harvest.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">תואר מדעית לראשונה בשנת <strong>1865</strong> על ידי הזואולוג האיטלקי <strong>קורנליו ליבראני</strong> (Cornelio Liberani, שנות חיים: 1832–1889). ליבראני תיאר את הפרט על בסיס דגימה שהגיעה מצפון ארגנטינה, אך בשל נדירותה של החיה וקושי הגישה לבית הגידול שלה, המידע עליה נותר דל מאוד במשך למעלה ממאה שנה.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">First scientifically described in <strong>1865</strong> by the Italian zoologist <strong>Cornelio Liberani</strong> (Lifespan: 1832–1889). Liberani described the specimen based on a sample from northern Argentina, but due to the animal's rarity and the inaccessibility of its habitat, information about it remained very scarce for over a century.</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה – מלך הגבהים:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution – King of the Heights:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">חתול ההרים האנדיי הוא מקרה קלאסי של אבולוציה מתכנסת (Convergent evolution). למרות שגנטית הוא שייך לשושלת האוצלוט (החיה ביערות חמים), הוא פיתח תכונות פיזיות הדומות להפליא לנמר השלג האסייתי (כמו פרווה אפורה וזנב ענק) בשל החיים באותה נישה אקולוגית של פסגות הרים קפואות. ההתפצלות שלו משאר בני הסוג קרתה לפני כ-2.5 מיליון שנים, עם התרוממות הרי האנדים לגובהם הנוכחי.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">The Andean mountain cat is a classic case of convergent evolution. Although genetically belonging to the Ocelot lineage (living in warm forests), it developed physical traits remarkably similar to the Asian snow leopard (like grey fur and a giant tail) due to living in the same ecological niche of frozen mountain peaks. Its divergence from other genus members occurred about 2.5 million years ago, coinciding with the Andes' rise to their current height.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור קריטי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Critical Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">מוגדר כ"בסכנת הכחדה" (Endangered - EN) על ידי ה-IUCN, והוא נחשב לאחד החתולים המאויימים ביותר בעולם. מעריכים כי נותרו פחות מ-1,400 פרטים בוגרים בטבע. האיום המרכזי עליו הוא הרס בתי גידול עקב כריית מתכות (זהב וליתיום) המזהמת את מקורות המים הדלים בגבהים אלו. בנוסף, הוא סובל מציד מסורתי (לטקסים דתיים) ומצמצום באוכלוסיית הטרף העיקרית שלו (הוויסקאשה) עקב ציד של בני אדם.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Classified as "Endangered" (EN) by the IUCN, it is considered one of the most threatened cats in the world. It is estimated that fewer than 1,400 mature individuals remain in the wild. The main threat is habitat destruction due to mining (gold and lithium) which pollutes the scarce water sources at these altitudes. Additionally, it suffers from traditional hunting (for religious ceremonies) and a decline in its main prey population (viscacha) due to human hunting.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-slate-400 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            document.querySelectorAll('.he-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'he'));
+            document.querySelectorAll('.en-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'en'));
+        }
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { imgEl.src = imgUrl; modal.classList.remove('hidden'); }
+        }
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
