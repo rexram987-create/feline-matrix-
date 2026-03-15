@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>חתול חולות (Felis margarita) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #fde047; /* צהוב-חול / מדבר */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-yellow-300/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-yellow-400 hover:bg-yellow-500 hover:text-black transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-yellow-400 hover:text-black transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/sandcat.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/sandcat.png" alt="חתול חולות במדבר" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-yellow-500/20 text-yellow-300 text-xs font-bold px-3 py-1 rounded-full border border-yellow-500/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-yellow-500/20 text-yellow-300 text-xs font-bold px-3 py-1 rounded-full border border-yellow-500/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">רוח המדבר החמקמקה</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">The Elusive Desert Ghost</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">חתול חולות</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Sand Cat</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Felis margarita</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. תעודת זהות -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-yellow-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-yellow-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Sand Cat / Sand Dune Cat</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Dune Walker"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> חתול קטן (קרוב מאוד גנטית לחתול הבית) והיחיד מבין כל החתוליים שחי אך ורק במדבריות חול אמיתיים. הוא אינו זקוק לשתיית מים (מפיק לחות ממזונו) וכפות רגליו מכוסות פרווה עבה שמונעת כוויות חום ומעלימה את עקבותיו לחלוטין.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Sand Cat / Sand Dune Cat</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Dune Walker"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> A small cat (genetically very close to the domestic cat) and the only feline that lives exclusively in true sandy deserts. It does not need to drink water (extracting moisture from its food) and its paws are covered in thick fur that prevents heat burns and completely erases its tracks.</li>
+                </ul>
+            </section>
+
+            <!-- 2. נתונים סטטיסטיים -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-yellow-400 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-yellow-400 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">59 עד 66 ימים</span><span class="en-content hidden">59 - 66 days</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">39 עד 52 ס"מ (חתול קטן מאוד)</span><span class="en-content hidden">39 - 52 cm (a very small cat)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">23 עד 31 ס"מ</span><span class="en-content hidden">23 - 31 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">1.5 עד 3.4 ק"ג (כמשקל חתול בית קטן)</span><span class="en-content hidden">1.5 - 3.4 kg (size of a small domestic cat)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">קשה למדידה (עד 13 שנים בשבי)</span><span class="en-content hidden">Hard to measure (up to 13 years in captivity)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. אנטומיה וביולוגיה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-yellow-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-yellow-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>נעלי חול בלתי נראות:</strong> האדפטציה המפורסמת ביותר של חתול החולות נמצאת בכפות רגליו. סוליות רגליו (בין הכריות) מכוסות בשכבה צפופה ועבה של פרווה קשיחה. פרווה זו מתפקדת כמבודד חום מפני החול הלוהט (שמגיע לטמפרטורות צורבות במדבר), ובנוסף היא מפזרת את משקלו כך שהוא בקושי משאיר עקבות. הדבר הופך את המעקב אחריו בטבע לכמעט בלתי אפשרי עבור חוקרים.</p>
+                    <p><strong>חיים ללא מים:</strong> במדבר אין נהרות ואגמים, וחתול החולות התאים את עצמו לכך באופן אבסולוטי. הוא אינו זקוק לשתיית מים כלל במהלך חייו. הכליות שלו יעילות להחריד, והוא מפיק את כל הלחות והנוזלים הנדרשים לקיומו אך ורק מהדם ומנוזלי הגוף של טרפו (מכרסמים, זוחלים, חרקים וציפורים קטנות).</p>
+                    <p><strong>שמיעת רדאר וציד תת-קרקעי:</strong> פניו של חתול החולות רחבות ושטוחות, ואוזניו הגדולות ממוקמות נמוך מאוד בצדי ראשו (כדי שיוכל להשתטח בחול ולא להיראות). האוזניים הללו עצומות ביחס לגולגולת שלו, והוא משתמש בהן כדי להאזין לרשרושים קלים של טרף שמתחפר מחת לפני השטח. ברגע שהוא מאתר את הצליל, הוא הופך לחופר מהיר ומוכשר המזנק ושולף את הטרף מהחול.</p>
+                    <p><strong>אלוף ההתחפרות:</strong> כדי להימלט מהחום הקיצוני של היום (וגם מהקור המקפיא של הלילה המדברי), חתול החולות לא מחפש צל של עצים (שאינם קיימים) – הוא פשוט חופר מאורות ומסתתר בהן. הוא חיה סוליטרית ולילית מובהקת המבלה את מרבית ימיה במחילה קרירה מתחת לאדמה.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Invisible Sand Shoes:</strong> The sand cat's most famous adaptation is found in its paws. The soles of its feet (between the pads) are covered in a dense, thick layer of wiry fur. This fur acts as thermal insulation against the scorching sand (which reaches burning temperatures in the desert), and it also distributes its weight so it barely leaves any tracks. This makes tracking it in the wild nearly impossible for researchers.</p>
+                    <p><strong>Life Without Water:</strong> There are no rivers or lakes in the desert, and the sand cat has adapted to this absolutely. It does not need to drink water at all during its life. Its kidneys are terrifyingly efficient, and it extracts all the moisture and fluids required for its survival solely from the blood and bodily fluids of its prey (rodents, reptiles, insects, and small birds).</p>
+                    <p><strong>Radar Hearing and Subterranean Hunting:</strong> The sand cat's face is broad and flat, and its large ears are set very low on the sides of its head (so it can flatten itself in the sand and remain unseen). These ears are enormous relative to its skull, and it uses them to listen for the faint rustling of prey burrowing underground. Once it pinpoints the sound, it becomes a rapid, skilled digger, pouncing and snatching the prey from the sand.</p>
+                    <p><strong>Champion Burrower:</strong> To escape the extreme heat of the day (and the freezing cold of the desert night), the sand cat doesn't seek the shade of trees (which don't exist) – it simply digs burrows and hides in them. It is a strictly solitary and nocturnal animal that spends most of its days in a cool underground den.</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-yellow-400 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-yellow-400 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Felis</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Felis</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלטינית 'Felis' משמעותה פשוט "חתול". סוג זה כולל את חתולי הבר הקטנים ביותר, וכמובן גם את חתול הבית הנפוץ (Felis catus). חתול החולות הוא בן דוד קרוב מאוד לחתולי הבית שאנחנו מכירים.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Latin word 'Felis' simply means "cat." This genus includes the smallest wildcats, and of course, the common domestic cat (Felis catus). The sand cat is a very close cousin to the domestic cats we know.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: margarita</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: margarita</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">בניגוד למה שניתן לחשוב, השם אינו קשור לקוקטייל "מרגריטה" או למילה פנינה. המין נקרא על שמו של הגנרל הצרפתי <strong>ז'אן אוגוסט מרגריט</strong> (Jean Auguste Margueritte, שנות חיים: 1823–1870). מרגריט הוביל מסע צבאי-חקרני אל תוך מדבר סהרה האלג'יראי בשנת 1858, ובמהלך מסע זה התגלה החתול המסתורי הזה לראשונה למדע. החוקר הצרפתי שליווה אותו (ויקטור לוק) החליט לקרוא לחתול על שם הגנרל כמחווה של כבוד.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Contrary to what one might think, the name is not related to the "Margarita" cocktail or the word for pearl. The species is named after the French General <strong>Jean Auguste Margueritte</strong> (Lifespan: 1823–1870). Margueritte led a military-exploratory expedition into the Algerian Sahara desert in 1858, during which this mysterious cat was first discovered by science. The French naturalist who accompanied him (Victor Loche) decided to name the cat after the general as a gesture of honor.</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי והעברי: חתול חולות</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Common Name: Sand Cat</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם העממי (גם באנגלית וגם בעברית) מתאר בצורה הברורה והפשוטה ביותר את בית הגידול הבלעדי שלו - דיונות החול. בערבית הוא מכונה לעיתים "קִט א-רַּמְל" (قط الرمل) שמשמעותו זהה.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The common name clearly and simply describes its exclusive habitat—the sand dunes. In Arabic, it is sometimes called "Qit al-Raml" (قط الرمل), which carries the exact same meaning.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריה ושימור -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-yellow-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-yellow-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">חתול החולות תואר מדעית בשנת <strong>1858</strong> על ידי חוקר הטבע והצפר הצרפתי ויקטור לוק (Victor Loche, שנות חיים: 1831–1866). לוק השתתף במסע המחקר לאלג'יריה שהוביל הגנרל מרגריט, וקיבל לידיו פרט שנלכד על ידי הילידים המקומיים.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">The sand cat was scientifically described in <strong>1858</strong> by the French naturalist and ornithologist Victor Loche (Lifespan: 1831–1866). Loche participated in the expedition to Algeria led by General Margueritte and was handed a specimen caught by local natives.</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">החתול שייך לשושלת החתולים הקטנים שמקורה באפריקה ובמזרח התיכון (Felis lineage). הוא התפצל מאב קדמון שהיה משותף לו ולחתול הבר האפריקני (ממנו בוית חתול הבית) לפני כ-2.5 מיליון שנים, והתמחה אבולוציונית באופן קיצוני לחיים בתנאי יובש וחול קשים במיוחד. תפוצתו משתרעת בצפון אפריקה (סהרה), חצי האי ערב, איראן ועד מרכז אסיה.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">The cat belongs to the small cat lineage originating in Africa and the Middle East (Felis lineage). It diverged from a common ancestor shared with the African wildcat (from which the domestic cat was tamed) about 2.5 million years ago, and specialized evolutionarily in an extreme way for life in particularly harsh, dry, and sandy conditions. Its distribution spans North Africa (Sahara), the Arabian Peninsula, Iran, to Central Asia.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני (ובישראל):</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status (and in Israel):</h4>
+                        <p class="text-sm text-slate-300 he-content">באופן גלובלי, ה-IUCN מגדיר אותו כ"ללא חשש" (Least Concern - LC) בזכות תפוצתו הגיאוגרפית הרחבה באזורי סהרה הקשים לגישה לאדם. עם זאת, אוכלוסיותיו מבודדות ומקוטעות. <strong>בישראל המצב טרגי:</strong> חתול החולות היה נפוץ בערבה ובחולות סמר, אך עקב הרס בתי גידול, התרחבות שטחי חקלאות, וכניסת טורפים מתחרים (כמו שועלים) בעקבות האדם, חתול החולות נכחד לחלוטין מהטבע בישראל בעשור האחרון. כיום ישנם מאמצים בגני החיות (כמו הספארי והתנ"כי) לרבות אותם בשבי בתקווה להשיבם יום אחד לדיונות הערבה.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Globally, the IUCN classifies it as "Least Concern" (LC) due to its wide geographic distribution in Saharan areas difficult for humans to access. However, its populations are isolated and fragmented. <strong>In Israel, the situation is tragic:</strong> the sand cat was common in the Arava and the Samar sands, but due to habitat destruction, agricultural expansion, and the influx of competing predators (like foxes) following human settlement, the sand cat has become completely extinct in the wild in Israel over the last decade. Today, there are efforts in zoos to breed them in captivity in hopes of one day reintroducing them to the Arava dunes.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-yellow-300 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            document.querySelectorAll('.he-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'he'));
+            document.querySelectorAll('.en-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'en'));
+        }
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { imgEl.src = imgUrl; modal.classList.remove('hidden'); }
+        }
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
