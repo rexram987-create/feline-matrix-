@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>יגוארונדי (Herpailurus yagouaroundi) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #8b5cf6; /* נשתמש בגוון סגול-חום אדמתי */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-amber-900/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-amber-700 hover:bg-amber-800 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-amber-800 hover:text-white transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/jaguarundi.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/jaguarundi.png" alt="יגוארונדי בטבע" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-amber-900/40 text-amber-500 text-xs font-bold px-3 py-1 rounded-full border border-amber-800/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-amber-900/40 text-amber-500 text-xs font-bold px-3 py-1 rounded-full border border-amber-800/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">חתול הסמור</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">The Weasel Cat</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">יגוארונדי</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Jaguarundi</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Herpailurus yagouaroundi</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. תעודת זהות -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Jaguarundi / Eyra Cat</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Otter Cat"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> חתול בר אמריקאי בעל מראה יוצא דופן. יש לו גוף מוארך, רגליים קצרות מאוד, ראש שטוח וזנב ארוך במיוחד – מבנה המזכיר יותר לוטרה (Otter) או סמור מאשר חתול. פרוותו חסרת כתמים לחלוטין.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Jaguarundi / Eyra Cat</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Otter Cat"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> An American wildcat with a highly unusual appearance. It has an elongated body, very short legs, a flat head, and an exceptionally long tail—a build more reminiscent of an otter or weasel than a cat. Its coat is completely unspotted.</li>
+                </ul>
+            </section>
+
+            <!-- 2. נתונים סטטיסטיים -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-amber-600 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-amber-600 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">70 עד 75 ימים</span><span class="en-content hidden">70 - 75 days</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">53 עד 77 ס"מ</span><span class="en-content hidden">53 - 77 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">31 עד 60 ס"מ (ארוך מאוד ביחס לגוף)</span><span class="en-content hidden">31 - 60 cm (very long relative to body)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">3.5 עד 7 ק"ג</span><span class="en-content hidden">3.5 - 7 kg</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">כ-10 שנים (עד 15 בשבי)</span><span class="en-content hidden">Approx. 10 years (up to 15 in captivity)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. אנטומיה וביולוגיה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>מבנה של זוחל:</strong> מבנה הגוף של היגוארונדי התפתח כדי לאפשר לו לנוע בחופשיות ובמהירות בתוך סבך צמחייה קוצני וצפוף. הרגליים הקצרות והגוף הארוך, יחד עם ראשו הפחוס, מאפשרים לו "להשתחל" במחילות וסבכים בדומה לסמורים, שם חתולים בעלי רגליים ארוכות יותר (כמו האוצלוט) היו מסתבכים. יכולת זו הקנתה לו גם את השם "החתול הזוחל".</p>
+                    <p><strong>שני מופעי צבע (Morphs):</strong> ליגוארונדי יש פרווה חלקה לחלוטין ללא כתמים, אך היא מגיעה בשני צבעים (מופעים) עיקריים שיכולים להיוולד אפילו באותה המלטה: מופע כהה (אפור-שחור או חום כהה), ומופע בהיר (אדמדם-ערמוני). בעבר מדענים חשבו בטעות שמדובר בשני מינים שונים (וקראו למין האדמדם Eyra), אך כיום ידוע שזו רק וריאציה גנטית של אותו המין.</p>
+                    <p><strong>צייד יום מובהק:</strong> בניגוד לרובם המוחלט של החתולים שהם פעילי לילה (Nocturnal) או דמדומים, היגוארונדי הוא פעיל יום (Diurnal). הוא צד בשעות הבוקר ואחר הצהריים המוארות, וניזון מציפורים (אותן הוא מסוגל לתפוס בזינוק מרשים של 2 מטרים לאוויר מהמקום), זוחלים, חרקים גדולים, דגים ומכרסמים.</p>
+                    <p><strong>רפרטואר קולי עשיר:</strong> היגוארונדי נחשב לאחד החתולים הקולניים ביותר באמריקה. חוקרים זיהו לפחות 13 סוגים שונים של קולות שהוא מפיק כדי לתקשר, ביניהם: שריקות (כמו ציפור), גרגור, יריקות, יללות, וקריאות ציוץ קצרות המשמשות כנראה לאיתור בני זוג בסבך הצפוף.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>A Creeper's Build:</strong> The jaguarundi's body structure evolved to allow it to move freely and rapidly through dense, thorny underbrush. Its short legs and long body, combined with a flattened head, enable it to "thread" through thickets and burrows much like weasels, where longer-legged cats (like the ocelot) would get tangled. This ability earned it the nickname "the creeping cat."</p>
+                    <p><strong>Two Color Morphs:</strong> The jaguarundi has a completely solid coat with no spots, but it comes in two main colors (morphs) that can even be born in the same litter: a dark morph (greyish-black or dark brown), and a light morph (reddish-chestnut). In the past, scientists mistakenly believed these were two different species (calling the reddish one Eyra), but it is now known to be just a genetic variation of the same species.</p>
+                    <p><strong>Strictly Diurnal Hunter:</strong> Unlike the vast majority of cats which are nocturnal or crepuscular, the jaguarundi is diurnal. It hunts during the bright morning and afternoon hours, feeding on birds (which it can catch by leaping an impressive 2 meters into the air from a standstill), reptiles, large insects, fish, and rodents.</p>
+                    <p><strong>Rich Vocal Repertoire:</strong> The jaguarundi is considered one of the most vocal cats in the Americas. Researchers have identified at least 13 different types of vocalizations it produces to communicate, including: whistles (like a bird), purrs, spits, yowls, and short chirping calls likely used to locate mates in the dense brush.</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-amber-600 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-amber-600 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Herpailurus</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Herpailurus</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">שם מדעי מרהיב המורכב משתי מילים ביוונית עתיקה: 'herpes' (ἕρπης) שמשמעותה "לזחול" או "זוחל" (Creeper), ו-'ailouros' (αἴλουρος) שמשמעותה חתול. כלומר: "החתול הזוחל". השם מתאר במדויק את אופן התנועה הנמוך והחמקמק שלו, הקרוב לקרקע בסבך.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">A spectacular scientific name composed of two Ancient Greek words: 'herpes' (ἕρπης) meaning "to creep" or "creeper," and 'ailouros' (αἴλουρος) meaning cat. Thus: "The creeping cat." The name accurately describes its low, elusive mode of movement, staying close to the ground in the brush.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין והשם העממי: yagouaroundi</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species & Common Name: yagouaroundi</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הגיעה לשפות האירופיות מתוך שפת גוארני עתיקה (Old Tupi-Guarani), שפתם של ילידי דרום אמריקה. היא מורכבת מהמילה 'yaguara' (המתארת כל טורף חזק, בדומה ליגואר) ומהסיומת 'undi' שפירושה "כהה" או קשורה למים. הצרפתים והספרדים אימצו את המילה ושיבשו אותה קלות ל-Jaguarundi.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The word entered European languages from Old Tupi-Guarani, an indigenous South American language. It consists of the word 'yaguara' (describing any strong predator, akin to jaguar) and the suffix 'undi' meaning "dark" or associated with water. The French and Spanish adopted the word, slightly altering it to Jaguarundi.</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העברי: יגוארונדי</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Hebrew Name: Jaguarundi</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השפה העברית משתמשת בתעתיק הישיר של השם הבינלאומי (יגוארונדי), שכן חיה זו אנדמית (ייחודית) ליבשת אמריקה ומעולם לא הייתה קיימת באזורנו ההיסטורי.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Hebrew language uses the direct transliteration of the international name (Jaguarundi), as this animal is endemic (unique) to the Americas and never existed in our historical region.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריה ושימור -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">תואר מדעית לראשונה בשנת <strong>1803</strong> על ידי הזואולוג הצרפתי אטיין ז'ופרואה סנט-אילר (Étienne Geoffroy Saint-Hilaire, שנות חיים: 1772–1844). הוא זיהה שני פרטים שהובאו מפרגוואי לפריז, וקרא להם בשם <em>Felis yagouaroundi</em>.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">Scientifically described for the first time in <strong>1803</strong> by the French zoologist Étienne Geoffroy Saint-Hilaire (Lifespan: 1772–1844). He identified two specimens brought from Paraguay to Paris, naming them <em>Felis yagouaroundi</em>.</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה: קרוב משפחה של הפומה!</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution: A Relative of the Puma!</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">למרות מראהו החריג ורגליו הקצרות, מחקרי דנ"א חשפו הפתעה עצומה: היגוארונדי שייך ל"שושלת הפומה" (Puma lineage). למעשה, קרוב המשפחה החי הקרוב אליו ביותר בעולם הוא הפומה הענקית (Puma concolor), וקרובו השני הוא הברדלס האפריקני (הצ'יטה). השושלת הזו התפתחה בצפון אמריקה לפני כ-8 מיליון שנים, והיגוארונדי אימץ מסלול אבולוציוני שונה לחלוטין של הקטנת ממדים לטובת חיים בסבך הצפוף של דרום אמריקה.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">Despite its unusual appearance and short legs, DNA studies revealed a massive surprise: the jaguarundi belongs to the "Puma lineage". In fact, its closest living relative in the world is the giant Puma (Puma concolor), and its second closest is the African Cheetah. This lineage evolved in North America about 8 million years ago, and the jaguarundi adopted a completely different evolutionary path of miniaturization to favor life in the dense brush of South America.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">ברמה הגלובלית, היגוארונדי מוגדר כ"ללא חשש" (Least Concern - LC) על ידי ה-IUCN, משום שהוא עדיין נפוץ במרבית דרום ומרכז אמריקה (בזכות העובדה שפרוותו נטולת הכתמים מעולם לא הייתה מבוקשת על ידי ציידים לשוק הפרוות). עם זאת, בירוא יערות מהווה איום על אוכלוסיות מקומיות. בארצות הברית, האוכלוסייה הזעירה בדרום טקסס מוגדרת כ"בסכנת הכחדה" (Endangered), ואוכלוסיות אחרות (כמו בפלורידה) נחשבות כיום לנכחדות לחלוטין.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Globally, the jaguarundi is classified as "Least Concern" (LC) by the IUCN, as it remains widespread in most of South and Central America (largely because its unspotted fur was never highly sought after by hunters in the fur trade). However, deforestation poses a threat to local populations. In the United States, the tiny population in southern Texas is listed as "Endangered", and other populations (such as in Florida) are now considered completely extirpated.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-amber-600 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            document.querySelectorAll('.he-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'he'));
+            document.querySelectorAll('.en-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'en'));
+        }
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { imgEl.src = imgUrl; modal.classList.remove('hidden'); }
+        }
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
