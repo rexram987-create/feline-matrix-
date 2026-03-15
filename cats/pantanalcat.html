@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>חתול פנטנל (Leopardus braccatus) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #a16207; /* צהוב-חום / אדמת ביצה */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-yellow-800/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-yellow-600 hover:bg-yellow-700 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-yellow-700 hover:text-white transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/pantanalcat.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/pantanalcat.png" alt="חתול פנטנל" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-yellow-800/30 text-yellow-500 text-xs font-bold px-3 py-1 rounded-full border border-yellow-700/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-yellow-800/30 text-yellow-500 text-xs font-bold px-3 py-1 rounded-full border border-yellow-700/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">הצייד בעל המגפיים</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">The Booted Hunter</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">חתול פנטנל</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Pantanal Cat</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Leopardus braccatus</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. תעודת זהות זואולוגית -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-yellow-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-yellow-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Pantanal Cat</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "Cat of the Great Wetlands"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> חתול בר קטן מדרום אמריקה שהופרד ממש לאחרונה טקסונומית מחתול הפמפס. הוא מאופיין בפרווה צהבהבה-חומה, אך סימן ההיכר המובהק ביותר שלו הוא כפות רגליו ורגליו התחתונות השחורות, המעניקות לו מראה של חתול הנועל "מגפיים" או מכנסיים כהים.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Pantanal Cat</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "Cat of the Great Wetlands"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> A small South American wildcat only recently taxonomically separated from the Pampas cat. It is characterized by yellowish-brown fur, but its most distinct feature is its black paws and lower legs, giving it the appearance of wearing dark "boots" or trousers.</li>
+                </ul>
+            </section>
+
+            <!-- 2. נתונים סטטיסטיים -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-yellow-600 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-yellow-600 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">כ-80 עד 85 ימים</span><span class="en-content hidden">Approx. 80 - 85 days</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">46 עד 75 ס"מ</span><span class="en-content hidden">46 - 75 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">23 עד 33 ס"מ (בעל קצה שחור)</span><span class="en-content hidden">23 - 33 cm (with a black tip)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">3 עד 4 ק"ג (קליל וזריז)</span><span class="en-content hidden">3 - 4 kg (light and agile)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">9 עד 16 שנים</span><span class="en-content hidden">9 - 16 years</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. אנטומיה וביולוגיה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-yellow-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-yellow-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>חיים באזור הביצות הגדול בעולם:</strong> שמו של החתול נגזר מאזור הפנטנל (Pantanal) – אזור הביצות והסוואנות המוצפות הגדול ביותר בעולם, המשתרע בעיקר בברזיל אך נוגע גם בבוליביה ופרגוואי. בניגוד לרוב החתולים, חתול הפנטנל אינו חושש ממים. המבנה הקליל שלו והרגליים הארוכות יחסית מאפשרים לו לנוע ביעילות בתוך צמחיית ביצה צפופה ומים רדודים, שם הוא צד את טרפו.</p>
+                    <p><strong>המגפיים השחורים:</strong> הסימן הוויזואלי המפריד אותו משאר חתולי הבר הדרום-אמריקאיים הוא צבע רגליו. בעוד צבע הבסיס שלו הוא צהוב-אדמתי חיוור (שלעיתים רחוקות מתהדר בכתמים דהויים בצדי הגוף), כפות רגליו ופרקי רגליו התחתונות הם בצבע חום כהה עד שחור פחם. חוקרים מאמינים כי הפיגמנטציה הכהה ברגליים משפרת את עמידות הפרווה (פיגמנט כהה מכיל יותר מלנין שמקשיח את השערה) נגד הבוץ, הלחות והשחיקה שבבתי הגידול הלחים שלו.</p>
+                    <p><strong>צייד סוואנה:</strong> בנוסף לאזורי ביצה, הוא נפוץ גם באזור ה"סראדו" (Cerrado) – סוואנה מיוערת המאופיינת בעשב גבוה. הוא נחשב לצייד יומי או של שעות הדמדומים (Diurnal/Crepuscular), המסתמך בעיקר על שמיעה וראייה חדה בתוך העשב. התזונה שלו מבוססת על מכרסמים קטנים (כמו עכברי קביה), ציפורי קרקע, לטאות קטנות ולעיתים גם נחשים.</p>
+                    <p><strong>מבנה גוף ואיום:</strong> בדומה לקולוקולו שממנו פוצל לאחרונה, גם לחתול הפנטנל יש פס של פרווה ארוכה יותר לאורך עמוד השדרה. למרות שממדיו דומים לחתול בית ממוצע, כשהוא חש מאוים הוא קשת את גבו ומסמר את הפרווה, מה שמעניק לו צללית מרשימה שמבריחה טורפים פוטנציאליים.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Life in the World's Largest Wetland:</strong> The cat's name is derived from the Pantanal region—the largest tropical wetland and flooded savanna area in the world, located mostly in Brazil but extending into Bolivia and Paraguay. Unlike most cats, the Pantanal cat does not fear water. Its lightweight build and relatively long legs allow it to move efficiently through dense marsh vegetation and shallow waters where it hunts.</p>
+                    <p><strong>The Black Boots:</strong> The visual mark that separates it from other South American wildcats is the color of its legs. While its base color is a pale earthy-yellow (rarely boasting faint spots on the flanks), its paws and lower joints are dark brown to charcoal black. Researchers believe this dark pigmentation improves fur durability (dark pigment contains more melanin which hardens the hair) against the mud, moisture, and abrasion in its wetland habitats.</p>
+                    <p><strong>Savanna Hunter:</strong> In addition to wetlands, it is also common in the "Cerrado"—a wooded savanna characterized by tall grass. It is considered a diurnal or crepuscular hunter, relying mainly on sharp hearing and vision within the grass. Its diet is based on small rodents (like cavy mice), ground birds, small lizards, and occasionally snakes.</p>
+                    <p><strong>Body Build and Threat Display:</strong> Similar to the colocolo from which it was recently split, the Pantanal cat also has a ridge of longer fur along its spine. Although its dimensions are similar to an average domestic cat, when threatened, it arches its back and bristles its fur, giving it an imposing silhouette that scares off potential predators.</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-yellow-600 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-yellow-600 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Leopardus</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Leopardus</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">מקור השם בלטינית ומשמעותו "דמוי-נמר". סוג זה אוגד בתוכו את רוב החתולים הקטנים של אמריקה הלטינית (כמו האוצלוט והקולוקולו). השם ניתן היסטורית בגלל הכתמים שיש לרוב בני הסוג, למרות שחתול הפנטנל הספציפי כמעט וחסר כתמים.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Originating from Latin, meaning "leopard-like." This genus groups together most small cats of Latin America (like the ocelot and colocolo). The name was historically given due to the spots most members have, although the specific Pantanal cat is nearly spotless.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: braccatus</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: braccatus</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלטינית 'braccatus' מתורגמת ישירות ל"לובש מכנסיים" או "בעל מכנסיים" (מהמילה 'braccae' שמשמעותה מכנסיים). שם זה ניתן לו במדויק בגלל רגליו התחתונות השחורות, שבולטות על רקע גופו הבהיר ונראות כמו פריט לבוש.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Latin word 'braccatus' translates directly to "wearing trousers" or "trousered" (from 'braccae' meaning trousers). It was given this name precisely because of its black lower legs, which stand out against its pale body and look like an item of clothing.</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי והעברי: חתול פנטנל</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Common Name: Pantanal Cat</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם מגיע מאזור הפנטנל (Pantanal) שבדרום אמריקה. המילה "פנטנל" עצמה מקורה בשפה הפורטוגזית מהמילה 'pântano' שפירושה המילולי הוא "ביצה" או "ביצה טובענית" (Swamp). כלומר, המשמעות הנסתרת של שמו העממי היא בעצם "חתול הביצות הגדולות".</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The name comes from the Pantanal region in South America. The word "Pantanal" itself originates from the Portuguese word 'pântano', literally meaning "swamp" or "bog". Thus, the underlying meaning of its common name is essentially "cat of the great swamps."</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריה ושימור -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-yellow-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-yellow-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">חתול הפנטנל תואר מדעית לראשונה בשנת <strong>1889</strong> על ידי הפלאונטולוג והזואולוג האמריקאי המפורסם <strong>אדוארד דרינקר קופ</strong> (Edward Drinker Cope, שנות חיים: 1840–1897). קופ תיאר את הפרט על בסיס עורות שנאספו במרכז ברזיל, והעניק לו את השם המאפיין את רגליו (braccatus).</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">The Pantanal cat was first scientifically described in <strong>1889</strong> by the famous American paleontologist and zoologist <strong>Edward Drinker Cope</strong> (Lifespan: 1840–1897). Cope described the specimen based on skins collected in central Brazil, giving it the name characterizing its legs (braccatus).</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה מפוצלת:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Split Evolution:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">מבחינה אבולוציונית, במשך עשרות שנים נחשב חתול הפנטנל רק כתת-מין של חתול הפמפס (הקולוקולו). עם זאת, מחקרים מורפולוגיים (מבנה הגולגולת ודפוסי צבע) וגנטיים שנערכו בעשורים האחרונים (בשנים 2020 ו-2021) הובילו חוקרים רבים להכיר בו כמין ביולוגי נפרד לחלוטין. הוא התפצל אבולוציונית כדי להתאים את עצמו לסביבות החמות והלחות יותר של ברזיל, לעומת הקור של הרי האנדים בו שורד הקולוקולו.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">Evolutionarily, for decades the Pantanal cat was considered merely a subspecies of the Pampas cat (colocolo). However, morphological studies (skull structure and color patterns) and genetic analyses conducted in recent decades (in 2020 and 2021) led many researchers to recognize it as an entirely separate biological species. It diverged evolutionarily to adapt to the hotter, more humid environments of Brazil, compared to the cold of the Andes where the colocolo survives.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">כיוון שהוא פוצל טקסונומית לאחרונה, ארגון ה-IUCN לרוב עדיין כורך אותו יחד עם הערכת המצב של חתול הפמפס ולכן חסרים נתונים מדויקים (Data Deficient). עם זאת, ברור שהמין נמצא בסיכון עקב פיתוח מואץ של חקלאות בברזיל ההורסת את הסוואנות המיוערות (הסראדו), וכן כתוצאה מדריסות תכופות בכבישים החוצים את אזורי הביצות.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Because it was only recently taxonomically split, the IUCN mostly still lumps it together with the Pampas cat's assessment, thus lacking precise data (Data Deficient). However, it is clear the species is at risk due to rapid agricultural development in Brazil destroying the wooded savannas (Cerrado), as well as frequent roadkills on highways crossing the wetlands.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-yellow-600 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            document.querySelectorAll('.he-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'he'));
+            document.querySelectorAll('.en-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'en'));
+        }
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { imgEl.src = imgUrl; modal.classList.remove('hidden'); }
+        }
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
