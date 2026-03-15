@@ -32,7 +32,7 @@ const content = {
     }
 };
 
-// רשימת 21 החתולים המלאה (בדרך ל-40!)
+// רשימת 26 החתולים המלאה (בדרך ל-40!)
 const catsData = [
     {
         id: "lion",
@@ -194,7 +194,7 @@ const catsData = [
         scientific: "Herpailurus yagouaroundi",
         img: "assets/jaguarundi.png",
         link: "cats/jaguarundi.html",
-        color: "#573516" // חום-אפרפר
+        color: "#573516" 
     },
     {
         id: "sundacloudedleopard",
@@ -203,7 +203,7 @@ const catsData = [
         scientific: "Neofelis diardi",
         img: "assets/sundacloudedleopard.png",
         link: "cats/sundacloudedleopard.html",
-        color: "#4b5563" // אפור כהה
+        color: "#4b5563" 
     },
     {
         id: "colocolo",
@@ -212,7 +212,7 @@ const catsData = [
         scientific: "Leopardus colocola",
         img: "assets/colocolo.png",
         link: "cats/colocolo.html",
-        color: "#b45309" // חום-קש
+        color: "#b45309" 
     },
     {
         id: "pantanalcat",
@@ -221,7 +221,53 @@ const catsData = [
         scientific: "Leopardus braccatus",
         img: "assets/pantanalcat.png",
         link: "cats/pantanalcat.html",
-        color: "#a16207" // צהוב-חום
+        color: "#a16207" 
+    },
+    // --- 5 החדשים שהוספו עכשיו ---
+    {
+        id: "blackfootedCat",
+        nameHe: "חתולים קטנים (חתול שחור-רגל)",
+        nameEn: "Small Cats (Black-footed Cat)",
+        scientific: "Felis nigripes",
+        img: "assets/blackfootedCat.png",
+        link: "cats/blackfootedCat.html",
+        color: "#57534e" // אפור-אבן כהה
+    },
+    {
+        id: "wildcat",
+        nameHe: "חתולים קטנים (חתול בר)",
+        nameEn: "Small Cats (Wildcat)",
+        scientific: "Felis silvestris",
+        img: "assets/wildcat.png",
+        link: "cats/wildcat.html",
+        color: "#65a30d" // ירוק זית
+    },
+    {
+        id: "junglecat",
+        nameHe: "חתולים קטנים (חתול ביצות)",
+        nameEn: "Small Cats (Jungle Cat)",
+        scientific: "Felis chaus",
+        img: "assets/junglecat.png",
+        link: "cats/junglecat.html",
+        color: "#4d7c0f" // ירוק עמוק
+    },
+    {
+        id: "margay",
+        nameHe: "חתולים קטנים (מרגיי)",
+        nameEn: "Small Cats (Margay)",
+        scientific: "Leopardus wiedii",
+        img: "assets/margay.png",
+        link: "cats/margay.html",
+        color: "#c2410c" // כתום-חלודה טרופי
+    },
+    {
+        id: "domesticcat",
+        nameHe: "חתולים קטנים (חתול בית)",
+        nameEn: "Small Cats (Domestic Cat)",
+        scientific: "Felis catus",
+        img: "assets/domesticcat.png",
+        link: "cats/domesticcat.html",
+        color: "#8b5cf6" // סגול-כחלחל מודרני
     }
 ];
 
