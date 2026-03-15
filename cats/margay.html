@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>מרגיי (Leopardus wiedii) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #c2410c; /* כתום-חלודה טרופי */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-orange-800/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-orange-600 hover:bg-orange-700 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-orange-700 hover:text-white transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/margay.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/margay.png" alt="מרגיי על ענף" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-orange-900/40 text-orange-500 text-xs font-bold px-3 py-1 rounded-full border border-orange-800/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-orange-900/40 text-orange-500 text-xs font-bold px-3 py-1 rounded-full border border-orange-800/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">אקרובט צמרות הג'ונגל</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">Acrobat of the Jungle Canopy</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">מרגיי</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Margay</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Leopardus wiedii</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. תעודת זהות זואולוגית -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-orange-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-orange-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Margay</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Tree Ocelot" / "Monkey Cat"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> חתול בר קטן מיערות הגשם של מרכז ודרום אמריקה. נראה כמו גרסה מוקטנת של האוצלוט, אך להבדיל ממנו, המרגיי שוכן עצים מובהק (Arboreal). הוא מחזיק ביכולת גמישות נדירה בקרסוליו, המאפשרת לו לנוע על עצים בצורה המזכירה קופים.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Margay</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Tree Ocelot" / "Monkey Cat"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> A small wildcat from the rainforests of Central and South America. It looks like a miniature version of the ocelot, but unlike it, the margay is highly arboreal. It possesses a rare flexibility in its ankles, allowing it to move in trees in a manner reminiscent of monkeys.</li>
+                </ul>
+            </section>
+
+            <!-- 2. נתונים סטטיסטיים -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-orange-600 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-orange-600 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">76 עד 84 ימים (המלטה לרוב של גור אחד בלבד)</span><span class="en-content hidden">76 - 84 days (usually a litter of only one kitten)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">48 עד 79 ס"מ</span><span class="en-content hidden">48 - 79 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">33 עד 51 ס"מ (כ-70% מאורך גופו, נדרש לאיזון על עצים)</span><span class="en-content hidden">33 - 51 cm (~70% of body length, needed for arboreal balance)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">2.6 עד 4 ק"ג (חתול קטן וקליל מאוד)</span><span class="en-content hidden">2.6 - 4 kg (a very light and small cat)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">כ-10 עד 14 שנים (עד 20 בשבי)</span><span class="en-content hidden">Approx. 10 - 14 years (up to 20 in captivity)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. אנטומיה וביולוגיה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-orange-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-orange-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>אקרובטיקה בלתי נתפסת:</strong> המרגיי הוא כנראה המטפס המוכשר ביותר בעולם החתולים. בדומה לנמר הערפלי (שחקרנו קודם), למרגיי יש קרסוליים אחוריים שיכולים להסתובב ב-180 מעלות. אנטומיה זו מאפשרת לו לרדת מגזעי עצים כשהראש כלפי מטה, לרוץ מתחת לענפים (כשהוא נתלה הפוך, כמו עצלן או קוף), והמדהים מכל: הוא יכול להיתלות מענף בעזרת כף רגל אחורית אחת בלבד ולשחרר את שאר הגוף באוויר כדי לתפוס טרף!</p>
+                    <p><strong>עיניים ענקיות:</strong> למרגיי יש עיניים גדולות במיוחד (באופן יחסי לגודל ראשו) המקנות לו מראה "חמוד" של גור, אפילו בבגרותו. העיניים הגדולות הללו חיוניות לראיית לילה חדה במיוחד מתחת לחופת יער הגשם הצפופה, שם כמעט ולא חודר אור ירח. הוא צייד לילי מובהק שמבלה את כל חייו כמעט מבלי לדרוך על הקרקע.</p>
+                    <p><strong>חיקוי קולי כמלכודת:</strong> המרגיי הוא מחתולי הבר הבודדים שהוכח מדעית כי הם משתמשים ב"ציד ווקאלי" – חיקוי קולות של חיות אחרות כדי לפתות אותן. חוקרים ביערות האמזונס תיעדו מרגיי שמחקה באופן מושלם את קריאת המצוקה של גור של "טמרין דל צבע" (סוג של קוף קטן). החיקוי גרם לקופים הבוגרים לרדת מהענפים הגבוהים כדי לחפש את ה"גור" במצוקה, ישר אל תוך המארב של המרגיי.</p>
+                    <p><strong>זנב כמשקולת איזון:</strong> הזנב שלו ארוך ושעיר במיוחד, ומהווה כ-70% מכלל אורך גופו. הזנב משמש אותו באופן קריטי לאיזון (Counterweight) כשהוא מדלג מרחקים ארוכים בין ענפים דקים באוויר.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Incredible Acrobatics:</strong> The margay is likely the most skilled climber in the feline world. Similar to the clouded leopard (which we studied earlier), the margay has hind ankles that can rotate 180 degrees. This anatomy allows it to climb down tree trunks headfirst, run underneath branches (hanging upside down, like a sloth or monkey), and most amazingly: it can hang from a branch by a single hind paw, letting the rest of its body dangle in mid-air to catch prey!</p>
+                    <p><strong>Enormous Eyes:</strong> The margay has unusually large eyes (relative to the size of its head) which give it a "cute" kitten-like appearance, even as an adult. These large eyes are crucial for extremely sharp night vision under the dense rainforest canopy, where almost no moonlight penetrates. It is a strictly nocturnal hunter that spends almost its entire life without stepping on the ground.</p>
+                    <p><strong>Vocal Mimicry as a Trap:</strong> The margay is one of the few wildcats scientifically proven to use "vocal hunting"—mimicking the calls of other animals to lure them in. Researchers in the Amazon forests documented a margay perfectly mimicking the distress call of a pied tamarin baby (a small monkey). The mimicry caused the adult monkeys to climb down from the high branches to search for the "baby" in distress, right into the margay's ambush.</p>
+                    <p><strong>Tail as a Counterweight:</strong> Its tail is exceptionally long and bushy, making up about 70% of its total body length. The tail serves a critical function as a counterweight when it leaps long distances between thin branches in mid-air.</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-orange-600 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-orange-600 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Leopardus</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Leopardus</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">מקור השם בלטינית ומשמעותו "דמוי-נמר". סוג זה אוגד בתוכו את רוב החתולים הקטנים של אמריקה הלטינית (כמו האוצלוט אליו המרגיי דומה מאוד גנטית ופיזית). השם הוענק בגלל הכתמים (ה"רוזטות") שיש לרוב בני הסוג, המזכירים את פרוות הנמר.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Originating from Latin, meaning "leopard-like." This genus groups together most small cats of Latin America (like the ocelot, to which the margay is very similar genetically and physically). The name was given due to the spots ("rosettes") most members possess, resembling a leopard's coat.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: wiedii</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: wiedii</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם המדעי הוענק כמחווה כבוד לחוקר הטבע והאתנולוג הגרמני, הנסיך <strong>מקסימיליאן צו ויד-נויוויד</strong> (Prince Maximilian of Wied-Neuwied, שנות חיים: 1782–1867). הנסיך מקסימיליאן ערך מסעות מחקר מקיפים וידועים בברזיל בשנים 1815-1817, ותיעד בפירוט רב מאות צמחים וחיות חדשות עבור המדע האירופי, כולל מידע אודות חתול זה.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The scientific name was bestowed as a tribute of honor to the German naturalist and ethnologist, <strong>Prince Maximilian of Wied-Neuwied</strong> (Lifespan: 1782–1867). Prince Maximilian conducted extensive and famous research expeditions in Brazil between 1815-1817, documenting in great detail hundreds of new plants and animals for European science, including information about this cat.</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי והעברי: מרגיי / Margay</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Common Name: Margay</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה "מרגיי" (Margay) מגיעה מתוך שפת הגוארני (Guarani), שפתם של ילידי דרום אמריקה. המילה המקורית הייתה "maracayá", שמשמעותה פשוט "חתול". המתיישבים הספרדים והפורטוגזים שהגיעו לאזור אימצו את השם, שיבשו אותו מעט עם השנים למילה "Margay", וייחדו אותו עבור החתול האקרובטי הזה.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The word "Margay" originates from Guarani, an indigenous South American language. The original word was "maracayá," simply meaning "cat." Spanish and Portuguese settlers who arrived in the region adopted the name, slightly corrupting it over the years into "Margay," and reserved it specifically for this acrobatic feline.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריה ושימור -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-orange-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-orange-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">המרגיי תואר מדעית לראשונה בשנת <strong>1821</strong> על ידי הזואולוג והרופא השוויצרי היינריך רודולף שינץ (Heinrich Rudolf Schinz, שנות חיים: 1777–1861). שינץ סיווג אותו בתחילה כ-*Felis wiedii*, בטרם הועבר מאוחר יותר לסוג *Leopardus* (חתולי כתמים דרום-אמריקאים).</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">The margay was first scientifically described in <strong>1821</strong> by the Swiss zoologist and physician Heinrich Rudolf Schinz (Lifespan: 1777–1861). Schinz initially classified it as *Felis wiedii*, before it was later moved to the *Leopardus* genus (South American spotted cats).</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה – בן דודו של האוצלוט:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution – Cousin of the Ocelot:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">המרגיי שייך ל"שושלת האוצלוט". מחקרי דנ"א מראים כי המרגיי והאוצלוט (החולקים בתי גידול חופפים) התפצלו מאב קדמון משותף רק לפני כ-1.5 מיליון שנים. הפיצול הזה הוא דוגמה קלאסית ל"חלוקת משאבים אקולוגית" (Niche partitioning): בעוד האוצלוט גדל בממדיו והפך לצייד על הקרקע, המרגיי נשאר קטן, פיתח גמישות קרסוליים נדירה, והשתלט לחלוטין על נישת הציד בחופת היער (צמרות העצים).</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">The margay belongs to the "Ocelot lineage". DNA studies show that the margay and the ocelot (which share overlapping habitats) diverged from a common ancestor only about 1.5 million years ago. This divergence is a classic example of "ecological niche partitioning": while the ocelot grew larger and became a terrestrial hunter, the margay remained small, developed rare ankle flexibility, and completely dominated the hunting niche in the forest canopy.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">מוגדר כ"קרוב לסיכון" (Near Threatened - NT) על ידי ה-IUCN, והאוכלוסייה נמצאת בירידה מתמדת. בעבר ניצודו עשרות אלפי מרגיי בשנה רק בשביל פרוותם היפה (שהיא עדינה יותר מזו של האוצלוט). למרות שהסחר בפרוותם נאסר בינלאומית בשנות ה-90, האיום המרכזי והחמור ביותר על קיומם כיום הוא בירוא יערות הגשם. מכיוון שהמרגיי הוא חיה ארבוראלית (תלויה לחלוטין בעצים לציד ולמגורים) ואינו סתגלן לשטחים פתוחים, כריתת יערות פירושה הכחדה ודאית של אוכלוסיות מקומיות. גורם נוסף לפגיעותו הוא קצב רבייה איטי במיוחד (לרוב רק גור אחד בשנה, שמתבגר לאט).</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Classified as "Near Threatened" (NT) by the IUCN, and the population is in continuous decline. In the past, tens of thousands of margays were hunted annually solely for their beautiful fur (which is softer than the ocelot's). Although the trade in their fur was internationally banned in the 1990s, the primary and most severe threat to their existence today is rainforest deforestation. Because the margay is an arboreal animal (completely dependent on trees for hunting and living) and not adaptable to open areas, clear-cutting means certain extinction for local populations. Another factor in its vulnerability is its extremely slow reproductive rate (usually only one kitten per year, which matures slowly).</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-orange-600 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            document.querySelectorAll('.he-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'he'));
+            document.querySelectorAll('.en-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'en'));
+        }
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { imgEl.src = imgUrl; modal.classList.remove('hidden'); }
+        }
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
