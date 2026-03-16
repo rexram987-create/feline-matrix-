@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>חתול הרים סיני (Felis bieti) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #d4d4d8; /* אפור בהיר / שלגי טיבט */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-gray-400/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-gray-300 hover:bg-gray-400 hover:text-black transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-gray-400 hover:text-black transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/chinesemountaincat.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/chinesemountaincat.png" alt="חתול הרים סיני" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-gray-700/40 text-gray-300 text-xs font-bold px-3 py-1 rounded-full border border-gray-600/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-gray-700/40 text-gray-300 text-xs font-bold px-3 py-1 rounded-full border border-gray-600/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">הרוח של הרמה הטיבטית</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">Spirit of the Tibetan Plateau</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">חתול הרים סיני</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Chinese Mountain Cat</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Felis bieti</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. תעודת זהות זואולוגית -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-gray-300 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-gray-300 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Chinese Mountain Cat / Chinese Desert Cat</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Steppe Lynx"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> חתול הבר האנדמי היחיד בסין (כלומר, אינו קיים בשום מדינה אחרת). הוא בעל מראה חסון, פרווה עבה בגוון חול-אפרפר, וציציות שיער קטנות על אוזניו. מומחה עולמי בציד חולדות-חפרפרת היישר מתוך מחילותיהן התת-קרקעיות בגבהים העצומים של צ'ינגהאי וטיבט.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Chinese Mountain Cat / Chinese Desert Cat</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Steppe Lynx"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> China's only endemic wildcat (meaning it exists in no other country). It has a stocky build, thick pale sand-grey fur, and small hair tufts on its ears. It is a world expert at hunting zokors (mole rats) straight out of their underground burrows at the massive altitudes of Qinghai and Tibet.</li>
+                </ul>
+            </section>
+
+            <!-- 2. נתונים סטטיסטיים -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-gray-300 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-gray-300 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">מוערך בכ-60 עד 75 ימים</span><span class="en-content hidden">Estimated 60 - 75 days</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">68 עד 84 ס"מ</span><span class="en-content hidden">68 - 84 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">29 עד 41 ס"מ (זנב עבה עם טבעות)</span><span class="en-content hidden">29 - 41 cm (thick, ringed tail)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">4.5 עד 9 ק"ג (גדול במעט מחתול בית)</span><span class="en-content hidden">4.5 - 9 kg (slightly larger than a domestic cat)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">מוערך ב-10 עד 12 שנים</span><span class="en-content hidden">Estimated 10 - 12 years</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. אנטומיה וביולוגיה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-gray-300 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-gray-300 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>פרווה למידות של קיפאון:</strong> חתול ההרים הסיני חי באזורים שבהם נושבות רוחות קרות במיוחד. הפרווה שלו ארוכה, צפופה ורכה מאוד, צבועה בגוון של אפור-חול בהיר המעוטר בפסים דהויים. כפות רגליו העבות מכוסות בפרווה עבותה המגינה עליהן מפני הקור והקרח, וזנבו מסתיים תמיד בקצה שחור ומספר טבעות שחורות המקיפות אותו.</p>
+                    <p><strong>הציד הטיבטי:</strong> תזונתו מבוססת באופן כמעט בלעדי על מכרסמים החיים בערבות הגבוהות. הטרף האהוב עליו ביותר הם פיקות (Pikas) וחולדות-חפרפרת המכונות זוקור (Zokors). כמו חתול החולות, הוא ניחן בשמיעה פנומנלית המאפשרת לו לאתר את המכרסמים מתחת לאדמה. ברגע שהוא מאתר זוקור נע במנהרה שלו כ-5 סנטימטרים מתחת לפני הקרקע, החתול מזנק באוויר, צולל עם כפותיו הקדמיות לתוך האדמה ושולף את המכרסם החוצה.</p>
+                    <p><strong>חיים במחילות נטושות:</strong> בניגוד לרוב החתולים שמחפשים מסתור בעצים או בין סלעים, הרמה הטיבטית לרוב חסרת עצים לחלוטין. כדי לשרוד את תנאי מזג האוויר הקיצוניים ולגדל את גוריו, חתול ההרים משתלט על מחילות תת-קרקעיות נטושות שנחפרו על ידי מרמיטות או גיריות, והופך אותן למאורתו.</p>
+                    <p><strong>ציציות האוזניים:</strong> בדומה לקרקל ולשונר, גם לחתול ההרים הסיני יש ציציות שיער כהות ובולטות (כ-2 ס"מ) בקצות האוזניים, המסייעות לו ככל הנראה למיקוד השמיעה. תכונה זו העניקה לו בעבר את הכינוי השגוי "שונר הערבות" (Steppe Lynx), למרות שאינו שייך כלל למשפחת השונרים.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Fur Built for Freezing:</strong> The Chinese mountain cat lives in areas hit by exceptionally cold winds. Its fur is long, dense, and very soft, colored in a pale sand-grey hue adorned with faint stripes. Its broad paws are covered with thick fur that protects them from cold and ice, and its tail always ends in a black tip surrounded by several dark rings.</p>
+                    <p><strong>The Tibetan Hunt:</strong> Its diet is based almost exclusively on rodents living in the high steppes. Its most favored prey are pikas and mole-rats known as zokors. Like the sand cat, it possesses phenomenal hearing allowing it to detect rodents underground. Once it locates a zokor moving in its tunnel about 5 centimeters below the surface, the cat leaps into the air, dives paws-first into the soil, and yanks the rodent out.</p>
+                    <p><strong>Living in Abandoned Burrows:</strong> Unlike most cats that seek shelter in trees or among rocks, the Tibetan plateau is largely treeless. To survive the extreme weather conditions and raise its cubs, the mountain cat takes over abandoned underground burrows dug by marmots or badgers, turning them into its den.</p>
+                    <p><strong>Ear Tufts:</strong> Similar to the caracal and lynx, the Chinese mountain cat also features dark, prominent hair tufts (about 2 cm) on the tips of its ears, which likely assist in focusing hearing. This trait historically earned it the misleading moniker "Steppe Lynx," even though it does not belong to the lynx genus at all.</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-gray-300 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-gray-300 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Felis</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Felis</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלטינית ל"חתול". כאמור, סוג זה מאגד את חתולי הבר הקטנים ביותר, וחתול ההרים הסיני חולק אותו עם חתול הבית, חתול הבר האירופי וחתול החולות.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Latin word for "cat". As stated, this genus groups the smallest wildcats, and the Chinese mountain cat shares it with the domestic cat, the European wildcat, and the sand cat.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: bieti</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: bieti</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם המדעי הוענק כמחווה מרגשת למיסיונר והזואולוג הצרפתי <strong>פליקס בייה</strong> (Félix Biet, שנות חיים: 1838–1901). בייה שימש כבישוף בחבל טיבט ובמחוז סצ'ואן בסין. מלבד עבודתו הדתית, הוא אסף ותיעד מאות צמחים ובעלי חיים. הוא היה הראשון שרכש את עורותיו של החתול הלא-מוכר מידי סוחרים מקומיים, ושלח אותם למוזיאון בפריז, מה שהוביל לגילוי המין.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The scientific name was bestowed as a touching tribute to the French missionary and zoologist <strong>Félix Biet</strong> (Lifespan: 1838–1901). Biet served as a bishop in Tibet and the Sichuan province of China. Besides his religious work, he collected and documented hundreds of plants and animals. He was the first to purchase skins of the unknown cat from local merchants and send them to the museum in Paris, leading to the species' discovery.</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי (והטעות ההיסטורית): Chinese Mountain Cat</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Common Name (and the Historical Error): Chinese Mountain Cat</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">בעבר הוא כונה "Chinese Desert Cat" (חתול המדבר הסיני). עם זאת, בשנת 1992 הוצע לשנות את שמו לאנגלית ל-"Chinese Mountain Cat", מכיוון שהתברר במחקרים כי החתול מעולם לא באמת שוכן במדבריות סין (שם חם וצחיח מדי), אלא נצמד תמיד לרמות הגבוהות וההרריות ולאזורי הערבה הקרה, היכן שהמכרסמים נפוצים.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">In the past, it was called the "Chinese Desert Cat". However, in 1992 it was proposed to change its English name to "Chinese Mountain Cat", as research revealed the cat never actually inhabits true Chinese deserts (where it is too hot and arid), but always sticks to the high mountainous plateaus and cold steppes where rodents are abundant.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריה ושימור -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-gray-300 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-gray-300 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">תואר מדעית לראשונה בשנת <strong>1892</strong> על ידי הזואולוג הצרפתי המפורסם <strong>אלפונס מילן-אדוארדס</strong> (Alphonse Milne-Edwards, שנות חיים: 1835–1900). מילן-אדוארדס היה חוקר במוזיאון לתולדות הטבע בפריז, והוא זה שקיבל את העורות שנשלחו מסין על ידי פליקס בייה, וזיהה מיד שמדובר במין חדש של חתול בר.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">First scientifically described in <strong>1892</strong> by the famous French zoologist <strong>Alphonse Milne-Edwards</strong> (Lifespan: 1835–1900). Milne-Edwards was a researcher at the Natural History Museum in Paris; he received the skins sent from China by Félix Biet and instantly recognized it as a new species of wildcat.</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה: הוויכוח על חתול הבר:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution: The Wildcat Debate:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">במשך שנים רבות, טקסונומים התווכחו האם חתול ההרים הסיני הוא מין עצמאי, או רק תת-מין מבודד של חתול הבר האסיאתי (Felis silvestris). מחקר גנטי רחב היקף מ-2007 אישר שאכן מדובר במין ביולוגי נפרד ואמיתי. עם זאת, ב-2021 מחקר נוסף רמז כי ייתכן וישנו ערבוב גנטי עם חתולי בית באזורים מסוימים, אך הוא עדיין נחשב לאחד החתולים הקדומים שהתאימו עצמם לגובה באופן קיצוני.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">For many years, taxonomists debated whether the Chinese mountain cat was an independent species or merely an isolated subspecies of the Asiatic wildcat (Felis silvestris). A comprehensive genetic study in 2007 confirmed it is indeed a true, distinct biological species. However, a 2021 study hinted at possible genetic mixing with domestic cats in some areas, yet it remains considered one of the ancient cats that radically adapted to high altitudes.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני: סכנה מורעלת</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status: A Poisoned Danger:</h4>
+                        <p class="text-sm text-slate-300 he-content">מוגדר כ"פגיע" (Vulnerable - VU) על ידי ה-IUCN, והאוכלוסייה העולמית מוערכת בפחות מ-10,000 פרטים בוגרים הנמצאים בירידה. האיום המרכזי והקטלני ביותר עליו (בדיוק כמו על חתול פאלאס שחי באותם אזורים) הוא קמפיין ממשלתי סיני להרעלה המונית של פיקות וזוקורים (הטרף העיקרי שלו) הנחשבים למזיקי חקלאות. בנוסף לפגיעה באספקת המזון שלו, חתולי הרים רבים מתים מהרעלה משנית לאחר אכילת המכרסמים המורעלים. איום נוסף הוא צייד לא חוקי עבור תעשיית הפרוות (העור נמכר לייצור כובעים מסורתיים בסין).</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Classified as "Vulnerable" (VU) by the IUCN, with a global population estimated at under 10,000 mature individuals in decline. The primary and most lethal threat to it (exactly like the Pallas's cat living in the same regions) is a Chinese government campaign to mass-poison pikas and zokors (its main prey), which are considered agricultural pests. In addition to depleting its food supply, many mountain cats die from secondary poisoning after eating the tainted rodents. Another threat is illegal poaching for the fur trade (pelts are sold to make traditional hats in China).</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-gray-400 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            document.querySelectorAll('.he-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'he'));
+            document.querySelectorAll('.en-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'en'));
+        }
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { imgEl.src = imgUrl; modal.classList.remove('hidden'); }
+        }
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
