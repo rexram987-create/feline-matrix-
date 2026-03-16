@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>חתול פאלאס (Otocolobus manul) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #64748b; /* אפור-צפחה / סלעי מונגוליה */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-slate-700/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-slate-400 hover:bg-slate-500 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-slate-500 hover:text-white transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/pallas\'scat.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/pallas'scat.png" alt="חתול פאלאס" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-slate-700/40 text-slate-300 text-xs font-bold px-3 py-1 rounded-full border border-slate-600/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-slate-700/40 text-slate-300 text-xs font-bold px-3 py-1 rounded-full border border-slate-600/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">הנזיר של הערבות</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">The Hermit of the Steppes</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">חתול פאלאס</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Pallas's Cat</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Otocolobus manul</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. תעודת זהות זואולוגית -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Pallas's Cat / Manul</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Grumpy Cat of the Steppes"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> חתול בר קטן, שמנמן למראה ובעל הבעת פנים "זועפת" תמידית. הוא מתאפיין בפרווה העבה והצפופה ביותר מבין כל מיני החתוליים, באישונים עגולים (ולא חריצים אנכיים), ובאוזניים שממוקמות נמוך מאוד בצדי ראשו. הוא חי באזורים הרריים וצחיחים, מהרמות של איראן ועד הערבות הקפואות של מונגוליה וסיביר.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Pallas's Cat / Manul</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Grumpy Cat of the Steppes"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> A small wildcat with a stout appearance and a perpetually "grumpy" facial expression. It boasts the thickest and most dense fur of all feline species, round pupils (rather than vertical slits), and ears positioned very low on the sides of its head. It inhabits arid mountainous regions, from the Iranian plateau to the freezing steppes of Mongolia and Siberia.</li>
+                </ul>
+            </section>
+
+            <!-- 2. נתונים סטטיסטיים -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-slate-400 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-slate-400 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">66 עד 75 ימים</span><span class="en-content hidden">66 - 75 days</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">46 עד 65 ס"מ</span><span class="en-content hidden">46 - 65 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">21 עד 31 ס"מ (עבה ושעיר מאוד)</span><span class="en-content hidden">21 - 31 cm (very thick and bushy)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">2.5 עד 4.5 ק"ג (נראה כבד פי שניים בגלל הפרווה)</span><span class="en-content hidden">2.5 - 4.5 kg (appears twice as heavy due to fur)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים</span><span class="en-content hidden">Lifespan</span></td>
+                                <td class="p-3"><span class="he-content">נדיר ששורד מעל 6 שנים בטבע (עד 11.5 בשבי)</span><span class="en-content hidden">Rarely survives past 6 years in wild (up to 11.5 in captivity)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. אנטומיה וביולוגיה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>הפרווה הצפופה בעולם:</strong> חתול פאלאס חי באזורים עם תנאי קור קיצוניים (טמפרטורות הצונחות למינוס 50 מעלות צלזיוס במונגוליה). כדי לשרוד, הוא פיתח את הפרווה הארוכה והצפופה ביותר מכל משפחת החתוליים. הפרווה בבטנו וזנבו ארוכה פי שניים מזו שעל גבו! הסיבה לכך היא שהחתול מבלה זמן רב ברביצה על אדמה קפואה ושלג בזמן שהוא אורב לטרף. בנוסף, הוא נוהג לעטוף את כפות רגליו בזנבו העבה (כמו צעיף) כדי למנוע איבוד חום.</p>
+                    <p><strong>אוזניים נמוכות וציד ממארב:</strong> בניגוד לרוב החתולים בעלי האוזניים הזקופות (כמו הסרוואל או הקרקל), האוזניים של חתול פאלאס קטנות וממוקמות נמוך מאוד בצדי ראשו השטוח. התאמה אבולוציונית זו נועדה לאפשר לו להציץ מעבר לסלעים בעשב הנמוך מבלי שהאוזניים שלו יבלטו ויחשפו את מיקומו. הוא רץ גרוע מאוד בגלל רגליו הקצרות, ולכן שיטת הציד שלו מתבססת באופן מוחלט על סבלנות ומארב בפתחי מחילות של מכרסמים.</p>
+                    <p><strong>אישונים עגולים:</strong> בניגוד לרוב המוחלט של החתולים הקטנים (שיש להם אישונים בצורת חריץ אנכי המתרחב בחושך), לחתול פאלאס יש אישונים עגולים, בדומה לאריות, טיגריסים ובני אדם. הדבר קשור ככל הנראה לטכניקת הציד שלו ולכך שהוא פעיל מאוד גם בשעות דמדומים ואור יום (Diurnal/Crepuscular).</p>
+                    <p><strong>מומחה לפיקות:</strong> התזונה שלו מבוססת בלמעלה מ-50% על פיקות (Pika) - יונק קטן דמוי ארנב חסר זנב החי במושבות בסלעים. הוא אוכל גם מכרסמים קטנים, מרמיטות, חוגלות וציפורי שיר שהוא צד על הקרקע.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>The Densest Fur in the World:</strong> Pallas's cat lives in regions with extreme cold conditions (temperatures plummeting to minus 50 degrees Celsius in Mongolia). To survive, it evolved the longest and densest fur of all felines. The fur on its belly and tail is twice as long as that on its back! The reason is that the cat spends a lot of time crouching on frozen ground and snow while ambushing prey. Additionally, it wraps its bushy tail around its paws (like a scarf) to prevent heat loss.</p>
+                    <p><strong>Low Ears and Ambush Hunting:</strong> Unlike most cats with upright ears (like the serval or caracal), the ears of Pallas's cat are small and set very low on the sides of its flat head. This evolutionary adaptation allows it to peer over rocks in low grass without its ears sticking out and revealing its location. It is a very poor runner due to its short legs, so its hunting method relies entirely on patience and ambushing rodent burrows.</p>
+                    <p><strong>Round Pupils:</strong> Unlike the vast majority of small cats (which have vertical slit pupils that expand in the dark), Pallas's cat has round pupils, similar to lions, tigers, and humans. This is likely related to its hunting technique and the fact that it is highly active during twilight and daylight hours (Diurnal/Crepuscular).</p>
+                    <p><strong>Pika Specialist:</strong> Over 50% of its diet is based on pikas—small, tailless rabbit-like mammals that live in rocky colonies. It also eats small rodents, marmots, partridges, and songbirds that it hunts on the ground.</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-slate-400 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-slate-400 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Otocolobus</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Otocolobus</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">שם הסוג נובע משילוב של שתי מילים מיוונית עתיקה: 'oto' (οὖς) שמשמעותה "אוזן", ו-'colobus' (κολοβός) שמשמעותה "קטום", "חסר" או "מעוות". משמעות השם היא "בעל אוזניים קטומות". החוקר ניקולאי סברצוב שהעניק לחתול את השם הזה בשנת 1858, בחר בו משום שהאוזניים של חתול פאלאס כה קטנות, נמוכות ומוחבאות בתוך הפרווה העבותה, שהן נראות כאילו קצצו אותן.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The genus name derives from a combination of two Ancient Greek words: 'oto' (οὖς) meaning "ear", and 'colobus' (κολοβός) meaning "stunted", "docked", or "mutilated". The name translates to "stunted-eared". The researcher Nikolai Severtzov, who gave the cat this name in 1858, chose it because the ears of Pallas's cat are so small, low-set, and hidden within its dense fur that they appear as if they were cropped off.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין והשם האסיאתי המקורי: manul</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species and Original Asian Name: manul</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה 'manul' אינה מלטינית או יוונית, אלא שאולה ישירות מהשפה המונגולית. זהו השם המקומי, העתיק והמקורי שבו קראו נוודי הערבות של אסיה לחתול הזה מאות שנים לפני שהמדע המערבי "גילה" אותו. בארצות רבות במזרח, הוא עדיין מוכר בשם "חתול מנול" ולא חתול פאלאס.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The word 'manul' is not from Latin or Greek, but borrowed directly from the Mongolian language. This is the local, ancient, and original name by which the nomadic people of the Asian steppes called this cat centuries before Western science "discovered" it. In many Eastern countries, it is still known as the "Manul cat" rather than Pallas's cat.</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי המערבי: Pallas's Cat</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Western Common Name: Pallas's Cat</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם העממי הבינלאומי ניתן לו לכבודו של המדען והזואולוג שגילה אותו למערב (פטר סימון פאלאס). מעניין לדעת שפאלאס טעה במקור וחשב שחתול הבר הזה הוא למעשה האב הקדמון של החתול הפרסי ארוך-השיער (הנפוץ כחתול בית), טעות שהופרכה גנטית שנים רבות לאחר מכן.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The international common name was given in honor of the scientist and zoologist who introduced it to the West (Peter Simon Pallas). Interestingly, Pallas originally made a mistake, theorizing that this wildcat was actually the ancestor of the long-haired Persian cat (a common domestic breed), an error genetically debunked many years later.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריה ושימור -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-slate-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">החתול תואר מדעית לראשונה בשנת <strong>1776</strong> על ידי חוקר הטבע, הזואולוג והגיאוגרף הפרוסי-גרמני הדגול <strong>פטר סימון פאלאס</strong> (Peter Simon Pallas, שנות חיים: 1741–1811). פאלאס, שחקר את המרחבים העצומים של האימפריה הרוסית וסיביר בשירותה של יקטרינה הגדולה, נתקל בחתול באזור ימת באיקאל. הוא כינה אותו תחילה בשם *Felis manul*.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">The cat was first scientifically described in <strong>1776</strong> by the great Prussian-German naturalist, zoologist, and geographer <strong>Peter Simon Pallas</strong> (Lifespan: 1741–1811). Pallas, who explored the vast expanses of the Russian Empire and Siberia in the service of Catherine the Great, encountered the cat near Lake Baikal. He initially named it *Felis manul*.</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה: שושלת החתול הנמרי</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution: Leopard Cat Lineage</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">מבחינה פילוגנטית, למרות המראה ה"פרהיסטורי" שלו, חתול פאלאס אינו ענף נפרד ועתיק, אלא שייך לשושלת החתול הנמרי האסייתית (Leopard cat lineage). הוא התפצל מהאב הקדמון של השושלת לפני כ-5.9 מיליון שנים. בעוד קרוביו (כמו החתול הנמרי הבנגלי וחתול הדייגים) פנו להתמחות באזורים לחים, יערות וביצות, המנול פנה לאזורים הצחיחים והקרים של הערבות האסיאתיות, שם פיתח את הפרווה הקיצונית שלו כהתאמה לתנאי השלג הקשים.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">Phylogenetically, despite its "prehistoric" appearance, Pallas's cat is not a separate ancient branch but belongs to the Asian Leopard cat lineage. It diverged from the lineage's common ancestor about 5.9 million years ago. While its relatives (like the Bengal leopard cat and fishing cat) specialized in humid areas, forests, and wetlands, the manul turned to the arid and cold regions of the Asian steppes, developing its extreme coat as an adaptation to the harsh snowy conditions.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני – פגיע לשינויים:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status – Vulnerable to Change:</h4>
+                        <p class="text-sm text-slate-300 he-content">מוגדר כ"ללא חשש" (Least Concern - LC) על ידי ה-IUCN, למרות שבעבר הוגדר כ"קרוב לסיכון". למרות הסטטוס המעודד לכאורה, מצבו בטבע שברירי מאוד. הוא תלוי כמעט לחלוטין באוכלוסיות הפיקות (Pikas) למאכל. במדינות כמו סין ומונגוליה, ישנם קמפיינים ממשלתיים רחבי-היקף להרעלת הפיקות (הנחשבות למזיקות לחקלאות). הרעלה המונית זו מחסלת את מקור המזון העיקרי של המנול ומובילה להרעלות משניות של החתולים עצמם. בנוסף, כלבי רועים, ציד למטרות מסחר בפרוות (בעיקר במונגוליה) וקיטוע בתי גידול ממשיכים לאיים על הישרדותו לאורך זמן.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Classified as "Least Concern" (LC) by the IUCN, although previously listed as "Near Threatened". Despite the seemingly encouraging status, its situation in the wild is very fragile. It is almost entirely dependent on Pika populations for food. In countries like China and Mongolia, there are large-scale government campaigns to poison pikas (considered agricultural pests). This mass poisoning eradicates the manul's main food source and leads to secondary poisonings of the cats themselves. Furthermore, herding dogs, hunting for the fur trade (especially in Mongolia), and habitat fragmentation continue to threaten its long-term survival.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <!-- Modal (חלון צף) - הקוד המלא והבדוק -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-slate-400 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            
+            const heElements = document.querySelectorAll('.he-content');
+            const enElements = document.querySelectorAll('.en-content');
+            
+            heElements.forEach(el => {
+                if(currentLang === 'he') {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+            
+            enElements.forEach(el => {
+                if(currentLang === 'en') {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+        }
+        
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { 
+                imgEl.src = imgUrl; 
+                modal.classList.remove('hidden'); 
+            }
+        }
+        
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
