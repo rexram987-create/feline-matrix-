@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>חתול זהוב אסיאתי (Catopuma temminckii) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #b45309; /* זהב-חום עמוק / אש */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-amber-800/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-amber-600 hover:bg-amber-700 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-amber-700 hover:text-white transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/asiangoldencat.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/asiangoldencat.png" alt="חתול זהוב אסיאתי" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-amber-800/30 text-amber-500 text-xs font-bold px-3 py-1 rounded-full border border-amber-700/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-amber-800/30 text-amber-500 text-xs font-bold px-3 py-1 rounded-full border border-amber-700/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">חתול האש מהמזרח</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">The Fire Cat of the East</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">חתול זהוב אסיאתי</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Asian Golden Cat</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Catopuma temminckii</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. תעודת זהות זואולוגית -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Asian Golden Cat / Asiatic Golden Cat</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Fire Cat"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> חתול בר בינוני, חזק ושרירי החי ביערות טרופיים בדרום-מזרח אסיה. הוא מאופיין ב"פולימורפיזם" (ריבוי תצורות) קיצוני: באותה אוכלוסייה ניתן למצוא פרטים בצבע זהב-אדמדם חלק, פרטים שחורים לחלוטין (מלניזם), ואפילו פרטים מנומרים עם רוזטות. פניו מעוטרים בפסי שחור-לבן בולטים.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Asian Golden Cat / Asiatic Golden Cat</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Fire Cat"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> A medium-sized, strongly built wildcat inhabiting the tropical forests of Southeast Asia. It is characterized by extreme "polymorphism" (multiple forms): within the same population, you can find individuals that are solid reddish-gold, completely black (melanistic), and even spotted with rosettes. Its face is adorned with prominent black-and-white stripes.</li>
+                </ul>
+            </section>
+
+            <!-- 2. נתונים סטטיסטיים -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-amber-600 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-amber-600 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">78 עד 80 ימים</span><span class="en-content hidden">78 - 80 days</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">66 עד 105 ס"מ</span><span class="en-content hidden">66 - 105 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">40 עד 57 ס"מ (ארוך למדי, בעל קצה שחור)</span><span class="en-content hidden">40 - 57 cm (quite long, with a black tip)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">9 עד 16 ק"ג (כפול ממשקל חתול בית גדול)</span><span class="en-content hidden">9 - 16 kg (double the weight of a large domestic cat)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">לא ידוע בטבע (עד 20 שנים בשבי)</span><span class="en-content hidden">Unknown in wild (up to 20 years in captivity)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. אנטומיה וביולוגיה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>פולימורפיזם קיצוני (שפע גוונים):</strong> החתול הזהוב האסיאתי הוא המין המגוון ביותר מבחינה ויזואלית בקרב החתוליים. בעוד שרוב הפרטים הם בעלי פרווה אחידה בצבעי חלודה, נחושת או זהב (ומכאן שמם), ניתן למצוא גם פרטים בצבע אפור-סלע או חום כהה. בנוסף, מוטציית המלניזם (פנתר שחור) נפוצה מאוד באזורי יערות חשוכים. התצורה הנדירה ביותר היא תצורת ה"אוצלוט" (Ocelot morph) – פרטים שנולדים עם רוזטות שחורות ובולטות על כל גופם, מה שגרם בעבר לחוקרים לחשוב שמדובר במין אחר לחלוטין.</p>
+                    <p><strong>צייד יערות טריטוריאלי:</strong> זהו חתול סוליטרי מאוד ואגרסיבי. הוא שוכן קרקע מעולה ביערות הגשם הטרופיים, אך גם מטפס עצים מצטיין כשנדרש לו לנוח. תזונתו מגוונת וכוללת מכרסמים, זוחלים וציפורים, אך בגלל מבנה גופו השרירי וכוחו הרב, הוא מסוגל להפיל טרף גדול משמעותית ממנו, כגון עופרים של איילי מונטיאק, חזירי בר צעירים ולעיתים אף קופים.</p>
+                    <p><strong>סימני פנים כמעין "מסיכה":</strong> גם אצל הפרטים בעלי הצבע החלק (הנפוצים ביותר), פני החתול נותרים מעוטרים בדפוס קבוע ומרשים של קווים. פסים עבים של שחור ולבן בוהק מעטרים את לחייו ואת אזור העיניים שלו, מה שמעניק לו מראה של חובש "מסיכת מלחמה".</p>
+                    <p><strong>מיתולוגיית חתול האש:</strong> בחלקים מתאילנד, בורמה ומיאנמר, החתול הזהוב האסיאתי מכונה בפולקלור המקומי כ"חתול האש" (Fire Cat) או "נמר האש" עקב צבעו האדמדם. האמונה הטפלה והמסורתית גורסת ששריפת שערה אחת מפרוותו של חתול זה מפיקה ריח שמבריח טיגריסים, ושימוש בבשר החתול או בעורו מעניק ללוחמים אומץ והגנה מפני התקפות טיגריסים בג'ונגל.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Extreme Polymorphism (A Multitude of Hues):</strong> The Asian golden cat is the most visually diverse species among felines. While most individuals have a solid rusty, copper, or golden coat (hence their name), one can also find slate-grey or dark brown individuals. Additionally, the melanistic mutation (black panther) is very common in dark forest regions. The rarest form is the "Ocelot morph"—individuals born with prominent black rosettes all over their bodies, which historically led researchers to believe they were an entirely different species.</p>
+                    <p><strong>Territorial Forest Hunter:</strong> This is a highly solitary and aggressive cat. It is an excellent terrestrial dweller in tropical rainforests, but also an outstanding tree climber when it needs to rest. Its diet is varied, including rodents, reptiles, and birds, but due to its muscular build and immense strength, it is capable of taking down prey significantly larger than itself, such as muntjac fawns, young wild boars, and occasionally even monkeys.</p>
+                    <p><strong>Facial Markings as a "Mask":</strong> Even in the solid-colored individuals (the most common), the cat's face remains adorned with a consistent, striking pattern of lines. Thick stripes of black and bright white decorate its cheeks and the area around its eyes, giving it the appearance of wearing a "war mask."</p>
+                    <p><strong>The Fire Cat Mythology:</strong> In parts of Thailand, Burma, and Myanmar, the Asian golden cat is referred to in local folklore as the "Fire Cat" or "Fire Leopard" due to its reddish color. Traditional superstition dictates that burning a single hair from this cat's pelt produces a scent that drives tigers away, and that consuming the cat's meat or wearing its skin grants warriors courage and protection against tiger attacks in the jungle.</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-amber-600 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-amber-600 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Catopuma</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Catopuma</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">זהו שם מודרני והלחם (Portmanteau) מעניין שהעניק הזואולוג ניקולאי סברצוב בשנת 1858. המילה מורכבת מהמילה 'Cat' (חתול) ומהמילה 'Puma' (פומה). הסיבה להענקת השם הזה היא שהחתול הזהוב האסיאתי (כמו גם בן דודו, החתול הבורנאי שחולק איתו את הסוג) נראה במבנה הגוף, בצבע החלק ובשריריות הפנים שלו כמו גרסה אסיאתית ומוקטנת של פומה אמריקאית, למרות שאין ביניהם קירבה גנטית מיידית.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">This is a modern name and an interesting portmanteau bestowed by the zoologist Nikolai Severtzov in 1858. The word consists of 'Cat' and 'Puma'. The reason for this name is that the Asian golden cat (as well as its cousin, the Bay cat, which shares the genus) resembles an Asian, scaled-down version of the American puma in its body structure, solid color, and facial musculature, despite there being no immediate genetic relationship between them.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: temminckii</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: temminckii</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם המדעי הוענק כהוקרה והנצחה לזואולוג ההולנדי הנודע <strong>קונראד יאקוב טמינק</strong> (Coenraad Jacob Temminck, שנות חיים: 1778–1858). טמינק היה המנהל הראשון של המוזיאון הלאומי לתולדות הטבע בליידן, ותרם רבות לקיטלוג ולחקר הפאונה שהובאה מאינדונזיה, מלזיה ואיי מזרח אסיה (אותו טמינק שהזכרנו במחקר של השונר האיברי!).</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The scientific name was given as a tribute and memorial to the renowned Dutch zoologist <strong>Coenraad Jacob Temminck</strong> (Lifespan: 1778–1858). Temminck was the first director of the National Museum of Natural History in Leiden and contributed greatly to the cataloging and study of the fauna brought from Indonesia, Malaysia, and the East Asian islands (the same Temminck we mentioned in the Iberian Lynx research!).</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי: Asian Golden Cat</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Common Name: Asian Golden Cat</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם העממי פשוט ומתייחס לאזור התפוצה שלו (אסיה) ולצבע המזוהה איתו ביותר – פרוות זהב נחושתית בוהקת. בסינית הוא מכונה לעיתים "חתול-נמר צהוב" עקב גרסת הרוזטות הנדירה שלו.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The common name is straightforward, referring to its distribution area (Asia) and the color most associated with it—a bright, coppery-golden coat. In Chinese, it is sometimes called the "yellow leopard-cat" due to its rare rosette-patterned variant.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריה ושימור -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">תואר מדעית לראשונה בשנת <strong>1827</strong> על ידי צמד הזואולוגים: תומאס הורספילד (Thomas Horsfield, שנות חיים: 1773–1859) וניקולס איילוורד ויגורס (Nicholas Aylward Vigors, שנות חיים: 1785–1840). הם ביססו את התיאור על עורות של החתול שהובאו מסומטרה, והחליטו להעניק למין החדש את שמו של הקולגה שלהם, קונראד טמינק.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">First scientifically described in <strong>1827</strong> by the zoologist duo: Thomas Horsfield (Lifespan: 1773–1859) and Nicholas Aylward Vigors (Lifespan: 1785–1840). They based the description on skins of the cat brought from Sumatra, deciding to name the new species after their colleague, Coenraad Temminck.</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה – שושלת חתול המפרץ (Bay cat lineage):</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution – The Bay cat lineage:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">מבחינה גנטית, החתול הזהוב האסיאתי שייך לשושלת מובחנת ועתיקה (שהתפצלה לפני כ-9.4 מיליון שנים) הכוללת שלושה חתולים בלבד: הוא עצמו, החתול הבורנאי (שחי באיי בורנאו), וחתול השיש הווירטואוזי (אותו חקרנו קודם). הוא התפתח במזרח והתמחה בציד בסבך הקרקעי של יערות הגשם והבמבוק במדינות כמו סין, הודו, תאילנד, וייטנאם ואינדונזיה.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">Genetically, the Asian golden cat belongs to a distinct and ancient lineage (which diverged about 9.4 million years ago) comprising only three cats: itself, the Bay cat (living in Borneo), and the virtuosic Marbled cat (which we studied earlier). It evolved in the East, specializing in terrestrial hunting within the dense undergrowth of rainforests and bamboo thickets in countries like China, India, Thailand, Vietnam, and Indonesia.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">המין מוגדר כ"קרוב לסיכון" (Near Threatened - NT) על ידי ה-IUCN, עם אוכלוסייה עולמית בירידה מתמדת. מלבד האיום המסורתי של בירוא יערות במזרח אסיה ההורס את בתי הגידול שלו, החתול הזהוב האסיאתי סובל מציד בלתי חוקי אכזרי. מכיוון שהטיגריסים הולכים ונכחדים, ציידים לא חוקיים הורגים כיום את החתול הזהוב האסיאתי ומוכרים את עצמותיו ואת בשרו בשוק השחור של "הרפואה האסיאתית המסורתית" כתחליף מזויף וזול יותר לעצמות טיגריס.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">The species is classified as "Near Threatened" (NT) by the IUCN, with a steadily declining global population. Besides the traditional threat of deforestation in East Asia destroying its habitats, the Asian golden cat suffers from brutal illegal poaching. As tigers become increasingly rare, poachers now kill the Asian golden cat, selling its bones and meat on the black market of "traditional Asian medicine" as a counterfeit, cheaper substitute for tiger bones.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <!-- Modal (חלון צף) - הקוד המלא והבדוק -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-amber-600 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            
+            const heElements = document.querySelectorAll('.he-content');
+            const enElements = document.querySelectorAll('.en-content');
+            
+            heElements.forEach(el => {
+                if(currentLang === 'he') {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+            
+            enElements.forEach(el => {
+                if(currentLang === 'en') {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+        }
+        
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { 
+                imgEl.src = imgUrl; 
+                modal.classList.remove('hidden'); 
+            }
+        }
+        
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
