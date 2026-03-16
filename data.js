@@ -18,12 +18,34 @@ const content = {
         searchPlaceholder: `חפש חתול לפי שם...`,
         glossaryTitle: `מילון מונחים זואולוגי`,
         glossaryTerms: [
-            { term: "היפר-קרניבור (Hypercarnivore)", def: "בעל חיים שתזונתו מורכבת מלמעלה מ-70% בשר. כל החתוליים, ללא יוצא מן הכלל, הם היפר-קרניבורים התלויים בחלבון מהחי לשרידותם." },
-            { term: "אנדמי (Endemic)", def: "מין של בעל חיים המוגבל בתפוצתו לאזור גיאוגרפי מסוים אחד בלבד (כמו אי או רכס הרים) ואינו קיים באופן טבעי בשום מקום אחר בעולם (לדוגמה: החתול הבורנאי)." },
-            { term: "מלניזם (Melanism)", def: "מוטציה גנטית הגורמת לייצור מוגבר של פיגמנט המלנין, מה שמעניק לבעל החיים פרווה שחורה לחלוטין. נפוץ מאוד אצל נמרים ויגוארים (פנתר שחור)." },
-            { term: "פולימורפיזם (Polymorphism)", def: "קיום של מספר מופעי צבע או צורה שונים לחלוטין באותו מין ביולוגי ובאותה אוכלוסייה (כפי שראינו אצל החתול הזהוב האסיאתי)." },
-            { term: "ראייה סטריאוסקופית (Stereoscopic Vision)", def: "ראיית עומק תלת-ממדית הנוצרת ממיקום שתי העיניים בקדמת הראש. תכונה זו חיונית לטורפים כדי לאמוד מרחק במדויק לקראת הזינוק על הטרף." },
-            { term: "חתוליים ארבוראליים (Arboreal)", def: "מינים המותאמים במיוחד לחיים ולציד על צמרות עצים. יש להם לרוב זנב ארוך לאיזון וקרסוליים גמישים (לדוגמה: מרגיי וחתול שיש)." }
+            { 
+                term: "Feline / Felidae (חתולי / חתוליים)", 
+                def: "מקור המילה משורש הלטיני 'feles' או 'felis' שפירושו פשוט 'חתול'. הסיומת '-ine' באנגלית (או הסיומת '-idae' בסיווג הטקסונומי המדעי) מסמלת 'שייך ל-' או 'ממשפחת ה-'. לכן, משמעות המילה 'Feline' היא כל בעל חיים השייך למשפחת החתולים. משפחה זו מוגדרת אבולוציונית על ידי מבנה גולגולת קצר, פנים שטוחות יחסית, ויכולת ציד קרניבורית מובהקת." 
+            },
+            { 
+                term: "היפר-קרניבור (Hypercarnivore)", 
+                def: "בעל חיים שתזונתו מורכבת מלמעלה מ-70% בשר. כל החתוליים, ללא יוצא מן הכלל, הם היפר-קרניבורים התלויים בחלבון מהחי לשרידותם." 
+            },
+            { 
+                term: "אנדמי (Endemic)", 
+                def: "מין של בעל חיים המוגבל בתפוצתו לאזור גיאוגרפי מסוים אחד בלבד (כמו אי או רכס הרים) ואינו קיים באופן טבעי בשום מקום אחר בעולם (לדוגמה: החתול הבורנאי)." 
+            },
+            { 
+                term: "מלניזם (Melanism)", 
+                def: "מוטציה גנטית הגורמת לייצור מוגבר של פיגמנט המלנין, מה שמעניק לבעל החיים פרווה שחורה לחלוטין. נפוץ מאוד אצל נמרים ויגוארים (פנתר שחור)." 
+            },
+            { 
+                term: "פולימורפיזם (Polymorphism)", 
+                def: "קיום של מספר מופעי צבע או צורה שונים לחלוטין באותו מין ביולוגי ובאותה אוכלוסייה (כפי שראינו אצל החתול הזהוב האסיאתי)." 
+            },
+            { 
+                term: "ראייה סטריאוסקופית (Stereoscopic Vision)", 
+                def: "ראיית עומק תלת-ממדית הנוצרת ממיקום שתי העיניים בקדמת הראש. תכונה זו חיונית לטורפים כדי לאמוד מרחק במדויק לקראת הזינוק על הטרף." 
+            },
+            { 
+                term: "חתוליים ארבוראליים (Arboreal)", 
+                def: "מינים המותאמים במיוחד לחיים ולציד על צמרות עצים. יש להם לרוב זנב ארוך לאיזון וקרסוליים גמישים (לדוגמה: מרגיי וחתול שיש)." 
+            }
         ]
     },
     en: {
@@ -42,12 +64,34 @@ const content = {
         searchPlaceholder: `Search for a cat by name...`,
         glossaryTitle: `Zoological Glossary`,
         glossaryTerms: [
-            { term: "Hypercarnivore", def: "An animal whose diet consists of more than 70% meat. All felines, without exception, are hypercarnivores depending on animal protein for survival." },
-            { term: "Endemic", def: "A species restricted in its distribution to one specific geographical area (like an island or mountain range) and not found naturally anywhere else (e.g., the Bay Cat)." },
-            { term: "Melanism", def: "A genetic mutation causing an increased production of the melanin pigment, giving the animal a completely black coat. Very common in leopards and jaguars (Black Panther)." },
-            { term: "Polymorphism", def: "The occurrence of several completely different color or form morphs within the same biological species and population (as seen in the Asian Golden Cat)." },
-            { term: "Stereoscopic Vision", def: "3D depth perception created by the forward placement of both eyes. This trait is crucial for predators to accurately gauge distance before pouncing on prey." },
-            { term: "Arboreal Felines", def: "Species specially adapted for living and hunting in tree canopies. They often have a long tail for balance and flexible ankles (e.g., Margay and Marbled Cat)." }
+            { 
+                term: "Feline / Felidae", 
+                def: "The origin of the word comes from the Latin root 'feles' or 'felis', which simply means 'cat'. The English suffix '-ine' (or the scientific taxonomic suffix '-idae') denotes 'pertaining to' or 'of the family of'. Therefore, the word 'Feline' means any animal belonging to the cat family. This family is evolutionarily defined by a short skull structure, a relatively flat face, and distinct carnivorous hunting capabilities." 
+            },
+            { 
+                term: "Hypercarnivore", 
+                def: "An animal whose diet consists of more than 70% meat. All felines, without exception, are hypercarnivores depending on animal protein for survival." 
+            },
+            { 
+                term: "Endemic", 
+                def: "A species restricted in its distribution to one specific geographical area (like an island or mountain range) and not found naturally anywhere else (e.g., the Bay Cat)." 
+            },
+            { 
+                term: "Melanism", 
+                def: "A genetic mutation causing an increased production of the melanin pigment, giving the animal a completely black coat. Very common in leopards and jaguars (Black Panther)." 
+            },
+            { 
+                term: "Polymorphism", 
+                def: "The occurrence of several completely different color or form morphs within the same biological species and population (as seen in the Asian Golden Cat)." 
+            },
+            { 
+                term: "Stereoscopic Vision", 
+                def: "3D depth perception created by the forward placement of both eyes. This trait is crucial for predators to accurately gauge distance before pouncing on prey." 
+            },
+            { 
+                term: "Arboreal Felines", 
+                def: "Species specially adapted for living and hunting in tree canopies. They often have a long tail for balance and flexible ankles (e.g., Margay and Marbled Cat)." 
+            }
         ]
     }
 };
@@ -105,7 +149,6 @@ function filterCats() {
         const nameEn = cat.nameEn.toLowerCase();
         const scientific = cat.scientific.toLowerCase();
         
-        // נניח שכל כרטיסיה קיבלה id בפורמט 'cat-card-0', 'cat-card-1' וכו'
         const card = document.getElementById(`cat-card-${index}`);
         
         if (card) {
