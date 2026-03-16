@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>חתול זהוב אפריקני (Caracal aurata) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #9a3412; /* חלודה אפריקנית / אדמת יער */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-orange-900/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-orange-700 hover:bg-orange-800 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-orange-800 hover:text-white transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/africangoldencat.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/africangoldencat.png" alt="חתול זהוב אפריקני ביער הגשם" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-orange-900/40 text-orange-600 text-xs font-bold px-3 py-1 rounded-full border border-orange-800/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-orange-900/40 text-orange-600 text-xs font-bold px-3 py-1 rounded-full border border-orange-800/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">רוח יערות קונגו</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">Ghost of the Congo Forests</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">חתול זהוב אפריקני</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">African Golden Cat</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Caracal aurata</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. תעודת זהות זואולוגית -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-orange-700 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-orange-700 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> African Golden Cat</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Leopard's Shadow"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> חתול בר בינוני, חסון ושרירי להפליא המהווה את חתול היערות הבלעדי של אפריקה (חי רק ביערות הגשם של מערב ומרכז היבשת, כגון אגן הקונגו). הוא מסתורי, חמקמק, ומציג שונות עצומה בצבעי הפרווה שלו, מזהב-אדמדם ועד אפור-צפחה.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> African Golden Cat</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Leopard's Shadow"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> A medium-sized, incredibly robust and muscular wildcat that is Africa's exclusive forest cat (living only in the rainforests of West and Central Africa, such as the Congo Basin). It is mysterious, elusive, and exhibits a massive variation in coat colors, from reddish-gold to slate-grey.</li>
+                </ul>
+            </section>
+
+            <!-- 2. נתונים סטטיסטיים -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-orange-700 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-orange-700 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">כ-75 ימים (נצפה בשבי)</span><span class="en-content hidden">Approx. 75 days (observed in captivity)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">61 עד 101 ס"מ</span><span class="en-content hidden">61 - 101 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">16 עד 46 ס"מ (אורכו משתנה מאוד בין פרטים)</span><span class="en-content hidden">16 - 46 cm (length varies greatly between individuals)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">5.5 עד 16 ק"ג (זכרים כבדים משמעותית)</span><span class="en-content hidden">5.5 - 16 kg (males are significantly heavier)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים</span><span class="en-content hidden">Lifespan</span></td>
+                                <td class="p-3"><span class="he-content">לא ידוע בטבע (עד 12 שנים בשבי)</span><span class="en-content hidden">Unknown in the wild (up to 12 years in captivity)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. אנטומיה וביולוגיה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-orange-700 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-orange-700 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>פולימורפיזם וכתמים אקראיים:</strong> ממש כמו עמיתו האסיאתי (החתול הזהוב האסיאתי), החתול הזהוב האפריקני מציג מגוון עצום של מופעי צבע. רוב הפרטים נולדים בצבע חלודה, זהב או חום-מהגוני. עם זאת, קיים מופע "אפור-צפחה" נפוץ מאוד, וכן מופע שחור לחלוטין (מלניזם). בניגוד לצבע הבסיס שיכול להשתנות במהלך חייו של החתול, לחלק מהפרטים יש כתמים שחורים רק על הבטן, בעוד לאחרים יש כתמים על כל הגוף.</p>
+                    <p><strong>"הצל של הנמר":</strong> באזורי התפוצה שלו, הוא חולק את יערות הגשם עם הנמר האפריקני. הילידים של אגן הקונגו מכנים אותו "אחיו של הנמר" או "הצל של הנמר", וטוענים שהוא עוקב אחר נמרים כדי ליהנות משאריות הציד שלהם. בפועל, החתול הזהוב הוא טורף אימתני בזכות עצמו, הידוע כצייד אגרסיבי של אנטילופות קטנות, קופי קולובוס, תרנגולי יער, ופנגולינים (אותם הוא מצליח לפצח למרות השריון הקשקשי שלהם).</p>
+                    <p><strong>רוח היערות:</strong> החתול הזהוב האפריקני נחשב לאחד החתולים הפחות נחקרים בעולם. הוא ביישן בצורה קיצונית ונמנע לחלוטין מקרבת בני אדם. התצפיות המעטות שלו בטבע נעשות בעיקר דרך מצלמות שביל. הוא מתמחה בחיים בסבך הצפוף של יערות טרופיים לאורך המשווה ואינו יוצא אל הסוואנות הפתוחות של אפריקה.</p>
+                    <p><strong>אדפטציה גופנית:</strong> מבנה הגוף שלו מותאם לחיים ביער צפוף - יש לו גוף חסון ושרירי, ראש קטן יחסית לגופו, ורגליים חזקות המעניקות לו יכולת זינוק מצוינת. למרות שהוא צייד קרקעי בעיקרו (הצד לרוב מן המארב בסבך), הוא מטפס עצים זריז ומסוגל לרדוף אחר קופים בחופת היער.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Polymorphism and Random Spots:</strong> Just like its Asian counterpart (the Asian Golden Cat), the African golden cat exhibits a vast array of color morphs. Most individuals are born with a rust, golden, or mahogany-brown coat. However, a "slate-grey" morph is very common, as well as a completely black morph (melanism). While the base color can sometimes change during the cat's lifetime, some individuals have black spots only on their bellies, while others are spotted all over.</p>
+                    <p><strong>"The Leopard's Shadow":</strong> In its distribution areas, it shares the rainforests with the African leopard. The indigenous people of the Congo Basin call it "the leopard's brother" or "the leopard's shadow," claiming it follows leopards to scavenge their kills. In reality, the golden cat is a formidable predator in its own right, known as an aggressive hunter of small antelopes (duikers), colobus monkeys, forest francolins, and pangolins (which it manages to breach despite their scaly armor).</p>
+                    <p><strong>Ghost of the Forests:</strong> The African golden cat is considered one of the least studied felines in the world. It is extremely shy and completely avoids human proximity. The few observations of it in the wild are primarily made through trail cameras. It is specialized for living in the dense underbrush of tropical equatorial forests and does not venture into the open African savannas.</p>
+                    <p><strong>Physical Adaptation:</strong> Its body structure is adapted for life in a dense forest—it has a sturdy, muscular body, a relatively small head for its size, and powerful legs that give it excellent leaping ability. Although it is primarily a terrestrial hunter (usually ambushing from the brush), it is an agile tree climber capable of chasing monkeys into the forest canopy.</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-orange-700 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-orange-700 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג החדש: Caracal (קרקל)</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. The New Genus: Caracal</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הטורקית העתיקה 'karakulak' שפירושה "אוזן שחורה". עד לאחרונה, החתול הזהוב האפריקני סווג בסוג נפרד משלו (*Profelis*). אולם, מחקרי DNA מהפכניים הוכיחו כי למרות שהוא חתול יער חסון והקרקל הוא חתול סוואנה וירטואוזי – הם למעשה בני דודים קרובים מאוד גנטית שהתפצלו לאחרונה! בעקבות התגלית המדעית, שונה שמו המדעי של החתול הזהוב והוא סופח במפתיע אל הסוג קרקל.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">From the Old Turkish word 'karakulak' meaning "black ear". Until recently, the African golden cat was classified in its own separate genus (*Profelis*). However, revolutionary DNA studies proved that even though it is a robust forest cat and the caracal is a virtuosic savanna cat—they are actually very close genetic cousins that diverged recently! Following this scientific discovery, the golden cat's scientific name was changed and it was surprisingly annexed into the Caracal genus.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: aurata (אוראטה)</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: aurata</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלטינית 'aurata' נגזרת מהמילה 'aurum' שפירושה "זהב" (Gold - היסוד הכימי בעל הסימול Au). משמעות המילה היא "מקושט בזהב" או "מוזהב". שם זה מתייחס באופן ישיר למופע הפרווה הנפוץ והידוע ביותר שלו, המבהיק כזהב טהור תחת קרני השמש החודרות את יער הגשם.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Latin word 'aurata' is derived from 'aurum' meaning "gold" (the chemical element with the symbol Au). The word means "gilded" or "adorned with gold". This name directly refers to its most common and well-known coat morph, which shines like pure gold under the sunbeams piercing the rainforest.</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי: African Golden Cat</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Common Name: African Golden Cat</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם האנגלי מתאר את מאפייניו הבולטים כדי להבדיל אותו באופן גיאוגרפי ממקבילו במזרח הרחוק (החתול הזהוב האסיאתי). יש לציין כי למרות הדמיון החזותי העצום ביניהם (שניהם חתולי יער חסונים עם מופעי צבע דומים), מדובר במקרה של אבולוציה מתכנסת, והם אינם קרובי משפחה קרובים מבחינה גנטית.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The English name describes its prominent features to geographically distinguish it from its counterpart in the Far East (the Asian Golden Cat). It should be noted that despite the immense visual similarity between them (both being robust forest cats with similar color morphs), this is a case of convergent evolution, and they are not closely related genetically.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריה ושימור -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-orange-700 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-orange-700 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">החתול הזהוב האפריקני תואר מדעית לראשונה בשנת <strong>1827</strong> על ידי הזואולוג ההולנדי <strong>קונראד יאקוב טמינק</strong> (Coenraad Jacob Temminck, שנות חיים: 1778–1858). טמינק, שהיה ממנהליו הבולטים של המוזיאון לתולדות הטבע בהולנד, זיהה את החתול הייחודי מעורות שנשלחו מאפריקה וקרא לו *Felis aurata*.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">The African golden cat was first scientifically described in <strong>1827</strong> by the Dutch zoologist <strong>Coenraad Jacob Temminck</strong> (Lifespan: 1778–1858). Temminck, a prominent director of the Natural History Museum in the Netherlands, identified the unique cat from skins sent from Africa and named it *Felis aurata*.</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה – הפיצול מחתולי הערבות:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution – Divergence from Savanna Cats:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">מבחינה גנטית, החתול שייך לשושלת הקרקל (Caracal lineage). לפני כ-8.5 מיליון שנים, האב הקדמון של שושלת זו חי באפריקה. בעוד שניים מצאצאיו (הקרקל והסרוואל) עזבו את היערות והתפתחו לחתולים בעלי רגליים ארוכות המותאמים לריצה ולציד בערבות הפתוחות והיבשות של אפריקה, החתול הזהוב האפריקני נותר מאחור בסבך הטרופי הצפוף והפך לצייד יערות חסון ונמוך קומה, המותאם לאקלים הלח והעבות של אגן הקונגו ומערב אפריקה.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">Genetically, the cat belongs to the Caracal lineage. About 8.5 million years ago, the common ancestor of this lineage lived in Africa. While two of its descendants (the caracal and the serval) left the forests and evolved into long-legged cats adapted for running and hunting in the open, dry savannas of Africa, the African golden cat stayed behind in the dense tropical undergrowth, becoming a robust, low-slung forest hunter adapted to the humid, thick climate of the Congo Basin and West Africa.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">מוגדר כ"פגיע" (Vulnerable - VU) על ידי ה-IUCN, עם מגמה ברורה של ירידה באוכלוסייה. מכיוון שהחתול הזהוב האפריקני תלוי באופן מוחלט ביערות ראשוניים בלתי-מופרעים, כריתת יערות מסיבית באפריקה למטרות תעשיית העץ (Logging) פוגעת אנושות בבתי הגידול שלו. בנוסף, למרות שהוא חיה חמקמקה, הוא ניצוד בטעות או בכוונה על ידי מלכודות ברזל שמוטמנות ביער לתעשיית הציד (Bushmeat), ופרוותו לעיתים משמשת בטקסים מסורתיים של פיגמים במרכז אפריקה.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Classified as "Vulnerable" (VU) by the IUCN, with a clear downward population trend. Because the African golden cat is completely dependent on undisturbed primary forests, massive deforestation in Africa for the logging industry fatally impacts its habitats. Furthermore, despite being an elusive animal, it is hunted accidentally or intentionally by snare traps set in the forest for the bushmeat trade, and its fur is sometimes used in traditional rituals by Pygmy tribes in Central Africa.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <!-- Modal (חלון צף) - הקוד המלא והבדוק -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-orange-700 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            
+            const heElements = document.querySelectorAll('.he-content');
+            const enElements = document.querySelectorAll('.en-content');
+            
+            heElements.forEach(el => {
+                if(currentLang === 'he') {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+            
+            enElements.forEach(el => {
+                if(currentLang === 'en') {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+        }
+        
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { 
+                imgEl.src = imgUrl; 
+                modal.classList.remove('hidden'); 
+            }
+        }
+        
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
