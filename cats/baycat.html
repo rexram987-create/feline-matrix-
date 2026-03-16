@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>חתול בורנאי (Catopuma badia) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #7f1d1d; /* חום-אדום עמוק / אדמת יערות בורנאו */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-red-900/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-red-500 hover:bg-red-700 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-red-700 hover:text-white transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/baycat.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/baycat.png" alt="חתול בורנאי מסתתר ביער" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-red-900/40 text-red-400 text-xs font-bold px-3 py-1 rounded-full border border-red-800/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-red-900/40 text-red-400 text-xs font-bold px-3 py-1 rounded-full border border-red-800/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">התעלומה של בורנאו</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">The Mystery of Borneo</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">חתול בורנאי</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Bornean Bay Cat</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Catopuma badia</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. תעודת זהות זואולוגית -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-red-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-red-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Bay Cat / Bornean Cat / Bornean Bay Cat</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "Ghost of Borneo"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> אחד מחתולי הבר הנדירים, הביישנים והפחות נחקרים בעולם כולו. הוא אנדמי אך ורק לאי בורנאו שבדרום-מזרח אסיה. מתאפיין בשני מופעי צבע (חום-אדמדם ואפור) ומשמר תכונות אנטומיות עתיקות, מה שהופך אותו ל"מאובן חי" של שושלת חתולים קדומה.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Bay Cat / Bornean Cat / Bornean Bay Cat</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "Ghost of Borneo"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> One of the rarest, most elusive, and least studied wildcats in the entire world. It is endemic solely to the island of Borneo in Southeast Asia. It features two color morphs (reddish-brown and grey) and retains ancient anatomical traits, making it a "living fossil" of an early feline lineage.</li>
+                </ul>
+            </section>
+
+            <!-- 2. נתונים סטטיסטיים -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-red-500 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-red-500 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך (משוערות עקב נדירותו)</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value (Estimates due to rarity)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">לא ידוע בטבע (משוער כ-70-75 ימים)</span><span class="en-content hidden">Unknown in wild (est. 70-75 days)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">49 עד 67 ס"מ</span><span class="en-content hidden">49 - 67 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">30 עד 40 ס"מ (בעל פס לבן תחתון)</span><span class="en-content hidden">30 - 40 cm (with a white underside stripe)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">3 עד 4 ק"ג (כגודל חתול בית גדול)</span><span class="en-content hidden">3 - 4 kg (size of a large domestic cat)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים</span><span class="en-content hidden">Lifespan</span></td>
+                                <td class="p-3"><span class="he-content">לא ידועה במדויק (מעולם לא גודל בשבי לאורך זמן)</span><span class="en-content hidden">Unknown exactly (never kept in captivity long-term)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. אנטומיה וביולוגיה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-red-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-red-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>פולימורפיזם וסימני זיהוי:</strong> כמו קרובו היבשתי (החתול הזהוב האסיאתי), החתול הבורנאי מגיע בשני צבעים עיקריים (Morphs): מופע אדמדם-ערמוני (הנפוץ יותר) ומופע אפור-פחם. גופו חלק מכתמים, אך הוא מתהדר בכמה סימני היכר ייחודיים: פס לבן בוהק העובר לאורך חלקו התחתון של הזנב (כנראה משמש לתקשורת חזותית בסבך החשוך), ושני פסים כהים העוברים מפינות העיניים אל עבר הקודקוד.</p>
+                    <p><strong>התעלומה המדעית:</strong> עד כמה נדיר החתול הבורנאי? במשך יותר ממאה שנים (מאז גילויו ב-1874 ועד 1992), לא תועד אפילו פרט חי אחד שלו על ידי מדענים. הידע עליו התבסס אך ורק על חמישה עורות פוחלצים במוזיאונים באירופה. רק בשנת 1992 נלכדה נקבה חיה ראשונה על ידי ציידים, ורק בשנת 1998 הצליחו לראשונה לצלם אותו בטבע באמצעות מצלמות שביל נסתרות!</p>
+                    <p><strong>אורח חיים סודי:</strong> בגלל המחסור הקיצוני בתצפיות, הביולוגיה וההתנהגות שלו מבוססות ברובן על השערות. מעריכים כי הוא חיה יחידאית (סוליטרית) ולילית בעיקרה. למרות שהוא נראה כמו גרסה קטנה של חתול עצים, התצפיות המעטות במצלמות מראות שהוא מבלה את רוב זמנו בציד על קרקעית יערות הגשם ויערות המנגרובים, כשהוא ניזון ממכרסמים, ציפורים וקופים קטנים.</p>
+                    <p><strong>מבנה גולגולת עתיק:</strong> גולגולתו של החתול הבורנאי קטנה יחסית אך שונה בפרופורציות שלה מחתולים מודרניים. מבנה עצמות הפנים והלסת שלו מוארך יותר, תכונה המזכירה מאובנים של חתולים קדומים. דבר זה הופך אותו לבעל חשיבות אבולוציונית אדירה בהבנת התפתחות משפחת החתוליים באסיה.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Polymorphism and Identification Marks:</strong> Like its mainland relative (the Asian golden cat), the Bornean Bay Cat comes in two main color morphs: a reddish-chestnut morph (more common) and a charcoal-grey morph. Its body is free of spots, but it boasts several unique markings: a bright white stripe running along the underside of its tail (likely used for visual communication in the dark brush), and two dark stripes running from the corners of its eyes to the top of its head.</p>
+                    <p><strong>The Scientific Mystery:</strong> How rare is the Bay Cat? For over a century (from its discovery in 1874 until 1992), not a single live specimen was documented by scientists. Knowledge of it was based entirely on five stuffed skins in European museums. It wasn't until 1992 that the first live female was captured by trappers, and only in 1998 was it successfully photographed in the wild for the first time using hidden trail cameras!</p>
+                    <p><strong>A Secretive Lifestyle:</strong> Due to the extreme lack of sightings, its biology and behavior are largely based on hypotheses. It is believed to be a solitary and primarily nocturnal animal. Although it looks like a small arboreal cat, the few camera trap sightings show it spends most of its time hunting on the floor of rainforests and mangrove swamps, feeding on rodents, birds, and small monkeys.</p>
+                    <p><strong>Ancient Skull Structure:</strong> The skull of the Bay Cat is relatively small but differs in proportion from modern cats. Its facial and jaw bone structure is more elongated, a trait reminiscent of ancient feline fossils. This makes it of immense evolutionary importance in understanding the development of the feline family in Asia.</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-red-500 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-red-500 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Catopuma</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Catopuma</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">הלחם בסיסי שהעניק הזואולוג הרוסי ניקולאי סברצוב ב-1858. השילוב של 'Cat' (חתול) ו-'Puma' (פומה) מתאר את הדמיון המורפולוגי של חתולים אלו (החתול הבורנאי והחתול הזהוב האסיאתי) לפומה האמריקאית - בעלי צבע חלק, חזית שרירית וראש קצר, למרות הריחוק הגיאוגרפי והגנטי.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">A basic portmanteau bestowed by the Russian zoologist Nikolai Severtzov in 1858. The combination of 'Cat' and 'Puma' describes the morphological resemblance of these cats (the Bay Cat and Asian Golden Cat) to the American puma—having solid coloring, a muscular front, and a short head, despite geographic and genetic distance.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: badia</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: badia</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלטינית 'badius' (שבנקבה מוטה ל-'badia') פירושה "חום-אדמדם", "ערמוני" או "צבע חלודה". השם המדעי הזה מתאר במדויק את מופע הצבע השכיח ביותר של החתול הזה, שנראה כאילו נצבע בגווני הנחושת והאדמה של יערות הגשם בבורנאו.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Latin word 'badius' (feminine form 'badia') means "reddish-brown," "chestnut," or "rust-colored." This scientific name precisely describes the cat's most common color morph, looking as if painted in the coppery and earthy tones of the Bornean rainforests.</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי והעברי: Bay Cat / חתול בורנאי</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Common Name: Bay Cat / Bornean Cat</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">באנגלית, המילה 'Bay' מתייחסת גם היא לאותו גוון חום-אדמדם עשיר (בדומה לסוסי Bay). בעברית, האקדמיה ומומחי הזואולוגיה בחרו בשם "חתול בורנאי", המדגיש את ייחודיותו האנדמית של המין – הוא שייך לאי בורנאו בלבד ואינו קיים בשום מקום אחר בעולם.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">In English, the word 'Bay' also refers to that rich reddish-brown hue (similar to Bay horses). In Hebrew, zoological experts chose the name "Bornean Cat" (Hatul Bornai), emphasizing the species' endemic uniqueness—it belongs exclusively to the island of Borneo and exists nowhere else in the world.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריה ושימור -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-red-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-red-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">החתול תואר מדעית לראשונה בשנת <strong>1874</strong> על ידי הזואולוג הבריטי הנודע <strong>ג'ון אדוארד גריי</strong> (John Edward Gray, שנות חיים: 1800–1875). גריי חקר עור וגולגולת שנשלחו אליו על ידי חוקר הטבע המפורסם אלפרד ראסל וואלאס (Alfred Russel Wallace), אשר שהה בבורנאו ב-1856 ואסף את הדגימה מהילידים באזור.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">The cat was first scientifically described in <strong>1874</strong> by the renowned British zoologist <strong>John Edward Gray</strong> (Lifespan: 1800–1875). Gray examined a skin and skull sent to him by the famous naturalist Alfred Russel Wallace, who was in Borneo in 1856 and collected the specimen from local natives in the area.</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה באי מבודד:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution on an Isolated Island:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">מבחינה גנטית, החתול הבורנאי והחתול הזהוב האסיאתי הם אחים ל"שושלת חתול המפרץ" (Bay cat lineage). הם התפצלו מאב קדמון משותף לפני כ-3.1 עד 4 מיליון שנים. במהלך עידני הקרח, ירדו פני הים ובורנאו חוברה ליבשת אסיה. אבותיו של החתול היגרו לאי, וכאשר פני הים עלו מחדש, הם נותרו מבודדים. בידוד גיאוגרפי זה (Allopatric speciation) גרם להם להתפתח למין נפרד בעל ממדים קטנים יותר, המותאם בצורה מושלמת לאקולוגיה הסגורה של האי.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">Genetically, the Bornean bay cat and the Asian golden cat are siblings in the "Bay cat lineage". They diverged from a common ancestor about 3.1 to 4 million years ago. During the ice ages, sea levels dropped and Borneo was connected to mainland Asia. The cat's ancestors migrated to the island, and when sea levels rose again, they were left isolated. This geographic isolation (Allopatric speciation) caused them to evolve into a separate species with smaller dimensions, perfectly adapted to the island's closed ecology.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני – סכנה עמוקה:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status – Deep Danger:</h4>
+                        <p class="text-sm text-slate-300 he-content">מוגדר כ"בסכנת הכחדה" (Endangered - EN) על ידי ה-IUCN, ומוערך כי נותרו פחות מ-2,500 פרטים בוגרים בטבע. בורנאו סובלת מאחד משיעורי כריתת היערות הגבוהים בעולם (בעיקר לטובת תעשיית העץ ומטעי שמן דקל). היעלמות היערות הקדומים של האי היא גזר דין מוות עבור החתול הבורנאי שאינו מסוגל לשרוד בשטחים חקלאיים פתוחים. בנוסף, נדירותו הקיצונית הפכה אותו למטרה נחשקת עבור סוחרי חיות אקזוטיות וציידים לא חוקיים.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Classified as "Endangered" (EN) by the IUCN, with an estimated fewer than 2,500 mature individuals remaining in the wild. Borneo suffers from one of the highest deforestation rates in the world (primarily for the logging industry and palm oil plantations). The disappearance of the island's ancient forests is a death sentence for the Bay Cat, which cannot survive in open agricultural areas. Furthermore, its extreme rarity has made it a coveted target for exotic animal smugglers and illegal poachers.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <!-- Modal (חלון צף) - הקוד המלא והבדוק -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-red-500 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            
+            const heElements = document.querySelectorAll('.he-content');
+            const enElements = document.querySelectorAll('.en-content');
+            
+            heElements.forEach(el => {
+                if(currentLang === 'he') {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+            
+            enElements.forEach(el => {
+                if(currentLang === 'en') {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+        }
+        
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { 
+                imgEl.src = imgUrl; 
+                modal.classList.remove('hidden'); 
+            }
+        }
+        
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
