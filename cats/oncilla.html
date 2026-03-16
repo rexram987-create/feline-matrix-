@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>אונצילה (Leopardus tigrinus) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #d97706; /* צהוב-כתום מנומר */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-amber-600/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-amber-500 hover:bg-amber-600 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-amber-600 hover:text-white transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/oncilla.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/oncilla.png" alt="אונצילה ביער" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-amber-600/20 text-amber-500 text-xs font-bold px-3 py-1 rounded-full border border-amber-600/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-amber-600/20 text-amber-500 text-xs font-bold px-3 py-1 rounded-full border border-amber-600/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">הנמר המיניאטורי</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">The Miniature Leopard</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">אונצילה</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Oncilla</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Leopardus tigrinus</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. תעודת זהות זואולוגית -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Oncilla / Little Spotted Cat / Tigrillo</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Little Tiger Cat"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> אחד מחתולי הבר הקטנים ביותר בדרום ומרכז אמריקה. בעל מראה כמעט זהה לאוצלוט ולמרגיי (עם פרוות רוזטות יפהפייה), אך הוא קטן ועדין מהם משמעותית. הוא חי במגוון בתי גידול, מיערות עננים ועד סוואנות יבשות.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Oncilla / Little Spotted Cat / Tigrillo</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Little Tiger Cat"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> One of the smallest wildcats in South and Central America. It looks almost identical to the ocelot and margay (with a beautiful rosette coat), but is significantly smaller and more slender. It inhabits a variety of environments, from cloud forests to dry savannas.</li>
+                </ul>
+            </section>
+
+            <!-- 2. נתונים סטטיסטיים -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-amber-500 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-amber-500 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">74 עד 76 ימים</span><span class="en-content hidden">74 - 76 days</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">38 עד 59 ס"מ (מבנה גוף צר וקליל)</span><span class="en-content hidden">38 - 59 cm (slender, light build)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">20 עד 42 ס"מ</span><span class="en-content hidden">20 - 42 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">1.5 עד 3 ק"ג (קטן מחתול בית)</span><span class="en-content hidden">1.5 - 3 kg (smaller than a domestic cat)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">10 עד 14 שנים (עד 17 בשבי)</span><span class="en-content hidden">10 - 14 years (up to 17 in captivity)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. אנטומיה וביולוגיה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>טיפוס אופורטוניסטי:</strong> למרות שהאונצילה היא מטפסת עצים זריזה ומוכשרת מאוד, מרבית פעילות הציד שלה מתרחשת דווקא על הקרקע. היא מנצלת את העצים בעיקר למנוחה בטוחה מפני טורפים גדולים יותר (כמו היגואר או אפילו האוצלוט, שעלול לראות בה מתחרה), או כדי לצוד ציפורים וקופים קטנים כשמזדמן לה.</p>
+                    <p><strong>תחרות בתוך המשפחה:</strong> האונצילה חולקת את אזורי המחיה שלה עם האוצלוט (הגדול ממנה) ועם המרגיי (הדומה לה). כדי להימנע מתחרות ישירה על מזון, האונצילה "נדחקה" לצוד טרף קטן יותר. התזונה שלה מתבססת על מכרסמים זעירים, שחלקם שוקלים גרמים בודדים, לטאות קטנות, ציפורי שיר וביצים.</p>
+                    <p><strong>פרוות רוזטות זהובה:</strong> פרוותה של האונצילה יפהפייה ונחשבת לאחת המרשימות במשפחת החתוליים. יש לה צבע בסיס זהוב-חרדל או חום-צהבהב, ועליו פזורות "רוזטות" (שושנות) כהות וסגורות. בדומה לקרוביה, גם אצלה קיימת תופעת המלניזם, וניתן למצוא פרטים שחורים לחלוטין באזורי יער דחוסים.</p>
+                    <p><strong>פעילות:</strong> האונצילה פעילה לרוב בשעות הלילה, אך באזורים שבהם יש טרף יומי רב, היא מגלה גמישות ויכולה לצוד גם באור יום. היא סוליטרית (יחידאית) וחששנית מאוד מקרבת בני אדם.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Opportunistic Climbing:</strong> Although the oncilla is a highly agile and skilled tree climber, most of its hunting activity actually takes place on the ground. It uses trees primarily for safe resting away from larger predators (like the jaguar or even the ocelot, which may view it as a competitor), or to hunt birds and small monkeys when the opportunity arises.</p>
+                    <p><strong>Intrafamilial Competition:</strong> The oncilla shares its habitat with the ocelot (which is larger) and the margay (which is similar). To avoid direct competition for food, the oncilla has been "pushed" to hunt smaller prey. Its diet is based on tiny rodents, some weighing only a few grams, small lizards, songbirds, and eggs.</p>
+                    <p><strong>Golden Rosette Coat:</strong> The oncilla's fur is incredibly beautiful and considered one of the most striking in the feline family. It has a mustard-golden or yellowish-brown base color, scattered with dark, closed "rosettes". Like its relatives, melanism occurs in this species, and completely black individuals can be found in dense forest areas.</p>
+                    <p><strong>Activity:</strong> The oncilla is mostly nocturnal, but in areas with abundant diurnal prey, it shows flexibility and can hunt during daylight as well. It is solitary and highly wary of human presence.</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-amber-500 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-amber-500 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Leopardus</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Leopardus</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלטינית ל"דמוי-נמר". סוג זה כולל את השושלת המפוארת של החתולים המנומרים והמקושטים של יבשת אמריקה. למרות שמם, הם אינם קשורים ישירות לסוג Panthera (החתולים הגדולים השואגים).</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Latin word for "leopard-like". This genus encompasses the magnificent lineage of the spotted and decorated cats of the Americas. Despite their name, they are not directly related to the Panthera genus (the big roaring cats).</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: tigrinus</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: tigrinus</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלטינית 'tigrinus' מתורגמת ל"דמוי טיגריס" (Tiger-like). השם המדעי המלא של החיה יוצר למעשה צרוף משעשע שמשמעותו "נמר טיגריסי" או "דמוי-נמר שהוא דמוי-טיגריס". שם זה הוענק לו בשל התבניות הכהות שעל פרוותו המזכירות גם פסים וגם חברבורות של החתולים הגדולים.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Latin word 'tigrinus' translates to "tiger-like". The full scientific name of the animal actually creates an amusing combination meaning "tiger leopard" or "a leopard-like that is tiger-like". This name was given due to the dark patterns on its coat that resemble both the stripes and spots of the big cats.</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי והעברי: אונצילה (Oncilla)</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Common Name: Oncilla</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה "אונצילה" (Oncilla) מקורה בספרדית. היא מורכבת ממיזוג של המילה *Onza* (אונזה), ששימשה לתיאור הברדלס או היגואר, יחד עם סיומת ההקטנה *illa*. כלומר: "האונזה הקטנה" או "חתול הכתמים הקטן". בעברית מקובל להשתמש בתעתיק אונצילה, או בכינוי "נמרון". במרכז אמריקה הוא נקרא גם "טיגרילו" (Tigrillo - טיגריס קטן).</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The word "Oncilla" originates in Spanish. It is a fusion of the word *Onza*, used to describe the cheetah or jaguar, combined with the diminutive suffix *illa*. Meaning: "the little onza" or "little spotted cat". In Central America, it is also called "Tigrillo" (little tiger).</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריה ושימור -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-amber-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">האונצילה תוארה מדעית לראשונה בשנת <strong>1775</strong> על ידי הזואולוג הגרמני <strong>יוהאן כריסטיאן דניאל פון שרבר</strong> (Johann Christian Daniel von Schreber, שנות חיים: 1739–1810). שרבר תיאר את החתול הקטן בעבודתו המקיפה על יונקי העולם, תחת השם *Felis tigrina*.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">The oncilla was first scientifically described in <strong>1775</strong> by the German zoologist <strong>Johann Christian Daniel von Schreber</strong> (Lifespan: 1739–1810). Schreber described the small cat in his comprehensive work on the mammals of the world, under the name *Felis tigrina*.</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה מורכבת ופיצול (2013):</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Complex Evolution and Split (2013):</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">האונצילה היא חלק משושלת האוצלוט, שהתפצלה מוקדם באבולוציה של חתולי אמריקה הלטינית. גילוי מדהים פורסם בשנת 2013: חוקרים גילו שאוכלוסיות האונצילה בצפון-מזרח ברזיל מבודדות גנטית מאלו שבדרום ברזיל, ואינן מזדווגות ביניהן. בעקבות כך, החתול הדרומי פוצל למין חדש לגמרי הנקרא כיום **חתול הפמפס הדרומי** או "נמרון דרומי" (Leopardus guttulus). בנוסף, ידוע כי האונצילה יוצרת לעיתים רחוקות בני-כלאיים (היברידים) בטבע עם חתולי פמפס (קולוקולו) היכן שאזורי המחיה שלהם חופפים.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">The oncilla is part of the Ocelot lineage, which diverged early in the evolution of Latin American cats. An amazing discovery was published in 2013: researchers found that oncilla populations in northeastern Brazil are genetically isolated from those in southern Brazil and do not interbreed. Consequently, the southern cat was split into an entirely new species now called the **Southern Tigrina** (Leopardus guttulus). Additionally, it is known that the oncilla occasionally forms natural hybrids in the wild with Pampas cats (colocolo) where their habitats overlap.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">מוגדר כ"פגיע" (Vulnerable - VU) על ידי ה-IUCN, עם אוכלוסייה עולמית המצויה במגמת ירידה מדאיגה. בעבר, בדומה לאוצלוט ולמרגיי, האונצילה סבלה מציד פראי וחסר רחמים לתעשיית פרוות המעילים (בגלל שהפרווה שלה יפהפייה ועדינה במיוחד). כיום, האיום המרכזי עליה הוא כריתת יערות המונית ופינוי שטחי מחיה לטובת מטעי קפה וחקלאות במרכז ודרום אמריקה.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Classified as "Vulnerable" (VU) by the IUCN, with a global population in a worrying state of decline. In the past, like the ocelot and margay, the oncilla suffered from fierce, ruthless hunting for the fur coat industry (because its fur is exceptionally beautiful and delicate). Today, the main threat to it is massive deforestation and the clearing of habitats for coffee plantations and agriculture in Central and South America.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            document.querySelectorAll('.he-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'he'));
+            document.querySelectorAll('.en-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'en'));
+        }
+        function openImageModal(imgUrl) {
+            /* מנגנון הצגת תמונה */
+        }
+        function closeImageModal() {
+            /* סגירת תמונה */
+        }
+    </script>
+</body>
+</html>
