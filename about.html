@@ -36,6 +36,11 @@
             border-radius: 50%;
             padding: 4px;
             background: linear-gradient(to right, #f59e0b, #d97706);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .profile-img-container:hover {
+            transform: scale(1.05);
         }
         .profile-img {
             width: 100%;
@@ -62,8 +67,8 @@
         <!-- אזור פרופיל (כותרת עליונה) -->
         <header class="relative w-full pt-20 pb-10 bg-gradient-to-b from-[#0a1122] to-[#0f172a] border-b border-slate-800/50">
             <div class="text-center px-6">
-                <div class="profile-img-container mb-6 shadow-2xl">
-                    <!-- שם התמונה תוקן סופית ל-ramprofile.png -->
+                <!-- נוספה פונקציית הלחיצה להגדלה -->
+                <div class="profile-img-container mb-6 shadow-2xl" onclick="openImageModal('assets/ramprofile.png')">
                     <img src="assets/ramprofile.png" alt="תמונת פרופיל - רם" class="profile-img shadow-inner" onerror="this.src='https://via.placeholder.com/150/1e293b/a1a1aa?text=Ram'">
                 </div>
                 
@@ -141,6 +146,12 @@
         </footer>
     </div>
 
+    <!-- Modal (חלון צף) נוסף בהצלחה -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-amber-500 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
+    </div>
+
     <script>
         let currentLang = 'he';
         
@@ -173,6 +184,24 @@
                     el.classList.add('hidden');
                 }
             });
+        }
+
+        // פונקציות החלון הצף הוספו במלואן
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { 
+                imgEl.src = imgUrl; 
+                modal.classList.remove('hidden'); 
+            }
+        }
+        
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
         }
     </script>
 </body>
