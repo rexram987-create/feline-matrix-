@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>חתול שטוח-ראש (Prionailurus planiceps) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #b45309; /* חום אדמדם / נהרות אסיה */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-amber-700/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-amber-600 hover:bg-amber-700 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-amber-700 hover:text-white transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/flatheadedcat.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/flatheadedcat.png" alt="חתול שטוח-ראש" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-amber-800/30 text-amber-500 text-xs font-bold px-3 py-1 rounded-full border border-amber-700/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-amber-800/30 text-amber-500 text-xs font-bold px-3 py-1 rounded-full border border-amber-700/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">חתול התנין מאסיה</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">The Crocodile Cat of Asia</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">חתול שטוח-ראש</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Flat-headed Cat</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Prionailurus planiceps</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. תעודת זהות זואולוגית -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Flat-headed Cat</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Fisher of the Swamp"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> חתול קטן ונדיר ביותר מדרום-מזרח אסיה שעבר התאמה (אדפטציה) קיצונית לחיים במים ולציד דגים. הגולגולת שלו ארוכה ושטוחה בצורה חריגה, עיניו ממוקמות קרוב מאוד זו לזו, ויש לו קרומי שחייה בין האצבעות.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Flat-headed Cat</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Fisher of the Swamp"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> A very rare, small cat from Southeast Asia that has undergone extreme adaptation for aquatic life and fish hunting. Its skull is unusually long and flat, its eyes are set very close together, and it has webbed feet.</li>
+                </ul>
+            </section>
+
+            <!-- 2. נתונים סטטיסטיים -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-amber-600 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-amber-600 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">כ-56 ימים</span><span class="en-content hidden">Approx. 56 days</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">41 עד 50 ס"מ</span><span class="en-content hidden">41 - 50 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">13 עד 15 ס"מ בלבד (קצר במיוחד)</span><span class="en-content hidden">Only 13 - 15 cm (extremely short)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">1.5 עד 2.5 ק"ג (חתול קל משקל)</span><span class="en-content hidden">1.5 - 2.5 kg (a lightweight cat)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">כ-14 שנים</span><span class="en-content hidden">Approx. 14 years</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. אנטומיה וביולוגיה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>אבולוציה של ראש שטוח:</strong> צורת הגולגולת שלו היא אולי המוזרה ביותר מכל החתוליים. הראש שלו ארוך ושטוח לחלוטין (בדומה ללוטרה מיוערת או לתנין קטן). מבנה אווירודינמי זה מאפשר לו להכניס את פניו עמוק לתוך המים כדי לאתר ולתפוס דגים מבלי ליצור התנגדות וגלים מיותרים.</p>
+                    <p><strong>ראייה סטריאוסקופית כפולה:</strong> בניגוד לרוב החתולים שעיניהם ממוקמות מעט בצדי הראש, עיניו של חתול זה קרובות מאוד זו לזו וממוקמות בקדמת פניו. מיקום זה מעניק לו ראיית עומק תלת-ממדית (Stereoscopic vision) חדה באופן חריג, הדרושה לו כדי לאמוד במדויק את המרחק של דג השוחה מתחת למים, שם שבירת האור (Refraction) בדרך כלל מטעה את העין.</p>
+                    <p><strong>ציוד דיג מובנה:</strong> החתול מצויד בשלוש תכונות ציד ימיות קטלניות. הראשונה: קרומי שחייה שלמים המתוחים בין אצבעות רגליו. השנייה: בדומה לברדלס, הטפרים שלו **אינם** נשלפים לחלוטין, מה שמאפשר לו אחיזה מושלמת בבוץ החלקלק של גדות הנהר. השלישית: שיני המלתעות שלו (Premolars) ארוכות מאוד ומחודדות אחורה כלפי הגרון, ממש כמו אצל תנינים, מה שמונע מדגים חלקלקים להחליק החוצה מהפה לאחר שנתפסו.</p>
+                    <p><strong>רחיצת מזון:</strong> בעוד שחתולי בית נרתעים ממים, חתול זה לא רק חי בהם, אלא לעיתים קרובות נצפה "רוחץ" (Washing) את הטרף שלו בתוך המים לפני שהוא אוכל אותו, בדומה להתנהגות המוכרת של דביבונים (Raccoons).</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Evolution of a Flat Head:</strong> Its skull shape is perhaps the most bizarre of all felines. Its head is completely long and flat (reminiscent of a forest otter or a small crocodile). This aerodynamic structure allows it to submerge its face deep into the water to locate and catch fish without creating unnecessary drag or ripples.</p>
+                    <p><strong>Double Stereoscopic Vision:</strong> Unlike most cats whose eyes are set slightly to the sides of the head, this cat's eyes are set very close together at the front of its face. This placement gives it exceptionally sharp 3D depth perception (stereoscopic vision), which is necessary to accurately gauge the distance of a fish swimming underwater, where light refraction usually deceives the eye.</p>
+                    <p><strong>Built-in Fishing Gear:</strong> The cat is equipped with three lethal aquatic hunting traits. First: full webbing stretched between its toes. Second: similar to the cheetah, its claws are **not** fully retractable, providing perfect grip on slippery, muddy riverbanks. Third: its premolar teeth are very long and pointed backwards toward the throat, much like a crocodile's, preventing slippery fish from escaping once caught.</p>
+                    <p><strong>Food Washing:</strong> While domestic cats typically abhor water, this cat not only lives in it but is frequently observed "washing" its prey in the water before eating it, similar to the well-known behavior of raccoons.</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-amber-600 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-amber-600 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Prionailurus</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Prionailurus</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם המדעי המורכב מגיע מיוונית עתיקה. המילה 'prion' (πρίων) משמעותה "מסור", והמילה 'ailur' (αἴλουρος) משמעותה חתול. כלומר: "חתול המסור". שם זה הוענק לכל בני הסוג (הכולל גם את החתול הנמרי) בשל שיניהם החדות להפליא, ובמיוחד הטפרים ושיני המלתעות של החתול שטוח-הראש המזכירים שיני מסור משוננות שנועדו להחזיק דגים.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The complex scientific name comes from Ancient Greek. The word 'prion' (πρίων) means "saw", and 'ailur' (αἴλουρος) means cat. Thus: "Saw cat". This name was given to all members of this genus (which includes the leopard cat) due to their incredibly sharp teeth, and particularly the claws and premolars of the flat-headed cat that resemble serrated saw teeth designed to grip fish.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: planiceps</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: planiceps</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">החלק השני של השם מגיע מלטינית. הקידומת 'planus' מתורגמת ל"שטוח" (Flat), והסיומת 'ceps' (שמקורה במילה caput) מתורגמת ל"ראש" (Head). החיבור יוצר את התיאור הפיזי המדויק ביותר לחיה זו: "בעל הראש השטוח".</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The second part of the name comes from Latin. The prefix 'planus' translates to "flat", and the suffix 'ceps' (derived from caput) translates to "head". The combination creates the most accurate physical description of this animal: "flat-headed".</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי והעברי: Flat-headed Cat</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Common Name: Flat-headed Cat</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם באנגלית ובעברית (חתול שטוח-ראש) הוא פשוט תרגום ישיר של השם המדעי اللטיני. במדינות המוצא שלו (כמו מלזיה ואינדונזיה), הוא מכונה "Kucing Hutan" שפירושו המילולי "חתול יער", למרות שהוא מבלה את רוב זמנו סביב נהרות וביצות.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The name in English and Hebrew (Flat-headed Cat) is simply a direct translation of the Latin scientific name. In its native countries (like Malaysia and Indonesia), it is called "Kucing Hutan" which literally means "forest cat," even though it spends most of its time around rivers and swamps.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריה ושימור -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">חתול שטוח-הראש תואר מדעית לראשונה בשנת <strong>1827</strong> על ידי צמד חוקרים בולטים: הזואולוג האירי <strong>ניקולס איילוורד ויגורס</strong> (Nicholas Aylward Vigors, שנות חיים: 1785–1840) וחוקר הטבע האמריקאי <strong>תומאס הורספילד</strong> (Thomas Horsfield, שנות חיים: 1773–1859). הם גילו אותו באי סומטרה במהלך מסעות החקר שלהם במזרח הרחוק.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">The flat-headed cat was first scientifically described in <strong>1827</strong> by a duo of prominent researchers: the Irish zoologist <strong>Nicholas Aylward Vigors</strong> (Lifespan: 1785–1840) and the American naturalist <strong>Thomas Horsfield</strong> (Lifespan: 1773–1859). They discovered it on the island of Sumatra during their exploration expeditions in the Far East.</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה - התמחות אקסטרים:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution - Extreme Specialization:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">מבחינה אבולוציונית, חתול שטוח-הראש שייך לשושלת החתול הנמרי (Leopard cat lineage) שהתפתחה באסיה. עם זאת, הוא נחשב למקרה הקיצוני ביותר של התמחות נישתית (Specialization) מבין כל חברי המשפחה. לפני כשני מיליון שנים, הוא התפצל גנטית כדי להפוך לצייד מים טהור. אבולוציה זו הובילה לשינוי שלד הגולגולת שלו ולקרומי השחייה ברגליו – תכונות המייחדות אותו מכל שאר בני סוגו.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">Evolutionarily, the flat-headed cat belongs to the Leopard cat lineage that evolved in Asia. However, it is considered the most extreme case of niche specialization among all family members. About two million years ago, it diverged genetically to become a pure aquatic hunter. This evolution led to the modification of its skull skeleton and the webbing in its feet—traits that distinguish it from all other members of its genus.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני – סכנה עמוקה:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status – Deep Danger:</h4>
+                        <p class="text-sm text-slate-300 he-content">מוגדר כ"בסכנת הכחדה" (Endangered - EN) על ידי ה-IUCN. זהו אחד החתולים הנדירים בעולם, עם אוכלוסייה המוערכת בפחות מ-2,500 פרטים בוגרים, ששורדים בכיסים מבודדים בחצי האי המלאי, סומטרה ובורנאו. מכיוון שהוא תלוי לחלוטין במקורות מים מתוקים (נחלים וביצות), הוא מאוים בצורה קטלנית מזיהום מים הנגרם מחומרי הדברה. אך האיום הגדול מכולם הוא חיסול היערות הלחים לטובת שתילת מטעי שמן דקל (Palm oil), המייבשים והורסים לחלוטין את בית הגידול המימי שבלעדיו הוא לא יכול לשרוד.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Classified as "Endangered" (EN) by the IUCN. It is one of the rarest cats globally, with a population estimated at under 2,500 mature individuals surviving in isolated pockets across the Malay Peninsula, Sumatra, and Borneo. Because it is completely dependent on fresh water sources (streams and wetlands), it is lethally threatened by water pollution caused by agricultural pesticides. But the greatest threat of all is the eradication of wetland forests in favor of palm oil plantations, which drain and completely destroy the aquatic habitat without which it cannot survive.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            document.querySelectorAll('.he-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'he'));
+            document.querySelectorAll('.en-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'en'));
+        }
+        function openImageModal(imgUrl) {
+            /* תמיכה במודל */
+        }
+        function closeImageModal() {
+            /* סגירה */
+        }
+    </script>
+</body>
+</html>
