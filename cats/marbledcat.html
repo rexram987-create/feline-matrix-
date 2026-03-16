@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>חתול שיש (Pardofelis marmorata) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #a16207; /* חום-ענבר שיש / יערות טרופיים */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-amber-700/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-amber-600 hover:bg-amber-700 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-amber-700 hover:text-white transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/marbledcat.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/marbledcat.png" alt="חתול שיש על ענף" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-amber-800/30 text-amber-500 text-xs font-bold px-3 py-1 rounded-full border border-amber-700/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-amber-800/30 text-amber-500 text-xs font-bold px-3 py-1 rounded-full border border-amber-700/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">האקרובט המנומר</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">The Marbled Acrobat</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">חתול שיש</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Marbled Cat</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Pardofelis marmorata</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. תעודת זהות זואולוגית -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Marbled Cat</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Miniature Clouded Leopard"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> חתול בר קטן ועדין מיערות דרום-מזרח אסיה, המזכיר במראהו גרסה מוקטנת של הנמר הערפלי. בדומה למרגיי באמריקה, חתול השיש הוא אלוף טיפוס עצים ומתאפיין בזנב שעיר וארוך להפליא שלעיתים עולה באורכו על אורך גופו כולו.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Marbled Cat</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Miniature Clouded Leopard"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> A small, delicate wildcat from the forests of Southeast Asia, resembling a miniature version of the clouded leopard. Much like the margay in the Americas, the marbled cat is a master tree climber characterized by an incredibly long, bushy tail that often exceeds the length of its entire body.</li>
+                </ul>
+            </section>
+
+            <!-- 2. נתונים סטטיסטיים -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-amber-600 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-amber-600 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">כ-81 ימים (נדיר מאוד בשבי)</span><span class="en-content hidden">Approx. 81 days (very rare in captivity)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">45 עד 62 ס"מ (כגודל חתול בית)</span><span class="en-content hidden">45 - 62 cm (size of a domestic cat)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">35 עד 55 ס"מ (זנב ארוך במיוחד)</span><span class="en-content hidden">35 - 55 cm (exceptionally long tail)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">2 עד 5 ק"ג</span><span class="en-content hidden">2 - 5 kg</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">לא ידוע בטבע (עד 12 שנים בשבי)</span><span class="en-content hidden">Unknown in wild (up to 12 years in captivity)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. אנטומיה וביולוגיה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>טיפוס ב-180 מעלות:</strong> חתול השיש מותאם בצורה מושלמת לחיים בצמרות העצים (Arboreal). בדומה לנמר הערפלי מאסיה ולמרגיי מאמריקה הדרומית (דוגמה מדהימה לאבולוציה מתכנסת), גם לחתול השיש יש מפרקי קרסול גמישים במיוחד. הוא מסוגל לסובב את כפות רגליו האחוריות ב-180 מעלות, מה שמאפשר לו לרדת במורד גזעי עצים בצורה אנכית כשראשו מופנה כלפי מטה, או להיתלות בחוזקה מענפים.</p>
+                    <p><strong>הזנב העצום:</strong> זנבו העבה והפרוותי מהווה עד 75% מאורך גופו כולו. במהלך הטיפוס והקפיצות המסוכנות בין ענפי יער הגשם, הזנב פועל כמשקולת כיוון (Counterweight) אקטיבית, שמייצבת את החתול הקטן באוויר ומונעת ממנו ליפול.</p>
+                    <p><strong>ציד משולב:</strong> למרות שחלק גדול מחייו הוא מבלה על העצים, חתול השיש צד גם על הקרקע. תזונתו כוללת מגוון רחב של בעלי חיים קטנים החיים בחופת היער ובקרקעיתו: ציפורים, סנאים (בייחוד סנאים מעופפים), מכרסמים, עטלפים, זוחלים ולעיתים אף צפרדעים וחרקים.</p>
+                    <p><strong>הסוואת "שיש":</strong> פרוותו יפהפייה וייחודית, ומזכירה בצורתה אבן שיש מלוטשת. הצבע השולט הוא חום-צהבהב עד חום-אפרפר, ועל גביו מתפתלים קווים עבים וכהים, וכתמים ענקיים שמרכזם בהיר משוליהם. מבנה "מבולגן" זה שובר לחלוטין את קווי המתאר של החתול בתוך האור והצל של היער הצפוף.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>180-Degree Climbing:</strong> The marbled cat is perfectly adapted to life in the canopy (arboreal). Similar to the clouded leopard in Asia and the margay in South America (a stunning example of convergent evolution), the marbled cat possesses extremely flexible ankle joints. It can rotate its hind paws 180 degrees, allowing it to climb down vertical tree trunks head-first, or hang tightly from branches.</p>
+                    <p><strong>The Enormous Tail:</strong> Its thick, bushy tail makes up to 75% of its entire head-to-body length. During climbing and dangerous leaps between rainforest branches, the tail acts as an active counterweight, stabilizing the small cat in mid-air and preventing it from falling.</p>
+                    <p><strong>Versatile Hunting:</strong> Although it spends much of its life in the trees, the marbled cat also hunts on the ground. Its diet includes a wide variety of small animals living in the forest canopy and on the floor: birds, squirrels (especially flying squirrels), rodents, bats, reptiles, and occasionally frogs and insects.</p>
+                    <p><strong>"Marble" Camouflage:</strong> Its coat is uniquely beautiful, resembling polished marble stone. The dominant color is yellowish-brown to greyish-brown, overlaid with thick, dark twisting lines and massive spots with centers lighter than their edges. This "chaotic" pattern completely breaks up the cat's outline within the dappled light and shadow of the dense forest.</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-amber-600 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-amber-600 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Pardofelis</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Pardofelis</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם המדעי הוא שילוב של שתי שפות קלאסיות. הקידומת מגיעה מיוונית עתיקה 'pardos' (πάρδος) שמשמעותה "נמר" או "פנתר", והסיומת מגיעה מלטינית 'felis' שמשמעותה "חתול". התרגום המילולי הוא "חתול-נמר" או "חתול-פנתר", המצביע על מראהו המנומר כשל חתול גדול, למרות מידותיו הזעירות.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The scientific name is a combination of two classical languages. The prefix comes from Ancient Greek 'pardos' (πάρδος) meaning "leopard" or "panther", and the suffix comes from Latin 'felis' meaning "cat". The literal translation is "leopard-cat" or "panther-cat", pointing to its spotted big-cat appearance despite its tiny dimensions.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: marmorata</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: marmorata</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">מקור המילה בלטינית הוא 'marmor' שפירושו "שיש" (Marble). סיומת זו ניתנה כתיאור פיזי ישיר של תבנית הפרווה של החיה, המורכבת מכתמים רחבים וקווים מתפתלים שמזכירים גידים של אבן שיש מלוטשת.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Latin root of the word is 'marmor', meaning "marble". This specific epithet was given as a direct physical description of the animal's coat pattern, which consists of broad spots and twisting lines that resemble the veins of polished marble stone.</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי והעברי: חתול שיש / Marbled Cat</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Common Name: Marbled Cat</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם העברי (והאנגלי) הוא תרגום ישיר של השם הלטיני המדעי שתיאר את מראה הפרווה. במדינות המוצא שלו במזרח אסיה, הוא מכונה לעיתים בשמות מקומיים המתרגמים ל"נמר העצים הקטן".</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Hebrew (and English) name is a direct translation of the Latin scientific name describing the fur's appearance. In its native East Asian countries, it is sometimes called by local names translating to "little tree leopard."</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריה ושימור -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-amber-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">חתול השיש תואר מדעית לראשונה בשנת <strong>1836</strong> על ידי חוקר הטבע והזואולוג הבריטי <strong>ויליאם צ'ארלס לינאוס מרטין</strong> (William Charles Linnaeus Martin, שנות חיים: 1798–1864). מרטין חקר דגימה שנשלחה מסומטרה או מג'אווה, ותיאר אותה כמין מיוחד המגשר על הפער הוויזואלי בין חתולים קטנים לחתולים גדולים מנומרים.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">The marbled cat was first scientifically described in <strong>1836</strong> by the British naturalist and zoologist <strong>William Charles Linnaeus Martin</strong> (Lifespan: 1798–1864). Martin examined a specimen sent from Sumatra or Java, describing it as a unique species bridging the visual gap between small cats and large spotted felines.</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">למרות הדמיון הפיזי המדהים לנמר הערפלי האסייתי, הם אינם קרובי משפחה ישירים! מחקרי דנ"א הוכיחו שחתול השיש שייך לשושלת ה"חתול הזהוב" (Bay cat lineage), שהתפצלה מוקדם יחסית באבולוציה של החתוליים (לפני כ-9.4 מיליון שנים). השושלת כוללת גם את החתול הזהוב האסיאתי (שנחקור בקרוב) ואת החתול הבורנאי.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">Despite the striking physical resemblance to the Asian clouded leopard, they are not direct relatives! DNA studies have proven that the marbled cat belongs to the "Bay cat lineage", which diverged relatively early in feline evolution (about 9.4 million years ago). This lineage also includes the Asian golden cat (which we will study soon) and the Bornean Bay cat.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">מוגדר כ"קרוב לסיכון" (Near Threatened - NT) על ידי ה-IUCN. הוא נפוץ ממרגלות ההימלאיה בנפאל והודו ועד ליערות העבותים של מלזיה, סומטרה ובורנאו. עם זאת, מכיוון שהוא חיה "ארבוראלית" (תלויה לחלוטין בעצים גבוהים), האיום העיקרי עליו הוא כריתת היערות המסיבית לאורך דרום-מזרח אסיה. כמו כן, הוא נפגע לעיתים מציד על ידי שבטים מקומיים בשל פרוותו היפה ובשרו.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Classified as "Near Threatened" (NT) by the IUCN. It ranges from the Himalayan foothills in Nepal and India to the dense forests of Malaysia, Sumatra, and Borneo. However, because it is an "arboreal" animal (completely dependent on tall trees), the primary threat to its survival is the massive deforestation across Southeast Asia. It is also occasionally affected by hunting by local tribes for its beautiful fur and meat.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <!-- Modal (חלון צף) - הקוד המלא והבדוק -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-amber-600 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            
+            const heElements = document.querySelectorAll('.he-content');
+            const enElements = document.querySelectorAll('.en-content');
+            
+            heElements.forEach(el => {
+                if(currentLang === 'he') {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+            
+            enElements.forEach(el => {
+                if(currentLang === 'en') {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+        }
+        
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { 
+                imgEl.src = imgUrl; 
+                modal.classList.remove('hidden'); 
+            }
+        }
+        
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
