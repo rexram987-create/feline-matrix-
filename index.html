@@ -32,6 +32,7 @@
     </header>
 
     <main class="flex-grow container mx-auto max-w-5xl relative z-10">
+        <!-- אזור טקסט פתיחה -->
         <section class="mb-12 intro-box p-6 md:p-8 max-w-3xl mx-auto" id="introBox">
             <h2 id="introTitle" class="text-xl md:text-2xl font-bold text-amber-500 mb-5 pb-2 inline-flex items-center"></h2>
             <div id="introContent" class="space-y-6 text-slate-300 leading-relaxed text-sm md:text-base text-justify">
@@ -40,11 +41,30 @@
             </div>
         </section>
 
+        <!-- שורת החיפוש החדשה -->
+        <div class="mb-8 max-w-2xl mx-auto relative px-2">
+            <div class="absolute inset-y-0 right-0 pr-6 flex items-center pointer-events-none">
+                <svg class="h-5 w-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </div>
+            <input type="text" id="searchInput" onkeyup="filterCats()" placeholder="חפש חתול לפי שם..." class="w-full bg-[#132342] border border-slate-700 text-white rounded-full py-3 pr-14 pl-4 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all shadow-inner placeholder-slate-500 text-sm">
+        </div>
+
+        <!-- קטלוג החתולים -->
         <section class="mb-16">
             <h2 id="catHeader" class="text-xs font-bold text-slate-500 uppercase tracking-[0.2em] mb-6 pl-2 text-center md:text-start">קטלוג החתוליים המלא</h2>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="catsGrid">
                 <p class="text-slate-500 text-sm animate-pulse">טוען נתונים אבולוציוניים...</p>
+            </div>
+        </section>
+
+        <!-- מילון מונחים חדש -->
+        <section class="mt-8 mb-12 max-w-3xl mx-auto">
+            <h2 id="glossaryHeader" class="text-xl md:text-2xl font-bold text-amber-500 mb-6 pl-2 text-center md:text-start border-b border-slate-800 pb-3">מילון מונחים זואולוגי</h2>
+            <div id="glossaryContainer" class="space-y-3">
+                <!-- המונחים ירונדרו לכאן באמצעות ה-JS -->
             </div>
         </section>
     </main>
@@ -64,39 +84,38 @@
         <div class="text-[9px] text-slate-700 uppercase tracking-[0.4em]">© 2026 The Feline Matrix | S25 Ultra</div>
     </footer>
 
-    <!-- טעינת הנתונים עם פרמטר v=2 שעוקף את זיכרון המטמון (Cache Buster) -->
-    <script src="data.js?v=2"></script>
+    <!-- טעינת הנתונים מתוך קובץ ה-JS -->
+    <!-- שינינו ל-v=3 כדי לעקוף את זיכרון המטמון ולראות את השינויים מיד -->
+    <script src="data.js?v=3"></script>
     <script>
         function renderCats() {
             const grid = document.getElementById('catsGrid');
             try {
-                // מנסה לצייר את הכפתורים. אם יש בעיה ב-data.js זה יקפוץ ל-catch
                 grid.innerHTML = ''; 
-                catsData.forEach(cat => {
-                    const title = currentLang === 'he' ? cat.nameHe : cat.nameEn;
+                catsData.forEach((cat, index) => {
+                    // הגדרת משתנה התחלתי שיתעדכן מיד לאחר מכן דרך toggleLanguage
+                    const title = cat.nameHe; 
+                    
+                    // הוספנו את ה-ID (cat-card-${index}) גם לכרטיס וגם לכותרת כדי שהחיפוש והחלפת השפות יעבדו חלק
                     const cardHtml = `
-                    <a href="${cat.link}" class="category-card p-4 rounded-3xl flex items-center space-x-4 space-x-reverse group hover:border-[${cat.color}]">
+                    <a href="${cat.link}" id="cat-card-${index}" class="cat-card category-card p-4 rounded-3xl flex items-center space-x-4 space-x-reverse group hover:border-[${cat.color}]">
                         <div class="card-img-container ml-4"><img src="${cat.img}" alt="${title}" onerror="this.src='https://via.placeholder.com/150/0a1122/${cat.color.replace('#','')}?text=🐾'"></div>
-                        <div><h3 class="font-bold text-lg text-white">${title}</h3><p class="text-[10px] text-slate-500 font-mono mt-1">${cat.scientific}</p></div>
+                        <div>
+                            <h3 id="cat-name-${index}" class="font-bold text-lg text-white">${title}</h3>
+                            <p class="text-[10px] text-slate-500 font-mono mt-1">${cat.scientific}</p>
+                        </div>
                     </a>
                     `;
                     grid.innerHTML += cardHtml;
                 });
             } catch (error) {
-                // אם יש שגיאה, נציג אותה כדי לדעת מה לתקן!
                 grid.innerHTML = `<div class="p-4 bg-red-900/30 border border-red-500 rounded-lg text-red-400 text-sm">שגיאה בטעינת נתונים: ${error.message} <br> אנא ודא שקובץ data.js תקין בגיטהאב.</div>`;
             }
         }
 
-        // דריסה (החלפה) של פונקציית החלפת השפה מ-data.js כדי שתרנדר גם את החתולים מחדש
-        const originalToggle = window.toggleLanguage;
-        window.toggleLanguage = function() {
-            if(typeof originalToggle === 'function') originalToggle(); 
-            renderCats(); 
-        }
-
-        // ציור ראשוני אחרי השהייה קלה כדי לוודא שהנתונים נטענו
-        setTimeout(renderCats, 200);
+        // אנו מרנדרים את כרטיסיות החתולים פעם אחת מיד עם טעינת הדף.
+        // החלפת השפה (toggleLanguage) מתוך data.js כבר תדאג לעדכן את הטקסטים מבלי למחוק את החיפוש!
+        renderCats();
     </script>
 </body>
 </html>
