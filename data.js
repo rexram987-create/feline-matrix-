@@ -32,332 +32,81 @@ const content = {
     }
 };
 
-// רשימת 36 החתולים המלאה
+// רשימת 40 החתולים המלאה
 const catsData = [
+    { id: "lion", nameHe: "חתולים גדולים (אריה)", nameEn: "Big Cats (Lion)", scientific: "Panthera leo", img: "assets/lion.png", link: "cats/lion.html", color: "#f59e0b" },
+    { id: "tiger", nameHe: "חתולים גדולים (טיגריס)", nameEn: "Big Cats (Tiger)", scientific: "Panthera tigris", img: "assets/tiger.png", link: "cats/tiger.html", color: "#f97316" },
+    { id: "leopard", nameHe: "חתולים גדולים (נמר)", nameEn: "Big Cats (Leopard)", scientific: "Panthera pardus", img: "assets/leopard.png", link: "cats/leopard.html", color: "#eab308" },
+    { id: "jaguar", nameHe: "חתולים גדולים (יגואר)", nameEn: "Big Cats (Jaguar)", scientific: "Panthera onca", img: "assets/jaguar.png", link: "cats/jaguar.html", color: "#fbbf24" },
+    { id: "cheetah", nameHe: "חתולים קטנים (ברדלס)", nameEn: "Small Cats (Cheetah)", scientific: "Acinonyx jubatus", img: "assets/cheetah.png", link: "cats/cheetah.html", color: "#facc15" },
+    { id: "puma", nameHe: "חתולים קטנים (פומה)", nameEn: "Small Cats (Puma/Cougar)", scientific: "Puma concolor", img: "assets/puma.png", link: "cats/puma.html", color: "#d97706" },
+    { id: "caracal", nameHe: "חתולים קטנים (קרקל)", nameEn: "Small Cats (Caracal)", scientific: "Caracal caracal", img: "assets/caracal.png", link: "cats/caracal.html", color: "#d97706" },
+    { id: "snowleopard", nameHe: "חתולים גדולים (נמר השלג)", nameEn: "Big Cats (Snow Leopard)", scientific: "Panthera uncia", img: "assets/snowleopard.png", link: "cats/snowleopard.html", color: "#94a3b8" },
+    { id: "canadianlynx", nameHe: "חתולים קטנים (שונר קנדי)", nameEn: "Small Cats (Canadian Lynx)", scientific: "Lynx canadensis", img: "assets/canadianlynx.png", link: "cats/canadianlynx.html", color: "#93c5fd" },
+    { id: "serval", nameHe: "חתולים קטנים (סרוואל)", nameEn: "Small Cats (Serval)", scientific: "Leptailurus serval", img: "assets/serval.png", link: "cats/serval.html", color: "#ca8a04" },
+    { id: "iberianlynx", nameHe: "חתולים קטנים (שונר איברי)", nameEn: "Small Cats (Iberian Lynx)", scientific: "Lynx pardinus", img: "assets/iberianlynx.png", link: "cats/iberianlynx.html", color: "#ea580c" },
+    { id: "blackpanther", nameHe: "מוטציה (פנתר שחור)", nameEn: "Mutation (Black Panther)", scientific: "Melanistic Panthera", img: "assets/blackpanther.png", link: "cats/blackpanther.html", color: "#64748b" },
+    { id: "ocelot", nameHe: "חתולים קטנים (אוצלוט)", nameEn: "Small Cats (Ocelot)", scientific: "Leopardus pardalis", img: "assets/ocelot.png", link: "cats/ocelot.html", color: "#d97706" },
+    { id: "bobcat", nameHe: "חתולים קטנים (בובקט)", nameEn: "Small Cats (Bobcat)", scientific: "Lynx rufus", img: "assets/bobcat.png", link: "cats/bobcat.html", color: "#9a3412" },
+    { id: "lynx", nameHe: "חתולים קטנים (שונר אירואסייתי)", nameEn: "Small Cats (Eurasian Lynx)", scientific: "Lynx lynx", img: "assets/lynx.png", link: "cats/lynx.html", color: "#a8a29e" },
+    { id: "cloudedleopard", nameHe: "חתולים גדולים (נמר הערפלי)", nameEn: "Big Cats (Clouded Leopard)", scientific: "Neofelis nebulosa", img: "assets/cloudedleopard.png", link: "cats/cloudedleopard.html", color: "#6b7280" },
+    { id: "sandcat", nameHe: "חתולים קטנים (חתול חולות)", nameEn: "Small Cats (Sand Cat)", scientific: "Felis margarita", img: "assets/sandcat.png", link: "cats/sandcat.html", color: "#fde047" },
+    { id: "jaguarundi", nameHe: "חתולים קטנים (יגוארונדי)", nameEn: "Small Cats (Jaguarundi)", scientific: "Herpailurus yagouaroundi", img: "assets/jaguarundi.png", link: "cats/jaguarundi.html", color: "#573516" },
+    { id: "sundacloudedleopard", nameHe: "חתולים גדולים (נמר ערפלי של איי סונדה)", nameEn: "Big Cats (Sunda Clouded Leopard)", scientific: "Neofelis diardi", img: "assets/sundacloudedleopard.png", link: "cats/sundacloudedleopard.html", color: "#4b5563" },
+    { id: "colocolo", nameHe: "חתולים קטנים (קולוקולו)", nameEn: "Small Cats (Colocolo / Pampas Cat)", scientific: "Leopardus colocola", img: "assets/colocolo.png", link: "cats/colocolo.html", color: "#b45309" },
+    { id: "pantanalcat", nameHe: "חתולים קטנים (חתול פנטנל)", nameEn: "Small Cats (Pantanal Cat)", scientific: "Leopardus braccatus", img: "assets/pantanalcat.png", link: "cats/pantanalcat.html", color: "#a16207" },
+    { id: "blackfootedCat", nameHe: "חתולים קטנים (חתול שחור-רגל)", nameEn: "Small Cats (Black-footed Cat)", scientific: "Felis nigripes", img: "assets/blackfootedCat.png", link: "cats/blackfootedCat.html", color: "#57534e" },
+    { id: "wildcat", nameHe: "חתולים קטנים (חתול בר)", nameEn: "Small Cats (Wildcat)", scientific: "Felis silvestris", img: "assets/wildcat.png", link: "cats/wildcat.html", color: "#65a30d" },
+    { id: "junglecat", nameHe: "חתולים קטנים (חתול ביצות)", nameEn: "Small Cats (Jungle Cat)", scientific: "Felis chaus", img: "assets/junglecat.png", link: "cats/junglecat.html", color: "#4d7c0f" },
+    { id: "margay", nameHe: "חתולים קטנים (מרגיי)", nameEn: "Small Cats (Margay)", scientific: "Leopardus wiedii", img: "assets/margay.png", link: "cats/margay.html", color: "#c2410c" },
+    { id: "domesticcat", nameHe: "חתולים קטנים (חתול בית)", nameEn: "Small Cats (Domestic Cat)", scientific: "Felis catus", img: "assets/domesticcat.png", link: "cats/domesticcat.html", color: "#8b5cf6" },
+    { id: "andeanmountaincat", nameHe: "חתולים קטנים (חתול הרים אנדיי)", nameEn: "Small Cats (Andean Mountain Cat)", scientific: "Leopardus jacobita", img: "assets/andeanmountaincat.png", link: "cats/andeanmountaincat.html", color: "#9ca3af" },
+    { id: "kodkod", nameHe: "חתולים קטנים (קודקוד)", nameEn: "Small Cats (Kodkod)", scientific: "Leopardus guigna", img: "assets/kodkod.png", link: "cats/kodkod.html", color: "#78350f" },
+    { id: "geoffroyscat", nameHe: "חתולים קטנים (חתול ג'ופרואה)", nameEn: "Small Cats (Geoffroy's Cat)", scientific: "Leopardus geoffroyi", img: "assets/geoffroy'scat.png", link: "cats/geoffroyscat.html", color: "#a8a29e" },
+    { id: "oncilla", nameHe: "חתולים קטנים (אונצילה)", nameEn: "Small Cats (Oncilla)", scientific: "Leopardus tigrinus", img: "assets/oncilla.png", link: "cats/oncilla.html", color: "#d97706" },
+    { id: "flatheadedcat", nameHe: "חתולים קטנים (חתול שטוח-ראש)", nameEn: "Small Cats (Flat-headed Cat)", scientific: "Prionailurus planiceps", img: "assets/flatheadedcat.png", link: "cats/flatheadedcat.html", color: "#b45309" },
+    { id: "fishingcat", nameHe: "חתולים קטנים (חתול דייגים)", nameEn: "Small Cats (Fishing Cat)", scientific: "Prionailurus viverrinus", img: "assets/fishingcat.png", link: "cats/fishingcat.html", color: "#0284c7" },
+    { id: "marbledcat", nameHe: "חתולים קטנים (חתול שיש)", nameEn: "Small Cats (Marbled Cat)", scientific: "Pardofelis marmorata", img: "assets/marbledcat.png", link: "cats/marbledcat.html", color: "#a16207" },
+    { id: "leopardcat", nameHe: "חתולים קטנים (חתול נמרי בנגלי)", nameEn: "Small Cats (Leopard Cat)", scientific: "Prionailurus bengalensis", img: "assets/leopardcat.png", link: "cats/leopardcat.html", color: "#ca8a04" },
+    { id: "asiangoldencat", nameHe: "חתולים קטנים (חתול זהוב אסיאתי)", nameEn: "Small Cats (Asian Golden Cat)", scientific: "Catopuma temminckii", img: "assets/asiangoldencat.png", link: "cats/asiangoldencat.html", color: "#b45309" },
+    { id: "africangoldencat", nameHe: "חתולים קטנים (חתול זהוב אפריקני)", nameEn: "Small Cats (African Golden Cat)", scientific: "Caracal aurata", img: "assets/africangoldencat.png", link: "cats/africangoldencat.html", color: "#9a3412" },
+    
+    // --- 4 האחרונים מהרשימה הסופית ---
     {
-        id: "lion",
-        nameHe: "חתולים גדולים (אריה)",
-        nameEn: "Big Cats (Lion)",
-        scientific: "Panthera leo",
-        img: "assets/lion.png",
-        link: "cats/lion.html",
-        color: "#f59e0b"
+        id: "pallascat",
+        nameHe: "חתולים קטנים (חתול פאלאס)",
+        nameEn: "Small Cats (Pallas's Cat)",
+        scientific: "Otocolobus manul",
+        img: "assets/pallas'scat.png",
+        link: "cats/pallascat.html",
+        color: "#64748b" // אפור-צפחה חורפי
     },
     {
-        id: "tiger",
-        nameHe: "חתולים גדולים (טיגריס)",
-        nameEn: "Big Cats (Tiger)",
-        scientific: "Panthera tigris",
-        img: "assets/tiger.png",
-        link: "cats/tiger.html",
-        color: "#f97316"
+        id: "rustyspottedcat",
+        nameHe: "חתולים קטנים (חתול אדמדם)",
+        nameEn: "Small Cats (Rusty-spotted Cat)",
+        scientific: "Prionailurus rubiginosus",
+        img: "assets/rustyspottedcat.png",
+        link: "cats/rustyspottedcat.html",
+        color: "#b45309" // חום-חלודה אדמדם
     },
     {
-        id: "leopard",
-        nameHe: "חתולים גדולים (נמר)",
-        nameEn: "Big Cats (Leopard)",
-        scientific: "Panthera pardus",
-        img: "assets/leopard.png",
-        link: "cats/leopard.html",
-        color: "#eab308"
+        id: "baycat",
+        nameHe: "חתולים קטנים (חתול בורנאי)",
+        nameEn: "Small Cats (Bay Cat)",
+        scientific: "Catopuma badia",
+        img: "assets/baycat.png",
+        link: "cats/baycat.html",
+        color: "#7f1d1d" // חום-אדום עמוק
     },
     {
-        id: "jaguar",
-        nameHe: "חתולים גדולים (יגואר)",
-        nameEn: "Big Cats (Jaguar)",
-        scientific: "Panthera onca",
-        img: "assets/jaguar.png",
-        link: "cats/jaguar.html",
-        color: "#fbbf24"
-    },
-    {
-        id: "cheetah",
-        nameHe: "חתולים קטנים (ברדלס)",
-        nameEn: "Small Cats (Cheetah)",
-        scientific: "Acinonyx jubatus",
-        img: "assets/cheetah.png",
-        link: "cats/cheetah.html",
-        color: "#facc15"
-    },
-    {
-        id: "puma",
-        nameHe: "חתולים קטנים (פומה)",
-        nameEn: "Small Cats (Puma/Cougar)",
-        scientific: "Puma concolor",
-        img: "assets/puma.png",
-        link: "cats/puma.html",
-        color: "#d97706"
-    },
-    {
-        id: "caracal",
-        nameHe: "חתולים קטנים (קרקל)",
-        nameEn: "Small Cats (Caracal)",
-        scientific: "Caracal caracal",
-        img: "assets/caracal.png",
-        link: "cats/caracal.html",
-        color: "#d97706"
-    },
-    {
-        id: "snowleopard",
-        nameHe: "חתולים גדולים (נמר השלג)",
-        nameEn: "Big Cats (Snow Leopard)",
-        scientific: "Panthera uncia",
-        img: "assets/snowleopard.png",
-        link: "cats/snowleopard.html",
-        color: "#94a3b8"
-    },
-    {
-        id: "canadianlynx",
-        nameHe: "חתולים קטנים (שונר קנדי)",
-        nameEn: "Small Cats (Canadian Lynx)",
-        scientific: "Lynx canadensis",
-        img: "assets/canadianlynx.png",
-        link: "cats/canadianlynx.html",
-        color: "#93c5fd"
-    },
-    {
-        id: "serval",
-        nameHe: "חתולים קטנים (סרוואל)",
-        nameEn: "Small Cats (Serval)",
-        scientific: "Leptailurus serval",
-        img: "assets/serval.png",
-        link: "cats/serval.html",
-        color: "#ca8a04"
-    },
-    {
-        id: "iberianlynx",
-        nameHe: "חתולים קטנים (שונר איברי)",
-        nameEn: "Small Cats (Iberian Lynx)",
-        scientific: "Lynx pardinus",
-        img: "assets/iberianlynx.png",
-        link: "cats/iberianlynx.html",
-        color: "#ea580c"
-    },
-    {
-        id: "blackpanther",
-        nameHe: "מוטציה (פנתר שחור)",
-        nameEn: "Mutation (Black Panther)",
-        scientific: "Melanistic Panthera",
-        img: "assets/blackpanther.png",
-        link: "cats/blackpanther.html",
-        color: "#64748b"
-    },
-    {
-        id: "ocelot",
-        nameHe: "חתולים קטנים (אוצלוט)",
-        nameEn: "Small Cats (Ocelot)",
-        scientific: "Leopardus pardalis",
-        img: "assets/ocelot.png",
-        link: "cats/ocelot.html",
-        color: "#d97706"
-    },
-    {
-        id: "bobcat",
-        nameHe: "חתולים קטנים (בובקט)",
-        nameEn: "Small Cats (Bobcat)",
-        scientific: "Lynx rufus",
-        img: "assets/bobcat.png",
-        link: "cats/bobcat.html",
-        color: "#9a3412"
-    },
-    {
-        id: "lynx",
-        nameHe: "חתולים קטנים (שונר אירואסייתי)",
-        nameEn: "Small Cats (Eurasian Lynx)",
-        scientific: "Lynx lynx",
-        img: "assets/lynx.png",
-        link: "cats/lynx.html",
-        color: "#a8a29e"
-    },
-    {
-        id: "cloudedleopard",
-        nameHe: "חתולים גדולים (נמר ערפלי)",
-        nameEn: "Big Cats (Clouded Leopard)",
-        scientific: "Neofelis nebulosa",
-        img: "assets/cloudedleopard.png",
-        link: "cats/cloudedleopard.html",
-        color: "#6b7280"
-    },
-    {
-        id: "sandcat",
-        nameHe: "חתולים קטנים (חתול חולות)",
-        nameEn: "Small Cats (Sand Cat)",
-        scientific: "Felis margarita",
-        img: "assets/sandcat.png",
-        link: "cats/sandcat.html",
-        color: "#fde047"
-    },
-    {
-        id: "jaguarundi",
-        nameHe: "חתולים קטנים (יגוארונדי)",
-        nameEn: "Small Cats (Jaguarundi)",
-        scientific: "Herpailurus yagouaroundi",
-        img: "assets/jaguarundi.png",
-        link: "cats/jaguarundi.html",
-        color: "#573516" 
-    },
-    {
-        id: "sundacloudedleopard",
-        nameHe: "חתולים גדולים (נמר ערפלי של איי סונדה)",
-        nameEn: "Big Cats (Sunda Clouded Leopard)",
-        scientific: "Neofelis diardi",
-        img: "assets/sundacloudedleopard.png",
-        link: "cats/sundacloudedleopard.html",
-        color: "#4b5563" 
-    },
-    {
-        id: "colocolo",
-        nameHe: "חתולים קטנים (קולוקולו)",
-        nameEn: "Small Cats (Colocolo / Pampas Cat)",
-        scientific: "Leopardus colocola",
-        img: "assets/colocolo.png",
-        link: "cats/colocolo.html",
-        color: "#b45309" 
-    },
-    {
-        id: "pantanalcat",
-        nameHe: "חתולים קטנים (חתול פנטנל)",
-        nameEn: "Small Cats (Pantanal Cat)",
-        scientific: "Leopardus braccatus",
-        img: "assets/pantanalcat.png",
-        link: "cats/pantanalcat.html",
-        color: "#a16207" 
-    },
-    {
-        id: "blackfootedCat",
-        nameHe: "חתולים קטנים (חתול שחור-רגל)",
-        nameEn: "Small Cats (Black-footed Cat)",
-        scientific: "Felis nigripes",
-        img: "assets/blackfootedCat.png",
-        link: "cats/blackfootedCat.html",
-        color: "#57534e" 
-    },
-    {
-        id: "wildcat",
-        nameHe: "חתולים קטנים (חתול בר)",
-        nameEn: "Small Cats (Wildcat)",
-        scientific: "Felis silvestris",
-        img: "assets/wildcat.png",
-        link: "cats/wildcat.html",
-        color: "#65a30d" 
-    },
-    {
-        id: "junglecat",
-        nameHe: "חתולים קטנים (חתול ביצות)",
-        nameEn: "Small Cats (Jungle Cat)",
-        scientific: "Felis chaus",
-        img: "assets/junglecat.png",
-        link: "cats/junglecat.html",
-        color: "#4d7c0f" 
-    },
-    {
-        id: "margay",
-        nameHe: "חתולים קטנים (מרגיי)",
-        nameEn: "Small Cats (Margay)",
-        scientific: "Leopardus wiedii",
-        img: "assets/margay.png",
-        link: "cats/margay.html",
-        color: "#c2410c" 
-    },
-    {
-        id: "domesticcat",
-        nameHe: "חתולים קטנים (חתול בית)",
-        nameEn: "Small Cats (Domestic Cat)",
-        scientific: "Felis catus",
-        img: "assets/domesticcat.png",
-        link: "cats/domesticcat.html",
-        color: "#8b5cf6" 
-    },
-    {
-        id: "andeanmountaincat",
-        nameHe: "חתולים קטנים (חתול הרים אנדיי)",
-        nameEn: "Small Cats (Andean Mountain Cat)",
-        scientific: "Leopardus jacobita",
-        img: "assets/andeanmountaincat.png",
-        link: "cats/andeanmountaincat.html",
-        color: "#9ca3af" 
-    },
-    {
-        id: "kodkod",
-        nameHe: "חתולים קטנים (קודקוד)",
-        nameEn: "Small Cats (Kodkod)",
-        scientific: "Leopardus guigna",
-        img: "assets/kodkod.png",
-        link: "cats/kodkod.html",
-        color: "#78350f" 
-    },
-    {
-        id: "geoffroyscat",
-        nameHe: "חתולים קטנים (חתול ג'ופרואה)",
-        nameEn: "Small Cats (Geoffroy's Cat)",
-        scientific: "Leopardus geoffroyi",
-        img: "assets/geoffroy'scat.png",
-        link: "cats/geoffroyscat.html",
-        color: "#a8a29e" 
-    },
-    {
-        id: "oncilla",
-        nameHe: "חתולים קטנים (אונצילה)",
-        nameEn: "Small Cats (Oncilla)",
-        scientific: "Leopardus tigrinus",
-        img: "assets/oncilla.png",
-        link: "cats/oncilla.html",
-        color: "#d97706" 
-    },
-    {
-        id: "flatheadedcat",
-        nameHe: "חתולים קטנים (חתול שטוח-ראש)",
-        nameEn: "Small Cats (Flat-headed Cat)",
-        scientific: "Prionailurus planiceps",
-        img: "assets/flatheadedcat.png",
-        link: "cats/flatheadedcat.html",
-        color: "#b45309" 
-    },
-    // --- 5 החדשים מהרשימה האחרונה ---
-    {
-        id: "fishingcat",
-        nameHe: "חתולים קטנים (חתול דייגים)",
-        nameEn: "Small Cats (Fishing Cat)",
-        scientific: "Prionailurus viverrinus",
-        img: "assets/fishingcat.png",
-        link: "cats/fishingcat.html",
-        color: "#0284c7" // כחול-מים
-    },
-    {
-        id: "marbledcat",
-        nameHe: "חתולים קטנים (חתול שיש)",
-        nameEn: "Small Cats (Marbled Cat)",
-        scientific: "Pardofelis marmorata",
-        img: "assets/marbledcat.png",
-        link: "cats/marbledcat.html",
-        color: "#a16207" // חום-ענבר שיש
-    },
-    {
-        id: "leopardcat",
-        nameHe: "חתולים קטנים (חתול נמרי בנגלי)",
-        nameEn: "Small Cats (Leopard Cat)",
-        scientific: "Prionailurus bengalensis",
-        img: "assets/leopardcat.png",
-        link: "cats/leopardcat.html",
-        color: "#ca8a04" // צהוב-כתום מנומר
-    },
-    {
-        id: "asiangoldencat",
-        nameHe: "חתולים קטנים (חתול זהוב אסיאתי)",
-        nameEn: "Small Cats (Asian Golden Cat)",
-        scientific: "Catopuma temminckii",
-        img: "assets/asiangoldencat.png",
-        link: "cats/asiangoldencat.html",
-        color: "#b45309" // זהוב-חום עמוק
-    },
-    {
-        id: "africangoldencat",
-        nameHe: "חתולים קטנים (חתול זהוב אפריקני)",
-        nameEn: "Small Cats (African Golden Cat)",
-        scientific: "Caracal aurata",
-        img: "assets/africangoldencat.png",
-        link: "cats/africangoldencat.html",
-        color: "#9a3412" // חלודה אפריקנית
+        id: "chinesemountaincat",
+        nameHe: "חתולים קטנים (חתול הרים סיני)",
+        nameEn: "Small Cats (Chinese Mountain Cat)",
+        scientific: "Felis bieti",
+        img: "assets/chinesemountaincat.png",
+        link: "cats/chinesemountaincat.html",
+        color: "#d4d4d8" // אפור בהיר
     }
 ];
 
