@@ -32,7 +32,7 @@ const content = {
     }
 };
 
-// רשימת 31 החתולים המלאה
+// רשימת 36 החתולים המלאה
 const catsData = [
     {
         id: "lion",
@@ -268,7 +268,6 @@ const catsData = [
         link: "cats/domesticcat.html",
         color: "#8b5cf6" 
     },
-    // --- 5 החדשים שהוספו עכשיו ---
     {
         id: "andeanmountaincat",
         nameHe: "חתולים קטנים (חתול הרים אנדיי)",
@@ -276,7 +275,7 @@ const catsData = [
         scientific: "Leopardus jacobita",
         img: "assets/andeanmountaincat.png",
         link: "cats/andeanmountaincat.html",
-        color: "#9ca3af" // אפור סלעים אנדיי
+        color: "#9ca3af" 
     },
     {
         id: "kodkod",
@@ -285,16 +284,16 @@ const catsData = [
         scientific: "Leopardus guigna",
         img: "assets/kodkod.png",
         link: "cats/kodkod.html",
-        color: "#78350f" // חום-יער כהה
+        color: "#78350f" 
     },
     {
-        id: "geoffroyscat", // שמתי בלי גרש במזהה למניעת בעיות קוד
+        id: "geoffroyscat",
         nameHe: "חתולים קטנים (חתול ג'ופרואה)",
         nameEn: "Small Cats (Geoffroy's Cat)",
         scientific: "Leopardus geoffroyi",
-        img: "assets/geoffroy'scat.png", // נתיב התמונה המקורי שהעלית
-        link: "cats/geoffroyscat.html", // נקרא לקובץ בלי גרש
-        color: "#a8a29e" // אפור-חום מנומר
+        img: "assets/geoffroy'scat.png",
+        link: "cats/geoffroyscat.html",
+        color: "#a8a29e" 
     },
     {
         id: "oncilla",
@@ -303,7 +302,7 @@ const catsData = [
         scientific: "Leopardus tigrinus",
         img: "assets/oncilla.png",
         link: "cats/oncilla.html",
-        color: "#d97706" // צהוב-כתום מנומר
+        color: "#d97706" 
     },
     {
         id: "flatheadedcat",
@@ -312,7 +311,53 @@ const catsData = [
         scientific: "Prionailurus planiceps",
         img: "assets/flatheadedcat.png",
         link: "cats/flatheadedcat.html",
-        color: "#b45309" // חום אדמדם
+        color: "#b45309" 
+    },
+    // --- 5 החדשים מהרשימה האחרונה ---
+    {
+        id: "fishingcat",
+        nameHe: "חתולים קטנים (חתול דייגים)",
+        nameEn: "Small Cats (Fishing Cat)",
+        scientific: "Prionailurus viverrinus",
+        img: "assets/fishingcat.png",
+        link: "cats/fishingcat.html",
+        color: "#0284c7" // כחול-מים
+    },
+    {
+        id: "marbledcat",
+        nameHe: "חתולים קטנים (חתול שיש)",
+        nameEn: "Small Cats (Marbled Cat)",
+        scientific: "Pardofelis marmorata",
+        img: "assets/marbledcat.png",
+        link: "cats/marbledcat.html",
+        color: "#a16207" // חום-ענבר שיש
+    },
+    {
+        id: "leopardcat",
+        nameHe: "חתולים קטנים (חתול נמרי בנגלי)",
+        nameEn: "Small Cats (Leopard Cat)",
+        scientific: "Prionailurus bengalensis",
+        img: "assets/leopardcat.png",
+        link: "cats/leopardcat.html",
+        color: "#ca8a04" // צהוב-כתום מנומר
+    },
+    {
+        id: "asiangoldencat",
+        nameHe: "חתולים קטנים (חתול זהוב אסיאתי)",
+        nameEn: "Small Cats (Asian Golden Cat)",
+        scientific: "Catopuma temminckii",
+        img: "assets/asiangoldencat.png",
+        link: "cats/asiangoldencat.html",
+        color: "#b45309" // זהוב-חום עמוק
+    },
+    {
+        id: "africangoldencat",
+        nameHe: "חתולים קטנים (חתול זהוב אפריקני)",
+        nameEn: "Small Cats (African Golden Cat)",
+        scientific: "Caracal aurata",
+        img: "assets/africangoldencat.png",
+        link: "cats/africangoldencat.html",
+        color: "#9a3412" // חלודה אפריקנית
     }
 ];
 
