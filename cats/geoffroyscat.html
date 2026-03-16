@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>חתול ג'ופרואה (Leopardus geoffroyi) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #a8a29e; /* אפור-חום מנומר */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-stone-500/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-stone-300 hover:bg-stone-400 hover:text-slate-900 transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-stone-400 hover:text-slate-900 transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/geoffroy\'scat.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/geoffroy'scat.png" alt="חתול ג'ופרואה" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-stone-600/40 text-stone-300 text-xs font-bold px-3 py-1 rounded-full border border-stone-500/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-stone-600/40 text-stone-300 text-xs font-bold px-3 py-1 rounded-full border border-stone-500/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">הצופה של הערבות</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">The Watcher of the Steppes</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">חתול ג'ופרואה</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Geoffroy's Cat</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Leopardus geoffroyi</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. תעודת זהות זואולוגית -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-stone-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-stone-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Geoffroy's Cat</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Meerkat Cat"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> חתול בר דרום-אמריקאי בגודל חתול בית, המאופיין בפרווה מכוסה בכתמים שחורים קטנים וצפופים. התכונה המפורסמת ביותר שלו היא הנטייה להיעמד על שתי רגליו האחוריות כמו סוריקטה, תוך שימוש בזנבו כחצובה לאיזון, כדי לסרוק את סביבתו בעשב הגבוה.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Geoffroy's Cat</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Meerkat Cat"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> A South American wildcat about the size of a domestic cat, characterized by a coat covered in numerous small black spots. Its most famous trait is its tendency to stand upright on its hind legs like a meerkat, using its tail as a tripod for balance, in order to scan its surroundings over tall grass.</li>
+                </ul>
+            </section>
+
+            <!-- 2. נתונים סטטיסטיים -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-stone-400 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-stone-400 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">72 עד 78 ימים</span><span class="en-content hidden">72 - 78 days</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">42 עד 57 ס"מ</span><span class="en-content hidden">42 - 57 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">24 עד 36 ס"מ</span><span class="en-content hidden">24 - 36 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">2 עד 6 ק"ג (משתנה מאוד בין צפון לדרום)</span><span class="en-content hidden">2 - 6 kg (varies greatly from north to south)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">14 עד 15 שנים (מעל 20 בשבי)</span><span class="en-content hidden">14 - 15 years (over 20 in captivity)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. אנטומיה וביולוגיה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-stone-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-stone-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>עמידת הסוריקטה:</strong> אזור המחיה של חתול ג'ופרואה כולל לעיתים קרובות ערבות עשב גבוהות. כדי לאתר טורפים ממרחק או לזהות תנועה של מכרסמים על הקרקע, החתול פיתח התנהגות תצפית ייחודית – הוא מזדקף על שתי רגליו האחוריות ונשען על הזנב שלו כדי לייצב את עצמו לחלוטין (בדומה להתנהגות הסוריקטה באפריקה). תנוחה זו מרחיבה משמעותית את שדה הראייה שלו באזורים פתוחים.</p>
+                    <p><strong>כלל ברגמן (Bergmann's rule):</strong> חתול ג'ופרואה מדגים בצורה מושלמת כלל אקולוגי מפורסם – ככל שחיים רחוק יותר מהקו המשווה (באקלים קר יותר), כך ממדי הגוף גדלים כדי לשמור על חום. הפרטים שחיים בברזיל ובבוליביה (באקלים חם) הם קטנים ושוקלים כ-2-3 ק"ג. לעומתם, הפרטים שחיים הרחק דרומה בפטגוניה של ארגנטינה (אקלים קר וסוער) הם כבדים וחסונים הרבה יותר, ומגיעים בקלות ל-6 ק"ג.</p>
+                    <p><strong>אלוף השחייה ואגירת המזון:</strong> בניגוד לאוצלוט, חתול ג'ופרואה הוא שחיין מצוין שלא מהסס לחצות נהרות גועשים בעובי של עד 30 מטרים. בנוסף, יש לו הרגל ייחודי המזכיר את הנמר האפריקני: הוא אוגר מזון עודף. במקום להשאיר את הטרף שלו (ארנבות, קביות או עופות מים) על הקרקע שם פומות או כלבי בר עלולים לגנוב אותו, הוא מטפס ומחביא את פגרי החיות על ענפי עצים כדי לאכול אותם במועד מאוחר יותר.</p>
+                    <p><strong>הסוואה ומלניזם:</strong> פרוותו מכוסה כולה בנקודות שחורות אחידות וצפופות (ללא רוזטות חלולות כמו לאוצלוט). בדומה לקודקוד, תופעת המלניזם נפוצה מאוד אצלו, ופרטים שחורים לחלוטין נולדים בתדירות גבוהה, במיוחד באזורים המיוערים והלחים יותר.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>The Meerkat Stance:</strong> Geoffroy's cat's habitat often includes tall grass steppes. To spot predators from a distance or detect rodent movement on the ground, the cat developed a unique observation behavior—it stands upright on its two hind legs, leaning on its tail for perfect balance (similar to meerkat behavior in Africa). This posture significantly expands its field of vision in open areas.</p>
+                    <p><strong>Bergmann's Rule:</strong> Geoffroy's cat perfectly demonstrates a famous ecological rule—the further away from the equator (in colder climates) an animal lives, the larger its body size tends to be to conserve heat. Individuals living in Brazil and Bolivia (warm climates) are small, weighing around 2-3 kg. In contrast, those living far south in Argentine Patagonia (cold, stormy climate) are much heavier and robust, easily reaching 6 kg.</p>
+                    <p><strong>Champion Swimmer and Food Cacher:</strong> Unlike the ocelot, Geoffroy's cat is an excellent swimmer that doesn't hesitate to cross raging rivers up to 30 meters wide. Additionally, it has a unique habit reminiscent of the African leopard: food caching. Instead of leaving its prey (hares, cavies, or waterfowl) on the ground where pumas or wild dogs might steal it, it climbs and hides the carcasses on tree branches to eat them at a later time.</p>
+                    <p><strong>Camouflage and Melanism:</strong> Its coat is completely covered in uniform, dense black dots (lacking hollow rosettes like the ocelot). Similar to the kodkod, melanism is very common in this species, and completely black individuals are born frequently, especially in more forested and humid areas.</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-stone-400 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-stone-400 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Leopardus</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Leopardus</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">"דמוי נמר" בלטינית. סוג זה מאגד כמעט את כל החתולים הקטנים והמנומרים של אמריקה הלטינית. על אף השם, הם אינם קרובים מבחינה גנטית לנמרים האמיתיים מאסיה ואפריקה (*Panthera*).</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">"Leopard-like" in Latin. This genus groups almost all the small, spotted cats of Latin America. Despite the name, they are not genetically closely related to the true leopards of Asia and Africa (*Panthera*).</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין והשם העממי: geoffroyi / Geoffroy's Cat</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species & Common Name: geoffroyi / Geoffroy's Cat</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם המדעי והעממי כאחד הם הוקרה והנצחה של אחד מגדולי המדענים בהיסטוריה, הפרופסור הצרפתי לזואולוגיה <strong>אטיין ז'ופרואה סנט-אילר</strong> (Étienne Geoffroy Saint-Hilaire, שנות חיים: 1772–1844). ז'ופרואה היה מורה, קולגה, ודמות מפתח בהתפתחות תורת האבולוציה (עוד לפני דרווין). הוא השתתף במסעו של נפוליאון למצרים, אסף אלפי דגימות של בעלי חיים בעולם, ותרם עצומות לזיהוי מינים חדשים (הוא אותו אדם שגילה את היגוארונדי).</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Both the scientific and common names are a tribute to and commemoration of one of the greatest scientists in history, the French Professor of Zoology <strong>Étienne Geoffroy Saint-Hilaire</strong> (Lifespan: 1772–1844). Geoffroy was a teacher, colleague, and key figure in the development of evolutionary theory (even before Darwin). He participated in Napoleon's expedition to Egypt, collected thousands of animal specimens globally, and contributed immensely to identifying new species (he is the same person who discovered the jaguarundi).</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם המקומי בדרום אמריקה (Gato montés)</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Local South American Name (Gato montés)</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">במדינות דוברות הספרדית שבהן הוא חי (כמו ארגנטינה וצ'ילה), החתול הזה מכונה בפשטות "גאטו מונטס" (Gato montés), שפירושו המילולי "חתול הרים" או "חתול פראי", אף על פי שהוא נפוץ דווקא במישורים וביערות נמוכים ולא רק בהרים.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">In the Spanish-speaking countries where it lives (like Argentina and Chile), this cat is simply called "Gato montés", which literally translates to "mountain cat" or "wild cat", even though it is prevalent in plains and lowland forests, not just mountains.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריה ושימור -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-stone-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-stone-400 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">חתול ג'ופרואה תואר מדעית בשנת <strong>1844</strong> (שנת מותו של ז'ופרואה) על ידי צמד הזואולוגים הצרפתים פול ז'רווה (Paul Gervais) ואלסיד ד'אורביני (Alcide d'Orbigny). הם החליטו להעניק למין החדש שמצאו בדרום אמריקה את שמו של הקולגה שלהם (ז'ופרואה) כאות של כבוד והערכה לפועלו.</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">Geoffroy's cat was scientifically described in <strong>1844</strong> (the year of Geoffroy's death) by the French zoologist duo Paul Gervais and Alcide d'Orbigny. They decided to name the new species they found in South America after their colleague (Geoffroy) as a mark of respect and appreciation for his work.</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">החתול התפצל מאחיו, הקודקוד (החתול הקטן ביותר), לפני פחות ממיליון שנים. בעוד הקודקוד התמחה ביערות גשם דחוסים, חתול ג'ופרואה הפך לגנרליסט אקולוגי – הוא התרבה והתפשט בכל רחבי הערבות, היערות הפתוחים, והמדבריות הקרים של החצי הדרומי של היבשת, והפך לאחד מחתולי הבר הנפוצים ביותר בדרום אמריקה.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">The cat diverged from its brother, the kodkod (the smallest cat), less than a million years ago. While the kodkod specialized in dense rainforests, Geoffroy's cat became an ecological generalist—multiplying and spreading across the steppes, open woodlands, and cold deserts of the southern half of the continent, becoming one of the most widespread wildcats in South America.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני – הניצול הגדול:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status – The Great Exploitation:</h4>
+                        <p class="text-sm text-slate-300 he-content">כיום מצבו של המין מוגדר כ"ללא חשש" (Least Concern - LC) על ידי ה-IUCN בשל אוכלוסייתו הגדולה. אך הסיפור ההיסטורי שלו טראגי: בשנות ה-60 עד סוף ה-80 של המאה ה-20, פרוותו המנומרת והיפה הפכה למבוקשת מאוד בתעשיית האופנה העולמית. חתול ג'ופרואה הפך לחתול הבר השני שניצוד הכי הרבה בעולם (אחרי הבובקט). מוערך כי למעלה מ-350,000 חתולי ג'ופרואה ניצודו ויוצאו כפרוות מדרום אמריקה לפני שהושת חרם סחר בינלאומי מלא ב-1992, אשר הציל את המין מהכחדה ודאית.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Today, the species is classified as "Least Concern" (LC) by the IUCN due to its large population. But its historical story is tragic: from the 1960s to the late 1980s, its beautifully spotted fur became highly sought after in the global fashion industry. Geoffroy's cat became the second most heavily hunted wildcat in the world (after the bobcat). It is estimated that over 350,000 Geoffroy's cats were hunted and exported as pelts from South America before a full international trade ban was imposed in 1992, saving the species from certain extinction.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            document.querySelectorAll('.he-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'he'));
+            document.querySelectorAll('.en-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'en'));
+        }
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { imgEl.src = imgUrl; modal.classList.remove('hidden'); }
+        }
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
