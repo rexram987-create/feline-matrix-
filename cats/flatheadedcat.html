@@ -207,7 +207,7 @@
         </footer>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal (חלון צף) - הקוד המלא והבדוק -->
     <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
         <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-amber-600 z-[101]">&times;</button>
         <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
@@ -215,19 +215,42 @@
 
     <script>
         let currentLang = 'he';
+        
         function toggleLanguage() {
             currentLang = currentLang === 'he' ? 'en' : 'he';
             document.documentElement.lang = currentLang;
             document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
             document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
-            document.querySelectorAll('.he-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'he'));
-            document.querySelectorAll('.en-content').forEach(el => el.classList.toggle('hidden', currentLang !== 'en'));
+            
+            const heElements = document.querySelectorAll('.he-content');
+            const enElements = document.querySelectorAll('.en-content');
+            
+            heElements.forEach(el => {
+                if(currentLang === 'he') {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+            
+            enElements.forEach(el => {
+                if(currentLang === 'en') {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
         }
+        
         function openImageModal(imgUrl) {
             const modal = document.getElementById('fullScreenImageModal');
             const imgEl = document.getElementById('modalFullImg');
-            if(modal && imgEl) { imgEl.src = imgUrl; modal.classList.remove('hidden'); }
+            if(modal && imgEl) { 
+                imgEl.src = imgUrl; 
+                modal.classList.remove('hidden'); 
+            }
         }
+        
         function closeImageModal() {
             const modal = document.getElementById('fullScreenImageModal');
             if(modal) {
