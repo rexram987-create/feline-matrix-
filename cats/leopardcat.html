@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>חתול נמרי בנגלי (Prionailurus bengalensis) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #ca8a04; /* צהוב-כתום מנומר */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-yellow-700/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-yellow-500 hover:bg-yellow-600 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-yellow-600 hover:text-white transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/leopardcat.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/leopardcat.png" alt="חתול נמרי בנגלי" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-yellow-700/40 text-yellow-400 text-xs font-bold px-3 py-1 rounded-full border border-yellow-600/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-yellow-700/40 text-yellow-400 text-xs font-bold px-3 py-1 rounded-full border border-yellow-600/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">המיני-נמר של אסיה</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">The Mini-Leopard of Asia</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">חתול נמרי בנגלי</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Leopard Cat</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Prionailurus bengalensis</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. תעודת זהות זואולוגית -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-yellow-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-yellow-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Leopard Cat / Mainland Leopard Cat</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Asian Forest Spirit"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> חתול בר בגודל חתול בית, בעל פרווה מרהיבה המכוסה כולה בכתמים שחורים (דמויי נמר). הוא חתול הבר הנפוץ והמצליח ביותר בכל יבשת אסיה, ומפורסם בהיותו האב הקדמון הפראי שממנו פותח גזע חתולי הבית ה"בנגליים".</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Leopard Cat / Mainland Leopard Cat</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Asian Forest Spirit"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> A wildcat the size of a domestic cat, featuring a spectacular coat covered entirely in black leopard-like spots. It is the most common and successful wildcat in all of Asia, and is famous for being the wild ancestor from which the domestic "Bengal" cat breed was developed.</li>
+                </ul>
+            </section>
+
+            <!-- 2. נתונים סטטיסטיים -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-yellow-600 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-yellow-600 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">60 עד 70 ימים</span><span class="en-content hidden">60 - 70 days</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">46 עד 65 ס"מ</span><span class="en-content hidden">46 - 65 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">21 עד 31 ס"מ</span><span class="en-content hidden">21 - 31 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">1.5 עד 3.8 ק"ג (פרטים סיביריים עשויים להגיע ל-7 ק"ג)</span><span class="en-content hidden">1.5 - 3.8 kg (Siberian individuals may reach 7 kg)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">כ-13 שנים (עד 15 בשבי)</span><span class="en-content hidden">Approx. 13 years (up to 15 in captivity)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. אנטומיה וביולוגיה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-yellow-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-yellow-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>הסוואה כלל-אסיאתית:</strong> החתול הנמרי מציג גיוון פנוטיפי אדיר המשקף את התפוצה הרחבה שלו. פרטים שחיים באזורים טרופיים בדרום (כמו הודו ואינדונזיה) הם בעלי פרווה צהובה-זהובה בוהקת ומשקל קליל. לעומת זאת, פרטים החיים באזורי השלג הקשים של צפון סין ורוסיה מפתחים פרווה אפורה-כסופה ועבה מאוד, ושוקלים כמעט פי שלושה מעמיתיהם הדרומיים. למרות הבדלי הצבע, כולם מעוטרים בכתמים שחורים בולטים המחקים נמר קטן ומעניקים לו הסוואה מושלמת ביערות.</p>
+                    <p><strong>אהבה מולדת למים:</strong> בדומה לקרובי משפחתו הישירים (חתול הדייגים והחתול שטוח-הראש שחקרנו), גם החתול הנמרי אוהב מים. יש לו קרומי שחייה קטנים בין האצבעות, והוא אינו מהסס לשחות בנהרות ולקפוץ למים רדודים כדי לצוד דגים, צפרדעים וסרטנים, שמרכיבים חלק נכבד מתזונתו לצד מכרסמים וציפורים.</p>
+                    <p><strong>יכולת טיפוס (Arboreal):</strong> למרות שהוא מבלה זמן רב בציד על הקרקע והמלטות מתרחשות לעיתים במחילות סלעיות, הוא מטפס עצים זריז ומצוין. הוא נצפה תופס עטלפים וסנאים ישירות מצמרות העצים, ומנצל ענפים גבוהים כדי לנוח בבטחה בשעות היום.</p>
+                    <p><strong>החתול הבנגלי (גזע הבית):</strong> בשנות ה-60 של המאה ה-20, חוקרת אמריקאית בשם ג'ין מיל הכליאה חתול נמרי בנגלי פראי עם חתולת בית שחורה. מטרתה הייתה ליצור חתול בית בעל פרווה אקזוטית של נמר. התוצאה היא גזע החתולים ה"בנגלי" הסופר-פופולרי (והיקר) של ימינו, אשר ירש מאב קדמון זה לא רק את הפרווה המרהיבה, אלא גם את האהבה למשחק במים.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Pan-Asian Camouflage:</strong> The leopard cat displays enormous phenotypic diversity reflecting its wide distribution. Individuals living in tropical southern areas (like India and Indonesia) have bright golden-yellow fur and a lightweight build. Conversely, individuals living in the harsh snowy regions of northern China and Russia develop very thick, silvery-grey fur and weigh almost three times as much as their southern counterparts. Despite the color differences, all are adorned with bold black spots mimicking a small leopard, providing perfect forest camouflage.</p>
+                    <p><strong>Innate Love for Water:</strong> Similar to its direct relatives (the fishing cat and the flat-headed cat we studied), the leopard cat loves water. It has small webbing between its toes and does not hesitate to swim in rivers and jump into shallow water to hunt fish, frogs, and crabs, which make up a significant part of its diet alongside rodents and birds.</p>
+                    <p><strong>Arboreal Ability:</strong> Although it spends a lot of time hunting on the ground and litters often occur in rocky dens, it is an agile and excellent tree climber. It has been observed catching bats and squirrels directly from tree canopies, and utilizes high branches to rest safely during the day.</p>
+                    <p><strong>The Bengal Cat (Domestic Breed):</strong> In the 1960s, an American researcher named Jean Mill crossed a wild Asian leopard cat with a black domestic cat. Her goal was to create a domestic cat with the exotic coat of a leopard. The result is today's super-popular (and expensive) "Bengal" cat breed, which inherited from this wild ancestor not only its spectacular coat but also its love for playing in water.</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-yellow-600 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-yellow-600 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Prionailurus</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Prionailurus</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">מקור השם ביוונית עתיקה: 'prion' (πρίων) פירושו "מסור", ו-'ailur' (αἴλουρος) פירושו "חתול". כלומר: "חתול-המסור". כזכור מחתול הדייגים וחתול שטוח-הראש, הקידומת הזו מתייחסת לשיניים החדות והמשוננות של מינים אלו (שנועדו להחזיק דגים וטרף חלקלק), למרות שאצל החתול הנמרי הדבר פחות בולט מאשר אצל אחיו שוכני-המים הקיצוניים.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">Originates from Ancient Greek: 'prion' (πρίων) means "saw", and 'ailur' (αἴλουρος) means "cat". Thus: "Saw-cat". As recalled from the fishing cat and flat-headed cat, this prefix refers to the sharp, serrated teeth of these species (designed to grip fish and slippery prey), although it is less pronounced in the leopard cat than in its extreme water-dwelling brethren.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: bengalensis</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: bengalensis</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם מורכב מהמילה "בנגל" (Bengal) – חבל ארץ היסטורי בצפון-מזרח תת-היבשת ההודית (כיום מחולק בין בנגלדש למדינת מערב בנגל בהודו), יחד עם הסיומת הלטינית 'ensis' שמשמעותה "שייך ל-" או "מגיע מ-". התרגום: "מגיע מבנגל", שכן משם נלקח הפרט הראשון שתואר מדעית (בדומה לטיגריס הבנגלי).</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The name is composed of "Bengal"—a historical region in the northeastern Indian subcontinent (now divided between Bangladesh and the Indian state of West Bengal)—along with the Latin suffix 'ensis' meaning "belonging to" or "originating from". The translation: "Originating from Bengal", as the first scientifically described specimen was taken from there (similar to the Bengal tiger).</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי והעברי: Leopard Cat</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Common Name: Leopard Cat</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">באנגלית, השם "Leopard Cat" (חתול נמרי) ניתן לו בפשטות עקב פרוותו המנומרת בכתמים שחורים עזים המחקים בדיוק מופלא את פרוותו של נמר (Leopard). בעברית מקובל לקרוא לו "חתול נמרי בנגלי" כדי להבדיל בינו לבין מיני "חתולים נמריים" אחרים באסיה (כמו חתול נמרי סונדי מהאיים).</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">In English, the name "Leopard Cat" was given simply due to its spotted coat with striking black spots that remarkably mimic the fur of a true Leopard. In Hebrew, it is commonly called "Bengal Leopard Cat" to distinguish it from other "leopard cat" species in Asia (like the Sunda leopard cat from the islands).</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריה ושימור -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-yellow-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-yellow-600 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">קוטלג מדעית לראשונה בשנת <strong>1792</strong> על ידי חוקר הטבע הסקוטי רוברט קר (Robert Kerr, שנות חיים: 1755–1813). קר קרא למין *Felis bengalensis* על סמך ציור ודגימה שנאספו במחוז בנגל. מעניין לציין שרוברט קר הוא גם המדען שתיאר באותה השנה ממש גם את השונר הקנדי מאמריקה!</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">First scientifically cataloged in <strong>1792</strong> by the Scottish naturalist Robert Kerr (Lifespan: 1755–1813). Kerr named the species *Felis bengalensis* based on a drawing and specimen collected in the Bengal province. Interestingly, Robert Kerr is also the scientist who described the Canadian lynx from the Americas in that exact same year!</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Evolution:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">החתול הנמרי משתייך לשושלת החתול הנמרי (Leopard Cat lineage) אשר התפתחה באסיה לפני כ-6.2 מיליון שנים. הוא "בן הדוד" היבשתי והנפוץ של מינים שהתמחו לחיים במים (חתול דייגים). הצלחתו האבולוציונית נובעת מגמישותו יוצאת הדופן – הוא מסוגל לשרוד ביערות טרופיים, במדבריות קרח, ואפילו בתוך מטעי חקלאות של כפות תמרים וגומי, היכן שטורפים אחרים נכחדים.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">The leopard cat belongs to the Leopard Cat lineage, which evolved in Asia about 6.2 million years ago. It is the widespread terrestrial "cousin" of species that specialized in aquatic life (the fishing cat). Its evolutionary success stems from its extraordinary flexibility—it can survive in tropical forests, ice deserts, and even within agricultural palm and rubber plantations where other predators go extinct.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">ברמה הגלובלית, ה-IUCN מגדיר אותו כ"ללא חשש" (Least Concern - LC). זהו החתול הקטן הנפוץ ביותר באסיה, עם אוכלוסיות יציבות ברוב אזורי תפוצתו (מהודו, דרך סין ועד מזרח רוסיה וקוריאה). עם זאת, תת-מינים מסוימים החיים באיים מבודדים (כמו ה"חתול הנמרי של אמוּר" או של איי יפן) נמצאים בסכנה עקב אובדן בתי גידול. בנוסף, למרות הגנתו החוקית, הוא סובל באזורים רבים מציד בלתי חוקי בשל המסחר המסורתי בפרוותיו המנומרות בסין.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">Globally, the IUCN classifies it as "Least Concern" (LC). It is the most common small cat in Asia, with stable populations in most of its range (from India, through China, to Eastern Russia and Korea). However, certain subspecies living on isolated islands (like the Amur leopard cat or those on Japanese islands) are endangered due to habitat loss. Additionally, despite legal protection, it suffers in many areas from illegal poaching due to the traditional trade in its spotted pelts in China.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <!-- Modal (חלון צף) - הקוד המלא והבדוק -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-yellow-500 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            
+            const heElements = document.querySelectorAll('.he-content');
+            const enElements = document.querySelectorAll('.en-content');
+            
+            heElements.forEach(el => {
+                if(currentLang === 'he') {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+            
+            enElements.forEach(el => {
+                if(currentLang === 'en') {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+        }
+        
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { 
+                imgEl.src = imgUrl; 
+                modal.classList.remove('hidden'); 
+            }
+        }
+        
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
