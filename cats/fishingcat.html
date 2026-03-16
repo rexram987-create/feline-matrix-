@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>חתול דייגים (Prionailurus viverrinus) | מטריצת החתוליים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אופטימיזציה ייעודית למסך Samsung S25 Ultra */
+        :root {
+            --bg-body: #030712; 
+            --bg-card: #0a1122; 
+            --border-card: #1d365d;
+            --text-accent: #0284c7; /* כחול-מים / ביצות אסיה */
+        }
+        body { background-color: var(--bg-body); color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; transition: all 0.3s ease; }
+        .samsung-s25-container { 
+            max-width: 412px; 
+            margin: 0 auto; 
+            background-color: #0f172a; 
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            .samsung-s25-container { max-width: 800px; border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-sky-700/30 relative">
+
+    <div class="samsung-s25-container relative pb-10">
+        
+        <!-- ניווט וכפתור שפה -->
+        <nav class="absolute top-4 w-full px-4 z-10 flex justify-between items-center">
+            <button onclick="toggleLanguage()" id="langBtn" class="bg-slate-900/80 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-sky-500 hover:bg-sky-600 hover:text-white transition-all shadow-lg active:scale-95">EN</button>
+            <a href="../index.html" class="bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm hover:bg-sky-600 hover:text-white transition border border-white/10 flex items-center gap-2">
+                <span class="he-content">&rarr; חזרה למטריצה</span>
+                <span class="en-content hidden">&larr; Back to Matrix</span>
+            </a>
+        </nav>
+
+        <!-- תמונת נושא ייצוגית -->
+        <header class="relative w-full h-72 md:h-96">
+            <button onclick="openImageModal('../assets/fishingcat.png')" class="w-full h-full p-0 border-0 bg-transparent cursor-pointer block focus:outline-none">
+                <img src="../assets/fishingcat.png" alt="חתול דייגים בנהר" class="w-full h-full object-cover">
+            </button>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 p-6 w-full pointer-events-none text-start">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-sky-800/30 text-sky-400 text-xs font-bold px-3 py-1 rounded-full border border-sky-700/30 he-content">Felinae (חתולים קטנים)</span>
+                    <span class="bg-sky-800/30 text-sky-400 text-xs font-bold px-3 py-1 rounded-full border border-sky-700/30 en-content hidden">Felinae (Small Cats)</span>
+                    <span class="text-slate-400 text-sm tracking-widest he-content">שליט הביצות של אסיה</span>
+                    <span class="text-slate-400 text-sm tracking-widest en-content hidden">Lord of the Asian Marshes</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-white mb-1 he-content">חתול דייגים</h1>
+                <h1 class="text-4xl font-extrabold text-white mb-1 en-content hidden">Fishing Cat</h1>
+                <h2 class="text-xl text-slate-300 italic font-serif">Prionailurus viverrinus</h2>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            
+            <!-- 1. תעודת זהות זואולוגית -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-sky-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">תעודת זהות זואולוגית</h3>
+                <h3 class="text-sky-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Zoological Identity</h3>
+                
+                <ul class="space-y-3 text-sm he-content">
+                    <li><strong class="text-slate-400">שם באנגלית:</strong> Fishing Cat</li>
+                    <li><strong class="text-slate-400">משפחה:</strong> חתוליים (Felidae) -> תת-משפחת החתולים הקטנים (Felinae)</li>
+                    <li><strong class="text-slate-400">כינוי פואטי באנגלית:</strong> "The Phantom of the Marshes"</li>
+                    <li><strong class="text-slate-400">מאפיין ייחודי:</strong> חתול בר חסון מדרום ודרום-מזרח אסיה, המותאם באופן קיצוני לחיים בסביבה מימית. יש לו קרומי שחייה בין האצבעות, פרווה כפולה דוחת מים שמתפקדת כחליפת צלילה, והוא צולל ושוחה למרחקים ארוכים כדי לצוד דגים.</li>
+                </ul>
+
+                <ul class="space-y-3 text-sm en-content hidden">
+                    <li><strong class="text-slate-400">Common Name:</strong> Fishing Cat</li>
+                    <li><strong class="text-slate-400">Family:</strong> Felidae -> Subfamily Felinae (Small Cats)</li>
+                    <li><strong class="text-slate-400">Poetic Moniker:</strong> "The Phantom of the Marshes"</li>
+                    <li><strong class="text-slate-400">Unique Feature:</strong> A robust wildcat from South and Southeast Asia, extremely adapted to aquatic environments. It features webbed feet, a water-repellent double coat that acts as a wetsuit, and it dives and swims long distances to hunt fish.</li>
+                </ul>
+            </section>
+
+            <!-- 2. נתונים סטטיסטיים -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-sky-500 font-bold text-lg px-2 he-content">נתונים סטטיסטיים</h3>
+                <h3 class="text-sky-500 font-bold text-lg px-2 en-content hidden">Statistical Data</h3>
+                <div class="overflow-x-auto rounded-xl border border-slate-800 shadow-lg">
+                    <table class="w-full text-sm text-start bg-slate-900">
+                        <thead class="bg-slate-800 text-slate-300">
+                            <tr>
+                                <th class="p-3 text-start he-content">פרמטר</th>
+                                <th class="p-3 text-start he-content">ערך</th>
+                                <th class="p-3 text-start en-content hidden">Parameter</th>
+                                <th class="p-3 text-start en-content hidden">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">היריון</span><span class="en-content hidden">Gestation</span></td>
+                                <td class="p-3"><span class="he-content">63 עד 70 ימים</span><span class="en-content hidden">63 - 70 days</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך גוף (ללא זנב)</span><span class="en-content hidden">Body Length</span></td>
+                                <td class="p-3"><span class="he-content">57 עד 78 ס"מ</span><span class="en-content hidden">57 - 78 cm</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">אורך זנב</span><span class="en-content hidden">Tail Length</span></td>
+                                <td class="p-3"><span class="he-content">20 עד 30 ס"מ (משמש כהגה במים)</span><span class="en-content hidden">20 - 30 cm (acts as a rudder in water)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">משקל בוגר</span><span class="en-content hidden">Adult Weight</span></td>
+                                <td class="p-3"><span class="he-content">5 עד 16 ק"ג (זכרים כבדים משמעותית)</span><span class="en-content hidden">5 - 16 kg (males are significantly heavier)</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="p-3 font-medium text-slate-400"><span class="he-content">תוחלת חיים (טבע)</span><span class="en-content hidden">Lifespan (Wild)</span></td>
+                                <td class="p-3"><span class="he-content">עד 12 שנים (מעל 15 בשבי)</span><span class="en-content hidden">Up to 12 years (over 15 in captivity)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. אנטומיה וביולוגיה -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-sky-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">אנטומיה, ביולוגיה והתנהגות (Anatomy & Behavior)</h3>
+                <h3 class="text-sky-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Anatomy, Biology & Behavior</h3>
+                
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 he-content">
+                    <p><strong>חליפת הצלילה של הטבע:</strong> האדפטציה המרשימה ביותר של חתול הדייגים היא הפרווה הכפולה שלו. השכבה התחתונה קצרה, צפופה מאוד ודוחת מים (כמו נוצות של ברווז). שכבה זו מתפקדת כחליפת צלילה תרמית השומרת על חום גופו ומונעת מהמים לחדור אל העור, גם כאשר החתול שוהה במים זמן רב. השכבה העליונה מורכבת משערות שומר ארוכות (Guard hairs) המעניקות לו את דפוס הפסים והכתמים להסוואה.</p>
+                    <p><strong>קרומי שחייה וטפרים חשופים:</strong> בדומה לחתול שטוח-הראש (קרוב משפחתו), לחתול הדייגים יש קרומי שחייה המחברים בין אצבעות רגליו, המעניקים לו דחף עוצמתי במים. בנוסף, הטפרים שלו אינם נשלפים במלואם אל תוך נדן, מה שמסייע לו לאחוז בדגים חלקלקים בתוך המים ולטפס על גדות בוציות תלולות.</p>
+                    <p><strong>שיטת הדיג בנקישות:</strong> חתול הדייגים פיתח טכניקת ציד ייחודית ומבריקה. הוא מתיישב על גדת הנהר ומכה קלות (Tapping) על פני המים בכפותיו. הרטט והגלים הקטנים שנוצרים מדמים תנועה של חרקים נופלים או גוססים. הדגים שעולים אל פני המים כדי לאכול את החרק לכאורה, מוצאים את עצמם מיד מונפים אל האוויר בטופריו החדים של החתול.</p>
+                    <p><strong>צייד רב-גוני:</strong> למרות שמו, תזונתו אינה מוגבלת רק לדגים (המהווים כ-70% ממנה). הוא צללן מצוין שטורף צפרדעים, סרטנים, נחשי מים, חלזונות ואפילו עופות מים. על היבשה, חתול הדייגים החסון מסוגל לצוד טרף גדול למדי כמו כלבים קטנים, עופות משק ועיזים צעירות.</p>
+                </div>
+
+                <div class="space-y-4 text-sm leading-relaxed text-slate-300 en-content hidden">
+                    <p><strong>Nature's Wetsuit:</strong> The fishing cat's most impressive adaptation is its double coat. The undercoat is short, incredibly dense, and highly water-repellent (much like duck feathers). This layer acts as a thermal wetsuit, maintaining its body heat and keeping water from reaching the skin, even during prolonged submersion. The outer layer consists of long guard hairs that provide its striped and spotted camouflage pattern.</p>
+                    <p><strong>Webbed Feet and Exposed Claws:</strong> Similar to its relative the flat-headed cat, the fishing cat has webbing connecting its toes, granting it powerful propulsion in the water. Furthermore, its claws do not fully retract into sheaths, aiding in gripping slippery fish underwater and providing traction on steep, muddy riverbanks.</p>
+                    <p><strong>The Tapping Technique:</strong> The fishing cat has developed a brilliant and unique hunting technique. It sits on the riverbank and lightly taps the water's surface with its paws. The vibrations and ripples mimic the movement of struggling or fallen insects. Fish rising to the surface to catch the supposed insect find themselves immediately scooped into the air by the cat's sharp claws.</p>
+                    <p><strong>Versatile Hunter:</strong> Despite its name, its diet is not restricted only to fish (which make up about 70% of it). It is an excellent diver that preys on frogs, crabs, water snakes, snails, and even waterfowl. On land, the robust fishing cat is capable of hunting fairly large prey such as small dogs, poultry, and young goats.</p>
+                </div>
+            </section>
+
+            <!-- 4. אטימולוגיה מורחבת -->
+            <section class="space-y-4 text-start">
+                <h3 class="text-sky-500 font-bold text-lg px-2 he-content">אטימולוגיה מורחבת</h3>
+                <h3 class="text-sky-500 font-bold text-lg px-2 en-content hidden">Extended Etymology</h3>
+                
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">1. הסוג: Prionailurus</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">1. Genus: Prionailurus</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם המדעי המורכב מגיע מיוונית עתיקה. המילה 'prion' (πρίων) משמעותה "מסור", והמילה 'ailur' (αἴλουρος) משמעותה "חתול". "חתול המסור". כפי שראינו בחתול שטוח-הראש, שם זה הוענק לכל בני הסוג המזרח-אסייתי הזה בשל שיניהם החדות והמשוננות (במיוחד המלתעות) שנועדו להחזיק דגים וטרף חלקלק בחוזקה.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The complex scientific name comes from Ancient Greek. The word 'prion' (πρίων) means "saw", and 'ailur' (αἴλουρος) means "cat". "Saw cat". As seen with the flat-headed cat, this name was given to all members of this East Asian genus due to their sharp, serrated teeth (especially premolars) designed to firmly grip fish and slippery prey.</p>
+                    </div>
+                    
+                    <div class="p-4 border-b border-slate-800">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">2. המין: viverrinus</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">2. Species: viverrinus</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">המילה הלטינית 'viverra' היא שמה של משפחת הגחניים (Viverridae), טורפים קטנים ומוארכים כמו הזבד והגחן, שהם בעלי גוף ארוך ורגליים קצרות. הסיומת '-inus' פירושה "שייך ל-" או "דומה ל-". לכן, משמעות השם היא "החתול דמוי-הגחן", משום שמבנה גופו הארוך, רגליו הקצרות והכתמים השחורים על פרוותו הזכירו למגלהיו צורה של גחן (Civet) ולא חתול טיפוסי.</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The Latin word 'viverra' is the name of the Viverridae family, small elongated carnivores like civets and genets, which have long bodies and short legs. The suffix '-inus' means "pertaining to" or "like". Thus, the name means "civet-like", because its long body, short legs, and black spots reminded its discoverers of a civet rather than a typical cat.</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <h4 class="text-md font-bold text-white mb-2 he-content">3. השם העממי והעברי: Fishing Cat / חתול דייגים</h4>
+                        <h4 class="text-md font-bold text-white mb-2 en-content hidden">3. Common Name: Fishing Cat</h4>
+                        <p class="text-sm text-slate-300 mb-2 he-content">השם העממי בכל השפות מציין בפשטות ובאופן ישיר את אסטרטגיית הציד וההישרדות המרכזית שלו בבתי הגידול הלחים של אסיה. בהודו וסרי לנקה הוא מכונה לעיתים על ידי המקומיים "Macha Bagha" שפירושו בהינדית "נמר הדגים".</p>
+                        <p class="text-sm text-slate-300 mb-2 en-content hidden">The common name in all languages simply and directly describes its primary hunting and survival strategy in the wetlands of Asia. In India and Sri Lanka, it is sometimes called "Macha Bagha" by locals, which means "Fish Tiger" in Hindi.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. היסטוריה ושימור -->
+            <section class="bg-slate-900 rounded-2xl p-5 border border-slate-800 shadow-lg text-start">
+                <h3 class="text-sky-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 he-content">היסטוריית הגילוי, אבולוציה ושימור</h3>
+                <h3 class="text-sky-500 font-bold text-lg mb-4 border-b border-slate-700 pb-2 en-content hidden">Discovery History, Evolution & Conservation</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">הגילוי המקורי:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Original Discovery:</h4>
+                        <p class="text-sm text-slate-300 mb-1 he-content">חתול הדייגים תואר מדעית לראשונה בשנת <strong>1833</strong> על ידי הזואולוג הבריטי <strong>אדוארד טרנר בנט</strong> (Edward Turner Bennett, שנות חיים: 1797–1836). בנט חקר עורות ודגימות שנשלחו מהודו, והיה הראשון לזהות שמדובר במין חדש ונפרד. הוא העניק לו את השם <em>Felis viverrina</em> (בטרם הועבר המין לסוגו הנוכחי).</p>
+                        <p class="text-sm text-slate-300 mb-1 en-content hidden">The fishing cat was first scientifically described in <strong>1833</strong> by the British zoologist <strong>Edward Turner Bennett</strong> (Lifespan: 1797–1836). Bennett examined skins and specimens sent from India, becoming the first to recognize it as a new, distinct species. He named it <em>Felis viverrina</em> (before the species was moved to its current genus).</p>
+                    </div>
+                    <div>
+                         <h4 class="text-white font-semibold mb-2 he-content">אבולוציה פילוגנטית:</h4>
+                         <h4 class="text-white font-semibold mb-2 en-content hidden">Phylogenetic Evolution:</h4>
+                         <p class="text-sm text-slate-300 mb-1 he-content">מבחינה אבולוציונית, חתול הדייגים התפצל מאב קדמון משותף בשושלת החתול הנמרי (Leopard cat lineage) לפני פחות מ-3 מיליון שנים. בעוד שאר בני השושלת הסתגלו לחיים ביערות (כמו החתול הנמרי הבנגלי שחקרנו), חתול הדייגים וחתול שטוח-הראש (אחיו הקרוב) בחרו בנישה אקולוגית חלופית והתפתחו להיות ציידי מים, כדי להימנע מתחרות מול טורפים יבשתיים ביערות העמוסים של אסיה.</p>
+                         <p class="text-sm text-slate-300 mb-1 en-content hidden">Evolutionarily, the fishing cat diverged from a common ancestor in the Leopard cat lineage less than 3 million years ago. While other members of the lineage adapted to forest life (like the leopard cat we studied), the fishing cat and the flat-headed cat (its close sibling) chose an alternative ecological niche and evolved into aquatic hunters to avoid competition with terrestrial predators in the crowded forests of Asia.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-2 he-content">מצב שימור מודרני:</h4>
+                        <h4 class="text-white font-semibold mb-2 en-content hidden">Modern Conservation Status:</h4>
+                        <p class="text-sm text-slate-300 he-content">המין מוגדר כ"פגיע" (Vulnerable - VU) על ידי ה-IUCN. אוכלוסיותיו לאורך הודו, סרי לנקה, תאילנד ואינדונזיה נמצאות בירידה תלולה וחלקן כבר נכחדו לחלוטין (כמו בפקיסטן ווייטנאם). האיום הראשי הוא הרס שיטתי של בתי גידול הלחים (Wetlands), המשמשים אותו לציד ולמגורים, לטובת חקלאות ומדגה מסחרי. בנוסף, חתולי דייגים נורים לעיתים קרובות על ידי חקלאים במזרח אסיה לאחר שהם נתפסים גונבים דגים מבריכות הגידול המלאכותיות או טורפים עיזים ותרנגולות מכפרים סמוכים.</p>
+                        <p class="text-sm text-slate-300 en-content hidden">The species is classified as "Vulnerable" (VU) by the IUCN. Its populations across India, Sri Lanka, Thailand, and Indonesia are in steep decline, and some have already become completely extinct (like in Pakistan and Vietnam). The primary threat is the systematic destruction of wetlands, which it uses for hunting and habitation, in favor of agriculture and commercial fisheries. Additionally, fishing cats are frequently shot by farmers in East Asia after being caught stealing fish from artificial breeding ponds or preying on goats and poultry from nearby villages.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 p-6 text-center text-slate-600 text-[10px] border-t border-slate-900 mx-6 pb-12 tracking-widest uppercase">
+            <p class="he-content">המחקר הושלם על ידי ג'מיני ורם | מטריצת החתוליים 2026</p>
+            <p class="en-content hidden">Research completed by Gemini & Ram | Feline Matrix 2026</p>
+        </footer>
+    </div>
+
+    <!-- Modal (חלון צף) - הקוד המלא והבדוק -->
+    <div id="fullScreenImageModal" class="fixed inset-0 bg-black/98 hidden z-[100] flex items-center justify-center p-4" onclick="closeImageModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-sky-500 z-[101]">&times;</button>
+        <img id="modalFullImg" src="" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl border border-slate-800">
+    </div>
+
+    <script>
+        let currentLang = 'he';
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'he' ? 'EN' : 'HE';
+            
+            const heElements = document.querySelectorAll('.he-content');
+            const enElements = document.querySelectorAll('.en-content');
+            
+            heElements.forEach(el => {
+                if(currentLang === 'he') {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+            
+            enElements.forEach(el => {
+                if(currentLang === 'en') {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+        }
+        
+        function openImageModal(imgUrl) {
+            const modal = document.getElementById('fullScreenImageModal');
+            const imgEl = document.getElementById('modalFullImg');
+            if(modal && imgEl) { 
+                imgEl.src = imgUrl; 
+                modal.classList.remove('hidden'); 
+            }
+        }
+        
+        function closeImageModal() {
+            const modal = document.getElementById('fullScreenImageModal');
+            if(modal) {
+                modal.classList.add('hidden');
+                setTimeout(() => { document.getElementById('modalFullImg').src = ''; }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
